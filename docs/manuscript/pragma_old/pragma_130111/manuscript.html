@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<meta charset=UTF-8>
+		
+		<link rel="shortcut icon" href="../../favicon.ico">
+		
+
+		<script type='text/javascript'>
+
+			url=String(window.location);
+			if( url.indexOf("?") == -1 || url.indexOf("&") == -1){
+
+				url="manuscript.html?user=regular&section=toc";
+				window.location = url;
+			}
+
+		</script>
+
+		<script type='text/javascript' src='../../js/jquery-latest.js'></script>
+	
+		<script type="text/x-mathjax-config">
+			
+			MathJax.Hub.Config({
+				
+
+				jax: ["input/TeX","output/SVG"],
+				extensions: ["tex2jax.js","MathMenu.js","MathZoom.js"],
+				TeX: {
+					extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+				}
+				
+				
+			});
+
+			MathJax.Hub.config.messageStyle= "simple";
+			
+			
+		</script>
+		<script type="text/javascript" src="../../js/MathJax2/unpacked/MathJax.js"></script>
+
+		
+		<script type="text/javascript" src="ids.js"></script>
+
+		<script>
+
+			
+			//console.log(user + "   " + section + "    " + prepage);
+
+		</script>
+
+
+		<script type="text/javascript" src="figure_ids.js"></script>
+		<script type="text/javascript" src="ref_ids.js"></script>
+		
+		<script type="text/javascript" >
+			
+			var currentitem = 0;
+			
+
+			
+			function loadContentAt(pos){
+				
+				console.log("load content "+pos+"    "+ids[pos]);
+				
+				currentitem=pos;
+				
+				jQuery.noConflict();
+				
+				sectionname=ids[currentitem];
+				
+				url="manuscript.html?user="+user+"&section="+sectionname;
+				
+				window.location = url;
+						
+			}
+
+
+			function loadAbstract(){
+				currentitem=-1;
+				url="manuscript.html?user="+user+"&section=abstract";
+				window.location = url;
+			}
+
+			function loadAnnexes(){
+				url="manuscript.html?user="+user+"&section=annexes";
+				window.location = url;
+			}
+
+		</script>
+		
+		
+		
+		
+		
+		
+		<link rel='stylesheet' href='style.css' />
+		
+	</head>
+
+	<body>
+		
+		<div id="content" >
+
+			
+			
+			<article>
+			
+				
+
+				<div id="toc_link" style="position: fixed; left: 20px;bottom:50px;cursor: pointer;font-weight: bold;">TOC</div>
+				
+				<script type="text/javascript">
+					document.getElementById("toc_link").onclick = function() {
+						
+						document.getElementById( "item_content" ).innerHTML="";
+						//jQuery("#item_content").load('toc.html');
+						url="manuscript.html?user="+user+"&section=toc";
+						window.location = url;
+						};
+				</script>
+				
+				
+				<div id="next_link" style="position: fixed; left: 20px;bottom:80px;cursor: pointer;font-weight: bold;">Next</div>
+				
+				<script type="text/javascript">
+					document.getElementById("next_link").onclick = function() {
+						
+						//correction version reviewer
+						//if(currentitem+1<ids.length){
+						if(currentitem+1<46){
+							document.getElementById( "item_content" ).innerHTML="";
+							loadContentAt(currentitem+1);
+						}
+						};
+				</script>
+				
+				
+				<div id="prev_link" style="position: fixed; left: 20px;bottom:110px;cursor: pointer;font-weight: bold;">Previous</div>
+				
+				<script type="text/javascript">
+					document.getElementById("prev_link").onclick = function() {
+						
+						if(currentitem-1>=0){
+							document.getElementById( "item_content" ).innerHTML="";
+							loadContentAt(currentitem-1);
+						}
+						else if(currentitem == 0){
+							loadAbstract();
+						}
+						};
+				</script>
+				
+				<div id="ref_link" style="position: fixed; left: 20px;bottom:20px;font-weight: bold;"><a href="references.html" target="_blank" >References</a></div>
+				
+			
+				<div id=item_content></div>
+ 
+ 				
+ 				  				 
+				<script type="text/javascript">
+					
+					
+					jQuery.noConflict();
+					
+					
+					document.getElementById( "item_content" ).innerHTML="";
+					
+					
+					url=String(window.location);
+					
+
+
+					var user;
+					var section;
+
+					var searchString = document.location.search;
+
+					// strip off the leading '?'
+					searchString = searchString.substring(1);
+
+					var params = searchString.split("&");
+
+					user = params[0].split("=")[1];
+					section = params[1].split("=")[1];
+
+					var prepage;
+
+					if(user=="regular"){
+						prepage = "../chapters/";
+					}
+					else if(user=="nadine"){
+						prepage = "../../../files_restricted/chapters_Nadine/";
+					}
+					else if(user=="rene"){
+						prepage = "../../../files_restricted/chapters_Rene/";
+					} 
+					else{
+						console.log("wrong user ");
+						jQuery("#item_content").html("<center style='padding: 40px 0px 20px 0px;font-size: 32px;font-weight:bold;'>\""+user+"\" is not an authorized user !!! (try regular or rene)</center>");
+					}
+
+					if(user == "regular" || user == "rene" || user == "nadine"){
+
+						if( section == "toc" ){
+							
+							console.log("load toc")
+							jQuery("#item_content").load('toc.html');
+						
+						}
+						else if(section == "abstract"){
+							console.log("load abstract")
+							jQuery("#item_content").html('<img src="../../abstract/brochure_jury_v2a.png" width="1000">');
+							currentitem=-1;
+						}
+						else if(section == "annexes"){
+							console.log("load annexes")
+						}
+						else if(section.indexOf("toc_") != -1){
+
+							console.log("load "+section)
+							jQuery("#item_content").load(section+'.html');
+						}
+						else{
+							
+							for(i=0;i<ids.length;i++){
+								if( ids[i] == section){
+									
+									currentitem = i;
+									
+
+									jQuery("#item_content").load(
+												prepage+pages[currentitem]+" #"+ids[currentitem]+" > *",
+												function ()  
+												{
+
+
+												
+
+												jQuery(document).ready(function(){
+														jQuery('.ref').each(function(){
+															var refname = jQuery(this).attr("name");
+															jQuery(this).html("["+id_ref[refname]+"]");
+
+														});
+
+														jQuery('.fig').each(function(){
+															var figname = jQuery(this).attr("name");
+															jQuery(this).html(id[figname]);
+
+														});
+
+														jQuery('.footnote').each(function(){
+															jQuery(this).html("*");
+
+														});
+
+														jQuery("figure").each(function(){
+															
+															var figname = jQuery(this).attr("id");
+															var caption ="";
+															caption = jQuery(this).find("figcaption").html();
+
+															if(type[figname]=="image"){
+																jQuery(this).find("figcaption").html("<strong>Figure "+id[figname]+": </strong>"+caption);
+															}
+															else if(type[figname] == "video"){
+																jQuery(this).find("figcaption").html("<strong>Movie "+id[figname]+": </strong>"+caption);
+
+																//border style too identify bonus content
+
+																jQuery(this).css('background-color','rgb(150,150,150)');
+
+																jQuery(this).css('border-style','solid');
+																jQuery(this).css('border-color','black');
+																jQuery(this).css('border-width','2px');
+
+																jQuery(this).css('margin','20px 0px');
+
+															}
+															else{
+																console.log("error figure type in "+figname);
+															}
+
+
+															
+														});
+
+
+
+
+														jQuery('.ref').click(function() {
+
+															var refname = jQuery(this).attr("name");
+															console.log("go to ref");
+															window.open('references.html#'+refname);
+														});
+
+
+														jQuery('.fig').click(function() {
+
+															var figname = jQuery(this).attr("name");
+															window.open('figure.html?name='+figname);
+														});
+
+												});
+
+												MathJax.Hub.Queue(["Typeset",MathJax.Hub,item_content]);
+
+												//go to the target item
+												//jQuery(this).scrollTo($("#test"), { duration: 0});
+												//window.location.hash = '#edit';
+												}
+									);
+								}
+							}
+							
+						}
+					
+					}
+
+
+				</script>
+				
+			</article>
+
+		</div>
+		
+	</body>	
+</html>

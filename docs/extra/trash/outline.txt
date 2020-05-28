@@ -1,0 +1,108 @@
+.Introduction
+.	Context
+.		new data / new model
+.		new workflow
+.	Objectives
+.		design a integrative platform for embryonic development modeling
+.		validate the model in the case of zebrafish early gastrulation (first 10 hours)
+.	Chapters summary
+.Developmental embryo modeling : State of the Art and Principles
+.	Historical timeline of both qualitative and quantitative embryological models (including organogenesis, angiogenesis...)
+.	Principles
+.		Levels of organization
+.			Space and time scales
+.			Micro-Meso-Macro : choices
+.		Multi-agents
+.		Splitting biomechanics and genetics
+.		Computer simulation versus analytical equation
+.		Understanding by building
+.	Principle guided summary
+.	General design (schematic)
+.MECAGEN: Biomechanics 
+.	State of the Art
+.		Soft material : no physics available
+.		Classical mechanics versus statistical mechanics
+.	Hypotheses
+.		Particle-based physics
+.		Abstract concept
+.			Over-damped newtonian mechanics (valable pour toutes les types de particules)
+.			spatial neighboring
+.			interaction potential
+.		Zebrafish specificities
+.		Particle type specific parameters
+.		Cell specific behavioral forces
+.			protrusion
+.			intercalation/migration
+.	Discussion
+.		Alternative/Future work (including previous experiments)
+.		Extracellular matrix
+.		Friction
+.MECAGEN: Genetic and molecular regulatory networks
+.	State of the Art
+.	Hypotheses
+.		Extracellular diffusion
+.			Fick's Law
+.			Approximation on a neighboring network
+.			Reaction-Diffusion
+.		Intracellular dynamics
+.			Gene-(ARN)-Protein
+.			Membrane Receptor
+.			Membrane Secretor (Diffusive ligands, non diffusive ligands)
+.			Protein-protein interaction
+.			Gene
+.			Cis-regulatory elements : boolean combination
+.	Discussion
+.		Epigenetics
+.		Extracellular matrix
+.MECAGEN: Coupling
+.	State of the Art
+.	Cell Behavior Ontology
+.		Adhesion
+.		Polarization
+.			Local gradient
+.			Mean Field
+.			PCP-like
+.		Protrusion
+.			Bipolar : intercalation
+.			Monopolar : migration
+.		Diffusion perturbation
+.	Discussion
+.		Mechano-transduction
+.Zebrafish early gastrulation
+.	Zebrafish early gastrulation review
+.		Cleavage
+.		Epiboly
+.		Internalization
+.		Convergence-Extension
+.	Production of experimental data
+.		Microscopy
+.		RNAinjection
+.		Mutants
+.		Atlas
+.	Production of simulated data
+.Methodology of optimization
+.	Four fitness functions
+.		ERF
+.		SRF
+.		TF
+.		CF
+.	Human vs. automated parameters exploration
+.		Manual optimization
+.		Evolutionary Algorithm
+.	Case studies vs. in toto
+.Reconstruction (ERF and SRF generation)
+.	Methodology
+.	Manual registration
+.	Voxel quality evaluation
+.	Blending function
+.	Deformation fields
+.	Blended deformation fields
+.Case studies
+.	Enveloping cell layer
+.	Inner Cell / Yolk interface at cleavage stage
+.	Internalization
+.	Margin contraction
+.	Convergence-Extension
+.In toto optimization strategy (All in one)
+.Annex A: GPGPU computing simulation
+.	Thousands of variable : performance needed

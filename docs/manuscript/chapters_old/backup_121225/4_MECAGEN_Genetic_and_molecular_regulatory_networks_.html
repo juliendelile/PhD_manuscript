@@ -1,0 +1,1160 @@
+
+ 
+ 
+ 
+ 
+<div id='4_'>
+<h1>4. MECAGEN Genetic and molecular regulatory networks  </h1>
+ 
+ 
+
+
+
+Goal of the section: 
+
+explain :
+
+1. The principle of the GRNs model
+
+2. The components of the GRNs model
+
+3. Examples
+
+
+
+
+<p>
+	Objective: designing a simple and fast model of the molecular and genetic interaction occuring during development
+</p>
+
+
+<p>
+	This task is subject to intense research by itself but we believe that relevant insight can be gained by using simple rules.
+</p>
+
+<p>
+	We articulate this model around tree parts:
+</p>
+
+<ul>
+	<li>rules leading the dynamics of intra-cellular reaction of proteins inside each cell,</li>
+	<li>rules leading the dynamics of the extra-cellular reaction and transport of diffusing proteins,</li>
+	<li>rules leading the dynamics of the cellular transduction and secretion.</li>
+</ul>
+
+
+<p>
+	To facilitate the specification of the parameters of the molecular and genetic regulation, we interface the model with the <a href="https://www.systemsbiology.org/biotapestry">BioTapestry</a> software developed by W. Longabaugh and H. Bolouri at the Davidson Lab (Caltech) <a name='Longabaugh:2005bq' class='ref'></a> <a name='Longabaugh:2009kp' class='ref'></a>. This software has been adopted by the developmental biology as the tool to draw and visualize the gene regulatory networks. We use it to draw the GRN and add the different GRN module parameters and export it as an xml file that is used as an input of our model.
+</p>
+
+
+<figure id='model_grns_zebra_grn_yuh'>
+	<img src="../../images/model_grns/zebra_grn_yuh.png" width="600">
+	<figcaption>BioTapestry representation the development GRN of the Zebrafish presented in <a name='Chan:2009er' class='ref'></a>.</figcaption>
+</figure>
+
+
+
+
+<h4>Intra-cellular dynamics</h4>
+
+<p>
+	To simplify the interactions inside the cells, we decide to use as variable only the quantities \(q_i\) of the different proteins \(P_i\) involved in the GRN and boolean activity states of the gene. This means that we bypass the existence of RNA as we merge the transcription and the translation processes in a single process. In the following, the term &quot;protein&quot; denotes the molecule which is synthesized by an encoding gene, whether it is RNA or a real protein. This &quot;protein&quot; may either react in a Protein-Protein interaction or act as a transcription factor reacting on a gene regulatory element.
+</p>
+
+<p>
+	The protein quantities evolve according to:
+</p>
+
+<ul>
+	<li>Protein-Protein interaction</li>
+	<li>Synthesis by its encoding gene</li>
+	<li>Degradation by the molecular environment</li>
+</ul>
+
+<p>
+	The genes \(G_i\) take boolean state variables \(g_i\) to express the activity of the gene.
+</p>
+
+
+<h5>Protein-Protein interaction</h5>
+
+
+<p>
+	Protein-Protein interactions are represented by first-order reaction whose rate is determined by the limiting reactant of the reaction. Only one product is allowed. In the following reaction,
+</p>
+
+
+<p>
+	$$ \alpha_{0} P_{0} + \alpha_{1} P_{1} \overset{k}{\rightarrow} \beta_{2} P_{2}  $$
+</p>
+
+<p>
+	\(\alpha_0\) proteins \(P_{0}\) react with \(\alpha_1\) proteins \(P_{1}\) to form \(\beta_2\) proteins \(P_2\) with a rate coefficient \(k\). We first determine which reactant is the limiting one by selecting the minimum quantity \(L_q\).
+</p>
+
+<p>
+	$$ L_{q}(t) = min(\alpha_i P_{i}(t)) $$
+</p>
+
+<p>
+	In addition, reactants may be consumed or not so we introduce an additional boolean parameter \(c_i\) which is \(1\) (resp. \(0\)) if the reactant is consumed (resp. not consumed). For the reactants, the rate of their quantity becomes:
+</p>
+
+<p>
+	$$ \frac{\mathrm{d} {q_i(t)}}{\mathrm{d} t} = - k c_i \alpha_i L_{q}(t)$$
+</p>
+
+<p>
+	And for the product:
+</p>
+
+<p>
+	$$ \frac{\mathrm{d} {q_i(t)}}{\mathrm{d} t} = k \beta_i L_{q}(t)$$
+</p>
+
+
+<p>
+	This simple approach has some drawbacks, a single protein is formed in each reaction and protein can be used as reactant in one PP-interaction only. 
+</p>
+
+
+
+<h5>Synthesis by its encoding gene</h5>
+
+<p>
+	If a gene \(G_i\) is active (i.e. \(g_i\ = 1\)), the quantity of its encoded protein \(P_i\) augments with a constant rate \(\gamma_i\) which is proper to the gene.
+</p>
+
+<p>
+	$$ \frac{\mathrm{d} {q_i(t)}}{\mathrm{d} t} = \gamma_i$$
+</p>
+
+
+
+
+<h5>Degradation by the molecular environment</h5>
+
+<p>
+	In addition to specified Protein-Protein interactions, proteins \(P_i\) are degraded by various molecular elements. We model this process by a simple degradation constant \(\kappa_i\) which is proper to the protein.
+</p>
+
+<p>
+	$$ \frac{\mathrm{d} {q_i(t)}}{\mathrm{d} t} = - \kappa_i$$
+</p>
+
+<h5>Cis-regulatory elements boolean model</h5>
+	
+<p>
+	The activity of a gene \(G_k\) is determined by the presence of activator transcription factors (TFs but &quot;proteins&quot; in the model) and the absence of repressor transcription factors in the cis-regulatory region of the gene. Multiple TFs may participate in the regulation of cis-regulatory module. Boolean logic is an adapted framework to represent these interactions (<a name='Peter:2012dy' class='ref'></a>).
+</p>
+
+<p>
+	The presence or the absence of each TFs (\(P_i\)) involved in the regulatory module of a gene (\(G_k\)) is represented by a boolean variable \(X_{i,k}\). The presence of a TF is expressed if the quantity of the protein \(P_i\) involved in the regulatory module of the gene \(G_k\) is above a given threshold \(T_{i,k}\).
+ </p>
+
+ <p>
+ 	$$ 
+ 	X_{i,k} =
+	\begin{cases}
+		1 & \text{if }q_i \geq T_{i,k} \\
+		0 & \text{if }q_i \lt T_{i,k}
+	\end{cases}
+	$$
+</p>
+
+<p>
+	The activity of the gene \(G_k\) is then determined by the output of a Boolean logic function \(F_k\) which takes as inputs all presence variable \(X_i,k\) involved in the module. \(F_k\) is a combination of AND, OR and NOT boolean operations. If \(F_k\) is a simple AND boolean operation, all activators need to have their presence variable set to one and all repressors presence variable need to be set to zero. For a simple OR boolean operation, a single activator presence variable set to one is sufficient to have an activated gene. For a gene with \(N\) inputs on its cis-regulatory module, its state variable is defined as follow:
+</p>
+
+<p>
+	$$ g_k(t) = F_k( X_{i,k}(t), i \in {1..N} ) $$
+</p>
+
+
+
+
+<h4>Signaling and secretion modules</h4>
+
+
+<p>
+	Cells communicate through various mode in the developing embryos. One of the most common mode is the secretion and the transduction of molecules (proteins, lipids...) out of their physical domain through the membrane. The interfacing module which internalizes and externalizes these molecules, denominated &quot;ligands&quot;, is presented in this section. 
+</p>
+
+
+<h5>Signaling secretion module</h5>
+
+<p>
+	Secreted protein are externalized from the cellular domain. Genes output that are connected to the signaling secretion module send a quantity \(S_i\) in the interstitium. The quantity of secreted ligand \(S_i\) is defined as a ratio \(s_i\) of the intra cellular quantity of the ligand.
+</p>
+
+
+<p>
+	$$ S_i(t) = s_i q_i(t) $$
+</p>
+
+
+
+<p>
+	It is known that some ligands diffuse and other remain attached to the cell membrane and affect only neighbor cells. Both schemes are dealt in the Extra-cellular dynamics section below.
+</p>
+
+
+
+
+<h5>Signaling transduction module</h5>
+
+<p>
+	The extra cellular signal is transduced into an intra cellular protein through the signaling transduction module. 
+
+	Three molecular actors are involved in this module: the membrane receptor protein, the extra-cellular ligand and the transduced protein downstream of the receptor (which may or may not be the extra-cellular ligand).
+
+	The module is active if the module's receptor is present in the cell. 
+
+	The receptor and the ligand may or may not be consumed during the process. Boolean parameters \(cl_i\) and \(cr_i\) set the choice. 
+
+	The quantity of transduced signal is function of both the receptor quantity \(q_i\) and the ligand quantity \(C_i\). 
+
+	During the transduction process, the quantity of all three actors evolves according to following equations.
+</p>
+
+<p>
+	$$ D_i(t) = t_i min(q_i(t), C_i(t)) $$
+</p>
+
+<p>
+	$$ T_i(t) = - cl_i D_i(t) $$
+</p>
+
+<p>
+	$$ R_i(t) = - cr_i D_i(t) $$
+</p>
+ 
+<p>
+	where \(D_i(t)\) is the variation of the downstream protein of the receptor, \(T_i(t)\) is the variation of extra-cellular ligand and \(R_i(t)\) is the variation of the receptor quantity. \(t_i\) controls the kinetic of the process.
+</p>
+
+
+
+
+
+<h4>Extra-cellular dynamics</h4>
+
+
+<p>
+	Whereas detailed models of the spatial configuration of the intersitium has been developed <a name='Kojic:2010jo' class='ref'></a>, we decide to use the neighborhood network describe in section XXXXX as a support for the ligand diffusion. Whereas the ligands diffuse in the interstitial region which is delimited by the cell membranes, the neighborhood network is set of links relating cell centers. However, as both cell surface and cell centers link representation are approximatively dual to each other, we will 
+
+	Moreover, this network offers a spatial representation of the embryo which is robust to the deformation of the multicellular assembly. 
+</p>
+
+<p>
+	The macroscopic law used to describe the diffusion of molecules$ is the Fick's law. It states that the ligands move from the region of high concentration to regions of low concentration with an amplitude proportional to the spatial gradient of concentration. The flux \(J_i\), which measures the quantity of ligands \(L_i\) that will pass through a section during a time interval is given by:
+</p>
+
+<p>
+	$$ J_i = - D_i \nabla C_i $$
+</p>
+
+<p>
+	where
+</p>
+
+
+<ul>
+	<li>\(D_i\) is the diffusion coefficient of the ligands \(L_i\)</li>
+	<li>\(C_i\) is the concentration of the ligands \(L_i\)</li>
+</ul>
+
+<figure id='model_grns_diffusion_schematic'>
+	<img src="../../images/model_grns/diffuse_volume_augmented_crop.png" width="800">
+	<figcaption></figcaption>
+</figure>
+
+<p>
+	The temporal evolution of the concentration is determined via the <i>continuity equation</i>. The continuity equation is a local form of the conservation law. The divergence theorem gives the integral form of continuity equation, applied on the volume of the cell:
+</p>
+
+
+!!!!! le veritable symbole est l'intégrale sur une surface fermée \oiint qui ne fonctionne pas avec la version internet. On se contented \iint ??  
+
+une solution est d'utiliser \mathop{\unicode{x222F}} online, mais il faudra le convertir pour le tex
+
+<p>
+	$$ \frac{\partial C}{\partial t} +  \iint J.dA = T + S $$
+</p>
+
+<p>
+	where \(dA\) is the surface normal vector of the closed surface of the cell, \(T\) (resp. \(S\)) is a sink (resp. source) term whose definition is given in the previous section.
+</p>
+
+<p>
+	The closed surface integral is expressed with the topological neighbor list introduced in section XXXXX.
+</p>
+
+<p>
+	$$ \frac{\partial C_i}{\partial t} =  - \sum_{j \in \mathcal{N}^t_i} \left( A_{i,j} J_{i,j} \right) + T_i + S_i $$
+</p>
+
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='4_1_'>
+<h2>4.1. State of the Art  </h2>
+ 
+ 
+Gillespie DT (1976) A general method for numerically simulating the stochastic time evolution of coupled chemical reactions. J Comp Phys 22: 403–434.
+
+
+de Jong H: Modeling and simulation of genetic regulatory systems: a literature review. J Comput Biol 2002, 9:67-103.
+
+Gilbert D, Fuss H, Gu X, Orton R, Robinson S, Vyshemirsky V, Kurth MJ, Downes CS, Dubitzky W: Computational methodologies for modelling, analysis and simulation of signalling networks. Brief Bioinformatics 2006,
+
+
+
+
+
+Bolouri, H. amp;avidson, E.H., 2002. Modeling transcriptional regulatory networks. BioEssays, 24(12), pp.1118–1129. <a name='Bolouri:2002ht' class='ref'></a>
+
+
+
+Istrail, S., De-Leon, S.B.-T. amp;avidson, E.H., 2007. The regulatory genome and the computer. Developmental Biology, 310(2), pp.187–195. <a name='Istrail:2007cw' class='ref'></a>
+
+
+Ben-Tabou de-Leon, S. amp;avidson, E., 2009. Modeling the dynamics of transcriptional gene regulatory networks for animal development. Developmental Biology, 325(2), pp.317–328. <a name='BenTaboudeLeon:2009vd' class='ref'></a>
+
+
+
+
+
+
+
+Arnosti, D.N. amp;y, A., 2012. Boolean modeling of gene regulatory networks: Driesch redux. Proceedings of the National Academy of Sciences. <a name='Arnosti:2012jw' class='ref'></a>
+
+Peter, I.S., Faure, E. amp;avidson, E.H., 2012. Predictive computation of genomic logic processing functions in embryonic development. Proceedings of the National Academy of Sciences, 109(41), pp.16434–16442. <a name='Peter:2012dy' class='ref'></a>
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='4_2_'>
+<h2>4.2. Hypotheses  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='4_2_1_'>
+<h2>4.2.1. Extracellular diffusion  </h2>
+ 
+ 
+
+	<p>
+		see quickly Colizza, V., Pastor-Satorras, R. & Vespignani, A., 2007. Reaction–diffusion processes and metapopulation models in heterogeneous networks. Nature Physics, 3(4), pp.276–282. <a name='Colizza:2007ik' class='ref'></a>
+	</p>
+	
+	
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='4_2_1_1_'>
+<h2>Fick's Law  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='4_2_1_2_'>
+<h2>Approximation on a neighboring network  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='4_2_1_3_'>
+<h2>Reaction-Diffusion  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='4_2_2_'>
+<h2>4.2.2. Intracellular dynamics  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='4_2_2_1_'>
+<h2>Gene-ARN-Protein  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='4_2_2_2_'>
+<h2>Membrane Receptor  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='4_2_2_3_'>
+<h2>Membrane Secretor - Diffusive ligands - non diffusive ligands  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='4_2_2_4_'>
+<h2>Protein-protein interaction  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='4_2_2_5_'>
+<h2>Gene  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='4_2_2_6_'>
+<h2>Cis-regulatory elements boolean combination  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='4_3_'>
+<h2>4.3. Discussion  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='4_3_1_'>
+<h2>4.3.1. Epigenetics  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='4_3_2_'>
+<h2>4.3.2. Extracellular matrix  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

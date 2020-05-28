@@ -1,0 +1,106 @@
+.Introduction 0
+.	Context 0
+.		new data - new model 0
+.		new workflow 0
+.	Objectives 0
+.		design a integrative platform for embryonic development modeling 0
+.		validate the model in the case of zebrafish early gastrulation 0
+.	Chapters summary 0
+.Developmental embryo modeling State of the Art and Principles 0
+.	Historical timeline biological development 1
+.	Theoretical biology models of development 1
+.	Modeling Principles 1
+.		Experimental science modeling 1
+.		Toward an integrated theory of development 1
+.			Levels of organization 1
+.			Upscaling laws 1
+.			Specialization of the laws 1
+.		Principles guided summary 1
+.	General design - schematic 0
+.MECAGEN Biomechanics 0
+.	State of the Art 0
+.		Soft material no physics available 1
+.		Particle-based physics 1
+.	Hypotheses 2
+.		Equation of Motion 2
+.		Spatial Neighborhood 2
+.		Interaction Potential 2
+.			Attraction-Repulsion 2
+.			Cell specific behavioral forces 2
+.	Discussion 0
+.		Alternative-Future work including previous experiments 0
+.		Extracellular matrix 0
+.		Friction 0
+.MECAGEN Genetic and molecular regulatory networks 0
+.	State of the Art 0
+.	Hypotheses 0
+.		Extracellular diffusion 0
+.			Fick's Law 0
+.			Approximation on a neighboring network 0
+.			Reaction-Diffusion 0
+.		Intracellular dynamics 0
+.			Gene-ARN-Protein 0
+.			Membrane Receptor 0
+.			Membrane Secretor - Diffusive ligands - non diffusive ligands 0
+.			Protein-protein interaction 0
+.			Gene 0
+.			Cis-regulatory elements boolean combination 0
+.	Discussion 0
+.		Epigenetics 0
+.		Extracellular matrix 0
+.MECAGEN Coupling 0
+.	State of the Art 0
+.	Cell Behavior Ontology 0
+.		Adhesion 0
+.		Polarization 0
+.			Local gradient 0
+.			Mean Field 0
+.			PCP-like 0
+.		Protrusion 0
+.			Bipolar intercalation 0
+.			Monopolar migration 0
+.		Diffusion perturbation 0
+.	Discussion 0
+.		Mechano-transduction 0
+.Zebrafish early gastrulation 0
+.	The mechanics of the Zebrafish early gastrulation review 1
+.		Cleavage 1
+.		Epiboly 1
+.		Internalization 1
+.		Convergence-Extension 1
+.	Production of experimental data 0
+.		Microscopy 0
+.		RNAinjection 0
+.		Mutants 0
+.		Atlas 0
+.	Production of simulated data 0
+.Methodology of optimization 0
+.	Four fitness functions 0
+.		ERF 0
+.		SRF 0
+.		TF 0
+.		CF 0
+.	Human vs. automated parameters exploration 0
+.		Manual optimization 0
+.		Evolutionary Algorithm 0
+.	Case studies vs. in toto 0
+.Reconstruction - ERF and SRF generation 0
+.	Methodology 1
+.	Manual registration 1
+.	Voxel quality evaluation 1
+.	Blending function 1
+.	Deformation fields 1
+.	Blended deformation fields 1
+.Case studies 1
+.	Yolk 1
+.	Cell Cycle 1
+.	Cleavage 1
+.	Enveloping cell layer 1
+.	Intercalation pattern 1
+.	Epiboly 0
+.	Internalization 0
+.	Margin contraction 0
+.	Convergence-Extension 0
+.In toto optimization strategy - All in one 0
+.Annex A GPGPU computing simulation 0
+.	Thousands of variable - performance needed 0

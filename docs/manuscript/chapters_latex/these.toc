@@ -1,0 +1,200 @@
+\contentsline {section}{\numberline {1}Introduction}{5}{section.1}
+\contentsline {subsection}{\numberline {1.1}A Historical Timeline of Developmental Biology }{5}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}The Science of How Organisms Form}{6}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}First Theories: Epigenesis, Preformation and Spontaneous Generation}{6}{subsubsection.1.1.2}
+\contentsline {paragraph}{\numberline {1.1.2.1}Aristotle Envisioned Them All}{6}{paragraph.1.1.2.1}
+\contentsline {paragraph}{\numberline {1.1.2.2}Early Mechanical Interpretations}{6}{paragraph.1.1.2.2}
+\contentsline {paragraph}{\numberline {1.1.2.3}The End of Spontaneous Generation}{7}{paragraph.1.1.2.3}
+\contentsline {paragraph}{\numberline {1.1.2.4}The End of Preformationism}{7}{figure.1}
+\contentsline {paragraph}{\numberline {1.1.2.5}Germ Layers}{8}{paragraph.1.1.2.5}
+\contentsline {paragraph}{\numberline {1.1.2.6}Cell Theory}{8}{paragraph.1.1.2.6}
+\contentsline {subsubsection}{\numberline {1.1.3}The Rise of Experimental Embryology}{8}{subsubsection.1.1.3}
+\contentsline {paragraph}{\numberline {1.1.3.1}\textit {Entwicklungsmechanik}: Self-Differentiation vs. Dependent Differentiation}{8}{paragraph.1.1.3.1}
+\contentsline {paragraph}{\numberline {1.1.3.2}Morphogenetic Fields}{9}{paragraph.1.1.3.2}
+\contentsline {paragraph}{\numberline {1.1.3.3}Induction}{10}{paragraph.1.1.3.3}
+\contentsline {subsubsection}{\numberline {1.1.4}Developmental Genetics}{10}{subsubsection.1.1.4}
+\contentsline {subsubsection}{\numberline {1.1.5}Molecular Genetics}{11}{subsubsection.1.1.5}
+\contentsline {paragraph}{\numberline {1.1.5.1}Operon-Lactose}{11}{paragraph.1.1.5.1}
+\contentsline {paragraph}{\numberline {1.1.5.2}Gene Regulatory Networks (GRNs), \textit {Cis}-Regulatory Systems}{12}{paragraph.1.1.5.2}
+\contentsline {paragraph}{\numberline {1.1.5.3}Maternal Factors}{12}{paragraph.1.1.5.3}
+\contentsline {paragraph}{\numberline {1.1.5.4}Gene Regulatory Networks and Epigenetics}{12}{paragraph.1.1.5.4}
+\contentsline {paragraph}{\numberline {1.1.5.5}Signaling Pathways, Transduction}{12}{paragraph.1.1.5.5}
+\contentsline {paragraph}{\numberline {1.1.5.6}Mechanotransduction}{13}{paragraph.1.1.5.6}
+\contentsline {subsubsection}{\numberline {1.1.6}Cell Biomechanics}{13}{subsubsection.1.1.6}
+\contentsline {paragraph}{\numberline {1.1.6.1}Differential Adhesion Hypothesis and Improvements}{13}{paragraph.1.1.6.1}
+\contentsline {paragraph}{\numberline {1.1.6.2}Diversified Cell Behaviors}{14}{paragraph.1.1.6.2}
+\contentsline {subsection}{\numberline {1.2}Integrating Developmental Mechanics and Genetics: The MECAGEN Project}{14}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Methodological Considerations}{15}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}The Scientist in the Observation-Hypothesis-Experiment Loop }{15}{subsubsection.1.3.1}
+\contentsline {paragraph}{\numberline {1.3.1.1}The Individual}{15}{paragraph.1.3.1.1}
+\contentsline {paragraph}{\numberline {1.3.1.2}Exchange/Validation by the Scientific Community}{16}{paragraph.1.3.1.2}
+\contentsline {subsubsection}{\numberline {1.3.2}Designing Tools to Perceive, Conceive and Manipulate}{17}{subsubsection.1.3.2}
+\contentsline {paragraph}{\numberline {1.3.2.1}Tools to Perceive}{17}{paragraph.1.3.2.1}
+\contentsline {subparagraph}{\numberline {1.3.2.1.1}Optical Microscopy: An Interface with the Studied Object}{18}{subparagraph.1.3.2.1.1}
+\contentsline {subparagraph}{\numberline {1.3.2.1.2}Phenomenological Reconstruction }{19}{subparagraph.1.3.2.1.2}
+\contentsline {paragraph}{\numberline {1.3.2.2}Tools to Conceive}{21}{paragraph.1.3.2.2}
+\contentsline {subparagraph}{\numberline {1.3.2.2.1}Means of Expression}{21}{subparagraph.1.3.2.2.1}
+\contentsline {subparagraph}{\numberline {1.3.2.2.2}Mathematical Formalism}{21}{subparagraph.1.3.2.2.2}
+\contentsline {subparagraph}{\numberline {1.3.2.2.3}Dynamical Systems}{21}{subparagraph.1.3.2.2.3}
+\contentsline {subparagraph}{\numberline {1.3.2.2.4}Parameters}{22}{subparagraph.1.3.2.2.4}
+\contentsline {subparagraph}{\numberline {1.3.2.2.5}Theoretical Models, Analytical vs. Computer-Simulated Models}{22}{subparagraph.1.3.2.2.5}
+\contentsline {subparagraph}{\numberline {1.3.2.2.6}"Black Box" Models}{24}{subparagraph.1.3.2.2.6}
+\contentsline {paragraph}{\numberline {1.3.2.3}Tools to Manipulate}{25}{paragraph.1.3.2.3}
+\contentsline {subsubsection}{\numberline {1.3.3}Reality Check: Validating the Hypotheses}{25}{subsubsection.1.3.3}
+\contentsline {paragraph}{\numberline {1.3.3.1}Fitness function}{26}{paragraph.1.3.3.1}
+\contentsline {paragraph}{\numberline {1.3.3.2}Validation Schemes}{26}{paragraph.1.3.3.2}
+\contentsline {subsection}{\numberline {1.4}Overview of this Dissertation}{28}{subsection.1.4}
+\contentsline {part}{I\hspace {1em}Generic Developmental Embryo Modeling}{30}{part.1}
+\contentsline {section}{\numberline {2}State of the Art and Principles of Embryo Development Models }{30}{section.2}
+\contentsline {subsection}{\numberline {2.1}A Review of Theoretical Models of Development }{30}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Early Attempts}{30}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Reaction-Diffusion Systems}{30}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Morphogen Gradients and Positional Information}{31}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Epithelial Cell Shaping and Division Patterns}{33}{subsubsection.2.1.4}
+\contentsline {subsubsection}{\numberline {2.1.5}Differential Adhesion and Cell Sorting}{35}{subsubsection.2.1.5}
+\contentsline {subsubsection}{\numberline {2.1.6}Segmentation and Somite Formation}{37}{subsubsection.2.1.6}
+\contentsline {subsubsection}{\numberline {2.1.7}Striping in Drosophila}{38}{subsubsection.2.1.7}
+\contentsline {subsection}{\numberline {2.2}Common Modeling Principles: Toward an Integrated Theory of Development }{39}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Dealing with Multiple Levels of Organization }{41}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Relating One Level to the Next: The Problem of Emergence}{43}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Identifying Custom Laws at Each Level}{44}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Summary Table }{46}{subsubsection.2.2.4}
+\contentsline {subsection}{\numberline {2.3}Overview of the MECAGEN Modeling Principles }{46}{subsection.2.3}
+\contentsline {section}{\numberline {3}MECAGEN Model of Cell Biomechanics}{48}{section.3}
+\contentsline {subsection}{\numberline {3.1}State of the Art in Biomechanical Modeling}{50}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}The Many Viewpoints on "Soft Matter": From Continuous-Space to Discrete-Element Models}{50}{subsubsection.3.1.1}
+\contentsline {paragraph}{\numberline {3.1.1.1}Continuous Models}{53}{paragraph.3.1.1.1}
+\contentsline {subparagraph}{\numberline {3.1.1.1.1}Mathematical Biology}{53}{subparagraph.3.1.1.1.1}
+\contentsline {subparagraph}{\numberline {3.1.1.1.2}Solid Mechanics}{53}{figure.26}
+\contentsline {subparagraph}{\numberline {3.1.1.1.3}Fluid Mechanics}{54}{subparagraph.3.1.1.1.3}
+\contentsline {paragraph}{\numberline {3.1.1.2}Discrete Models}{55}{paragraph.3.1.1.2}
+\contentsline {subparagraph}{\numberline {3.1.1.2.1}On-Lattice Models with One Particle per Cell}{56}{subparagraph.3.1.1.2.1}
+\contentsline {subparagraph}{\numberline {3.1.1.2.2}On-Lattice Models with Multiple Particles per Cell}{56}{subparagraph.3.1.1.2.2}
+\contentsline {subparagraph}{\numberline {3.1.1.2.3}Off-Lattice Models with One Particle per Cell}{58}{subparagraph.3.1.1.2.3}
+\contentsline {subparagraph}{\numberline {3.1.1.2.4}Off-Lattice Models with Multiple Particles per Cell}{58}{subparagraph.3.1.1.2.4}
+\contentsline {subsubsection}{\numberline {3.1.2}Particle-Based Physics}{61}{subsubsection.3.1.2}
+\contentsline {paragraph}{\numberline {3.1.2.1}Spatial Neighborhoods}{61}{paragraph.3.1.2.1}
+\contentsline {subparagraph}{\numberline {3.1.2.1.1}All to All Neighborhoods}{61}{figure.29}
+\contentsline {subparagraph}{\numberline {3.1.2.1.2}Metric (Distance-Based) Neighborhoods}{62}{subparagraph.3.1.2.1.2}
+\contentsline {subparagraph}{\numberline {3.1.2.1.3}Topological Neighborhoods: Voronoi Diagram}{62}{subparagraph.3.1.2.1.3}
+\contentsline {subparagraph}{\numberline {3.1.2.1.4}Dual of the Voronoi Diagram: Delaunay Triangulation}{64}{subparagraph.3.1.2.1.4}
+\contentsline {paragraph}{\numberline {3.1.2.2}Attraction/Repulsion Potential}{64}{paragraph.3.1.2.2}
+\contentsline {subparagraph}{\numberline {3.1.2.2.1}Equilibrium Distance}{64}{subparagraph.3.1.2.2.1}
+\contentsline {subparagraph}{\numberline {3.1.2.2.2}Implicit Equilibrium Distance}{65}{subparagraph.3.1.2.2.2}
+\contentsline {subsection}{\numberline {3.2}Hypotheses}{66}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Generic Cell-Centered Equation of Motion}{67}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Cell Neighborhood}{69}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Interaction Potential}{76}{subsubsection.3.2.3}
+\contentsline {paragraph}{\numberline {3.2.3.1}Attraction-Repulsion Interaction Potential}{79}{paragraph.3.2.3.1}
+\contentsline {paragraph}{\numberline {3.2.3.2}Cell specific behavioral forces}{83}{paragraph.3.2.3.2}
+\contentsline {section}{\numberline {4}MECAGEN Model of Molecular and Genetic Regulation and Signaling}{85}{section.4}
+\contentsline {subsection}{\numberline {4.1}Intra-Cellular Gene/Protein Reactions}{86}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Protein-Protein Interactions}{89}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Synthesis by Encoding Genes}{90}{subsubsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.3}Degradation by the Molecular Environment}{90}{subsubsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.4}Cis-Regulatory Boolean Model of Gene Expression}{91}{subsubsection.4.1.4}
+\contentsline {subsection}{\numberline {4.2}Signal Secretion and Transduction Modules}{91}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Signal Secretion Module}{91}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Signal Transduction Module}{92}{subsubsection.4.2.2}
+\contentsline {subsection}{\numberline {4.3}Extra-Cellular Reactions, Transport and Diffusion}{92}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Illustration on Artificial GRN Motifs}{94}{subsection.4.4}
+\contentsline {subparagraph}{\numberline {4.4.0.0.1}Double negative gate}{94}{subparagraph.4.4.0.0.1}
+\contentsline {section}{\numberline {5}MECAGEN Model of Mechanic-Genetic Coupling}{95}{section.5}
+\contentsline {subsection}{\numberline {5.1}Toward a Cell Behavior Ontology}{95}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Cell Behavior Ontology}{96}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Cell Adhesion}{96}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.3}Cell Polarization}{97}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.4}Mechanotransduction Input of the GRN}{99}{subsubsection.5.1.4}
+\contentsline {subsection}{\numberline {5.2}Waddingtonian Timeline Specification}{100}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Cell Types}{100}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Ligand Sinks and Sources}{101}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.3}Passive Force's Adhesion Modulation}{101}{subsubsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.4}Active Cell Behavior Specification}{101}{subsubsection.5.2.4}
+\contentsline {subsection}{\numberline {5.3}Illustration on Artificial Cell Sorting}{103}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Cell Sorting: Short Revisit of a Classical Problem}{103}{subsubsection.5.3.1}
+\contentsline {paragraph}{\numberline {5.3.1.1}DAH, strong homotypic adhesion, weak heterotypic adhesion, random protrusion axis}{104}{paragraph.5.3.1.1}
+\contentsline {paragraph}{\numberline {5.3.1.2}Oriented protrusion exterior morphogenetic field, source left right}{104}{paragraph.5.3.1.2}
+\contentsline {paragraph}{\numberline {5.3.1.3}Oriented protrusion exterior morphogenetic field, source center}{104}{paragraph.5.3.1.3}
+\contentsline {subsubsection}{\numberline {5.3.2}Single Cell Migration}{108}{subsubsection.5.3.2}
+\contentsline {part}{II\hspace {1em}Specific study of the Zebrafish early development}{108}{part.2}
+\contentsline {section}{\numberline {6}Review of the Zebrafish Early Developmental Mechanics}{108}{section.6}
+\contentsline {subsection}{\numberline {6.1}Cleavage Stages, Formation of the EVL and YSL}{110}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}The Formation of the Enveloping Cell Layer (EVL)}{110}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.2}The Formation of the Yolk Syncitial Layer (YSL)}{112}{subsubsection.6.1.2}
+\contentsline {subsection}{\numberline {6.2}Blastula Stages and the Onset of Epiboly}{112}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Gastrulation Movements}{115}{subsection.6.3}
+\contentsline {subsubsection}{\numberline {6.3.1}Epiboly Phase Two}{115}{subsubsection.6.3.1}
+\contentsline {paragraph}{\numberline {6.3.1.1}Endocytosis in the external YSL}{116}{paragraph.6.3.1.1}
+\contentsline {paragraph}{\numberline {6.3.1.2}Possible roles of the EVL in driving epiboly}{116}{paragraph.6.3.1.2}
+\contentsline {paragraph}{\numberline {6.3.1.3}The purse-string scenario, contraction at the margin of the eYSL and/or EVL margin}{117}{paragraph.6.3.1.3}
+\contentsline {paragraph}{\numberline {6.3.1.4}A friction force induced by a retrograde flow in the eYSL}{117}{paragraph.6.3.1.4}
+\contentsline {paragraph}{\numberline {6.3.1.5}Blastoderm driving late epiboly}{117}{paragraph.6.3.1.5}
+\contentsline {subsection}{\numberline {6.4}Convergence-Extension}{117}{subsection.6.4}
+\contentsline {section}{\numberline {7}Experimental Reconstruction of the Zebrafish Early Development }{117}{section.7}
+\contentsline {subsection}{\numberline {7.1}Bioemergences Reconstruction Workflow }{117}{subsection.7.1}
+\contentsline {subsubsection}{\numberline {7.1.1}Embryo Preparation and Acquisition }{121}{subsubsection.7.1.1}
+\contentsline {subsubsection}{\numberline {7.1.2}Cell Lineage Reconstruction Workflow }{121}{subsubsection.7.1.2}
+\contentsline {paragraph}{\numberline {7.1.2.1}Workflow}{121}{figure.78}
+\contentsline {subparagraph}{\numberline {7.1.2.1.1}Filtering}{121}{subparagraph.7.1.2.1.1}
+\contentsline {subparagraph}{\numberline {7.1.2.1.2}Cell identification}{121}{subparagraph.7.1.2.1.2}
+\contentsline {subparagraph}{\numberline {7.1.2.1.3}Shape Segmentation}{124}{figure.79}
+\contentsline {subparagraph}{\numberline {7.1.2.1.4}Cell tracking}{124}{subparagraph.7.1.2.1.4}
+\contentsline {paragraph}{\numberline {7.1.2.2}Visualization / Correction}{124}{paragraph.7.1.2.2}
+\contentsline {paragraph}{\numberline {7.1.2.3}Validation}{125}{paragraph.7.1.2.3}
+\contentsline {subsubsection}{\numberline {7.1.3}Post Processing and Exploitation }{125}{subsubsection.7.1.3}
+\contentsline {subsubsection}{\numberline {7.1.4}4D Atlas of Gene Expression }{125}{subsubsection.7.1.4}
+\contentsline {subsection}{\numberline {7.2}Reconstructing In Toto Deformation Fields }{131}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Manual Registration }{132}{subsubsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.2}Voxel Quality Evaluation }{135}{subsubsection.7.2.2}
+\contentsline {subsubsection}{\numberline {7.2.3}Blending Function }{139}{subsubsection.7.2.3}
+\contentsline {subsubsection}{\numberline {7.2.4}Deformation Fields }{142}{subsubsection.7.2.4}
+\contentsline {subsubsection}{\numberline {7.2.5}Blended Deformation Fields }{142}{subsubsection.7.2.5}
+\contentsline {section}{\numberline {8}Simulated Reconstruction and Model Validation Through Case Studies}{144}{section.8}
+\contentsline {subsection}{\numberline {8.1}Investigating the Yolk Biomechanical Properties}{144}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}Hypotheses and Model}{144}{subsubsection.8.1.1}
+\contentsline {paragraph}{\numberline {8.1.1.1}The yolk membrane (ym)}{148}{paragraph.8.1.1.1}
+\contentsline {paragraph}{\numberline {8.1.1.2}The yolk interior (yi)}{149}{paragraph.8.1.1.2}
+\contentsline {paragraph}{\numberline {8.1.1.3}Parameter space for the biomechanical properties of the yolk}{150}{paragraph.8.1.1.3}
+\contentsline {subsubsection}{\numberline {8.1.2}Simulation, Parameter Space and Validation }{152}{subsubsection.8.1.2}
+\contentsline {paragraph}{\numberline {8.1.2.1}Experimental protocol: live specimen}{152}{paragraph.8.1.2.1}
+\contentsline {paragraph}{\numberline {8.1.2.2}Experimental protocol: simulation}{154}{paragraph.8.1.2.2}
+\contentsline {paragraph}{\numberline {8.1.2.3}Fitness function}{154}{paragraph.8.1.2.3}
+\contentsline {paragraph}{\numberline {8.1.2.4}Fitness landscape}{155}{paragraph.8.1.2.4}
+\contentsline {paragraph}{\numberline {8.1.2.5}Fitness pattern analysis}{155}{paragraph.8.1.2.5}
+\contentsline {subsubsection}{\numberline {8.1.3}Discussion}{156}{subsubsection.8.1.3}
+\contentsline {subsection}{\numberline {8.2}Cell Proliferation Rate Along the Cell Lineage}{159}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Hypotheses and Model}{161}{subsubsection.8.2.1}
+\contentsline {paragraph}{\numberline {8.2.1.1}Geometric progression of the cell cycle}{163}{paragraph.8.2.1.1}
+\contentsline {paragraph}{\numberline {8.2.1.2}Arithmetic progression of the cell cycle}{164}{paragraph.8.2.1.2}
+\contentsline {subsubsection}{\numberline {8.2.2}Simulation, Parameter Space and Validation}{164}{subsubsection.8.2.2}
+\contentsline {paragraph}{\numberline {8.2.2.1}Cell cycle length measurement through the reconstructed lineage tree}{164}{paragraph.8.2.2.1}
+\contentsline {paragraph}{\numberline {8.2.2.2}Simulated cell cycles}{164}{paragraph.8.2.2.2}
+\contentsline {paragraph}{\numberline {8.2.2.3}Fitness function}{164}{paragraph.8.2.2.3}
+\contentsline {paragraph}{\numberline {8.2.2.4}Fitness landscape}{169}{figure.137}
+\contentsline {subsubsection}{\numberline {8.2.3}Discussion}{169}{subsubsection.8.2.3}
+\contentsline {subsection}{\numberline {8.3}Shaping the zebrafish gastrula }{173}{subsection.8.3}
+\contentsline {subsubsection}{\numberline {8.3.1}Hypotheses and Model }{173}{subsubsection.8.3.1}
+\contentsline {subsubsection}{\numberline {8.3.2}Simulation, Parameter Space and Validation }{175}{subsubsection.8.3.2}
+\contentsline {subparagraph}{\numberline {8.3.2.0.1}Fitness Function}{176}{subparagraph.8.3.2.0.1}
+\contentsline {subsubsection}{\numberline {8.3.3}Discussion }{176}{subsubsection.8.3.3}
+\contentsline {subsection}{\numberline {8.4}Cell behaviors in the enveloping cell layer compartment }{176}{subsection.8.4}
+\contentsline {subsubsection}{\numberline {8.4.1}Hypotheses and Model }{178}{subsubsection.8.4.1}
+\contentsline {subsubsection}{\numberline {8.4.2}Simulation, Parameter Space and Validation }{179}{subsubsection.8.4.2}
+\contentsline {subsubsection}{\numberline {8.4.3}Discussion }{180}{subsubsection.8.4.3}
+\contentsline {subsection}{\numberline {8.5}Intercalation Patterns }{180}{subsection.8.5}
+\contentsline {subsubsection}{\numberline {8.5.1}Hypotheses and Model }{184}{subsubsection.8.5.1}
+\contentsline {subsubsection}{\numberline {8.5.2}Simulation, Parameter Space and Validation }{184}{subsubsection.8.5.2}
+\contentsline {paragraph}{\numberline {8.5.2.1}Reconstruction}{184}{paragraph.8.5.2.1}
+\contentsline {subsubsection}{\numberline {8.5.3}Discussion }{186}{subsubsection.8.5.3}
+\contentsline {subsection}{\numberline {8.6}Gastrulation }{186}{subsection.8.6}
+\contentsline {subsubsection}{\numberline {8.6.1}Internalization }{186}{subsubsection.8.6.1}
+\contentsline {subsubsection}{\numberline {8.6.2}Margin contraction }{186}{subsubsection.8.6.2}
+\contentsline {subsubsection}{\numberline {8.6.3}Convergence-Extension }{186}{subsubsection.8.6.3}
+\contentsline {paragraph}{\numberline {8.6.3.1}Q1. Influence of the division orientation axis on the convergence}{188}{paragraph.8.6.3.1}
+\contentsline {paragraph}{\numberline {8.6.3.2}Q2. Effect of the hypoblast CE on the epiblast CE.}{188}{figure.150}
+\contentsline {paragraph}{\numberline {8.6.3.3}Q3. Contribution of the CE to the epiboly.}{189}{paragraph.8.6.3.3}
+\contentsline {subparagraph}{\numberline {8.6.3.3.1}Background}{192}{subparagraph.8.6.3.3.1}
+\contentsline {subsubsection}{\numberline {8.6.4}Hypotheses and Model }{192}{subsubsection.8.6.4}
+\contentsline {subsubsection}{\numberline {8.6.5}Simulation, Parameter Space and Validation }{192}{subsubsection.8.6.5}
+\contentsline {subsubsection}{\numberline {8.6.6}Discussion }{192}{subsubsection.8.6.6}
+\contentsline {section}{\numberline {9}Conclusion }{192}{section.9}

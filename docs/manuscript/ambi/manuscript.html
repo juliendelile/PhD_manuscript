@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<meta charset=UTF-8>
+		
+		<link rel="shortcut icon" href="../../favicon.ico">
+		
+		<script type='text/javascript' src='../../js/jquery-latest.js'></script>
+	
+		<script type="text/x-mathjax-config">
+			
+			MathJax.Hub.Config({
+				
+
+				jax: ["input/TeX","output/SVG"],
+				extensions: ["tex2jax.js","MathMenu.js","MathZoom.js"],
+				TeX: {
+					extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+				}
+				
+				
+			});
+
+			MathJax.Hub.config.messageStyle= "simple";
+			
+			
+		</script>
+		<script type="text/javascript" src="../../js/MathJax2/unpacked/MathJax.js"></script>
+
+		
+		<script type="text/javascript" src="ids.js"></script>
+		
+		<script type="text/javascript" >
+			
+			var currentitem = 0;
+			
+			document.buzy_updating = 0;
+			
+		</script>
+		
+		
+		
+		
+		
+		<script>
+			//from http://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
+			// left: 37, up: 38, right: 39, down: 40,
+			// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+			var keys = [37, 38, 39, 40];
+
+			function preventDefault(e) {
+			e = e || window.event;
+			if (e.preventDefault)
+				e.preventDefault();
+			e.returnValue = false;  
+			}
+
+			function keydown(e) {
+				for (var i = keys.length; i--;) {
+					if (e.keyCode === keys[i]) {
+						preventDefault(e);
+						return;
+					}
+				}
+			}
+
+			function wheel(e) {
+			preventDefault(e);
+			}
+
+			function disable_scroll() {
+			
+			
+			
+			if (window.addEventListener) {
+				window.addEventListener('DOMMouseScroll', wheel, false);
+				//window.addEventListener('mousewheel', wheel, false);
+			}
+			
+			window.onmousewheel = document.onmousewheel = wheel;
+			document.onkeydown = keydown;
+			
+			
+			}
+
+			function enable_scroll() {
+				
+				if (window.removeEventListener) {
+					window.removeEventListener('DOMMouseScroll', wheel, false);
+					//window.removeEventListener('mousewheel', wheel, false);
+				}
+				
+				window.onmousewheel = document.onmousewheel = document.onkeydown = null;  
+			}
+		
+		</script>
+		
+		
+		
+		
+		
+		
+	
+		
+		<script>
+			
+			function stopScroll(){
+				console.log("stop scroll");
+				document.buzy_updating=1;
+				disable_scroll();
+			}
+			
+			function startScroll(){
+					console.log("start scroll");
+						document.buzy_updating=0; 
+						enable_scroll();
+						/*
+						setTimeout(
+									function(){
+										enable_scroll();
+									}
+									, 1000
+								);*/
+			}
+			
+			function go2href(){
+				
+				var newpos = jQuery("#"+ids[currentitem]).offset().top - jQuery('#content').offset().top + jQuery('#content').scrollTop();
+				jQuery('#content').scrollTop( newpos);
+
+			}
+			
+			function loadContentAt(pos, href){
+				
+				console.log("load content "+pos+"    "+ids[pos]);
+				
+				stopScroll();
+		   
+				currentitem=pos;
+				
+				jQuery.noConflict();
+				var id;
+				
+				//clear every item but triplet n-1 n n+1
+				for(i=0;i<currentitem-1;i++){
+					id = ids[i];
+					jQuery("#"+id).empty();
+					//console.log(i);
+				}
+				
+				for(i=currentitem+2;i<ids.length;i++){
+					id = ids[i];
+					jQuery("#"+id).empty();
+					//console.log(i);
+				}
+			
+				//load item n-1 n n+1
+				if(currentitem-1>=0){
+					jQuery("#"+ids[currentitem-1]).load(pages[currentitem-1]+" #"+ids[currentitem-1]+" > *",
+						 function ()  
+						{
+							MathJax.Hub.Queue(["Typeset",MathJax.Hub,ids[currentitem-1]]);
+						}
+					);
+				}
+
+				
+				
+;				jQuery("#"+ids[currentitem]).load(pages[currentitem]+" #"+ids[currentitem]+" > *",
+						 function ()  
+						{
+							MathJax.Hub.Queue(["Typeset",MathJax.Hub,ids[currentitem]]);
+							
+							//if(currentitem==ids.length-1){
+								MathJax.Hub.Queue(
+									function(){
+										startScroll();
+										if(href){go2href();}
+									}
+								);
+							//}
+							
+						}
+				);
+
+				if(currentitem+1<ids.length){
+					jQuery("#"+ids[currentitem+1]).load(pages[currentitem+1]+" #"+ids[currentitem+1]+" > *",
+						 function ()  
+						{
+							MathJax.Hub.Queue(["Typeset",MathJax.Hub,ids[currentitem+1]]);
+
+						}
+					);
+				}
+				
+
+			}
+		</script>
+		
+		
+		
+		
+		
+		<script type="text/javascript">
+			 
+			jQuery.noConflict();
+			
+			//jQuery(window).bind('scroll', 
+			jQuery(window).bind( 'mousewheel DOMMouseScroll',
+				function() {
+						
+						
+						console.log("idcurrent "+ids[currentitem]+" idnext "+ids[currentitem + 1]+" idnextnext "+ids[currentitem + 2] + " idprevious "+ids[currentitem - 1]+" idpreviousprevious "+ids[currentitem - 2]+" buzy "+document.buzy_updating);
+						
+						var bufferdown = 40;
+						var bufferup = 80;
+						
+						var deltanext = jQuery('#content').scrollTop() - (jQuery("#"+ids[currentitem + 1]).position().top - bufferdown);
+						var deltaprevious =    jQuery('#content').scrollTop() - (jQuery("#"+ids[currentitem]).position().top - bufferup);
+						
+						// if element has scrolled off the screen, even if other elements exist below it
+						if ( 
+							//(jQuery('#content').scrollTop() > jQuery("#"+ids[currentitem + 1]).position().top - bufferdown)
+								deltanext > 0
+								&& (document.buzy_updating==0) && (currentitem + 2 < ids.length) 
+							){
+								
+								console.log("load next item "+(currentitem+1)+"    "+ids[currentitem+1]);
+
+								stopScroll();
+								
+								
+								jQuery("#"+ids[currentitem + 2]).load(
+										pages[currentitem+2]+" #"+ids[currentitem + 2]+" > *",function ()   {
+											//console.log(idnextnext+"  loaded");
+											MathJax.Hub.Queue(["Typeset",MathJax.Hub,ids[currentitem + 2]]);
+
+											//remove n-1 item
+											//update locked pos position to anticipate removal
+											MathJax.Hub.Queue(
+												function(){
+													
+													if(currentitem>0){
+														/*
+														var currentpos = jQuery('#content').scrollTop();
+														var pheight = jQuery("#"+ids[currentitem - 1]).height();
+														document.getElementById( ids[currentitem - 1] ).innerHTML="";
+														jQuery('#content').scrollTop(currentpos-pheight);
+														*/
+														
+														//alert("n1");
+														document.getElementById( ids[currentitem - 1] ).innerHTML="";
+														//alert("n2");
+														jQuery('#content').scrollTop( deltanext + (jQuery("#"+ids[currentitem+1]).position().top - bufferdown));
+														//alert("n3");
+													}
+
+												}
+											);
+											
+											
+											
+											
+											
+											//when previous op are over, we stop locking
+											MathJax.Hub.Queue(
+												function(){
+													currentitem += 1;
+													startScroll();
+												
+												}
+											);
+										
+											
+										}
+								);
+						}
+						else if( 
+							//(jQuery('#content').scrollTop() < jQuery("#"+ids[currentitem]).position().top - bufferup)
+							deltaprevious < 0
+							&& (document.buzy_updating==0) && (currentitem - 1 > 0) 
+						){
+								
+								console.log("load previous item "+(currentitem-1)+"   "+ids[currentitem-1]);
+								
+								stopScroll();
+								
+								document.getElementById( ids[currentitem-2] ).style.position="absolute";
+								document.getElementById( ids[currentitem-2] ).style.right="30000px";
+								document.getElementById( ids[currentitem-2] ).style.width="980px";
+								
+								//jQuery("#"+ids[currentitem-2]).css({'position':'absolute','visibility':'hidden','display':'block'});
+
+								
+								jQuery("#"+ids[currentitem-2]).load(
+									pages[currentitem-2]+" #"+ids[currentitem-2]+" > *",
+									
+									function ()   {
+										
+										
+										//console.log(idpreviousprevious+"  loaded");
+										MathJax.Hub.Queue(["Typeset",MathJax.Hub,ids[currentitem-2]]);
+										
+									
+										//when previous op are over, we stop locking
+										MathJax.Hub.Queue(
+											function(){
+												
+												
+												
+												
+												console.log("size pp "+jQuery("#"+ids[currentitem-2]).outerHeight(true));
+												console.log("size pp "+jQuery("#"+ids[currentitem-2]).height());
+												console.log(document.getElementById(ids[currentitem-2]).clientHeight); 
+												
+												var ii;
+												//alert("nrst");
+												
+												
+												// jQuery("#"+ids[currentitem-2]).css("position","static").show();
+												//jQuery("#"+ids[currentitem-2]).css({'position':'static','visibility':'visible','display':'none'});
+											//alert("1");
+												//var deltaprevious =    jQuery('#content').scrollTop() - (jQuery("#"+ids[currentitem]).position().top - bufferup);
+												
+												
+												//console.log("size pp "+jQuery("#"+ids[currentitem-2]).outerHeight(true));
+												//console.log("size pp "+jQuery("#"+ids[currentitem-2]).height());
+												
+												console.log("jquery "+jQuery("#title").height()+"    client "+document.getElementById("title").clientHeight);
+												console.log("jquery "+jQuery("#toc_title").height()+"    client "+document.getElementById("toc_title").clientHeight);
+												console.log("jquery "+jQuery("#toc_content").height()+"    client "+document.getElementById("toc_content").clientHeight);
+												console.log("jquery "+jQuery("#"+ids[currentitem-2]).height()+"    client "+document.getElementById(ids[currentitem-2]).clientHeight);
+												console.log("jquery "+jQuery("#"+ids[currentitem-1]).height()+"    client "+document.getElementById(ids[currentitem-1]).clientHeight);
+												
+												
+												
+												
+												
+												
+												setTimeout(
+															function(){
+																
+																document.getElementById( ids[currentitem-2] ).style.position="static";
+																//alert("unrisaet");
+																var newpos = deltaprevious + (jQuery("#"+ids[currentitem]).position().top - bufferup);												
+																jQuery('#content').scrollTop( newpos );
+												
+															startScroll();
+
+															if(currentitem+1<ids.length){
+																jQuery("#"+ids[currentitem+1]).empty();
+															}
+
+															currentitem -= 1;
+																		}
+															, 1
+														);
+												
+												
+												
+											
+											}
+										);
+										
+									}
+								);
+						}
+					
+				}		
+			);       
+			
+		</script>
+		
+		
+		
+		<link rel='stylesheet' href='style.css' />
+		
+	</head>
+
+	<body>
+		
+		<div id="content_noscroll_wrapper" >
+		<div id="content" >
+
+			
+			
+			<article>
+				
+				<div id="title">Manuscript</div>
+			
+				<div id="toc_title">Table of Contents</div>
+
+				<div id="toc_content"></div>
+
+				<div id="toc_link" style="position: fixed; left: 20px;bottom:20px;">TOC</div>
+				
+				<script type="text/javascript">
+					document.getElementById("toc_link").onclick = function() {
+						
+						window.location.href = "manuscript.html#toc_title";
+						console.log("back to TOC");
+						loadContentAt(0,0);
+						
+						window.location.hash='';
+						};
+				</script>
+
+			  
+ 
+ 
+<div id=1_></div>
+ 
+ 
+ 
+ 
+<div id=1_1_></div>
+ 
+ 
+ 
+ 
+<div id=1_1_1_></div>
+ 
+ 
+ 
+ 
+<div id=1_1_2_></div>
+ 
+ 
+ 
+ 
+<div id=1_2_></div>
+ 
+ 
+ 
+ 
+<div id=1_2_1_></div>
+ 
+ 
+ 
+ 
+<div id=1_2_2_></div>
+ 
+ 
+ 
+ 
+<div id=1_3_></div>
+ 
+ 
+ 
+ 
+<div id=2_></div>
+ 
+ 
+ 
+ 
+<div id=2_1_></div>
+ 
+ 
+ 
+ 
+<div id=2_2_></div>
+ 
+ 
+ 
+ 
+<div id=2_2_1_></div>
+ 
+ 
+ 
+ 
+<div id=2_2_1_1_></div>
+ 
+ 
+ 
+ 
+<div id=2_2_1_2_></div>
+ 
+ 
+ 
+ 
+<div id=2_2_2_></div>
+ 
+ 
+ 
+ 
+<div id=2_2_3_></div>
+ 
+ 
+ 
+ 
+<div id=2_2_4_></div>
+ 
+ 
+ 
+ 
+<div id=2_2_5_></div>
+ 
+ 
+ 
+ 
+<div id=2_3_></div>
+ 
+ 
+ 
+ 
+<div id=2_4_></div>
+ 
+ 
+ 
+ 
+<div id=3_></div>
+ 
+ 
+ 
+ 
+<div id=3_1_></div>
+ 
+ 
+ 
+ 
+<div id=3_1_1_></div>
+ 
+ 
+ 
+ 
+<div id=3_1_2_></div>
+ 
+ 
+ 
+ 
+<div id=3_1_3_></div>
+ 
+ 
+ 
+ 
+<div id=3_2_></div>
+ 
+ 
+ 
+ 
+<div id=3_2_1_></div>
+ 
+ 
+ 
+ 
+<div id=3_2_2_></div>
+ 
+ 
+ 
+ 
+<div id=3_2_3_></div>
+ 
+ 
+ 
+ 
+<div id=3_2_3_1_></div>
+ 
+ 
+ 
+ 
+<div id=3_2_3_2_></div>
+ 
+ 
+ 
+ 
+<div id=3_2_3_2_1_></div>
+ 
+ 
+ 
+ 
+<div id=3_2_3_2_2_></div>
+ 
+ 
+ 
+ 
+<div id=3_2_4_></div>
+ 
+ 
+ 
+ 
+<div id=3_3_></div>
+ 
+ 
+ 
+ 
+<div id=3_3_1_></div>
+ 
+ 
+ 
+ 
+<div id=3_3_2_></div>
+ 
+ 
+ 
+ 
+<div id=3_3_3_></div>
+ 
+ 
+ 
+ 
+<div id=4_></div>
+ 
+ 
+ 
+ 
+<div id=4_1_></div>
+ 
+ 
+ 
+ 
+<div id=4_2_></div>
+ 
+ 
+ 
+ 
+<div id=4_2_1_></div>
+ 
+ 
+ 
+ 
+<div id=4_2_1_1_></div>
+ 
+ 
+ 
+ 
+<div id=4_2_1_2_></div>
+ 
+ 
+ 
+ 
+<div id=4_2_1_3_></div>
+ 
+ 
+ 
+ 
+<div id=4_2_2_></div>
+ 
+ 
+ 
+ 
+<div id=4_2_2_1_></div>
+ 
+ 
+ 
+ 
+<div id=4_2_2_2_></div>
+ 
+ 
+ 
+ 
+<div id=4_2_2_3_></div>
+ 
+ 
+ 
+ 
+<div id=4_2_2_4_></div>
+ 
+ 
+ 
+ 
+<div id=4_2_2_5_></div>
+ 
+ 
+ 
+ 
+<div id=4_2_2_6_></div>
+ 
+ 
+ 
+ 
+<div id=4_3_></div>
+ 
+ 
+ 
+ 
+<div id=4_3_1_></div>
+ 
+ 
+ 
+ 
+<div id=4_3_2_></div>
+ 
+ 
+ 
+ 
+<div id=5_></div>
+ 
+ 
+ 
+ 
+<div id=5_1_></div>
+ 
+ 
+ 
+ 
+<div id=5_2_></div>
+ 
+ 
+ 
+ 
+<div id=5_2_1_></div>
+ 
+ 
+ 
+ 
+<div id=5_2_2_></div>
+ 
+ 
+ 
+ 
+<div id=5_2_2_1_></div>
+ 
+ 
+ 
+ 
+<div id=5_2_2_2_></div>
+ 
+ 
+ 
+ 
+<div id=5_2_2_3_></div>
+ 
+ 
+ 
+ 
+<div id=5_2_3_></div>
+ 
+ 
+ 
+ 
+<div id=5_2_3_1_></div>
+ 
+ 
+ 
+ 
+<div id=5_2_3_2_></div>
+ 
+ 
+ 
+ 
+<div id=5_2_4_></div>
+ 
+ 
+ 
+ 
+<div id=5_3_></div>
+ 
+ 
+ 
+ 
+<div id=5_3_1_></div>
+ 
+ 
+ 
+ 
+<div id=6_></div>
+ 
+ 
+ 
+ 
+<div id=6_1_></div>
+ 
+ 
+ 
+ 
+<div id=6_1_1_></div>
+ 
+ 
+ 
+ 
+<div id=6_1_2_></div>
+ 
+ 
+ 
+ 
+<div id=6_1_3_></div>
+ 
+ 
+ 
+ 
+<div id=6_1_4_></div>
+ 
+ 
+ 
+ 
+<div id=6_2_></div>
+ 
+ 
+ 
+ 
+<div id=6_2_1_></div>
+ 
+ 
+ 
+ 
+<div id=6_2_2_></div>
+ 
+ 
+ 
+ 
+<div id=6_2_3_></div>
+ 
+ 
+ 
+ 
+<div id=6_2_4_></div>
+ 
+ 
+ 
+ 
+<div id=6_3_></div>
+ 
+ 
+ 
+ 
+<div id=7_></div>
+ 
+ 
+ 
+ 
+<div id=7_1_></div>
+ 
+ 
+ 
+ 
+<div id=7_1_1_></div>
+ 
+ 
+ 
+ 
+<div id=7_1_2_></div>
+ 
+ 
+ 
+ 
+<div id=7_1_3_></div>
+ 
+ 
+ 
+ 
+<div id=7_1_4_></div>
+ 
+ 
+ 
+ 
+<div id=7_2_></div>
+ 
+ 
+ 
+ 
+<div id=7_2_1_></div>
+ 
+ 
+ 
+ 
+<div id=7_2_2_></div>
+ 
+ 
+ 
+ 
+<div id=7_3_></div>
+ 
+ 
+ 
+ 
+<div id=8_></div>
+ 
+ 
+ 
+ 
+<div id=8_1_></div>
+ 
+ 
+ 
+ 
+<div id=8_2_></div>
+ 
+ 
+ 
+ 
+<div id=8_3_></div>
+ 
+ 
+ 
+ 
+<div id=8_4_></div>
+ 
+ 
+ 
+ 
+<div id=8_5_></div>
+ 
+ 
+ 
+ 
+<div id=8_6_></div>
+ 
+ 
+ 
+ 
+<div id=9_></div>
+ 
+ 
+ 
+ 
+<div id=9_1_></div>
+ 
+ 
+ 
+ 
+<div id=9_2_></div>
+ 
+ 
+ 
+ 
+<div id=9_3_></div>
+ 
+ 
+ 
+ 
+<div id=9_4_></div>
+ 
+ 
+ 
+ 
+<div id=9_5_></div>
+ 
+ 
+ 
+ 
+<div id=10_></div>
+ 
+ 
+ 
+ 
+<div id=11_></div>
+ 
+ 
+ 
+ 
+<div id=11_1_></div>
+ 
+
+				<script>
+					
+					
+					jQuery.noConflict();
+					
+					document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+					jQuery("#content").height(jQuery(window).height());
+					
+					jQuery("#toc_content").load('toc.html');
+					
+					loadContentAt(0,0);
+					
+			
+				</script>
+				
+			</article>
+
+		</div>
+		</div>
+		
+	</body>	
+</html>

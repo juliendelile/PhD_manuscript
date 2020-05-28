@@ -1,0 +1,57 @@
+#!/bin/bash
+#modify the relative of js and css link in the header
+
+updatePath(){
+	
+	relative=".."
+	
+	for (( i=0; i<$2; i++ )){
+		relative=$relative"/.."
+	}
+	
+	echo "file: $1  level: $2 relative: $relative"
+	
+	
+	#update video source path
+	new="src=\"$relative/videos/"
+	perl -pi -e "s#src=\".*/videos/#$new#g" $1
+	
+	#update pdfs source path
+	new="<a href=\"$relative/papers/"
+	perl -pi -e "s#<a href=\".*/papers/#$new#g" $1
+	perl -pi -e "s#<a href=\".*/Papers/#$new#g" $1
+
+	#update images source path
+	new="src=\"$relative/images/"
+	perl -pi -e "s#src=\".*/images/#$new#g" $1
+
+	
+	#update svgs source path
+	new="data=\"$relative/images/"
+	perl -pi -e "s#data=\".*/images/#$new#g" $1
+
+	#update favicon source path
+	new="href=\"$relative/favicon.ico"
+	perl -pi -e "s#href=\".*/favicon.ico#$new#g" $1
+	
+	#what????
+}
+
+recurse() {
+
+local level=0
+let "level = $2 + 1"
+
+ for i in "$1"/*;do
+    if [ -d "$i" ];then
+        recurse "$i" $level
+    elif [ -f "$i" ]; then
+       	#echo "file: $i level $level"
+        updatePath $i $level
+    fi
+ done
+}
+
+
+recurse chapters 0
+

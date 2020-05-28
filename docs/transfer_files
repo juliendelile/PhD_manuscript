@@ -1,0 +1,162 @@
+#!/bin/bash
+#copy pdfs in papers directory if needed
+#pour manuscript -> ./transfer_files manuscript/chapters
+
+copyPDFs(){
+	
+	pdfline=`grep -o 'href=.*/papers/.*pdf\">' $1`
+	nummatch=`grep -c 'href=.*/papers/.*pdf\">' $1`
+
+	for ((k=0; k<$nummatch; k++ )){
+		
+		newline=${pdfline#*papers}
+		newline=${newline%%\">*}
+		#echo "$newline"
+
+		if [ ! -f "papers$newline" ];
+		then
+			echo "File not found $newline"
+			
+			foldername=${newline#/}
+			foldername=${foldername%%/*}
+			echo "$foldername"
+			year=${newline%/*}
+			echo "$year"
+			
+			
+			if [ ! -d "papers/$foldername" ];then
+				mkdir "papers/$foldername"
+				mkdir "papers$year"
+			elif [ ! -d "papers$year" ];then
+				mkdir "papers$year"
+			fi
+			#copy pdf
+			cp /Users/Julien/Documents/Papers"$newline" papers"$newline"
+		fi
+
+
+		pdfline=${pdfline#*pdf\">}
+		#echo "pdfline   $pdfline"
+	}
+}
+
+copyImages(){
+	
+	imageline=`grep -o 'img src=.*/images/.*\"' $1`
+	nummatch=`grep -c 'img src=.*/images/.*\"' $1`
+	#echo "nummatch $nummatch          line : $imageline"
+	
+	for (( k=0; k<$nummatch; k++ )){
+		
+		newline=${imageline#*images}
+		newline=${newline%%\"*}
+		#echo "$newline"
+
+		if [ ! -f "images$newline" ];
+		then
+			echo "File not found  $newline"
+			
+			foldername=${newline%/*}
+			echo "$foldername"
+			
+			mkdir -p "images$foldername"
+			cp /Users/Julien/Documents/Work/PhD/Images"$newline" images"$newline"
+		fi
+
+
+		imageline=${imageline#*/images/}
+		imageline=${imageline#*\"}
+		#echo "imageline   $imageline"
+	}
+}
+
+copySVGs(){
+	
+	imageline=`grep -o 'object data=.*/images/.*\"' $1`
+	nummatch=`grep -c 'object data=.*/images/.*\"' $1`
+	#echo "nummatch $nummatch          line : $imageline"
+	
+	for (( k=0; k<$nummatch; k++ )){
+		
+		newline=${imageline#*images}
+		newline=${newline%%\"*}
+		#echo "$newline"
+
+		if [ ! -f "images$newline" ];
+		then
+			echo "File not found  $newline"
+			
+			foldername=${newline%/*}
+			echo "$foldername"
+			
+			mkdir -p "images$foldername"
+			cp /Users/Julien/Documents/Work/PhD/Images"$newline" images"$newline"
+			
+			
+			#convert svg to pdf for manuscript
+			#mangling http://www.linuxjournal.com/article/8919
+			#newlineraw=${newline%.svg}
+			#echo "nnewlineraw  $newlineraw"
+			#/Applications/Inkscape.app/Contents/Resources/bin/inkscape -z -D --file=images"$newline" --export-pdf=images"$newlineraw".pdf
+		fi
+
+
+		imageline=${imageline#*/images/}
+		imageline=${imageline#*\"}
+		#echo "imageline   $imageline"
+	}
+}
+
+
+copyVideos(){
+	
+	videoline=`grep -o 'video src=.*/videos/.*\"' $1`
+	nummatch=`grep -c 'video src=.*/videos/.*\"' $1`
+	#echo "nummatch $nummatch          line : $videoline"
+	for (( k=0; k<$nummatch; k++ )){
+		
+		newline=${videoline#*videos}
+		newline=${newline%%\"*}
+		#echo "$newline"
+
+		if [ ! -f "videos$newline" ];
+		then
+			echo "File not found  $newline"
+			
+			foldername=${newline%/*}
+			echo "$foldername"
+			
+			mkdir -p "videos$foldername"
+			cp /Users/Julien/Documents/Work/PhD/Video"$newline" videos"$newline"
+		fi
+
+
+		videoline=${videoline#*/videos/}
+		videoline=${videoline#*\"}
+	}
+}
+
+recurse() {
+
+ for i in "$1"/*;do
+    if [ -d "$i" ];then
+        recurse "$i"
+    elif [ -f "$i" ]; then
+		#echo "$i"
+		copyPDFs $i
+		copyImages $i
+		copySVGs $i
+		copyVideos $i
+    fi
+ done
+}
+
+
+if [ "$1" != "" ]; then
+	recurse $1
+else
+	recurse page
+fi
+
+
+

@@ -1,0 +1,118 @@
+
+
+\section{MECAGEN Coupling  }
+
+  In this section, we present two mode of interaction... 
+\begin{itemize}
+	\item an ideal coupling mode, which relates the biomechanical model introduced in chapter 3 and the genetic and molecular regulation model introduced in chapter 4. This coupling is what has driven the design choices behind the mechanical and genetical model. However, the principles behind the coupling will only be introduced here as, in its current state, the model has not been tested already.
+	\item a simplificated model of cell behavior specification, inspired by Waddington's epigenetic landscape, which bypasses the molecular and genetic interaction and allows us to test the mechanical hypotheses introduced in chapter 3.
+\end{itemize}
+
+\paragraph{MECAGEN coupling}
+
+  Biological system modeling requires the choice of an ontology. In our domain, the adapted ontology is a categorization of the various cell behaviors occurring during a developmental process.   Among a number of initiatives, we mention the current work of XXXX which performs an in-depth classification of heterogeneous objects and processes involved in multi-cellular systems.   Ontologies are funded by hierarchical categories which reflects the vision of the ontology designer.    In MECAGEN, we propose to introduce a simple ontology based on the rules introduced in the Chapters 3 and 4.   The objective of this ontology is establish a mapping between the genetic and molecular state of the cell and its mechanical behavior.   All the mechanical parameters must be defined by the molecular state of the cell. The spatio-temporal specification of the mechanical behavior of each cell is ruled by the dynamical outputs of its molecular and genetic regulation.    In practical terms, a predefined set of intracellular concentration levels $p_a$ is monitored, and determines the value taken by the biomechanical parameters: 
+\begin{itemize}
+	\item w_{\mathrm{adh}} which modulates the attraction part of the \textit{relaxation} force $\vec{F}^P_{ij}$
+	\item a boolean determining with the protrusive force $\vec{F}^A_{ij}$ is operating
+	\item the polarization axis $\vec{u}_i$
+\end{itemize}
+
+  Because we do not study ..., some mechanisms are decoupled from the intracellular molecular and genetic regulation in MECAGEN: 
+\begin{itemize}
+	\item cell cycle length
+	\item cell volume control
+\end{itemize}
+
+  Others are not considered: 
+\begin{itemize}
+	\item cell death
+	\item extracellular matrix
+\end{itemize}
+
+\subparagraph{Cell Behavior Ontology}
+
+   The major dichotomy in our cell behavior ontology distinguishes the mesenchymal cell behaviors and the epithelial cell behaviors.  
+
+   Mesenchymal cell behavior is determined by:     control of adhesion    polarization    active behavior: protrusion (mono/bipolar)    
+
+   Epithelial cell behavior is determined by:      apico-basal adhesion  lateral adhesion  specification of an apical-basal polarization axis  reinforced lateral adhesion  active behavior1: apico-basal contraction (torquing )  active behavior2: active intercalation in the lateral plane (only, require an additional axis).  
+
+\subparagraph{Cell adhesion}
+
+  Cell adhesion is the mechanical phenomenon that is the easiest to relate to an output of the molecular and genetic regulation. The intensity of the adhesion between two neighbor cells is a function of the surface densities of adhesion molecules (proportionnal ref ??? \cite{Zhang:2011ca}: different models, )  assume that the adhesive molecules are uniformly distributed on the cell membrane 
+
+  Multiple adhesive molecules type may be involved so the global adhesion coefficient is a function of all the adhesion coeff.    adhesion -> directly relates an intracellular concentration with the adhesion coefficient w_{\mathrm{adh}} -> but different adhesion related molecule are involved in the developmental processes. w_{\mathrm{adh}} is the     mesenchymal behaviors:  
+
+\subparagraph{Cell protrusion}  protrusion -> module ((rho rac gtpase)) a set of molecule whose state determine if the cell will perform protrusive activity  We expect a protruding cell to be active if it orients its protrusion(s) along   protrusion -> axis, monopolar, bipolar, substrate     polarization -> eventuellement relier au module de protrusion  necessite une spatialization au niveau subcellulaire, assymetrie cytoplasmique.    par defaut random...   mode ligand mode average mode mechanotransduction both  update pas instantané...    epithelial behaviors:  apico-basal specification  stronger lateral adhesion  additional mechanisms: apical-constriction             Artificial link because   Some mechanical parameters are directly connected to the intra cellular dynamics as the adhesion variable of the model.     
+
+\subparagraph{Cell polarization}
+
+  If a cell is in a molecular and genetic state that require a polarization axis, two mode of specification this axis are available:  
+
+  Determination de l'axe de polarization: mode de propagation du champ de polarization:  
+\begin{itemize}
+	\item 1. gradient local ( moyenne des liens de voisinages pondérée par la difference de concentration d'une substance )
+	\item 2. alignement en fonction des axes de polarization des voisines (pondéré par une substance, idéalement état de la cellule "polarisée" ou non)
+\end{itemize}
+
+  Protrusion related parameters: 
+\begin{itemize}
+	\item a. monopolaire ou bi_polaire (chapitre 3)
+	\item b. intensité de la protrusion (chapitre 3)
+	\item c. protrusion target, function of cell types (chapitre 5)
+	\item d. axe de polarization
+\end{itemize}
+
+\paragraph{Waddingtonian landscape specification}
+
+  bypassing of the molecular and genetic regulation 
+\begin{itemize}
+	\item intra -> les unes / aux autres dans le feuillet
+	\item inter -> extérieur au feuillet, pas d'intercalations radiaires (car couches concentriques) 
+\end{itemize}
+
+\subsection{Cell Behavior Ontology  }
+
+\subsection{Waddingtonian Timeline Specification  }
+
+\subsection{Toy Model of Developmental Processes: Cell Sorting  }
+
+\paragraph{Cell sorting: short revisit of a classical problem}  see \cite{Zhang:2011ca}
+
+\subparagraph{DAH, strong homotypic adhesion, weak heterotypic adhesion, random protrusion axis}
+
+
+\subparagraph{Oriented protrusion exterior morphogenetic field, source left right}
+
+
+\subparagraph{Oriented protrusion exterior morphogenetic field, source center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

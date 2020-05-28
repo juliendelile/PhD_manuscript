@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<meta charset=UTF-8>
+		
+		<link rel="shortcut icon" href="favicon.ico">
+		
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+	
+		
+		
+	</head>
+
+	<body>
+		
+		<div id="content" >
+
+			
+			
+			<article>
+			
+				
+								
+				
+		
+				<div id="item_content">
+				
+
+
+				</div>
+ 
+ 				
+ 				  				 
+				<script>
+					
+					
+					jQuery.noConflict();
+					
+					
+					var url=String(window.location);
+					var filename = url.substr(url.indexOf("file=")+5,url.length);
+					
+					console.log('filename  '+filename);
+					/*
+					jQuery("#item_content").html('<figure><video src="files/soutenance/migrRaz.ogg" width="800" controls></video><figcaption>Simulation of the yolk relaxation case study</figcaption></figure>');*/
+
+					
+					jQuery("#item_content").html('<figure><video src="'+filename+'.ogg" width="800" controls></video>'); 
+
+									
+				</script>
+				
+			</article>
+
+		</div>
+		
+	</body>	
+</html>

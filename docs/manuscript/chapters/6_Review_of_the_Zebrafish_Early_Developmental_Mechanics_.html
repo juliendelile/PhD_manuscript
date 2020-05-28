@@ -1,0 +1,244 @@
+<div id='6_'><h1>6. Review of the Zebrafish Early Developmental Mechanics</h1>
+
+<p>Our goal in this chapter is to identify the different phases of the developing early zebrafish embryo that our model should account for, and the different components with their characteristic scales that are expected to be at play and underlie the biomechanics of this process.</p>
+
+<p>The zebrafish gastrulation, its processes and underlying causalities have long been and remain today a very active field of research. The global view that we have formed about this phenomenon, and which we present in this chapter, is based on raw microscope observations, the 3D+time imaging and reconstructions performed by the BioEmergences platform, and the state-of-the-art literature surveyed in the following publications:</p>
+
+<ul>
+  <li>D'Amico, L.A. &amp; Cooper, M.S., 2001. Morphogenetic domains in the yolk syncytial layer of axiating zebrafish embryos. <i>Developmental dynamics: an official publication of the American Association of Anatomists</i>, 222(4), pp.611–624. <a name='DAmico:2001ic' class='ref'></a></li>
+
+  <li>Montero, J.-A. &amp; Heisenberg, C.-P., 2004. Gastrulation dynamics: cells move into focus. <i>Trends in cell biology</i>, 14(11), pp.620–627. <a name='Montero:2004hh' class='ref'></a></li>
+
+  <li>Solnica-Krezel, L., 2005. Conserved Patterns of Cell Movements during Vertebrate Gastrulation. <i>Current Biology</i>, 15(6), pp.R213–R228. <a name='SolnicaKrezel:2005uz' class='ref'></a></li>
+
+  <li>Solnica-Krezel, L., 2006. Gastrulation in zebrafish -- all just about adhesion? <i>Current opinion in genetics &amp; development</i>, 16(4), pp.433–441. <a name='SolnicaKrezel:2006dl' class='ref'></a></li>
+
+  <li>Rohde, L.A. &amp; Heisenberg, C.-P., 2007. Zebrafish gastrulation: cell movements, signals, and mechanisms. <i>International review of cytology</i>, 261, pp.159–192. <a name='Rohde:2007ba' class='ref'></a></li>
+
+  <li>Heisenberg, C.-P. &amp; Solnica-Krezel, L., 2008. Back and forth between cell fate specification and movement during vertebrate gastrulation. <i>Current opinion in genetics &amp; development</i>, 18(4), pp.311–316. <a name='Heisenberg:2008fc' class='ref'></a></li>
+
+  <li>Chan, T.-M. et al., 2009. Developmental gene regulatory networks in the zebrafish embryo. <i>Biochimica et biophysica acta</i>, 1789(4), pp.279–298.<a name='Chan:2009er' class='ref'></a></li>
+
+  <li>Blanchard, G.B. &amp; Adams, R.J., 2011. Measuring the multi-scale integration of mechanical forces during morphogenesis. <i>Current opinion in genetics &amp; development</i>, pp.1–11.<a name='Blanchard:2011hk' class='ref'></a></li>
+</ul>
+
+<p>We interpret the early zebrafish embryo biomechanics to result from the interaction of the blastoderm cells isolated from the yolk cell by the 32-cell stage (or somewhat later), which first differentiate in the epithelial enveloping layer (<i>EVL</i>) and the deep cells, with the <i>deep cells</i> giving rise to the <i>hypoblastic</i> and <i>epiblastic</i> layers through gastrulation (Fig. <a name='zebrafish_10h_review_kimmel_drawings_augmented' class='fig'></a>). The epiblast is described as fated to neural and non-neural ectoderm and the hypoblast is fated to the mesoderm and the endoderm.</p>
+
+<figure id='zebrafish_10h_review_kimmel_drawings_augmented'>
+	<img src="../../images/zebrafish_10h_review/kimmel_drawings_augmented.png" width="600">
+	<figcaption><strong>The zebrafish early developmental stages. </strong> Adapted from Kimmel <a name='Kimmel:1995kn' class='ref'></a>. From the 1-cell stage until the end of gastrulation, lateral views with animal pole to the top and dorsal side, identified by the shield stage, to the right. The enveloping layer (EVL) is in yellow. The deep cells (in blue) lead through gastrulation to the hypoblast (in purple) and the epiblast (in dark blue).  The whole spatio-temporal sequence is expected to last 10 hours at 28.5 degree celsius.</figcaption>
+</figure>
+
+<p>Cell biomechanics is expected to result from the dynamics of the cytoskeleton. The tissue biomechanics should result from cell dynamics, including adhesive properties and intrinsic motility, cell-cell and cell-extra cellular matrix (<i>ECM</i>) interactions. In addition, the yolk contribution to the embryo biomechanics during early embryonic stages is highly debated <a name='Behrndt:2012gy' class='ref'></a>.</p>
+
+<p>It is one of our main  modeling challenges to identify and integrate the components that we hypothesize to be causal in the zebrafish early embryo morphogenesis. During our more detailed exploration of the possible ingredients of the model, we will follow the known chronology of events, keeping in mind at the same time that the classical narrative of the developmental stages might also be hiding other changes in the cell dynamics. It should be one of the strengths of the model to point to the transitions in the system's dynamics.</p>
+
+<!-- ====================================================================== -->
+</div><div id='6_1_'><h2>6.1. Cleavage Stages, Formation of the EVL and YSL</h2>
+<!-- ====================================================================== -->
+ 
+<p>We call <i>cleavage stages</i> the steps going from the 1-cell stage to the 1000-cell stage through successive cell divisions. As emphasized by Olivier et al. <a name='Olivier:2010jz' class='ref'></a>, cell cycles gradually desynchronize from cell cycle 2. The first 10 cell cycles leave only time for a succession of S and M phases, and the observed lengthening is interpreted to reflect the exhaustion of maternal components required for the underlying biochemistry. Major aspects of these steps are, in addition, the absence of cell intrinsic motility, the acquisition of cell diversity in terms of cell environment and cell volume&mdash;although the global cell volume is supposed to remain constant with the sum of the daughter cells volume equal to their mother's volume without growth. The latter is actually expected to hold true until the end of gastrulation, i.e. until cycle 15 or so. Shaping the zebrafish blastoderm at these early stages is also based on cell division orientation, and precise quantitative data has been obtained providing rules of orientation from one division to the other and relative to the embryo surface <a name='Olivier:2010jz' class='ref'></a>. Two major morphogenetic events should additionally be singled out: the formation of the enveloping layer (EVL) and the formation of the yolk syncytial layer (YSL).</p>
+
+<!-- ---------------------------------------------------------------------- -->
+</div><div id='6_1_1_'><h3>6.1.1. The Formation of the Enveloping Cell Layer (EVL)</h3>
+<!-- ---------------------------------------------------------------------- -->
+
+<p>The EVL, long considered as an extraembryonic tissue, might rather be homologous to mammals' epidermis as recently pointed by the work of D. Wagner and coll. (Communication, Madison zebrafish meeting 2012). When formed and anchored on the yolk membrane, the EVL will bring a major biomechanical constraint to the blastoderm and to the whole embryo.</p>
+
+<p>EVL differentiation is described to start as early ad the 64-cell stage, and it should be a compartment by the sphere stage (4 hpf). This means that at some point inbetween these two stages, the outer layer of the blastoderm will be characterized by specific dynamics and biomechanical properties distinct from the blastoderm deep cells. Indeed, EVL is revealed as the external layer of the deep cells during the mid-blastula transition. Its cells start flattening along the radial axis and their cell cycle lengthens <a name='Kane:1992gw' class='ref'></a>.</p>
+
+<p>According to Kimmel <a name='Kimmel:1985vc' class='ref'></a>, EVL cell division produces deep cells as late as the \(9^{\mathrm{th}}\) cell cycle. It is shown by injections of lineage tracer dye into single blastomeres in midblastula embryos, which yield clones contributing cells to several tissues. In the example shown in Fig. 2 of <a name='Kimmel:1985vc' class='ref'></a>, <q>a cell of the surface enveloping layer (EVL) of the blastoderm was injected at the 1000-cell stage (3 hpf); and eventually gave rise to three classes of descendants at three separate locations: ... EVL, two adjacent somites, neural cells in the spinal cord</q>. By the sphere stage (4 hpf), EVL cell division orientation is confined to the tangential plane of the blastoderm <a name='Kimmel:1990us' class='ref'></a>. However, mechanisms underlying the EVL differentiation are still debated <a name='Manning:2010ce' class='ref'></a> <a name='Krens:2011ht' class='ref'></a>. <!-- XXXX nadine: A toi de sortir un message de ce debat. Je n'ai pas le temps de revenir voir ces papiers. --></p>
+
+<!-- ---------------------------------------------------------------------- -->
+</div><div id='6_1_2_'><h3>6.1.2. The Formation of the Yolk Syncitial Layer (YSL)</h3>
+<!-- ---------------------------------------------------------------------- -->
+
+<p>By cycle 9 (512-cell stage) starts the <q>mid-blastula transition</q> (MBT) and the zygotic transcription begins. At the same time, the yolk becomes a syncytium. The yolk is described at first as a large sac filled with yolk platelets and fat droplets, which are surrounded by a lipid bilayer membrane and structured by an actomyosin cortex organized soon after the egg is laid down. The yolk becomes a syncytium through one round of cell divisions at the blastoderm margin, fusing half of the mother cells' progeny with the yolk. We then distinguish the yolk syncytial layer (<i>YSL</i>) where the yolk syncytial nuclei (<i>YSN</i>) lie, from the yolk cytoplasmic layer (<i>YCL</i>). The YSL is further divided into the internal and the external YSL. The YSL becomes an active region of transcriptional activity contributing to the dorso-ventral symmetry breaking <a name='Hong:2010ej' class='ref'></a>. The MBT certainly marks major changes in terms of the system's biomechanics. Cells acquire an intrinsic motility, the EVL differentiates and the yolk syncytium cytoskeleton further organizes.</p>
+
+<!-- ====================================================================== -->
+</div><div id='6_2_'><h2>6.2. Blastula Stages and the Onset of Epiboly</h2>
+<!-- ====================================================================== -->
+
+<p>The causes of the blastoderm shape changes after MBT (3 hpf) for the next hour, i.e. until the sphere stage and the first manifestations of epiboly, remain elusive. The qualitative description highlighted by the actual naming of the developmental stages: <q>high</q>, <q>oblong</q>, and <q>sphere</q>, points to the flattening of the blastoderm and suggests that the overall shape of the embryo gets closer to perfectly spherical. An increase of cell-cell tension compared to yolk-cell tension might lead to the flattening of the blastoderm. Other issues might include the EVL differentiation and modification of the yolk cytoskeleton organization and dynamics.</p>
+
+<p>By the sphere stage (4 hpf at 28.5 degree Celsius), the YSL and YCL are well organized with dense networks of microtubules <a name='Kimmel:1985uh' class='ref'></a> <a name='SolnicaKrezel:2002ty' class='ref'></a>. Two different microtubule networks are found in the yolk: one in the anuclear yolk cortical layer, which is oriented along the animal-vegetal axis toward the vegetal pole; the other in the yolk syncytial layer, linking YSN mitotic and interphase microtubules. No microtubules were detected in the deeper, yolk-containing center of the yolk cell, but it might be an experimental artifact <a name='SolnicaKrezel:1994wl' class='ref'></a> (Fig. <a name='zebrafish_10h_review_krezel_1994' class='fig'></a>).</p>
+
+<figure id='zebrafish_10h_review_krezel_1994'>
+	<img src="../../images/zebrafish_10h_review/krezel_1994.png" width="600">
+	<figcaption><strong>Schematic illustration of the changes in the organization of the cortical cytoplasm of the yolk cell in relation to other cell types in zebrafish embryo during epiboly in normal embryos.</strong> The organization of microtubule networks in the YSL and YCL observed in this study is indicated by thin lines. Only part of the blastoderm is shown to reveal the morphology of the yolk cell. The relative sizes of elements are not proportional. (A) The late blastula just before the onset of epiboly (sphere stage, 4.0 h). The blastoderm, composed of the internal deep cells and the superficial enveloping layer (EVL), is positioned atop of the syncytial yolk cell. The animal surface of the yolk cell underlying the blastoderm is flat. Most of the yolk syncytial nuclei (YSN) are in the external yolk syncytial layer (external YSL) vegetal to the blastoderm. The microtubules of the external YSL form a network. The organization of microtubules in the internal YSL at this stage of development is not known. The microtubules of the a nuclear yolk cytoplasmic layer (YCL) radiate from the organizing centers associated with the vegetal-most YSN and are aligned along the animal-vegetal axis. (B) 30 percent epiboly (4.7h). The blastoderm covers 30 percent of the yolk cell that bulged toward the animal pole taking on a dome shape. The external YSL has contracted and exhibits densely packed YSN and a dense network of microtubules. The external YSL is partially covered by the expanding vegetally blastoderm. (C) 50 percent epiboly (5.2h). The blastoderm arrives at 50 percent of the yolk cell latitude and covers almost completely the YSN which is also migrating vegetally and the YSL microtubule network. Only the YCL with its array of the animal-vegetal microtubules is visible vegetally to the blastoderm. (D) 60 percent epiboly (6.5h). Deep cells cover 60 percent of the yolk cell. The YSN nuclei are now visible in front of the blastoderm and lead the epibolic movement. The YSN are often stretched along the animal vegetal axis. The EVL rim is closer to the vegetal pole than the margin of deep cells. The YCL is diminished. Figure and caption from Solnica-Krezel and Driever (1994) <a name='SolnicaKrezel:1994wl' class='ref'></a> </figcaption>
+</figure>
+
+<p>The dynamics of the yolk cytoskeleton including microtubules-based trafficking and tensegrity, and actomyosin-based tension, contraction and elastic properties, should correlate with morphogenetic events and various kinds of signaling including calcium fluxes. A recent publication summarizes this latter issue (Fig. <a name='zebrafish_10h_review_yuen_2012' class='fig'></a>). The schematic view below (Fig. <a name='zebrafish_10h_review_yuen_2012' class='fig'></a>) suggests specific features for the transition during the blastula period corresponding to the first phase of epiboly. We effectively have to account for the so-called doming phase and the respective contribution to this morphogenetic step of the blastoderm EVL tension, deep cells movements, and possibly the yolk cortex tension's relative weakness at the animal pole.</p>
+
+<figure id='zebrafish_10h_review_yuen_2012'>
+	<img src="../../images/zebrafish_10h_review/yuen_2012.png" width="800">
+	<figcaption><strong>Characterization of Ca(2+) signaling in the external yolk syncytial layer during the late blastula and early gastrula periods of zebrafish development. </strong> Timeline to show the major events that occur during: the appearance of the YSL; the division, distribution and movement of the E-YSN; the movement of the I-YSN; and the reported Ca2+ signals generated at or near to the blastoderm margin, during the blastula and early gastrula periods. New data regarding E-YSN clustering, changes in inter-nuclear distance in the E-YSL over time and the generation of E-YSL Ca2+ waves are also shown. MBT, midblastula transition; AP, animal pole; VP, vegetal pole. These features correlating events at different scales does not bring us closer however to an integrated model of zebrafish blastulation and gastrulation. But it indeed provides some hints in the ingredients that the model should take into account. Figure and caption from Yuen et al., 2012 <a name='Yuen:2012fr' class='ref'></a>
+</figcaption>
+</figure>
+
+<p>EVL cells are obviously stretched, and as Rohde (2007) <a name='Rohde:2007ba' class='ref'></a> puts it: <q>It is possible this increase in surface area is not only a passive response to EVL stretching, but also an active component of epiboly. Experiments in <i>Fundulus</i> showing an increase in apical membrane turnover in EVL cells under tension support this idea.</q> This view is also supported by the work of Fink et al. <a name='Fink:1996un' class='ref'></a>.</p>
+
+<p>As shown from lineage tracing experiments <a name='Kimmel:1985vc' class='ref'></a>, the progeny of injected deep cell starts to loose their cohesion during the 4th-hour period of development, indicating their newly acquired intrinsic motility <a name='Warga:1990vu' class='ref'></a>. From the sphere stage to the shield stage, the deep cells undergo radial intercalation. How much of this feature is the cause or consequence of this first phase of epiboly is unclear. Radial intercalation might indeed entrain the blastoderm margin and lead the epiboly movement of both the EVL and YSN. Deep cells might also actively migrate on the yolk and on the EVL to produce a similar phenotypic feature.</p>
+
+<p>The role of the yolk in this first phase of epiboly might be envisioned at different levels. We already suggested a possible relative weakness of the yolk cortex that would contribute to the doming initiation. Then, although the literature does not mention this possibility, we might think about an active role of the yolk content, platelets and lipid drops, if moved by an internal cytoskeleton and molecular motors. To our knowledge, however, none of these are documented in the literature. Certain functions of the yolk cortical layer and its cytoskeleton are documented. Microtubules in the yolk cortical layer (iYSL) are absent in nocodazole treated embryos <a name='SolnicaKrezel:1994wl' class='ref'></a>. Consequently, the yolk cell acquires a more spherical shape and in addition, <q>the YSN are blocked in their movement towards the vegetal pole and do not exhibit elongated shapes. Deep cells move very slowly toward the vegetal pole and almost cover the YSN. Epiboly of the EVL is slower than in control embryos.</q> However, epiboly is not impaired in nocodazole treated embryos and the process robustness indicates the synergistic involvement of multiple factors. Actomyosin contraction at the margin has been involved in the second phase of epiboly, although recent studies dispute its role <a name='Behrndt:2012gy' class='ref'></a>. Phase 1 epiboly would be however rather counteracted by a contraction at the blastoderm margin, with eventually the blastoderm slipping away from the yolk.</p>
+
+<!-- ====================================================================== -->
+</div><div id='6_3_'><h2>6.3. Gastrulation Movements</h2>
+<!-- ====================================================================== -->
+
+<p>Gastrulation <i>per se</i> starts by 6 hpf and is characterized by the involution of the endomesoderm most prominent on the dorsal side, the second phase of epiboly, and the beginning of convergence-extension movements. During gastrulation, it looks like blastoderm cells, YSN, and probably also the extra cellular matrix (ECM) have the same kind of movements. As a rough approximation, all cells and tissues move in a similar fashion. They spread over the yolk toward the vegetal pole (epiboly) and converge toward the dorsal side of the embryo to form the antero-posterior axis (convergence-extension).</p>
+
+<p>However, the detailed observation of cells and tissues kinematics reveals that each tissue has specificities and their mechanical contribution to the gastrulation movements may be different. This issue is of importance to implement a relevant model of gastrulation processes.</p>
+
+<p>Whether cells are active or passive, with homogenous behaviors within a tissue, exerting or not forces on neighboring tissues is difficult to assess. Perturbations, whether genetic, pharmacologic, or mechanic, have been extensively used to discriminate between different scenarios.</p>
+
+<!-- ---------------------------------------------------------------------- -->
+</div><div id='6_3_1_'><h3>6.3.1. Epiboly Phase Two</h3>
+<!-- ---------------------------------------------------------------------- -->
+
+<p>Although epiboly might be considered a continuous process, it probably relies on different processes distinguishing Phase 1 from Phase 2. Phase 2 epiboly coincides with the onset of gastrulation <i>per se</i>. Again, gastrulation and epiboly seem robust to a number of perturbations and it seems possible to broadly decorrelate different processes contributing to normal gastrulation: epiboly, hypoblast formation/internalization, and convergence-extension.</p>
+
+<p>What the driving force of epiboly is, however, has not yet received a definitive answer. Several hypotheses have been debated and it is not clear whether any of them should be definitely included or excluded. In fact, the epiboly process seems so robust that it very likely combines several of these hypotheses, which might even compensate for each other and synergize to produce the full-fledged phenomenon. Finally, epiboly is described for the YSN, deep cells, and EVL, and the three tissues seem to be able to proceed in part independently. We review here some of the mechanisms thought to underlie the vegetal-oriented displacement of the EVL, deep cells, and eYSL margin:</p>
+
+<ul>
+  <li>migration of EVL cells on the yolk</li>
+  <li>active intercalation in the EVL or active EVL surface increase</li>
+  <li>microtubule-driven vegetal-ward movement of YSN</li>
+  <li>endocytosis in the external YSL</li>
+  <li>active contraction of the actomyosin ring-like structure in the eYSL margin and EVL margin</li>
+  <li>friction force induced by a retrograde flow in the eYSL</li>
+  <li>continuous internalization treadmill of deep cells</li>
+</ul>
+
+<h4>Possible roles of the YSL in driving epiboly</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>The first explanation of epiboly in teleosts was proposed by J.P. Trinkaus in 1951 <a name='Trinkaus:1951ue' class='ref'></a>. He ruled out suppositions that epiboly was due to differential growth mechanisms or to a contractile activity of the yolk surface (the <q>yolk gel layer</q> idea). Instead, he favored the hypothesis that the so-called periblast (now called the internal yolk syncytial layer iYSL) is responsible for the cells' <i>mass movements</i>. This claim mainly relied on microdissection experiments in which the blastoderm was removed, leaving the periblast exposed. In such cases, the periblast still completed epiboly until the blastopore closure. Later studies <a name='Trinkaus:1967uz' class='ref'></a> <a name='Trinkaus:1984wu' class='ref'></a> confirmed this insight and designated the YSL as the driving force of the Fundulus epiboly. Several features of the YSL dynamics have been investigated for their possible involvement in driving epiboly, including (i) endocytosis in the eYSL, and (ii) microtubule-driven YSN movement:</p>
+
+<ul>
+  <li>(i) Endocytosis has been observed in Fundulus just below the advancing margin of the blastoderm <a name='Betchaku:1978hm' class='ref'></a>, thus in the eYSL only. In the zebrafish, the endocytotic process was observed even in the absence of YSL microtubules <a name='SolnicaKrezel:1994wl' class='ref'></a>. It is however unlikely that they play an active role in the epiboly of the margin, as the endocytic vesicles integrate the surface of the eYSL more vegetally and do not integrate the surface of the iYSL, thus not contributing to its expansion <a name='Betchaku:1986tw' class='ref'></a>.</li>
+  
+  <li>(ii) Even if microtubules are disrupted by nocodazole treatment, deep cells and EVL still performs partial epiboly whereas YSN stay in the 40 percent region. Thus YSN movement toward the vegetal pole is not a candidate to drive tissue epiboly <a name='SolnicaKrezel:1994wl' class='ref'></a>.</li>
+</ul>
+
+<h4>Possible roles of the EVL in driving epiboly</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>The possibility that the EVL either migrates over the yolk surface, or rearranges, or contracts, and by doing so, contributes in different ways to epiboly, has also been discussed. Filopodial activity has been observed on the apicolateral surfaces of the EVL cells at the EVL/eYSL interface. These microspike-like structures suggest that EVL may have an active behavior at the margin <a name='Zalik:1999tx' class='ref'></a>. However, a strong cohesion of the yolk membrane and EVL margin, with the presence of tight junctions seems to exclude the migration of EVL cells on the yolk membrane <a name='Betchaku:1978hm' class='ref'></a>. Keller and Trinkaus observed cell rearrangements in the enveloping layer suggesting that the EVL may be an active component of epiboly <a name='Keller:1987va' class='ref'></a>. EVL cells, however, do not perform large-scale rearrangements during epiboly. In particular, nothing has been described so far like the <q>rosette</q> scenario in <i>Drosophila</i> <a name='Blankenship:2006jg' class='ref'></a>. We interpret that epithelia that perform active rearrangements may have a lateral-to-apico/basal length ratio much closer to 1 than is observed in the EVL. Finally, an actomyosin contraction in the YSL induces EVL cell shape changes <a name='Koppen:2006fy' class='ref'></a>, correlating with margin contraction, and the resulting constriction has long been postulated to be the driving force of epiboly.</p>
+
+<h4>The purse-string scenario, contraction at the margin of the eYSL and/or EVL margin</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>The presence of F-actin-based structures at the margin after 50 percent epiboly was described as follows by Cheng <a name='Cheng:2004ff' class='ref'></a>:</p>
+
+<blockquote>
+  <q>They are composed of two ring-like F-actin structures that form at the deep cell and enveloping layer margins of the blastoderm and a punctate actin band that develops in the external yolk syncytial layer. Treatment with cytochalasin B or the calcium chelator dibromo-BAPTA results in the disruption of all three of these actin-based structures, leading to the slowing or immediate arrest of epiboly, respectively, followed by a failure of yolk cell occlusion and the eventual lysis of the embryo through the vegetal pole region.</q>
+</blockquote>
+
+<p>These observations suggest the role of a contractile ring in the occlusion of the vegetal portion of the yolk cell during the Phase 2 of epiboly <a name='Cheng:2004ff' class='ref'></a>. A hypothesis is that the Phase 2 epiboly is driven by an actomyosin contraction at the margin of the EVL. The local density of actin at the EVL margin correlates with its deformation. And the process involves actin and myosin 2 recruitment within the yolk cytoplasm, as observed in Drosophila for the dorsal closure <a name='Koppen:2006fy' class='ref'></a>. This scenario has been recently challenged and the state of the art in the domain now comes from the following works, described next.</p>
+
+<h4>A friction force induced by a retrograde flow in the eYSL</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>A recent study hypothesized the existence of an additional and previously undescribed force that would pull the EVL-yolk margin vegetally by a flow-friction mechanism <a name='Behrndt:2012gy' class='ref'></a>. This mechanism is shown to be sufficient to drive epithelial epiboly after 50 percent epiboly because, in mechanically constrained cylindrical embryos where a purse-string scenario is inefficient, the margin is still converging to the vegetal pole. We propose however that radial intercalation in the epiblast could explain the sustained epiboly in cylindrical embryos. This hypothesis might be tested by in vivo imaging and assess the position of the blastoderm margin compared to the EVL margin.</p>
+
+<h4>Possible role of deep cells dynamics in driving late epiboly</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>Epiboly might emerge from the behavior of deep cells. Relevant behaviors include cell intercalation, radial and/or medio-lateral through convergence and extension, and cell involution at the margin. However, Trinkaus's work in Fundulus led to the idea that deep cells are not responsible for the late epiboly (<q>Epiboly of Fundulus, and presumably of teleosts generally, does not depend on the deep cells.</q> <a name='Trinkaus:1984wu' class='ref'></a>). Indeed, colchicine treatment of the Fundulus gastrulae, blocking microtubules polymerization, impaired the deep cells mechanical properties, and yet the epiboly still performed normally <a name='Trinkaus:1983bm' class='ref'></a>. Moreover, the possibility that hypoblast involution contributes to epiboly was excluded by authors interpreting that involution is not a continuous process throughout epiboly <a name='Keller:2008km' class='ref'></a>. Our observations suggest that this conclusion might be revised (e.g. Movie <a name='videos_070927b' class='fig'></a>). We propose that a continuous internalization treadmill of hypoblastic cells might both drive deep cells epiboly and entrain the EVL.</p>
+
+<p>In addition, other work mentions deep cells' intercalation as contributing to epiboly. Epiblast deep cells intercalate radially from the interior layer to the sub-EVL layer. They change their shape to actively drive the epiboly. Compromised E-cadherin function exhibit reduced radial cell intercalation movements <a name='Montero:2005kq' class='ref'></a>. An E-cadherin mutant, <q>half-baked</q> (<i>hab</i>), expressed in a radial gradient in the nonaxial epiblast, induce cell phenotype that do no maintain their intercalated position, and <q>de-intercalate</q> toward their previous interior layer <a name='Kane:2005iva' class='ref'></a>. In addition, <i>hab</i> mutation stops margin epiboly but it hardly affects internalization and convergence extension. Moreover EVL and YSN produce unaffected epibolic movement, so they do not need proper deep cell epiboly <a name='Kane:1996uk' class='ref'></a>.</p>
+
+<figure id='videos_070927b'>
+  <video src="../../videos/070927b.ogg" width="800" controls></video> 
+  <figcaption><strong>Time-lapse sequence showing the tail bud closure at the vegetal pole.</strong> The left part of the video shows the projection of a slice delimited by the two planes visible on the right part. On the top left, internalization of the epiblast seems to occur, after the end of internalization described in the literature.</figcaption>
+</figure>
+
+<!-- ---------------------------------------------------------------------- -->
+</div><div id='6_3_2_'><h3>6.3.2. Hypoblast Formation</h3>
+<!-- ---------------------------------------------------------------------- -->
+
+<p>The relative movements of the YSL, deep cells, and EVL leave open the possibility that one is entraining the others. D'Amico and Cooper showed that the YSN and blastoderm cells' movements during gastrulation are similar <a name='DAmico:2001ic' class='ref'></a>. C.P. Heisenberg excluded however the possibility that the YSNs pulled the hypoblast, by showing that they move behind the hypoblast anterior border <a name='Carvalho:2009et' class='ref'></a>. A more systematic quantitative study would certainly be useful to revisit these issues, based on <i>in vivo</i> imaging, such as shown in Movies <a name='Wnt11_functions_in_gastrulation_by_controlling_cell_cohesion_through_Rab5c_and_E_cadherin_movieWT' class='fig'></a> (from <a name='Ulrich:2005jz' class='ref'></a>) and <a name='Zebra_Involution_Montero_2004' class='fig'></a> (from <a name='Montero:2004hh' class='ref'></a>), which prompt a number of questions about the dynamics of hypoblast involution, the relative movements of deep cells and EVL, or the cells' neighborhood rearrangements at the onset of gastrulation.</p>
+
+<figure id='Wnt11_functions_in_gastrulation_by_controlling_cell_cohesion_through_Rab5c_and_E_cadherin_movieWT'>
+  <video src="../../videos/Wnt11_functions_in_gastrulation_by_controlling_cell_cohesion_through_Rab5c_and_E_cadherin/movieWT.ogg" width="500" controls></video> 
+  <figcaption><strong>Time-lapse sequence showing the movement of ectodermal precursor (epiblast) cells and mesendodermal precursor (hypoblast) cells in the shield region of wild-type embryos for 90 min at the onset of gastrulation.</strong> Video from <a name='Ulrich:2005jz' class='ref'></a></figcaption>
+</figure>
+
+<figure id='Zebra_Involution_Montero_2004'>
+  <video src="../../videos/in_vivo/Zebra/Involution_Montero_2004.ogg" width="500" controls></video>
+  <figcaption><strong>Time-lapse video of cell movements at the blastoderm margin in the shield region, from the shield stage.</strong> The video was recorded for a total of 123min at 2.5-min time intervals. Sagittal views. Frame size: 206\(\times\)206\(\mu\)m. Video from <a name='Montero:2004hh' class='ref'></a></figcaption>
+</figure>
+
+<p>The general description of germ layers formation and gastrulation movement is still qualitative and remains vague in terms of the individual cell behaviors underlying morphogenetic events, as stated in Montero et al. <a name='Montero:2005kq' class='ref'></a>:</p> 
+
+<blockquote>
+  <q>In zebrafish, the first mesendodermal progenitors are induced at the margin of the blastoderm when the blastoderm starts to spread over the yolk cell (dome stage) (for reviews, see Kimelman and Schier, 2002; Warga and Stainier, 2002). When the blastoderm covers about half of the yolk cell (50 percent epiboly), the germ ring forms as a local thickening at the margin of the blastoderm. Germ ring formation is accompanied by convergence movements of blastodermal cells, leading to a compaction of cells at the dorsal side of the germ ring, where the embryonic organizer or <q>shield</q> forms (Warga and Kane, 2003). This is also the time, when mesendodermal progenitors within the germ ring begin to internalize by moving first to the margin of the blastoderm, then downwards in direction of the yolk sac and eventually migrating back towards the animal pole of the gastrula (Warga and Kimmel, 1990).</q> 
+</blockquote>
+
+<h4>Ingression and involution</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>The cell behaviors underlying the formation of the hypoblast (mesendodermal layer) are described as a combination of ingression and involution. It is however not clear that the concept of <i>involution</i> described by Trinkaus <a name='Trinkaus:1996ju' class='ref'></a> applies to the gastrulating zebrafish hypoblast:</p>
+
+<blockquote>
+  <q><i>Involution</i> is the flowing of a sheet of cells over the edge of an inpocketing, where invagination has occurred, such as at the blastopore during amphibian gastrulation.</q>
+</blockquote>
+
+<p>Trinkaus believes that <i>Fundulus</i> does not perform a <q>classical involution</q> as observed in <i>Amphibia</i>. A cohesive sheet of cells is supposed to internalize by involution in opposition to <i>ingression</i> for <q>individuals or small clusters of individuals</q> that <q>sink inside as individuals, changing their relations to each other in the process</q>. The motility pattern is different. In the involuting tissue, there is no internal topological rearrangement between the cells. Ingressing cells have extensive topological rearrangements and may even be mixed with the non-internalizing tissue.</p>
+
+<p>In the case of the zebrafish gastrulation, we use the involution concept as an archetypal description characterizing the motion of a collective sheet of cell plunging toward the yolk mass and turning back toward the animal pole. But we interpret that cell behaviors leading to the hypoblast formation, their specific features depending on the position along the dorso ventral axis, and the processes that segregates the hypoblast and the epiblast, all remain open questions. We can indeed find studies concluding about hypoblast ingression and others rather suggesting involution. D'Amico and Cooper <a name='DAmico:2001ic' class='ref'></a> suggest that ingression is not the dominant mode of internalization. This is the interpretation derived from 4D confocal imaging of 114 fluorescent-dextran labeled cells internalizing at the dorsal marginal zone. <q>98 percent of the cells entered the hypoblast within approximately three cell diameters from the edge of the margin</q>. 70 over 114 cells entered the hypoblast within a 1-cell diameter from the margin. This argument of the distance from the margin where cells enter the hypoblast does not so clearly favor the internalization at least on the dorsal side for the prechordal plate population in the shield. Montero et al. <a name='Montero:2005kq' class='ref'></a> observed that:</p>
+
+<blockquote>
+  <q>Notably, all of the prechordal plate progenitor cells – out of the 70 epiblast cells we analyzed in dorsal/axial of the germ ring – delaminated not more than 4-5 cell diameters away from the tip of the germ ring; this indicates that prechordal plate progenitor cell internalization is restricted to the marginal-most region of the germ ring.</q>
+</blockquote>
+
+<h4><i>MZoep</i> mutants</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>The investigation of hypoblast formation defects in <i>MZoep</i> mutants devoid of both the maternal and zygotic components of the Nodal pathway indicate that hypoblast cells rather ingress and point to the cell autonomy of the process <a name='CarmanyRampey:2001uy' class='ref'></a>. The ingression hypothesis is also favored in Montero, 2005 <a name='Montero:2005kq' class='ref'></a>: internalizing cells delaminate as single cells within more than <q>4-5 cell diameters away from the tip of the germ ring</q>.</p>
+
+<p>In <i>MZoep</i> mutants internalization does not happen at all. <i>MZoep</i> mutant cells transplanted to the margin of wild-type embryos internalize normally but do not migrate toward the animal pole. In the reverse transplantation experiment WT transplanted cells internalize properly and express mesendodermal markers.</p>
+
+<blockquote>
+  <q>Interestingly, in <i>MZoep</i> embryos the wild-type cells internalized by directly moving deep toward the yolk without first moving to the most vegetal region of the margin, as in wild-type embryos.</q>
+</blockquote>
+
+<p>The mechanisms of this individual ingression are however unknown. We interpret that this observation does not necessarily imply an intrinsic motility of the cells. The WT transplanted cell diving to the yolk might be excluded by the MZoep host cells as they intercalate. Such a hypothesis might be tested in the context of <i>cadh1</i> loss of function where impaired radial intercalation might perturb the process. The behavior of WT cells in <i>MZoep</i> mutants is reminiscent of the behavior of cells with constitutive activity of the nodal pathway when transplanted in a wild type background <a name='David:2001to' class='ref'></a>. This suggests that the major issue might be some differential between the donor and the host in terms of adhesion, polarity, intrinsic motility. A quantitative assessment of these features might help highlighting this point.</p>
+
+<h4>Timing and separation</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>In addition to the mode of internalization: involution or ingression, the timing of involution, meaning onset and duration of the process are not so precisely documented. The onset of internalization might be indicated by the formation of the germ ring that becomes visible almost simultaneously all around the embryo, within 15min <a name='Warga:1990vu' class='ref'></a>. The duration of internalization is also an issue and quantitative data is largely lacking. According to Keller et al. <a name='Keller:2008km' class='ref'></a>, involution is achieved through an embolic phase. Our observations from in vivo imaging suggest however that involution might go on throughout the whole gastrulation. This hypothesis is very likely to have consequences on the dynamics of epiboly that we should be able to test with our modeling strategy.</p>
+
+<p>Hypoblast involution means that at some point, the epiblast and the hypoblast are distinct compartments. Again, the modalities of this separation should be revealed by the cell lineage data. If the relative movements of the two cell populations far from the margin suggest that there is probably no passage from one to the other far from the blastoderm margin, segregation close to the margin depending on the involution/ingression movements might lead to a fuzzy border. In addition, hypoblast needs to be separated in endoderm and mesoderm. The former is described to involute first, have a cell autonomous fate, and spread over the yolk through a random walk <a name='David:2001to' class='ref'></a>.</p>
+
+<h4>Later progression</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>How cells behave after internalization/ingression to progress throughout epiboly is another issue. Three distinct populations with relatively autonomous behaviors progress both anteriorly toward the animal pole and posteriorly to reach the tail bud: the endoderm and the mesoderm that form the hypoblast, and the ectoderm. The endoderm is a mono-layer of highly motile and rather sparse mesenchymal cell (Movie <a name='6_Sdf1_Cxcr4_signaling_controls_the_dorsal_migration_of_endodermal_cells_during_zebrafish_gastrulation_movie1' class='fig'></a> from <a name='Mizoguchi:2008di' class='ref'></a>). We hypothesize that the kind of contact inhibition observed in Drosophila cells might explain the dispersed pattern of endodermal cells <a name='Davis:2012gq' class='ref'></a>. The mesoderm becomes regionalized in sub-populations with distinct behaviours and fates: the prechorale plate and the notochord at the dorsal midline, the paraxial mesoderm, lateral and ventral mesoderm. The mesendodermal layer has been described to migrate collectively with and intrinsic directionality given through cell contacts <a class='footnote' title='{Dumortier:2012jk}'></a>. The ectoderm is the neural ectoderm dorsally and non-neural ectoderm ventrally. The refinement of tissues regionalization with distinct fates should early on correlate with distinct cell behaviors that have not been quantified so far.</p>
+
+<figure id='6_Sdf1_Cxcr4_signaling_controls_the_dorsal_migration_of_endodermal_cells_during_zebrafish_gastrulation_movie1'>
+  <video src="../../videos/Sdf1_Cxcr4_signaling_controls_the_dorsal_migration_of_endodermal_cells_during_zebrafish_gastrulation/movie1.ogg" width="800" controls></video> 
+  <figcaption><strong>Time-lapse movie of migrating endodermal cells in a Tg(sox17:EGFP) transgenic embryo from 65 percent to 90 percent epiboly stages.</strong> Lateral views with dorsal to the right. Video and caption from <a name='Mizoguchi:2008di' class='ref'></a>.</figcaption>
+</figure>
+
+<!-- ---------------------------------------------------------------------- -->
+</div><div id='6_3_3_'><h3>6.3.3. Convergence-Extension</h3>
+<!-- ---------------------------------------------------------------------- -->
+
+<p>As gastrulation proceeds, movements of convergence toward the dorsal side and extension of the tissues along the animal/vegetal becoming the anterior/posterior axis increase and culminate around the tailbud closure. Convergence-extension leads to a marked dorso-ventral asymmetry that might have been initiated early on by the maternal distribution of the Nodal ligand Sqt, reinforced by the asymmetric distribution of nuclear \(\beta\)-catenine at the onset of zygotic activation and then morphologically obvious with the formation of the embryonic shield <a name='Gore:2005fj' class='ref'></a>.</p>
+
+<p>Convergence extension movements seem to be largely independent from other gastrulation movement as suggested by the phenotype of <i>hab</i> mutants, defective in the expression of E-cadherin, where epiboly stops, however hardly affecting CE <a name='Kane:1996tl' class='ref'></a>. A combination of cell behaviors is hypothesized to contribute to convergence with distinct features from ventral to dorsal: individual migration, cohesive migration, intercalation <a name='Tada:2012ep' class='ref'></a>.</p>
+
+<p>In addition, although all the tissues (epiblast, mesoderm, endoderm) display convergence extension movements, they do so with their respective dynamics thus having relative movements. The movements of the YSL nuclei are particularly intriguing as they are achieved in the absence of cell boundaries. It was hypothesized that the microtubule arrays that interlink YSL nuclei are necessary to achieve the process <a name='SolnicaKrezel:1994wl' class='ref'></a>. The correlation of YSL nucleus movements and blastoderm cell movements has been extensively studied <a name='DAmico:2001ic' class='ref'></a>. Hypoblast cells do not migrate on a passive YSL as it would send YSN in the opposite direction. YSL can be active, either be autonomously converging, or actively reacting to DC migration. Blastoderm cells and more precisely the large endodermal cells are migrating over the yolk membrane separating them from the yolk nuclei, pointing to their possible influence on each other <a name='Warga:1999wq' class='ref'></a>. As D'Amico and Cooper put it <a name='DAmico:2001ic' class='ref'></a>:
+</p>
+
+<blockquote>
+  <q>Epiboly of the blastoderm has been shown to be at least partially dependent on the normal epiboly of the YSL (Trinkaus, 1984b; Str&auml;hle and Jesuthasan, 1993; Solnica-Krezel and Driever, 1994; Kane et al., 1996; Zalik et al., 1999). An alternative hypothesis is that the motility of deep cells in the blastoderm is responsible for directing the YSL nuclear movements. Is it possible that cells migrating on the surface of the YSL could somehow drag YSL nuclei with them, even though the plasma membrane of the yolk cell physically separates them? Although it is formally plausible that a bulk flow of YSL membrane and YSL cytoplasm could be generated by migrating cells collectively pulling the YSL membrane, this theoretical possibility is unsupported by numerous observations. Previous studies have shown that deep cells migrate individually, in different directions, and independently of underlying YSL nuclei (Warga and Kimmel, 1990; Solnica-Krezel and Driever, 1994; Wilson et al., 1995; Trinkaus, 1996; Warga and N&uuml;sslein- Volhard, 1999). Moreover, it is known that the epiboly movements of the YSL nuclei in both Fundulus and zebrafish are not dependent on the overlying cells of the blastoderm (Trinkaus, 1984a,b, 1993; Kane et al., 1996). Thus, it seems unlikely that the convergentextension movements of YSL nuclei in zebrafish embryos are driven by the convergent-extension movements of deep cells in the overlying blastoderm. A third possibility is that, despite their similarities, the collective movements of deep cells and YSL nuclei are largely autonomous of each other.</q>
+</blockquote>
+
+<p>In addition to convergence extension movements, oriented cell division, regulated by the planar cell polarity pathway, was hypothesized to be a driving force for axis elongation <a name='Gong:2004bw' class='ref'></a> <a name='Segalen:2009fg' class='ref'></a>. We expect our modeling strategies to help assess the respective contribution of protrusive activity and cell division orientation to the elongation process.</p>
+
+</div>
+

@@ -1,0 +1,122 @@
+.Introduction 1
+.	A Historical Timeline of Developmental Biology 1
+.		The Science of How Organisms Form 1
+.		First Theories: Epigenesis, Preformation and Spontaneous Generation 1
+.		The Rise of Experimental Embryology 1
+.		Developmental Genetics 1
+.		Molecular Genetics 1
+.		Cell Biomechanics 1
+.	Integrating Developmental Mechanics and Genetics: The MECAGEN Project 1
+.	Methodological Considerations 1
+.		The Scientist in the Observation-Hypothesis-Experiment Loop 1
+.		Designing Tools to Perceive, Conceive and Manipulate 1
+.		Reality Check: Validating the Hypotheses 1
+.	Overview of this Dissertation 3
+.State of the Art and Principles of Embryo Development Models 1
+.	A Review of Theoretical Models of Development 1
+.		Early Attempts 1
+.		Reaction-Diffusion Systems 1
+.		Morphogen Gradients and Positional Information 1
+.		Epithelial Cell Shaping and Division Patterns 1
+.		Differential Adhesion and Cell Sorting 1
+.	Common Modeling Principles: Toward an Integrated Theory of Development 1
+.		Dealing with Multiple Levels of Organization 1
+.		Relating One Level to the Next: The Problem of Emergence 1
+.		Identifying Custom Laws at Each Level 1
+.		Summary Table 1
+.	Overview of the MECAGEN Modeling Principles 3
+.MECAGEN Model of Cell Biomechanics 1
+.	State of the Art in Biomechanical Modeling 1
+.		The Many Viewpoints on "Soft Matter": From Continuous-Space to Discrete-Element Models 4
+.		Particle-Based Physics 1
+.	Hypotheses 1
+.		Generic Cell-Centered Equation of Motion 1
+.		Cell Neighborhood 4
+.		Interaction Potential 1
+.		Cell Specific Behavioral Forces 1
+.MECAGEN Model of Molecular and Genetic Regulation and Signaling 1
+.	Intra-Cellular Gene/Protein Reactions 1
+.		Protein-Protein Interactions 1
+.		Synthesis by Encoding Genes 1
+.		Degradation by the Molecular Environment 1
+.		Cis-Regulatory Boolean Model of Gene Expression 1
+.	Signal Secretion and Transduction Modules 1
+.		Signal Secretion Module 1
+.		Signal Transduction Module 1
+.	Extra-Cellular Reactions, Transport and Diffusion 1
+.	Illustration on Artificial GRN Motifs 4
+.MECAGEN Model of Mechanic-Genetic Coupling 1
+.	Toward a Cell Behavior Ontology 1
+.		Cell Behavior Ontology 1
+.		Mechanotransduction Input of the GRN 1
+.		Cell Adhesion 1
+.		Cell Polarization 1
+.	Waddingtonian Timeline Specification 1
+.		Cell Types 1
+.		Ligand Sinks and Sources 1
+.		Passive Force's Adhesion Modulation 1
+.		Active Cell Behavior Specification 1
+.	Illustration on Artificial Cell Sorting 1
+.		Cell Sorting: Revisiting a Classical Problem 4
+.		Individual Cell Migration 4
+.Review of the Zebrafish Early Developmental Mechanics 1
+.	Cleavage Stages, Formation of the EVL and YSL 1
+.		The Formation of the Enveloping Cell Layer 1
+.		The Formation of the Yolk Syncitial Layer 1
+.	Blastula Stages and the Onset of Epiboly 1
+.	Gastrulation Movements 1
+.		Epiboly Phase Two 4
+.		Hypoblast Formation 4
+.		Convergence-Extension 1
+.Experimental Reconstruction of the Zebrafish Early Development 1
+.	Bioemergences Reconstruction Workflow 1
+.		Embryo Preparation and Acquisition 1
+.		Cell Lineage Reconstruction Workflow 4
+.		Post Processing and Exploitation 4
+.	Reconstructing In Toto Deformation Fields 1
+.		Manual Registration 1
+.		Voxel Quality Evaluation 1
+.		Blending Function 1
+.		Deformation Fields 1
+.		Blended Deformation Fields 1
+.Simulated Reconstruction and Model Validation Through Case Studies 1
+.	Investigating the Yolk Biomechanical Properties 1
+.		Hypotheses and Model 1
+.		Simulation, Parameter Space and Validation 4
+.		Discussion 1
+.	Cell Proliferation Rate Along the Cell Lineage 1
+.		Hypotheses and Model 1
+.		Simulation, Parameter Space and Validation 4
+.		Discussion 1
+.	Shaping the Zebrafish Blastula 1
+.		Hypotheses and Model 4
+.		Simulation, Parameter Space and Validation 4
+.		Discussion 1
+.	Cell Behaviors in the Enveloping Cell Layer Compartment 1
+.		Hypotheses and Model 1
+.		Simulation, Parameter Space and Validation 4
+.		Discussion 1
+.	Intercalation Patterns 1
+.		Hypotheses and Model 4
+.		Simulation, Parameter Space and Validation 4
+.		Discussion 1
+.	Gastrulation 1
+.		Hypotheses and Model 1
+.		Simulation, Parameter Space and Validation 1
+.		Discussion 1
+.Conclusion 1
+.	Criteria for a "Good" Model 1
+.		Similarities between Variables and Concepts 1
+.		Computational Feasibility 1
+.	Choices Concerning the Biomechanics 1
+.		Spatial Neighborhood 1
+.		Interaction Potential and Behavioral Forces 1
+.		External Objects 1
+.		Single-Cell vs. Subcellular Mechanics 1
+.		Spherical-Voronoi Approximation 1
+.	Choices Concerning the Molecular/Genetic Regulation and Signaling 1
+.	Assessment of the Case Studies 1
+.	Future Work 1
+.		Portability to Other Animal Models 1
+.		Interactive Exploration of Parameter Space 1
+.		Toward an "Evo-Devo" Perspective 1

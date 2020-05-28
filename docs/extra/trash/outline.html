@@ -1,0 +1,201 @@
+	<script type="text/javascript">
+			 
+			jQuery.noConflict();
+			
+			//jQuery(window).bind('scroll', 
+			jQuery(window).bind( 'mousewheel DOMMouseScroll',
+				function() {
+						
+						//console.log("position "+jQuery(document).scrollTop());
+						
+						if(currentitem-1>0){
+							var idpreviousprevious = ids[currentitem - 2];
+						}
+						
+						if(currentitem>0){
+							var idprevious = ids[currentitem - 1];
+						}
+						var idcurrent = ids[currentitem];
+						
+						if(currentitem+1<ids.length){
+							var idnext = ids[currentitem + 1];
+						}
+						
+						if(currentitem+2<ids.length){
+							var idnextnext = ids[currentitem + 2];
+						}
+						
+						console.log("idcurrent "+idcurrent+" idnext "+idnext+" idnextnext "+idnextnext + " idprevious "+idprevious+" idpreviousprevious "+idpreviousprevious+" buzy "+document.buzy_updating);
+						
+						var bufferdown = 200;
+						var bufferup = 300;
+						
+						console.log("scrolltop content "+jQuery('#content').scrollTop() );
+						console.log("position top noscroll "+jQuery('#content_noscroll_wrapper').position().top );
+						console.log("content height  "+jQuery('#content').height() );
+							
+						console.log(" pos next "+ (jQuery("#"+idnext).position().top - bufferdown));
+							
+						console.log(" pos previous "+ (jQuery("#"+idcurrent).position().top - bufferup));
+						
+						// if element has scrolled off the screen, even if other elements exist below it
+						if ( 
+							(jQuery('#content').scrollTop() > jQuery("#"+idnext).position().top - bufferdown)
+								&& (document.buzy_updating==0) && (currentitem + 2 < ids.length) && 0
+							){
+								
+								console.log("load next item");
+								document.buzy_updating=1;
+								disable_scroll();
+								
+								//console.log( "pre   "+jQuery(document).scrollTop());
+								
+								jQuery("#"+idnextnext).load(
+										pages[currentitem+2]+" #"+idnextnext+" > *",function ()   {
+											//console.log(idnextnext+"  loaded");
+											MathJax.Hub.Queue(["Typeset",MathJax.Hub,idnextnext]);
+
+											//remove n-1 item
+											//update locked pos position to anticipate removal
+											MathJax.Hub.Queue(
+												function(){
+													
+													if(currentitem>0){
+														
+														var currentpos = jQuery('#content').scrollTop();
+														//var currentpos = jQuery("#"+idnext).position().top - bufferdown;
+														var pheight = jQuery("#"+idprevious).height();
+														document.getElementById( idprevious ).innerHTML="";
+														jQuery('#content').scrollTop(currentpos-pheight);
+
+														//console.log(idprevious+"  removed")
+													}
+
+												}
+											);
+											
+											
+											
+											
+											
+											//when previous op are over, we stop locking
+											MathJax.Hub.Queue(
+												function(){
+													//console.log(idnextnext+" mathjaxed");
+
+													currentitem += 1;
+													document.buzy_updating=0;
+													//console.log("post  "+ jQuery(document).scrollTop());
+													setTimeout(
+														function(){
+															enable_scroll();
+														}
+														, 1000
+													);
+													
+													
+													//alert("Hello");
+													//document.getElementById("toc").click();
+													//enable_scroll();
+													//document.getElementById("toc").onclick();
+													//console.log( "post2 "+jQuery(document).scrollTop());
+												}
+											);
+										
+											/*
+											MathJax.Hub.Queue(
+												function(){
+
+													var contentheight = jQuery("#"+ids[currentitem-1]).height()+ jQuery("#"+ids[currentitem]).height()+ jQuery("#"+ids[currentitem+1]).height();
+
+													console.log("set content height : "+ contentheight);
+
+													jQuery('#content').height( contentheight );
+
+
+												}
+											);*/
+											
+										}
+								);
+						}
+						else if( 
+							(jQuery('#content').scrollTop() < jQuery("#"+idcurrent).position().top - bufferup)
+								&& (document.buzy_updating==0) && (currentitem - 1 > 0) && 0
+						){
+								
+								console.log("load previous item");
+								document.buzy_updating=1;
+								
+								disable_scroll();
+								
+								document.getElementById( idpreviousprevious ).style.position="absolute";
+								document.getElementById( idpreviousprevious ).style.right="30000px";
+						
+						
+								jQuery("#"+idpreviousprevious).load(
+									pages[currentitem-2]+" #"+idpreviousprevious+" > *",function ()   {
+										
+										//console.log(idpreviousprevious+"  loaded");
+										MathJax.Hub.Queue(["Typeset",MathJax.Hub,idpreviousprevious]);
+										
+										//remove n+1 item
+										MathJax.Hub.Queue(
+											function(){
+												if(currentitem+1<ids.length){
+													jQuery("#"+idnext).empty();
+													//console.log(idnext+"  removed")
+												}
+
+											}
+										);
+												
+										
+										//when previous op are over, we stop locking
+										MathJax.Hub.Queue(
+											function(){
+												//console.log(idpreviousprevious+" mathjaxed");
+												
+												document.getElementById( idpreviousprevious ).style.position="static";
+												var currentpos = jQuery('#content').scrollTop();
+												var ppheight = jQuery("#"+idpreviousprevious).height();
+												jQuery('#content').scrollTop(currentpos+ppheight);
+
+
+												currentitem -= 1;
+												document.buzy_updating=0;
+												
+												//enable_scroll();
+												
+												setTimeout(
+														function(){
+															enable_scroll();
+														}
+														, 1000
+													);
+											}
+										);
+										
+										/*
+										MathJax.Hub.Queue(
+											function(){
+												
+												var contentheight = jQuery("#"+ids[currentitem-1]).height()+ jQuery("#"+ids[currentitem]).height()+ jQuery("#"+ids[currentitem+1]).height();
+												
+												console.log("set content height : "+ contentheight);
+
+												jQuery('#content').height( contentheight );
+
+
+											}
+										);
+										*/
+										
+									}
+								);
+						}
+					
+				}		
+			);       
+			
+		</script>

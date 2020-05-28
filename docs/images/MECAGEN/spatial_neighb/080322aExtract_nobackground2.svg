@@ -1,0 +1,1658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg version="1.2" baseProfile="tiny" viewBox="0 0 9830 7925" preserveAspectRatio="xMidYMid" fill-rule="evenodd" clip-path="url(#presentation_clip_path)" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:smil="urn:oasis:names:tc:opendocument:xmlns:smil-compatible:1.0" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xml:space="preserve">
+ <defs>
+  <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
+   <rect x="0" y="0" width="9830" height="7925"/>
+  </clipPath>
+ </defs>
+ <g id="id2" class="Master_Slide" clip-path="url(#presentation_clip_path)">
+  <g id="bg-id2" visibility="visible" class="Background">
+   <rect fill="none" stroke="none" x="0" y="0" width="9830" height="7925"/>
+  </g>
+  <g id="bo-id2" visibility="visible" class="BackgroundObjects"/>
+ </g>
+ <g id="id1" class="Slide" visibility="visible" clip-path="url(#presentation_clip_path)">
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="5799" y="5488" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="6951" y="6238" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="5763" y="6951" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="1263" y="7763" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="4226" y="7699" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="6924" y="7776" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="8461" y="6763" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="8838" y="5274" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="7638" y="51" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="9538" y="124" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="9226" y="2226" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="9063" y="3838" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="8063" y="2951" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="8113" y="1376" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="6063" y="1061" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="88" y="1726" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="1363" y="1101" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="2576" y="138" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="2749" y="1001" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="4638" y="1124" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="949" y="6524" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="1976" y="6726" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="1476" y="5276" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="1313" y="2626" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="1888" y="4036" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="3313" y="6511" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="3238" y="4713" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="2499" y="2849" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="3761" y="2211" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="4213" y="6201" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="7349" y="4213" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="6851" y="2624" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="5499" y="2601" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="4074" y="3451" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="4676" y="4626" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="5963" y="3801" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 3375,6575 L 4275,6265"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 2038,6790 L 3375,6575"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 4288,7763 L 3375,6575"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 5825,7015 L 4275,6265"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 4288,7763 L 5825,7015"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 5861,5552 L 4275,6265"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 4738,4690 L 5861,5552"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 4275,6265 L 4738,4690"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 3300,4777 L 4738,4690"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 4136,3515 L 4738,4690"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1950,4100 L 3300,4777"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 2561,2913 L 3300,4777"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1950,4100 L 1538,5340"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1375,2690 L 1950,4100"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="390" y="4138" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 452,4202 L 1950,4100"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1375,2690 L 452,4202"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 2561,2913 L 1375,2690"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1425,1165 L 1375,2690"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 150,1790 L 1425,1165"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1375,2690 L 150,1790"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 2811,1065 L 2561,2913"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1425,1165 L 2811,1065"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 2638,202 L 2811,1065"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1425,1165 L 2638,202"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 4700,1188 L 2811,1065"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 3823,2275 L 4700,1188"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 2811,1065 L 3823,2275"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 2561,2913 L 3823,2275"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 4136,3515 L 3823,2275"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 2561,2913 L 4136,3515"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 5561,2665 L 4136,3515"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 3300,4777 L 4136,3515"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 3375,6575 L 3300,4777"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1538,5340 L 3300,4777"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 3375,6575 L 1538,5340"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 2038,6790 L 1538,5340"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1011,6588 L 2038,6790"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1538,5340 L 1011,6588"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 452,4202 L 1538,5340"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 2038,6790 L 1325,7827"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1011,6588 L 1325,7827"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 4275,6265 L 4288,7763"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 5861,5552 L 5825,7015"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 7013,6302 L 5861,5552"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 5825,7015 L 7013,6302"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 6025,3865 L 5861,5552"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 6025,3865 L 4738,4690"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 5561,2665 L 6025,3865"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 4136,3515 L 6025,3865"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 3823,2275 L 5561,2665"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 4700,1188 L 5561,2665"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 6125,1125 L 4700,1188"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 5561,2665 L 6125,1125"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 8175,1440 L 6125,1125"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 7700,115 L 8175,1440"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 6125,1125 L 7700,115"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 6913,2688 L 8175,1440"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 6125,1125 L 6913,2688"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 5561,2665 L 6913,2688"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 6025,3865 L 6913,2688"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 7411,4277 L 8125,3015"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 6913,2688 L 8125,3015"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 9288,2290 L 8125,3015"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 8175,1440 L 8125,3015"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 9288,2290 L 8175,1440"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 9600,188 L 9288,2290"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 8175,1440 L 9600,188"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 7700,115 L 9600,188"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 7411,4277 L 6913,2688"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 6025,3865 L 7411,4277"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 7013,6302 L 8523,6827"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 7013,6302 L 6986,7840"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 5825,7015 L 6986,7840"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 8523,6827 L 6986,7840"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 8900,5338 L 8523,6827"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 7411,4277 L 8900,5338"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 9125,3902 L 8900,5338"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 7411,4277 L 9125,3902"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 8125,3015 L 9125,3902"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 9288,2290 L 9125,3902"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 2561,2913 L 1950,4100"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 4275,6265 L 3300,4777"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.CustomShape">
+   <g>
+    <rect fill="none" stroke="none" x="-1" y="-1" width="9831" height="7926"/>
+    <rect fill="none" stroke="none" x="-1" y="0" width="9831" height="7926"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 1250,1 L 1398,509"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 1779,509 L 2025,76"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 2100,851 L 1779,509"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 3487,401 L 2100,851"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 3850,601 L 3487,401"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 3562,1 L 3487,401"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 3850,601 L 4575,138"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 5323,451 L 4575,138"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 5973,76 L 5323,451"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 6848,88 L 5973,76"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 7310,826 L 6848,88"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 7148,1713 L 7310,826"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 8473,438 L 7310,826"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 8598,76 L 8473,438"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 9123,1176 L 8473,438"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 9723,1151 L 9123,1176"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 9723,3163 L 8848,2976"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 9829,4836 L 8348,4511"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 9148,6149 L 9748,5774"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 8448,5974 L 9148,6149"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 9473,7211 L 9829,7274"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 9148,6149 L 9473,7211"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 8185,7824 L 9473,7211"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 7573,6986 L 8185,7824"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 7885,6261 L 8020,6076"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 7573,6986 L 7885,6261"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 8023,5136 L 8022,5337"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 8348,4511 L 8023,5136"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 8235,3776 L 8348,4511"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 8848,2976 L 8235,3776"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 8473,2263 L 8848,2976"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 9123,1176 L 8473,2263"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 7710,2251 L 8473,2263"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 7148,1713 L 7710,2251"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 7423,3301 L 7710,2251"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 8235,3776 L 7423,3301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 6735,3526 L 7423,3301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 6610,4449 L 6735,3526"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 7148,1713 L 6298,2151"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 6173,3063 L 6298,2151"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 6735,3526 L 6173,3063"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 5373,1738 L 6298,2151"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 5323,451 L 5373,1738"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 4650,2126 L 5373,1738"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 3837,1476 L 4650,2126"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 3850,601 L 3837,1476"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 3025,2226 L 3837,1476"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 2237,2151 L 3025,2226"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 1987,1851 L 2237,2151"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 2100,851 L 1987,1851"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 1075,1826 L 1987,1851"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 612,1088 L 1075,1826"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M -1,813 L 612,1088"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 1398,509 L 612,1088"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 537,2526 L 1075,1826"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 1,2668 L 537,2526"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 750,3163 L 1262,3538"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 2000,3301 L 1262,3538"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 2237,2151 L 2000,3301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 537,2526 L 750,3163"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 750,3163 L 1,3684"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 1175,4411 L 1262,3538"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 2750,3638 L 2000,3301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 3325,2926 L 3062,3551"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 3025,2226 L 3325,2926"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 2750,3638 L 3062,3551"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 2250,4874 L 2750,3638"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 1175,4411 L 2250,4874"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 2525,5561 L 2250,4874"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 2387,6074 L 2525,5561"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 1587,6236 L 2387,6074"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 562,5699 L 1587,6236"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 600,4999 L 562,5699"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 1175,4411 L 600,4999"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 87,5949 L 562,5699"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 600,4999 L -1,5024"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 600,7611 L 1387,7286"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M -1,7274 L 600,7611"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 487,7924 L 600,7611"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 1387,7286 L 2087,7736"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 2050,7924 L 2087,7736"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 1587,6236 L 1387,7286"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 2700,7011 L 2387,6074"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 2525,5561 L 3650,5611"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 4100,5211 L 3650,5611"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 3975,4236 L 4100,5211"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 3062,3551 L 3975,4236"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 5035,3826 L 3975,4236"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 4100,5211 L 4887,5449"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 5498,4686 L 4887,5449"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 5035,3826 L 5498,4686"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 6235,4799 L 5498,4686"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 6610,4449 L 6523,4658"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 4914,0 L 4914,0"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 6411,4798 L 6235,4799"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 6185,6224 L 6585,5324"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 5210,6261 L 6185,6224"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 4887,5449 L 5210,6261"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 4787,7086 L 5210,6261"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 6735,7024 L 6185,6224"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 7573,6986 L 6735,7024"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 6298,7824 L 6735,7024"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 5185,7799 L 6298,7824"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 4787,7086 L 5185,7799"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 4000,6961 L 4787,7086"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 3650,5611 L 4000,6961"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 3437,7574 L 4000,6961"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 2700,7011 L 3437,7574"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 2700,7011 L 2087,7736"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 3437,7574 L 3437,7924"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 4650,2126 L 4600,2613"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 3325,2926 L 4600,2613"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 5173,3351 L 6173,3063"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 5035,3826 L 5173,3351"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 4600,2613 L 5173,3351"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(255,153,102)" d="M 1398,509 L 1779,509"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1375,2690 L 2811,1065"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 8022,5337 L 8127,5587"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 8288,5797 L 8127,5587"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 8288,5797 L 8448,5974"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 8165,5973 L 8448,5974"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 8020,6076 L 8165,5973"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 7746,5968 L 7885,6261"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 7619,5714 L 7746,5968"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 7365,5460 L 7619,5714"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 6984,5333 L 7365,5460"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 6585,5324 L 6984,5333"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 6603,5079 L 6585,5324"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 6476,4952 L 6603,5079"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 6235,4799 L 6476,4952"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 6523,4658 L 6411,4798"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 6610,4449 L 6730,4698"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 6984,4952 L 6730,4698"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 7111,5079 L 6984,4952"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 7492,5206 L 7111,5079"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 7746,5206 L 7492,5206"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(197,0,11)" d="M 8023,5136 L 7746,5206"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="589" y="327" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="1590" y="-172" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="3991" y="29" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="9892" y="6430" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="9293" y="7931" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="5794" y="8132" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="2695" y="7833" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="-104" y="7734" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="-203" y="5435" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="-202" y="3136" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M -141,5499 L 1538,5340"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1011,6588 L -203,5498"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 452,4202 L -203,5498"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M -140,3200 L 452,4202"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1375,2690 L -140,3200"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 651,391 L 150,1790"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1652,-108 L 651,391"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 2638,202 L 1652,-108"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 4053,93 L 2638,202"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 4700,1188 L 4053,93"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 8900,5338 L 9954,6494"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 8523,6827 L 9954,6494"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 9355,7995 L 8523,6827"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 5856,8196 L 6986,7840"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 5825,7015 L 5856,8196"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 4288,7763 L 5856,8196"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 2757,7897 L 4288,7763"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 3375,6575 L 2757,7897"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 2038,6790 L 2757,7897"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1325,7827 L 2757,7897"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M -42,7798 L 1325,7827"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1011,6588 L -42,7798"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="9995" y="5233" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="9996" y="3934" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="10197" y="1335" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="10098" y="2436" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="9399" y="-563" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="8200" y="-562" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="7201" y="-561" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="6302" y="-560" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="5203" y="-559" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="304" y="-558" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="-495" y="243" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="-494" y="1744" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="-593" y="4145" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="1208" y="8246" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="1209" y="8247" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="4208" y="8246" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="4209" y="8247" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1271,8311 L 1325,7827"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.EllipseShape">
+   <g>
+    <rect fill="none" stroke="none" x="-492" y="6546" width="128" height="128"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M -430,6610 L 1011,6588"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M -531,4209 L 452,4202"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M -432,1808 L 150,1790"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M -433,307 L 651,391"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 366,-494 L 651,391"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 5265,-495 L 4053,93"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 4700,1188 L 5265,-495"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 6125,1125 L 5265,-495"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 6364,-496 L 6125,1125"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 7263,-497 L 7700,115"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 8262,-498 L 7700,115"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 9461,-499 L 9600,188"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 10259,1399 L 9600,188"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 9288,2290 L 10259,1399"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 10160,2500 L 9288,2290"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 10058,3998 L 9125,3902"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 8900,5338 L 10057,5297"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 4288,7763 L 4271,8311"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 1652,-108 L 1425,1165"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ConnectorShape">
+   <g>
+    <path fill="none" stroke="rgb(0,204,204)" d="M 651,391 L 1425,1165"/>
+   </g>
+  </g>
+ </g>
+</svg>

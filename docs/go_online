@@ -1,0 +1,12 @@
+#!/bin/sh
+
+
+rsync --exclude '/js/MathJax*' --exclude '/.htaccess' --exclude '.htpasswd' --progress --delete -azvvv -e ssh /Applications/MAMP/htdocs/mecagen/ delile@zebulon.iscpif.fr:public_html/mecagen
+
+
+# rsync --exclude '/js/MathJax*' --exclude '/.htaccess' --exclude '.htpasswd' --progress --delete -azvvv -e ssh /Applications/MAMP/htdocs/mecagen/ delile@polux.iscpif.fr:/var/www/delile/mecagen
+
+
+# rsync --exclude '/js/MathJax*' --exclude '/.htaccess' --exclude '.htpasswd' --progress --delete -azvvv -e ssh /Applications/MAMP/htdocs/mecagen/ delile@zebulon.iscpif.fr:public_html/mecagen
+
+

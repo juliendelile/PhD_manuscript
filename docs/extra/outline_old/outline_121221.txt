@@ -1,0 +1,129 @@
+.Introduction 2
+.	Developmental Biology: A Historical Timeline 2
+.		The Science of How Organisms Form 2
+.		First Theories: Epigenesis, Preformation and Spontaneous Generation 2
+.			Aristotle Envisioned Them All 2
+.			Early Mechanical Interpretation 2
+.			The End of Spontaneous Generation 2
+.			The End of Preformationism 2
+.			Germ Layers 2
+.			Cell Theory 2
+.		The Rise of Experimental Embryology 2
+.			Entwicklungsmechanik: Self-Differentiation vs. Dependent Differentiation 2
+.			Morphogenetic Fields 2
+.			Induction 2
+.		Developmental Genetics 2
+.		Molecular Genetics 2
+.			Operon-Lactose 2
+.			Gene Regulatory Networks, Cis-Regulatory Systems 2
+.			Maternal Factors 2
+.			Cytoplasmic Protein-Protein Interactions: The Missing Pieces 2
+.			Gene Regulatory Networks and Epigenetics 2
+.			Signaling Pathways, Transduction 2
+.			Mechanotransduction 2
+.		Cell Biomechanics 2
+.			Differential Adhesion Hypothesis and Improvements 2
+.			Cell Behaviorism 2
+.	Issues and Objectives 0
+.	Methodology 2
+.		Scientists in the Loop 2
+.			The Individual 2
+.			Exchange/Validation by the Scientific Community 2
+.		Tool-Augmented Methodologies 2
+.			Tools to Perceive 2
+.			Tools to Conceive 2
+.			Tools to Manipulate 2
+.		Validation of the hypotheses 2
+.			Fitness function 2
+.			Schemes of validation 2
+.	Summary of the Next Chapters 0
+.Developmental embryo modeling State of the Art and Principles 0
+.	Theoretical biology models of development 1
+.	Modeling Principles 1
+.		Toward an integrated theory of development 1
+.			Levels of organization 1
+.			Scaling up the laws 1
+.			Specialization of the laws 1
+.		Principles guided summary 1
+.	General design - schematic 0
+.MECAGEN Biomechanics 2
+.	State of the Art in Biomechanical Modeling 2
+.		The Many Viewpoints on "Soft Matter": From Continuous-Space to Discrete-Element Models 2
+.			Continuous Models 2
+.			Discrete Models 2
+.		Particle-Based Physics 2
+.			Spatial Neighborhoods 2
+.			Attraction/Repulsion Potential 2
+.	Hypotheses 2
+.		Generic Cell-Centered Equation of Motion 2
+.		Neighborhood of a Cell 2
+.		Scope of Interaction Potential 2
+.			Attraction-Repulsion Interaction Potential 2
+.			Cell specific behavioral forces 2
+.MECAGEN Genetic and molecular regulatory networks 0
+.	State of the Art 0
+.	Hypotheses 0
+.		Extracellular diffusion 0
+.			Fick's Law 0
+.			Approximation on a neighboring network 0
+.			Reaction-Diffusion 0
+.		Intracellular dynamics 0
+.			Gene-ARN-Protein 0
+.			Membrane Receptor 0
+.			Membrane Secretor - Diffusive ligands - non diffusive ligands 0
+.			Protein-protein interaction 0
+.			Gene 0
+.			Cis-regulatory elements boolean combination 0
+.	Discussion 0
+.		Epigenetics 0
+.		Extracellular matrix 0
+.MECAGEN Coupling 0
+.	State of the Art 0
+.	Cell Behavior Ontology 0
+.		Adhesion 0
+.		Polarization 0
+.			Local gradient 0
+.			Mean Field 0
+.			PCP-like 0
+.		Protrusion 0
+.			Bipolar intercalation 0
+.			Monopolar migration 0
+.		Diffusion perturbation 0
+.	Discussion 0
+.		Mechano-transduction 0
+.The mechanics of the Zebrafish early gastrulation review 1
+.	Cleavage 1
+.	Epiboly 1
+.	Internalization 1
+.	Convergence-Extension 1
+.Reconstruction of the Zebrafish early development 1
+.	Embryo Preparation and Acquisition 1
+.	Cell lineage reconstruction workflow 1
+.		Workflow 1
+.		Visualization / Correction 1
+.		Validation 1
+.	Post processing / Exploitation 1
+.	4D Atlas of gene expression 1
+.	in toto cell lineage 1
+.		Manual registration 1
+.		Voxel quality evaluation 1
+.		Blending function 1
+.		Deformation fields 1
+.		Blended deformation fields 1
+.Case studies 1
+.	Conceptual embryology 0
+.		concept_1 0
+.		concept_2 0
+.	Zebrafish early development 1
+.		Yolk 1
+.		Cell Cycle 1
+.		Cleavage 1
+.		Enveloping cell layer 1
+.		Intercalation pattern 1
+.		Epiboly 0
+.		Internalization 0
+.		Margin contraction 0
+.		Convergence-Extension 0
+.In toto optimization strategy - All in one 0
+.Annex A GPGPU computing simulation 0
+.	Thousands of variable - performance needed 0

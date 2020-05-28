@@ -1,0 +1,194 @@
+
+<div id="title">From Cell Behavior to Embryonic Morphogenesis: <br />Mechanogenetic Modeling and Computational Simulation <br />of Early Animal Development</div>
+<div id="subtitle">PhD Dissertation by Julien Delile <br />Supervised by Nadine Peyriéras and René Doursat</div>
+<div><a href="../Delile_thesis_jury.pdf" id="pdf" style="font-weight:bold;">Download manuscript PDF <img src=../../pdf.jpg width=20></a></div>
+<div><a href="../../slides/index.html" id="pdf" style="font-weight:bold;">View defense slides online (without movies) <img src=../../html5_logo.png width=20></a></div>
+<div><a href="../../slides/defense_slides.pdf" id="pdf" style="font-weight:bold;">Download defense slides PDF (without movies) <img src=../../pdf.jpg width=20></a></div>
+<br/>
+<div style="color:rgb(0,200,0);font-weight:bold;padding-top:30px;">Sections that contain videos (microscopy imaging or simulations) are highlighted in green.</div>
+<div id="toc_content">
+<li><a onclick="loadAbstract()" class="item_good" style="font-weight:bold;">Abstract  </a></li>
+<li><a onclick="loadAcknowledgments()" class="item_done" style="font-weight:bold;">Acknowledgments  </a></li>
+<li style="margin-top:40px;"><a onclick="loadContentAt(0)" class="item_good" style="font-weight:bold;">1. Introduction  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(1)" class="item_good" >1.1. A Historical Timeline of Developmental Biology  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(2)" class="item_good" >1.1.1. The Science of How Organisms Form  </a></li>
+<li ><a onclick="loadContentAt(3)" class="item_good" >1.1.2. First Theories: Epigenesis, Preformation and Spontaneous Generation  </a></li>
+<li ><a onclick="loadContentAt(4)" class="item_good" >1.1.3. The Rise of Experimental Embryology  </a></li>
+<li ><a onclick="loadContentAt(5)" class="item_good" >1.1.4. Developmental Genetics  </a></li>
+<li ><a onclick="loadContentAt(6)" class="item_good" >1.1.5. Molecular Genetics  </a></li>
+<li ><a onclick="loadContentAt(7)" class="item_good" >1.1.6. Cell Biomechanics  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(8)" class="item_good" >1.2. Integrating Developmental Mechanics and Genetics: The MECAGEN Project  </a></li>
+<li ><a onclick="loadContentAt(9)" class="item_good" >1.3. Methodological Considerations  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(10)" class="item_good" >1.3.1. The Scientist in the Observation-Hypothesis-Experiment Loop  </a></li>
+<li ><a onclick="loadContentAt(11)" class="item_good" >1.3.2. Designing Tools to Perceive, Conceive and Manipulate  </a></li>
+<li ><a onclick="loadContentAt(12)" class="item_good" >1.3.3. Reality Check: Validating the Hypotheses  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(13)" class="item_red" >1.4. Overview of this Dissertation  </a></li>
+</ul>
+<li style="margin-top: 50px;"><a class="item_part">PART I: A GENERIC MODEL OF MULTICELLULAR DEVELOPMENT</a></li>
+<li style="margin-top:40px;"><a onclick="loadContentAt(14)" class="item_good" style="font-weight:bold;">2. State of the Art and Principles of Embryo Development Models  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(15)" class="item_good" >2.1. A Review of Theoretical Models of Development  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(16)" class="item_good" >2.1.1. Early Attempts  </a></li>
+<li ><a onclick="loadContentAt(17)" class="item_good" >2.1.2. Reaction-Diffusion Systems  </a></li>
+<li ><a onclick="loadContentAt(18)" class="item_good" >2.1.3. Morphogen Gradients and Positional Information  </a></li>
+<li ><a onclick="loadContentAt(19)" class="item_good" >2.1.4. Epithelial Cell Shaping and Division Patterns  </a></li>
+<li ><a onclick="loadContentAt(20)" class="item_good" >2.1.5. Differential Adhesion and Cell Sorting  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(21)" class="item_good" >2.2. Common Modeling Principles: Toward an Integrated Theory of Development  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(22)" class="item_good" >2.2.1. Dealing with Multiple Levels of Organization  </a></li>
+<li ><a onclick="loadContentAt(23)" class="item_good" >2.2.2. Relating One Level to the Next: The Problem of Emergence  </a></li>
+<li ><a onclick="loadContentAt(24)" class="item_good" >2.2.3. Identifying Custom Laws at Each Level  </a></li>
+<li ><a onclick="loadContentAt(25)" class="item_good" >2.2.4. Summary Table  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(26)" class="item_red" >2.3. Overview of the MECAGEN Modeling Principles  </a></li>
+</ul>
+<li style="margin-top:40px;"><a onclick="loadContentAt(27)" class="item_good" style="font-weight:bold;">3. MECAGEN Model of Cell Biomechanics  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(28)" class="item_good" >3.1. State of the Art in Biomechanical Modeling  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(29)" class="item_video" >3.1.1. The Many Viewpoints on "Soft Matter": From Continuous-Space to Discrete-Element Models  </a></li>
+<li ><a onclick="loadContentAt(30)" class="item_good" >3.1.2. Particle-Based Physics  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(31)" class="item_good" >3.2. Hypotheses  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(32)" class="item_good" >3.2.1. Generic Cell-Centered Equation of Motion  </a></li>
+<li ><a onclick="loadContentAt(33)" class="item_video" >3.2.2. Cell Neighborhood  </a></li>
+<li ><a onclick="loadContentAt(34)" class="item_good" >3.2.3. Interaction Potential  </a></li>
+<li ><a onclick="loadContentAt(35)" class="item_good" >3.2.4. Cell Specific Behavioral Forces  </a></li>
+</ul></ul>
+<li style="margin-top:40px;"><a onclick="loadContentAt(36)" class="item_good" style="font-weight:bold;">4. MECAGEN Model of Molecular and Genetic Regulation and Signaling  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(37)" class="item_good" >4.1. Intra-Cellular Gene/Protein Reactions  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(38)" class="item_good" >4.1.1. Protein-Protein Interactions  </a></li>
+<li ><a onclick="loadContentAt(39)" class="item_good" >4.1.2. Synthesis by Encoding Genes  </a></li>
+<li ><a onclick="loadContentAt(40)" class="item_good" >4.1.3. Degradation by the Molecular Environment  </a></li>
+<li ><a onclick="loadContentAt(41)" class="item_good" >4.1.4. Cis-Regulatory Boolean Model of Gene Expression  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(42)" class="item_good" >4.2. Signal Secretion and Transduction Modules  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(43)" class="item_good" >4.2.1. Signal Secretion Module  </a></li>
+<li ><a onclick="loadContentAt(44)" class="item_good" >4.2.2. Signal Transduction Module  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(45)" class="item_good" >4.3. Extra-Cellular Reactions, Transport and Diffusion  </a></li>
+<li ><a onclick="loadContentAt(46)" class="item_video" >4.4. Illustration on Artificial GRN Motifs  </a></li>
+</ul>
+<li style="margin-top:40px;"><a onclick="loadContentAt(47)" class="item_good" style="font-weight:bold;">5. MECAGEN Model of Mechanic-Genetic Coupling  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(48)" class="item_good" >5.1. Toward a Cell Behavior Ontology  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(49)" class="item_good" >5.1.1. Cell Behavior Ontology  </a></li>
+<li ><a onclick="loadContentAt(50)" class="item_good" >5.1.2. Mechanotransduction Input of the GRN  </a></li>
+<li ><a onclick="loadContentAt(51)" class="item_good" >5.1.3. Cell Adhesion  </a></li>
+<li ><a onclick="loadContentAt(52)" class="item_good" >5.1.4. Cell Polarization  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(53)" class="item_good" >5.2. Waddingtonian Timeline Specification  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(54)" class="item_good" >5.2.1. Cell Types  </a></li>
+<li ><a onclick="loadContentAt(55)" class="item_good" >5.2.2. Ligand Sinks and Sources  </a></li>
+<li ><a onclick="loadContentAt(56)" class="item_good" >5.2.3. Passive Force's Adhesion Modulation  </a></li>
+<li ><a onclick="loadContentAt(57)" class="item_good" >5.2.4. Active Cell Behavior Specification  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(58)" class="item_good" >5.3. Illustration on Artificial Cell Sorting  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(59)" class="item_video" >5.3.1. Cell Sorting: Revisiting a Classical Problem  </a></li>
+<li ><a onclick="loadContentAt(60)" class="item_video" >5.3.2. Individual Cell Migration  </a></li>
+</ul></ul>
+<li style="margin-top: 50px;"><a class="item_part">PART II: STUDY OF THE ZEBRAFISH EARLY EMBRYOGENESIS</a></li>
+<li style="margin-top:40px;"><a onclick="loadContentAt(61)" class="item_good" style="font-weight:bold;">6. Review of the Zebrafish Early Developmental Mechanics  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(62)" class="item_good" >6.1. Cleavage Stages, Formation of the EVL and YSL  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(63)" class="item_good" >6.1.1. The Formation of the Enveloping Cell Layer  </a></li>
+<li ><a onclick="loadContentAt(64)" class="item_good" >6.1.2. The Formation of the Yolk Syncitial Layer  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(65)" class="item_good" >6.2. Blastula Stages and the Onset of Epiboly  </a></li>
+<li ><a onclick="loadContentAt(66)" class="item_good" >6.3. Gastrulation Movements  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(67)" class="item_video" >6.3.1. Epiboly Phase Two  </a></li>
+<li ><a onclick="loadContentAt(68)" class="item_video" >6.3.2. Hypoblast Formation  </a></li>
+<li ><a onclick="loadContentAt(69)" class="item_good" >6.3.3. Convergence-Extension  </a></li>
+</ul></ul>
+<li style="margin-top:40px;"><a onclick="loadContentAt(70)" class="item_good" style="font-weight:bold;">7. Experimental Reconstruction of the Zebrafish Early Development  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(71)" class="item_good" >7.1. Bioemergences Reconstruction Workflow  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(72)" class="item_good" >7.1.1. Embryo Preparation and Acquisition  </a></li>
+<li ><a onclick="loadContentAt(73)" class="item_video" >7.1.2. Cell Lineage Reconstruction Workflow  </a></li>
+<li ><a onclick="loadContentAt(74)" class="item_video" >7.1.3. Post Processing and Exploitation  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(75)" class="item_good" >7.2. Reconstructing In Toto Deformation Fields  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(76)" class="item_good" >7.2.1. Manual Registration  </a></li>
+<li ><a onclick="loadContentAt(77)" class="item_good" >7.2.2. Voxel Quality Evaluation  </a></li>
+<li ><a onclick="loadContentAt(78)" class="item_good" >7.2.3. Blending Function  </a></li>
+<li ><a onclick="loadContentAt(79)" class="item_good" >7.2.4. Deformation Fields  </a></li>
+<li ><a onclick="loadContentAt(80)" class="item_good" >7.2.5. Blended Deformation Fields  </a></li>
+</ul></ul>
+<li style="margin-top:40px;"><a onclick="loadContentAt(81)" class="item_good" style="font-weight:bold;">8. Simulated Reconstruction and Model Validation Through Case Studies  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(82)" class="item_good" >8.1. Investigating the Yolk Biomechanical Properties  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(83)" class="item_good" >8.1.1. Hypotheses and Model  </a></li>
+<li ><a onclick="loadContentAt(84)" class="item_video" >8.1.2. Simulation, Parameter Space and Validation  </a></li>
+<li ><a onclick="loadContentAt(85)" class="item_good" >8.1.3. Discussion  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(86)" class="item_good" >8.2. Cell Proliferation Rate Along the Cell Lineage  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(87)" class="item_good" >8.2.1. Hypotheses and Model  </a></li>
+<li ><a onclick="loadContentAt(88)" class="item_video" >8.2.2. Simulation, Parameter Space and Validation  </a></li>
+<li ><a onclick="loadContentAt(89)" class="item_good" >8.2.3. Discussion  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(90)" class="item_good" >8.3. Shaping the Zebrafish Blastula  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(91)" class="item_video" >8.3.1. Hypotheses and Model  </a></li>
+<li ><a onclick="loadContentAt(92)" class="item_video" >8.3.2. Simulation, Parameter Space and Validation  </a></li>
+<li ><a onclick="loadContentAt(93)" class="item_good" >8.3.3. Discussion  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(94)" class="item_good" >8.4. Cell Behaviors in the Enveloping Cell Layer Compartment  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(95)" class="item_good" >8.4.1. Hypotheses and Model  </a></li>
+<li ><a onclick="loadContentAt(96)" class="item_video" >8.4.2. Simulation, Parameter Space and Validation  </a></li>
+<li ><a onclick="loadContentAt(97)" class="item_good" >8.4.3. Discussion  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(98)" class="item_good" >8.5. Intercalation Patterns  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(99)" class="item_video" >8.5.1. Hypotheses and Model  </a></li>
+<li ><a onclick="loadContentAt(100)" class="item_video" >8.5.2. Simulation, Parameter Space and Validation  </a></li>
+<li ><a onclick="loadContentAt(101)" class="item_good" >8.5.3. Discussion  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(102)" class="item_good" >8.6. Gastrulation  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(103)" class="item_good" >8.6.1. Hypotheses and Model  </a></li>
+<li ><a onclick="loadContentAt(104)" class="item_good" >8.6.2. Simulation, Parameter Space and Validation  </a></li>
+<li ><a onclick="loadContentAt(105)" class="item_good" >8.6.3. Discussion  </a></li>
+</ul></ul>
+<li style="margin-top:40px;"><a onclick="loadContentAt(106)" class="item_good" style="font-weight:bold;">9. Conclusion  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(107)" class="item_good" >9.1. Criteria for a "Good" Model  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(108)" class="item_good" >9.1.1. Similarities between Variables and Concepts  </a></li>
+<li ><a onclick="loadContentAt(109)" class="item_good" >9.1.2. Computational Feasibility  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(110)" class="item_good" >9.2. Choices Concerning the Biomechanics  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(111)" class="item_good" >9.2.1. Spatial Neighborhood  </a></li>
+<li ><a onclick="loadContentAt(112)" class="item_good" >9.2.2. Interaction Potential and Behavioral Forces  </a></li>
+<li ><a onclick="loadContentAt(113)" class="item_good" >9.2.3. External Objects  </a></li>
+<li ><a onclick="loadContentAt(114)" class="item_good" >9.2.4. Single-Cell vs. Subcellular Mechanics  </a></li>
+<li ><a onclick="loadContentAt(115)" class="item_good" >9.2.5. Spherical-Voronoi Approximation  </a></li>
+</ul>
+<li ><a onclick="loadContentAt(116)" class="item_good" >9.3. Choices Concerning the Molecular/Genetic Regulation and Signaling  </a></li>
+<li ><a onclick="loadContentAt(117)" class="item_good" >9.4. Assessment of the Case Studies  </a></li>
+<li ><a onclick="loadContentAt(118)" class="item_good" >9.5. Future Work  </a></li>
+<ul>
+<li ><a onclick="loadContentAt(119)" class="item_good" >9.5.1. Portability to Other Animal Models  </a></li>
+<li ><a onclick="loadContentAt(120)" class="item_good" >9.5.2. Interactive Exploration of Parameter Space  </a></li>
+<li ><a onclick="loadContentAt(121)" class="item_good" >9.5.3. Toward an "Evo-Devo" Perspective  </a></li>

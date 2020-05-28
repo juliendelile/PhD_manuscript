@@ -1,0 +1,526 @@
+
+ 
+ 
+ 
+ 
+<div id='8_'>
+<h1>8. Reconstruction - ERF and SRF generation  </h1>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_1_'>
+<h2>8.1. Methodology  </h2>
+ 
+
+
+
+
+ 	<figure id='washington_5angles_before'>
+		<img src="../../images/Reconstruction/washington/5angles_before.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+ 
+
+	<figure id='washington_workflow'>
+		<img src="../../images/Reconstruction/washington/workflow.png" width="900">
+		<figcaption><i>in toto</i> displacement field reconstruction workflow</figcaption>
+	</figure>
+
+
+
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_2_'>
+<h2>8.2. Manual registration  </h2>
+ 
+
+	
+
+	
+	<figure id='washington_workflow_manual'>
+		<img src="../../images/Reconstruction/washington/workflow_manual.png" width="600">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+
+	<figure id='washington_SPIM'>
+		<img src="../../images/Reconstruction/washington/SPIM.png" width="900">
+		<figcaption>SPIM set up.</figcaption>
+	</figure>
+
+
+
+
+
+	<figure id='washington_manual_spim'>
+		<img src="../../images/Reconstruction/washington/manual_spim.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+	<figure id='washington_manual_registration_selection'>
+		<img src="../../images/Reconstruction/washington/manual_registration_selection.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+	<figure id='washington_manual_registration_final'>
+		<img src="../../images/Reconstruction/washington/manual_registration_final.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+	<figure id='washington_5angles_after'>
+		<img src="../../images/Reconstruction/washington/5angles_after.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_3_'>
+<h2>8.3. Voxel quality evaluation  </h2>
+ 
+ 
+
+
+
+
+	<figure id='washington_workflow_vqe'>
+		<img src="../../images/Reconstruction/washington/workflow_vqe.png" width="600">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+	<figure id='washington_vqe'>
+		<img src="../../images/Reconstruction/washington/vqe.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_4_'>
+<h2>8.4. Blending function  </h2>
+ 
+
+	
+
+	<figure id='washington_workflow_blend'>
+		<img src="../../images/Reconstruction/washington/workflow_blend.png" width="600">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+	<figure id='washington_blendingfunction'>
+		<img src="../../images/Reconstruction/washington/blendingfunction.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+	<figure id='washington_blendingfunction_raw'>
+		<img src="../../images/Reconstruction/washington/blendingfunction_raw.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_5_'>
+<h2>8.5. Deformation fields  </h2>
+ 
+ 
+
+
+
+	<figure id='washington_workflow_deffield'>
+		<img src="../../images/Reconstruction/washington/workflow_deffield.png" width="600">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+	<figure id='washington_vueGlobal_frame'>
+		<img src="../../images/Reconstruction/washington/deffield/vueGlobal_frame.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+	<figure id='washington_vue1ts'>
+		<img src="../../images/Reconstruction/washington/deffield/vue1ts.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+	<figure id='washington_vue2ts'>
+		<img src="../../images/Reconstruction/washington/deffield/vue2ts.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+	<figure id='washington_vueDeffield2tsNoFiltering'>
+		<img src="../../images/Reconstruction/washington/deffield/vueDeffield2tsNoFiltering.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+	<figure id='washington_vueDeffield2ts'>
+		<img src="../../images/Reconstruction/washington/deffield/vueDeffield2ts.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_6_'>
+<h2>8.6. Blended deformation fields  </h2>
+ 
+
+
+
+
+
+
+	<figure id='washington_workflow_blend_deffield'>
+		<img src="../../images/Reconstruction/washington/workflow_blend_deffield.png" width="600">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+	<figure id='washington_blendingfunction_deffield'>
+		<img src="../../images/Reconstruction/washington/blendingfunction_deffield.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+	<figure id='washington_blendingfunction_deffield_multits'>
+		<img src="../../images/Reconstruction/washington/blendingfunction_deffield_multits.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

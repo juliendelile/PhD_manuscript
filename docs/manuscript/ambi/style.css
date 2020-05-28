@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+/*
+Theme Name: MorphoTheme
+Description: nope
+Author: Julien D
+Author URI: 
+*/
+
+
+
+/*Reset from http://meyerweb.com/eric/tools/css/reset/ */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{
+  margin:0 auto;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  font:inherit;
+  vertical-align:baseline;
+}
+
+
+body{
+	width:1020px;
+	overflow:hidden;
+	
+}
+
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+  display:block;
+}
+
+
+#content_noscroll_wrapper{
+	width:1020px;
+	overflow:hidden;
+}
+
+
+#content{
+	
+	//margin: 0 auto;
+	position: relative;
+	background: rgba(255, 255, 255, 0);
+	width: 1040px;
+	height:1000px;
+	overflow:auto;
+	
+	font-family: "Times New Roman", "Century gothic",verdana, Arial, sans-serif;
+}
+
+
+#content a {
+	color: #465F7B;
+	text-decoration: none;
+}
+
+#content a:hover {
+	color:#2B77CD;
+}
+
+
+
+
+article{
+	margin: 0 auto;
+	position: relative;
+	padding: 0px 0px 0px 0px;
+	width: 980px;
+}
+
+
+#content p {
+	font-size: 14px;
+	font-weight:normal;
+	padding: 10px 0px 10px 0px;
+	text-align: justify;
+}
+
+#content p strong{
+	
+	font-weight: bold;
+	margin-top: 100px;
+	margin-bottom: 10px;
+}
+
+.comment-green{
+	color: #8fd075;
+}
+
+#content li {
+	
+	font-size: 14px;
+	font-weight:normal;
+	padding: 0px 0px 0px 0px;
+	text-align: justify;
+	
+}
+
+
+#content ul {
+	padding: 0px 0px 0px 40px;
+}
+
+
+
+#content .left{
+   position: relative;
+   float: left;
+   left: 4.00%;
+   width: 37.00%;
+}
+#content .right{
+   position: relative;
+   float: left;
+   left: 6.00%;
+   right: 4.00%;
+   width: 55.00%;
+}
+
+#content h1{
+	padding: 100px 0px 50px 0px;
+	font-size:40px;
+}
+
+#content h2{
+	padding: 40px 0px 20px 0px;
+	font-size: 24px ;
+}
+
+#content h3{
+	padding: 20px 0px 20px 0px;
+	font-size: 20px ;
+}
+
+#content h4{
+	padding: 10px 0px 10px 0px;
+	font-size: 18px;
+}
+
+#content div.bonus{
+	
+	border-style:solid;
+	border-width:5px;
+}
+
+#title {
+	margin-top: 200px; 
+	margin-bottom: 700px; 
+	font-size: 48px;
+	}
+	
+#toc_title {
+	margin-top: 200px; 
+	margin-bottom: 100px; 
+	font-size: 32px;
+	}
+
+#toc_content{
+	margin-top: 100px; 
+	margin-bottom: 200px; 
+	color:green;
+	}
+	
+#toc_content li {
+	color:green;
+	list-style:none;
+	}
+
+	
+#toc_content  a {
+	//color: black;
+	text-decoration: none;
+}
+
+#toc_content  a.item_empty {
+	color: black;
+}
+
+#toc_content  a.item_ongoing {
+	color: rgb(200,0,0) ;
+}
+
+#toc_content  a.item_done {
+	color: rgb(0,144,0) ;
+}
+
+
+
+
+blockquote {
+	padding-left:70px;
+	padding-right:40px;
+	color:#777;
+	font-style: normal;	
+	text-align: justify;
+}
+
+blockquote footer {
+	padding-top: 0px;
+	text-align: right;
+}
+
+/* hanging opening quote */
+blockquote:before {
+	display: block;
+	height: 0;
+	content: "“";
+	margin-left: -.75em; font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+	color: #999;
+}
+
+
+figure {
+	text-align: center;
+	padding: 10px 0px 10px 0px;
+}
+
+figure figcaption {
+	clear: left;
+	margin: .75em 0;
+	text-align: center;
+	font-style: italic;
+	line-height: 1.5em;
+	font-family: "Century gothic",verdana, Arial, sans-serif;
+	font-size: 14px;
+	font-weight:normal;
+	padding-left:100px;
+	padding-right:100px;
+}
+

@@ -1,0 +1,904 @@
+
+ 
+ 
+ 
+<div id=3_>
+<h1>3. MECAGEN Biomechanics  </h1>
+ 
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+ 
+</div>
+ 
+ 
+ 
+<div id=3_1_>
+<h2>3.1. State of the Art  </h2>
+ 
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+ 
+</div>
+ 
+ 
+ 
+<div id=3_1_1_>
+<h3>3.1.1. Soft material no physics available  </h3>
+ 
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+ 
+</div>
+ 
+ 
+ 
+<div id=3_1_2_>
+<h3>3.1.2. Classical mechanics versus statistical mechanics  </h3>
+ 
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+ 
+</div>
+ 
+ 
+ 
+<div id=3_2_>
+<h2>3.2. Hypotheses  </h2>
+ 
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+
+
+ </div>
+
+<div id=3_2_1_>
+<h3>3.2.1. Particle-based physics  </h3>
+
+
+<p>In particle-based physics models, each element of matter is represented by a particle.</p>
+<p>Mechanical properties of the system are the parameters of the interaction potentials between neighbor particles.</p>
+
+<div class="bonus">
+<figure>
+	<video src="../videos/MD_archaeal_translocon/translocation.ogg" width="400" controls></video>
+	<figcaption>An exemple of particle-based simulation of a protein translocation. from <a href="../papers/Gumbart/2006/Gumbart 2006 Molecular dynamics studies of the archaeal translo-1.pdf">Gumbart and Schulten. Molecular dynamics studies of the archaeal translocon. Biophysical Journal (2006)</a></figcaption>
+</figure>
+
+</div>
+
+<p>Describing a particle-based model can be organized in two parts, resumed by the following questions: </p>
+
+<ul>
+	<li>how to divide up the physical space into particles ? (Space)</li>
+	<li>how to relate the motion of the particles with their mechanical properties ? (Forces)</li>
+</ul>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+
+
+</div> 
+
+<div id=3_2_2_>
+<h3>3.2.2. Spatial Neighborhood  </h3>
+ 
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+
+
+
+ </div>
+ 
+<div id=3_2_3_>
+<h3>3.2.3. Equation of Motion  </h3>
+ 
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+ 
+</div>
+ 
+ 
+ 
+<div id=3_2_4_>
+<h3>3.2.4. Interaction Potential  </h3>
+ 
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+ 
+</div>
+ 
+ 
+ 
+<div id=3_2_4_1_>
+<h4>3.2.4.1. Cell specific behavioral forces  </h4>
+ 
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+ 
+</div>
+ 
+ 
+ 
+<div id=3_2_4_1_1_>
+<h5>3.2.4.1.1. protrusion  </h5>
+ 
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+ 
+</div>
+ 
+ 
+ 
+<div id=3_2_4_1_2_>
+<h5>3.2.4.1.2. intercalation-migration  </h5>
+ 
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+ 
+</div>
+ 
+ 
+ 
+<div id=3_2_5_>
+<h3>3.2.5. Zebrafish specificities  </h3>
+ 
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+ 
+</div>
+ 
+ 
+ 
+<div id=3_3_>
+<h2>3.3. Discussion  </h2>
+ 
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+ 
+</div>
+ 
+ 
+ 
+<div id=3_3_1_>
+<h3>3.3.1. Alternative-Future work including previous experiments  </h3>
+ 
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+ 
+</div>
+ 
+ 
+ 
+<div id=3_3_2_>
+<h3>3.3.2. Extracellular matrix  </h3>
+ 
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+ 
+</div>
+ 
+ 
+ 
+<div id=3_3_3_>
+<h3>3.3.3. Friction  </h3>
+ 
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum eros, viverra fermentum fermentum non, fringilla non odio. Vivamus ac elit arcu, ut consectetur arcu. Curabitur nec nisl eros, a venenatis magna. Suspendisse sed turpis nisl. Cras pharetra, nulla a euismod sagittis, nunc risus semper ante, sed tincidunt neque orci id sem. Suspendisse ac tortor at nisl sollicitudin venenatis. Nam nec ipsum et nulla molestie vestibulum. Nulla vehicula risus et ipsum pellentesque eleifend. Aenean eleifend nibh sed urna tincidunt vitae lobortis leo tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+</p>
+
+<p>Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+
+
+					$$
+
+					N_{\text{all to all}} =
+					\begin{pmatrix}
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+					\end{pmatrix}
+
+					
+					$$
+				</p>
+				
+				
+				
+<p>
+Proin dapibus consectetur lectus id pellentesque. Nunc eget augue at velit elementum viverra vel ac sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus, mauris non tincidunt laoreet, dolor lorem tristique justo, ultrices porttitor ante leo non ipsum. In vehicula, diam vitae pulvinar consequat, elit velit blandit eros, vitae scelerisque diam risus sed eros. Aliquam erat volutpat. Phasellus varius elit vel turpis eleifend vitae egestas orci lobortis. Cras tristique justo vitae lorem consequat sed varius purus eleifend. Donec eu lacus nisl. Ut nisi sem, suscipit in ullamcorper eget, sollicitudin eget libero. Phasellus nibh elit, lacinia in faucibus non, tempus eget erat. Morbi gravida ipsum sed velit aliquam pharetra. Fusce metus mauris, iaculis egestas lobortis eu, ornare non purus.
+</p>
+
+<figure>
+					<img src="../images/nbody/nbody2.png" alt="" width="600">
+					<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+				</figure>
+					
+<p>
+Nam feugiat felis vel lectus pellentesque feugiat. Cras tincidunt velit id diam pulvinar a ultrices urna mollis. Sed vestibulum velit ac lectus placerat sed ullamcorper sem varius. Cras eleifend rutrum tortor, in venenatis urna commodo at. Sed sodales facilisis aliquam. Curabitur dapibus gravida vulputate. Nullam at ullamcorper risus. Quisque rutrum condimentum augue sit amet ornare. Fusce elementum justo sit amet leo convallis mollis. Aliquam varius imperdiet odio. Quisque semper nulla id magna bibendum volutpat. Aliquam facilisis mauris convallis mi vehicula eget volutpat lacus gravida.
+</p>
+<p>
+Aenean egestas, tortor et vestibulum congue, ipsum magna rutrum urna, vel ullamcorper nisl justo eu tortor. Aenean eleifend porttitor porttitor. Sed id ligula in tellus cursus pretium. Curabitur at ligula ac erat eleifend consectetur id non nibh. Donec vel lacus vitae ante pretium malesuada id id erat. Curabitur ut venenatis nisl. Quisque accumsan justo a ligula euismod eget ultrices lacus fermentum. Suspendisse potenti.
+</p>
+ 
+</div>

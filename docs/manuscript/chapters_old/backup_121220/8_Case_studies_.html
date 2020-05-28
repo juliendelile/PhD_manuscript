@@ -1,0 +1,2185 @@
+
+ 
+ 
+ 
+ 
+<div id='8_'>
+<h1>8. Case studies  </h1>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_1_'>
+<h2>8.1. Conceptual embryology  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_1_1_'>
+<h2>8.1.1. concept_1  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_1_2_'>
+<h2>8.1.2. concept_2  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_2_'>
+<h2>8.2. Zebrafish early development  </h2>
+ 
+ 
+
+
+<p>
+	<strong>Methodology</strong>
+</p>
+
+
+<p>
+	For each case, we explain:
+</p>
+
+
+<ul>
+	<li>A. the hypotheses (rules + parameters)</li>
+	<li>B. the observed data</li>
+	<li>C. the reconstruction workflow </li>
+	<li>D. the fitness function</li>
+</ul>
+
+<p>
+	Then we discuss the cartography of the parameter space exhaustively explored. (E. reverse engineering)
+</p>
+
+
+
+
+
+<figure id='method_cartography'>
+	<img src="../../images/Cases_Studies/methodology/method_cartography.png" width="800">
+	<figcaption></figcaption>
+</figure>
+
+
+
+
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<p>
+		<strong>A. Hypotheses</strong>
+	</p>
+
+	<p>
+		<strong>B. Observed data</strong>
+	</p>
+
+
+	<p>
+		<strong>C. Reconstruction</strong>
+	</p>
+
+
+	<p>
+		<strong>D. Fitness function</strong>
+	</p>
+
+	<p>
+		E. Discussion
+	</p>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_2_1_'>
+<h2>8.2.1. Yolk  </h2>
+ 
+
+
+tester avec nouveau mesure : conservation du volume...
+
+
+
+
+	
+	<p>
+		The zebrafish zygote is a large cell filled with cytoplasm and lipid drops. During the first division, both fluids segregate, the cytoplasm being sucked up into dividing cell domain (see figure <a name='Case_0_Yolk_THG_thg' class='fig'></a>). A bilipid membrane progressively compartementalizes the cells at the animal pole from the lipid drops, forming an independent structure called <i>yolk</i>. After the Xth division cycle, the marginal deep cells synchronizely send half of their nuclei and cytoplasm into the yolk, forming a third structure called <i>yolk syncytial layer</i> (YSL). At that point, the cells definitely separated from the yolk.
+	</p>
+
+
+
+
+	<p>
+		<strong>A. Hypotheses</strong>
+	</p>
+
+
+	<figure id='Case_0_Yolk_THG_thg'>
+		<img src="../../images/Cases_Studies/Case_0_Yolk/THG/thg.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+
+	<p>
+		In our mechanical model, we approximate the cells and the yolk as independent structures from the zygotic stage. To capture the dynamical mechanical interaction between the cells and the yolk, we also model the yolk in the particle-based paradigm. Two particle categories compose the yolk: external yolk membrane particles form a viscoelastic layer and inner yolk particles represent the lipid drops contained by the external layer.
+	</p>
+
+	<figure id='Case_0_Yolk_general_particles_yolk'>
+		<img src="../../images/Cases_Studies/Case_0_Yolk/general_particles_yolk.png" width="600">
+		<figcaption></figcaption>
+	</figure>
+
+
+	<p>
+		In figure <a name='Case_0_Yolk_general_particles_yolk' class='fig'></a>, the yellow particles represent the yolk membrane. By yolk membrane, we denote not only the bilipic layer surrounding the yolk but also the cytoskeletal material underlying it (acto-myosin, tubulin structures...). The yolk membrane topology is defined by a geodesic dome. It is derived from an icosahedron, one of the five Platonic solids and it remains invariant through time. An icosahedron's surface is composed of 20 identical equlateral triangles, 12 vertices and 30 edges. This topology is refined by subdividing each triangles by four new identical equilateral triangles. The new vertices are projected on the sphere. This process is repeated 4 times to approximate a spherical shape with 5120 triangles and 2562 vertices (see figure <a name='Case_0_Yolk_blender_all_gl_zoom' class='fig'></a>). 
+
+		Any other Platonic solid could have been chosen without any significant drawback. 
+
+		However, the icosahedron has the better trade-off between stability (its elementary faces are triangles) and volume maximization (only the dodecahedron occupied a slightly larger volume by it has pentagonal faces). 
+
+		In our geodesic dome, every vertex but the original 12 has 6 direct neighbors, the original vertices have 5 direct neighbors. We denote these lists of neighbors by rank 1. 
+	</p>
+
+	<p>
+		The forces exerted inside this layer are pure elastic forces. Each rank 1 neighboring relationship is materialized by a linear spring. 
+	</p>
+
+	<p>
+		$$ F = k_{my} (r_l - r) $$
+	</p>
+
+	<p>
+		\(k_{my}\) is the stiffness constant which controls the ability to deform the neighboring link for a given applied force (higher k gives stiffer resistance). \(r_l\) is the rest length or the length of the neighboring link if no force is applied on it. Each link of the yolk membrane has its own rest length. It is defined by the length of the link when the geodesic dome is projected on a sphere whose volume is equal to desired yolk volume \(V_{yolk}\) (radius \(R_{yolk} = \sqrt[3]{\frac{3V_{yolk}}{4\pi}}\)). Concretely, rest lengths are different for the 5-neighbors vertices from the 6-neighbors vertices. Without this rescaling, the equilibrium shape toward which the membrane would converge is the original Platonic solid and not a sphere.
+	</p>
+
+
+	<p>
+		As the topology remains invariant, there is no plasticity in the yolk membrane alone: each deformation triggered by a load will be absorbed and the original shape will be recovered. However, if the applied load is too harsh, the membrane mesh may get tangled up and erratic behavior may occur. To lower the risk, we define rank 2 neighbors list as the list comprising rank 1 neighbors and rank 1 neighbors of the rank 1 neighbors (figure <a name='Case_0_Yolk_blender_all_gl_zoom' class='fig'></a>). These links are also materialized by linear springs with equivalent stiffness coefficient \(k_{my}\) and rest length \(r_l\). 
+	</p>
+
+
+	
+
+	<figure id='Case_0_Yolk_blender_all_gl_zoom'>
+		<img src="../../images/Cases_Studies/Case_0_Yolk/blender/all_gl_zoom.png" width="900">
+		<figcaption>The structural topology of the yolk membrane is a geodesic dome. <strong>a</strong>, Icosahedron. <strong>b</strong>, <strong>c</strong>, <strong>d</strong>, <strong>e</strong>, iterative subdivision of the original icosahedron to obtain the geodesic dome. <strong>f</strong>, the blue vertex is a regular geodesic vertex and the green vertex is one of the 12 original icosahedral vertices. Rank 1 neighbors are related by red links and rank 2 neighbors by yellow links.</figcaption>
+	</figure>
+
+	<p>
+		An empty yolk membrane as it is modeled here can be seen as a empty elastic balloon. It has the ability to absorb and recover from tangential load but it hardly resists any load applied in a non-tangential manner. Inspired by the lipid drops visible in figure <a name='Case_0_Yolk_THG_thg' class='fig'></a>, we fill the yolk membrane with \(N_{iy}\) identical inner particles of volume \(V_{iy}\) and radius \(R_{iy}\) (see the red particles in figure <a name='Case_0_Yolk_general_particles_yolk' class='fig'></a>). Practically, \(N_{iy} = 500\) particles are added in our simulation which is less than the number of lipid drops and represents a coarse-grained approximation.
+	</p>
+
+	
+	<p>
+		Between inner yolk particles and yolk membrane particles and between inner yolk particles themselves, we apply interaction rules similar to cell-cell interaction described in chapter 3. The topology of these interactions is recomputed at each time step of the simulation, first through a metric selection then through a topological selection. Yolk plasticity is permitted by this adaptive neighboring topology through passive rearrangement of the inner yolk particles.
+	</p>
+
+	<p>
+		We suppose that the membrane yolk particle have a radial radius which is equivalent to the inner yolk particle radius. So the volume occupied by the \(N_{iy}\) inner yolk particles is equal to the volume of a sphere of radius \(R_{yolk} - R_{iy}\).
+	</p>
+
+	<p>
+		$$ N_{iy} \frac{4}{3} \pi R_{iy}^3 = \frac{4}{3} \pi (R_{yolk} - R_{iy})^3 $$
+	</p>
+
+	<p>
+		We deduce the inner yolk particle radius:
+	</p>
+
+	<p>
+		$$ R_{iy} = \frac{R_{yolk}}{1 + \sqrt[3]{N_{iy}}} $$ 
+	</p>
+
+	<p>
+		The interaction forces acting in between inner yolk particles or between inner yolk and yolk membrane particles are the same as the passive attraction/repulsion forces used between deep cells particles (section 3.2.3.1). 
+	</p>
+
+	<p>
+		$$ F = \begin{cases} - w_{rep} (r-r_{eq}) \cdot A(r,R_i,R_j)  & \text{if }r < r_{eq} \\ - w_{adh} (r-r_{eq})  \cdot A(r,R_i,R_j) & \text{if }r\geq r_{eq} \wedge r \leq r_{max} \\ 0 & \text{if } r \geq r_{max}  \end{cases} $$
+	</p>
+
+
+	summary
+
+	<p>
+		3 parameters drives the biomechanical properties of the yolk in our model: the stiffness of the yolk membrane \(k_{my}\) and the attraction and repulsion coefficients of the interaction force between inner particles ( \(w_{adh}\), \(w_{rep}\)). However, what we have idealized here is an empty balloon filled with a viscous fluid whom volume is exactly the volume of the empty balloon. In the real yolk, if the yolk membrane is damaged, inner material is expelled out of the membrane (citation, show data, unpublished data...????). This indicates that the pressure is more important inside the yolk that outside the yolk. We hypothesize that this difference of pressure is due to the cortical tension exerted by the yolk membrane. It translates in the yolk membrane elastic force by replacing the original rest length by a shorter rest length \(r_l = c_{r_l} r_{l_0}\) with \(c_{r_l}\) smaller than \(1\). Hence \(c_{r_l}\) is the forth parameter which influences the yolk biomechanics.
+	</p>
+
+
+
+
+
+
+	<p>
+		To obtain the more realistic yolk mechanical behavior, we fit the model parameters ( inner yolk particles adhesive and repulsive coefficient, the yolk membrane rest length and stiffness ) with the video recording extracted data of a mechanical experiment.
+	</p>
+
+
+	<p>
+		A non deformable ball is pressed on the yolk for a period of time Dt, starting at T0, at depth n% yolk radius. At T1=T0+Dt, the pressing is removed and the yolk progressively recover its initial shape.
+	</p>
+
+
+
+
+
+
+
+
+
+
+
+	<p>
+		<strong>B. Observed data</strong>
+	</p>
+
+	<figure id='Case_0_Yolk_yolk_relaxation_example'>
+		<video src="../../videos/MECAGEN/Case_0_Yolk/yolk_relaxation_example.ogg" width="800" controls></video>
+		<figcaption>Simulation of the yolk relaxation case study</figcaption>
+	</figure>
+
+	<figure id='Case_0_Yolk_120710B_start14min58sec'>
+		<video src="../../videos/MECAGEN/Case_0_Yolk/120710B_start14min58sec.ogg" width="800" controls></video>
+		<figcaption>Simulation of the yolk relaxation case study</figcaption>
+	</figure>
+
+
+	<p>	
+		The real embryo experimentation is made on N individual, the average of each individual measure is used. (???)
+	</p>
+
+
+
+
+
+
+
+
+
+	<p>
+		<strong>C. Reconstruction</strong>
+	</p>
+
+
+
+	measure, start from simulated reconstructed data
+
+	1. We let the yolk get its initial shape (as the model does not assure that the yolk volume is conserved)
+	2. We move the ball toward the yolk along a straight axis passing through the center of the yolk. We use antero-posterior axis as a mark.
+	3. The ball is removed when it has been sunk to a depth equal to 63% of the initial yolk diameter along the AP axis.
+	4. The relaxing yolk diameter is measured at regular time step.
+
+
+
+
+
+
+
+	<figure id=>
+		<img src="../../images/Cases_Studies/Case_0_Yolk/experiment_relaxation.png"  width="800">
+		<figcaption></a>
+		</figcaption>
+	</figure>
+
+
+	<p> 
+	 	We measure the normalized length of the compressed yolk along the compression axis through time.
+		 The same measure is made on experimental and simulated data.
+	</p>
+	 
+	<figure id='measures_relaxation'>
+		<img src="../../images/Cases_Studies/Case_0_Yolk/measures_relaxation.png"  width="800">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+	<p>
+		<strong>D. Fitness function</strong>
+	</p>
+
+
+	<figure id='fitness_relaxation'>
+		<img src="../../images/Cases_Studies/Case_0_Yolk/fitness_relaxation.png"  width="800">
+		<figcaption></figcaption>
+	</figure>
+	 
+	<p>
+	 	The fitness function sums the absolute difference between experimental and simulated normalized length at each timestep (depends of the experimental reconstruction time step).
+	</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p>
+		<strong>E. Discussion</strong>
+	</p>
+
+
+
+	Data simulation : Experiments/2012_11_04_18_25_53_explo_01_over
+
+
+
+	<p>
+		The simulated experiment is done (N1*N2*N3*N4) times, each realization having a different set of parameters.
+	</p>
+
+
+
+	<p>Example of visualization of the 4D + fitness dataset with a custom-made tool.</p>
+	
+	<figure id='Case_0_Yolk_4d_viewer'>
+		<video src="../../videos/MECAGEN/Case_0_Yolk/4d_viewer.ogg" width="800" controls></video>
+		<figcaption></figcaption>
+	</figure>
+	
+
+	 
+
+	
+	 improve mechanical measure by using stress-strain curve (we can not now bc we do not know what is the load applied to the yolk)
+	 
+
+
+
+
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EVL heterogeneité des surfaces ? issues du control de l'epaisseur ? comment ? 
+ 
+ 
+<div id='8_2_2_'>
+<h2>8.2.2. Cell Cycle  </h2>
+ 
+
+
+
+
+	<p>
+		Regarder papier Ben Simons sur cycle cellulaire cellule souche pour la mise en valeur d'un modèle à priori simple de rythmes cellulaire -> He, J. et al., 2012. How Variable Clones Build an Invariant Retina. Neuron, 75(5), pp.786–798. <a name='He:2012dg' class='ref'></a>
+	</p>
+	
+
+
+
+ 
+	<p>
+		Objective: setting up the cell cycle 
+	</p>
+
+
+
+
+
+ 
+ 
+	<p>
+		<strong>A. Hypotheses</strong>
+	</p>
+
+	<p>
+		In Mecagen, except for the Enveloping Layer (see section 8.4  XXXXXXX), the cell cycle is uncoupled from the other cell mechanism. It is so because we do not have specific hypothesis to test on this topics.
+	</p>
+
+
+	<p>
+		However, cells do divide and their size and number has a direct influence of the zebrafish development. In order to avoid perturbing the other mechanisms, we explore the possible cell cycling rules and fit them to experimental measures.
+	</p>
+
+
+	<ul>
+		<li>Hyp. 1: the cell cycle is approximated as constant during the first ten division, what is this constant ?</li>
+		<li>Hyp. 2: decide whether, after the tenth cell cycle, the progression of the cell cycle is geometric or arithmetic.</li>
+	</ul>
+
+
+
+
+
+
+
+
+
+
+
+	<p>
+		<strong>B. Observed data</strong>
+	</p>
+
+
+	<figure id='kane_kimmel_1993_cell_cycle'>
+		<img src="../../images/Cases_Studies/Case_1_Division/kane_kimmel_1993_cell_cycle.png" width="400">
+		<figcaption>from Kane, D. &amp; Kimmel, C., 1993. The zebrafish midblastula transition. Development <a name='Kane:1993wp' class='ref'></a> </figcaption>
+	</figure>
+
+
+	<figure id='kane_kimmel_1993_cell_cycle_2'>
+		<img src="../../images/Cases_Studies/Case_1_Division/kane_kimmel_1993_cell_cycle_2.png" width="400">
+		<figcaption>from Kane, D. &amp; Kimmel, C., 1993. The zebrafish midblastula transition. Development <a name='Kane:1993wp' class='ref'></a></figcaption>
+	</figure>
+
+
+	<figure id='kane_kimmel_1993_cell_cycle_3'>
+		<img src="../../images/Cases_Studies/Case_1_Division/kane_kimmel_1993_cell_cycle_3.png" width="800">
+		<figcaption>from Kane, D. &amp; Kimmel, C., 1993. The zebrafish midblastula transition. Development <a name='Kane:1993wp' class='ref'></a></figcaption>
+	</figure>
+
+	<p>
+		According to Kane and Kimmel <a name='Kane:1993wp' class='ref'></a>, cell cycle increases as \(\frac{1}{V_{cell}}\). If cell is divided in two identical daughter cells, it means the cell volume is divided by 2 and the cell cycle double after eath mitosis. Geometric growth of the cell cycle.
+	</p>
+
+
+
+
+
+
+
+
+
+	
+
+	<p>
+		However, data do not match their claim: (10->17min, 11->22min, 12->33min, 13->55min).
+	</p>
+
+
+
+
+	<p>
+		If cycle 10 at 3h, numcells 1000
+	</p>
+
+	<p>
+		then cycle 11 at 3h17min, 2000
+	</p>
+
+	<p>
+		cycle 12 at 3h39min, 4000
+	</p>
+
+	<p>
+		cycle 13 at 4h12min, 8000
+	</p>
+
+	<p>
+		cycle 14 at 6h07min 16000
+	</p>
+
+	<p>
+		..
+	</p>
+
+	<p>
+		if double
+	</p>
+
+	<p>
+		cycle 15 at 8h 32000
+	</p>
+
+	<p>
+		cycle 16 at 12h 64000
+	</p>
+	
+
+
+
+
+
+
+	<p>
+		<strong>Data paper Science</strong> Olivier, N. et al., 2010. Cell lineage reconstruction of early zebrafish embryos using label-free nonlinear microscopy. Science <a name='Olivier:2010jz' class='ref'></a>
+	</p>
+
+	<figure id='Case_1_Division_Olivieretal'>
+		<img src="../../images/Cases_Studies/Case_1_Division/Olivieretal.png" width="400">
+		<img src="../../images/Cases_Studies/Case_1_Division/Olivieretal2.png" width="400">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+	<p>
+		<strong>081104a</strong> (start at 4h, dt=2min25s, selection 20059)
+	</p>
+
+
+
+	<figure id='Cycle_081104a_start4h_dt2min25s'>
+		<img src="../../images/Cases_Studies/Case_1_Division/Cycle_081104a_start4h_dt2min25s.png" width="700">
+		<img src="../../images/Cases_Studies/Case_1_Division/Cycle_081104a_start4h_dt2min25s_edited.png" width="700">
+		<figcaption>abscissa: time of mitosis. ordinate: time from previous mitosis. On the bottom picture, an approximation of what could be the cell cycle. With more points, we could improve this measure a lot, and use it to answer the case study question !!!!</figcaption>
+	</figure>
+
+
+
+
+	<p>
+		t 50 -> 6h previous cellcycle length 50dt = 2h tprevious mitosis 4h
+	</p>
+
+	<p>
+		t 100 -> 8h 70dt = 2h50 5h10
+	</p>
+
+	<p>
+		t 150 -> 10h 90dt = 3h37 6h23
+	</p>
+
+	<p>
+		t 200 -> 12h 110dt = 4h25 7h35
+	</p>
+
+
+
+
+<p>
+	<strong>070418a</strong>: 10040, ts 1min07s, 'all clones', start 4h10min, plot selection
+</p>
+
+<p>
+	<strong>071222bF</strong>: 2005, ts 3min, 'clones corriges ingrid', start 1h45
+</p>
+
+
+
+	<figure id='Case_1_Division_071222bF_vue_AP'>
+		<video src="../../videos/MECAGEN/Case_1_Division/071222bF_vue_AP.ogg" width="800" controls></video>
+		<figcaption></figcaption>
+	</figure>
+
+
+	<figure id='Case_1_Division_071222bF_t_t2005_374'>
+		<video src="../../videos/MECAGEN/Case_1_Division/071222bF_t_t2005_374.ogg" width="800" controls></video>
+		<figcaption></figcaption>
+	</figure>
+
+	<figure id='071222bF_t_selection_1_all_T_121106_lineage_tree'>
+		<img src="../../images/Cases_Studies/Case_1_Division/071222bF_t_selection_1_all_T_121106_lineage_tree.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+<figure id='071222bF_t_selection_1_all_T_121119_nomargin_nolate_cellcyclelength_per_generation'>
+	<img src="../../images/Cases_Studies/Case_1_Division/071222bF_t_selection_1_all_T_121119_nomargin_nolate_cellcyclelength_per_generation.png" width="900">
+	<figcaption>071222bF_t_selection_1_all_T_121119_nomargin_nolate_cellcyclelength_per_generation</figcaption>
+</figure>
+
+
+<figure id='071222bF_t_selection_1_all_T_121106_cellcyclelength_per_generation_mod'>
+	<img src="../../images/Cases_Studies/Case_1_Division/071222bF_t_selection_1_all_T_121106_cellcyclelength_per_generation_mod.png" width="900">
+	<figcaption>071222bF_t_selection_1_all_T_121106_cellcyclelength_per_generation_mod</figcaption>
+</figure>
+
+
+<p>
+	d'apres film raw divisions:
+</p>
+
+<ul>
+	<li>1 -> 2   				ts    		0h30?	cycle 1 		plan1</li>
+	<li>2 -> 4   				ts    		0h45?	cycle 2 		plan2</li>
+	<li>4 -> 8   				ts   		1h00?	cycle 3  		plan1</li>
+	<li>8 -> 16   				ts    		1h15? 	cycle 4  		plan2</li>
+	<li>16 -> 32  				ts 1   		1h45? 	cycle 5  		AV</li>
+	<li>32 -> 64 				ts 6 		2h 		cycle 6 		plan1</li>
+	<li>64 -> 128 				ts 11 		2h15 	cycle 7 		plan2</li>
+	<li>128 -> 256 				ts 15 		2h30 	cycle 8 		AV</li>
+	<li>256 -> 512 				ts 19 		2h45 	cycle 9 		EVL tangentiel ?</li>
+	<li>512 -> 1024 () 			ts 25-27	3h00 	cycle 10 		EVL radial animal, tangentiel margin</li>
+	<li>1024 -> 2048-(Nevl) 	ts 33-38	3h30	cycle 11 		EVL tangentielle sauf exception</li>
+
+debut epibolie 3h30 (simu 2100)
+
+	<li>2048 -> 4096 			ts 45-49 	4h06	cycle 12 		</li>
+	<li>4096 -> 8192 			ts 70-78	5h27 	cycle 13 		</li>
+
+debut internalization 5h30 (simu 3300)
+
+	<li>8192 -> 16384 			ts 100-115 	7h06 	cycle 14 		</li>
+	<li>16384 -> 32768 	ts  		cycle 15 		</li>
+
+</ul>
+
+<p>
+	Attention ! si 3h pour cycle 10, le cycle moyen est de 18min ie (180ts simu). Mais 1 cycle 45 min. deuxieme donc OK.
+</p>
+
+
+<p>
+	TODO 121119: 
+</p>
+
+<ul>
+	<li>.sortir listes ID cellules generation 15 et 16 en dessous car elles doivent être plus longues. faux positifs ingrid ?? lui demander de vérifier à partir de la liste -> 071222bF_t_selection_1_all_T_121119_nomargin_nolate_listGEN15plus.csv</li>
+	<li>dire a ingrid qu'il y a des lignées qui commencent très tard. À supprimer... ?</li>
+</ul>
+
+
+
+<p>
+	Extraire plot cycle/t depuis les fichiers emb de 081104a et 070418a
+</p>
+
+
+
+
+
+	<p>
+		Progression linéaire du cycle cellulaire ?
+	</p>
+
+	<p>
+		<strong>Data figure XXXX papier XXXX</strong> (start at 4h10, dt=1min07s)
+	</p>
+
+
+	<figure id='Densite_start4h10_dt1min07s_zoom'>
+		<img src="../../images/Cases_Studies/Case_1_Division/Densite_start4h10_dt1min07s_zoom.png" width="700">
+		<figcaption></figcaption>
+	</figure>
+	
+	<p>
+		Dt 90 = 1h40min30s
+	</p>
+
+	
+	<p>
+		t 0 4h10
+	</p>
+
+	<p>
+		t 90 5h50
+	</p>
+
+	<p>
+		t 180 7h30
+	</p>
+
+	<p>
+		t 270 9h10
+	</p>
+
+	<p>
+		t 360 10h50
+	</p>
+
+	<p>
+		t 450 12h30
+	</p>
+
+	<p>
+		t540 14h10
+	</p>
+
+
+	<p>
+		Environ 8000 cellules à 10h ?? Vue partielle de l'embryon
+	</p>
+
+
+
+
+
+
+
+
+
+	<p>
+		<strong>Model</strong>
+	</p>
+
+
+	<p>
+		Hypothese 1: Geometric progression
+	</p>
+
+	<p>
+		if cycle \( < 10\), 
+	</p>
+
+	<ul>
+		<li>cellcyclelength remains constant after a division</li>
+	</ul>
+	
+	<p>
+		otherwise,
+	</p>
+
+	<ul>
+		<li>\(cellcyclelength_daughter = (commonratio * cellcyclelength_mother * (1.0 + k * rand(-.5,.5))\)</li>
+	</ul>
+
+	<figure id='Case_1_Division_GEO_multi'>
+		<img src="../../images/Cases_Studies/Case_1_Division/GEO_multi.png" width="700">
+		<figcaption>If ts=6sec, cellcyclelength(0) = 160ts = 16 minutes </figcaption>
+	</figure>
+
+
+	<figure id='Case_1_Division_GEO_multi_log'>
+		<img src="../../images/Cases_Studies/Case_1_Division/GEO_multi_log.png" width="700">
+		<figcaption>If ts=6sec, cellcyclelength(0) = 160ts = 16 minutes </figcaption>
+	</figure>
+
+	<figure id='GEO_CR2_k04v3'>
+		<img src="../../images/Cases_Studies/Case_1_Division/GEO_CR2_k04v3.png" width="700">
+		<figcaption>Scatter Plot (Last cycle length / mitosis time). CR=2 k=.4</figcaption>
+	</figure>
+
+
+	<figure id='GEO_CR2_k04v3_zoom'>
+		<img src="../../images/Cases_Studies/Case_1_Division/GEO_CR2_k04v3_zoom.png" width="700">
+		<figcaption>Zoom &quot;a la&quot; Cycle 081104a_start4h_dt2min25s</figcaption>
+	</figure>
+	
+
+
+	<p>
+		Hypothese 2: Arithmetic progression
+	</p>
+
+	<p>
+		if cycle \( < 10\), 
+	</p>
+
+	<ul>
+		<li>cellcyclelength remains constant after a division</li>
+	</ul>
+	
+	<p>
+		otherwise,
+	</p>
+
+	<ul>
+		<li>cellcyclelength_daughter = cellcyclelength_mother + commonratio * (1.0 + k * rand(-.5,.5))</li>
+	</ul>
+
+	<figure id='Case_1_Division_ARI_multi'>
+		<img src="../../images/Cases_Studies/Case_1_Division/ARI_multi.png" width="700">
+		<figcaption>If ts=6sec, cellcyclelength(0) = 160ts = 16 minutes </figcaption>
+	</figure>
+
+
+	<figure id='Case_1_Division_ARI_multi_log'>
+		<img src="../../images/Cases_Studies/Case_1_Division/ARI_multi_log.png" width="700">
+		<figcaption>If ts=6sec, cellcyclelength(0) = 160ts = 16 minutes </figcaption>
+	</figure>
+
+	<figure id='ARI_CD400_K08'>
+		<img src="../../images/Cases_Studies/Case_1_Division/ARI_CD400_K08.png" width="700">
+		<figcaption>Scatter Plot (Last cycle length / mitosis time). CD=400 k=.8</figcaption>
+	</figure>
+
+
+	<figure id='ARI_CD400_K08_zoom'>
+		<img src="../../images/Cases_Studies/Case_1_Division/ARI_CD400_K08_zoom.png" width="700">
+		<figcaption>Zoom &quot;a la&quot; Cycle 081104a_start4h_dt2min25s</figcaption>
+	</figure>
+	
+
+
+
+
+
+
+
+
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_2_3_'>
+<h2>8.2.3. Cleavage  </h2>
+ 
+
+
+
+ 
+ 
+ 
+ 
+	<p>
+		<strong>A. Hypotheses</strong>
+	</p>
+
+	<p>
+		Study spans between the 8cell and the 512cell stage (and later if data is available).
+	</p>
+
+
+	<p>
+		Cell cycle and division axis are imposed. 
+	</p>
+
+
+	<p>
+		We want to decipher the pattern of evolution of the embryo shape (the evolution toward the high stage: diminishing deep cell/yolk interface surface and increasing height of the embryo). The key parameters of this study are the Cell/Cell and Cell/Yolk attraction/repulsion parameters (4params). Yolk mechanical params could also be discussed.
+	</p>
+
+
+
+	<p>
+		<strong>B. Observed data</strong>
+	</p>
+
+
+
+
+	<p>
+		Cell centers from 081014h used in the science papers. (080917h and 081024h also available). The average dataset looks flat.
+	</p>
+
+
+
+	<figure id='Case_2_Cleavage_video_example_Cleavage_example'>
+		<video src="../../videos/MECAGEN/Case_2_Cleavage/video_example/Cleavage_example.ogg" width="800" controls></video>
+		<figcaption>Superposition of the experimental cell centers data set (large green cubes) and simulated cell centers. </figcaption>
+	</figure>
+
+
+
+
+
+	<p>
+		<strong>C. Reconstruction</strong>
+	</p>
+
+
+
+
+
+	<p>
+		Both simulated and experiment cell centers are superposed. 
+	</p>
+
+	<p>
+		Measure 1: at each time step, we compute the 3D alpha-shape from the cell center set.
+	</p>
+
+
+	<p>
+		On the figure below, Mesure 2: another possibility of recontruction. The centers could be projected on a half plane delimited by the Animal Vegetal axis. The 2D alpha-shape of these projected centers reveals more tractable parameters. For example, separating the external curve (above) and the internal curve (at the cells/yolk border) and interpolating. 
+	</p>
+
+
+
+	<figure id='Case_2_Cleavage_schematics_lowres'>
+		<img src="../../images/Cases_Studies/Case_2_Cleavage/schematics_lowres.png" width="700">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+
+
+	<p>
+		<strong>D. Fitness function</strong>
+	</p>
+
+
+	<p>
+		Measure 1: From the simulated and experimental 3D alpha shape, we count the number of cells from the simulated data set which are outside the alphashape of the experimental data set and vice versa. In the ideal case, the sum of these &quot;outside&quot; centers is nul. This sum will be the fitness function for this measure.
+	</p>
+
+
+
+	<p>
+		E. Discussion
+	</p>
+	
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_2_4_'>
+<h2>8.2.4. Enveloping cell layer  </h2>
+ 
+ 
+
+<p>
+	<strong>Intuition adeline:</strong>
+</p>
+
+
+<ul>
+	<li>moins de division au pole animale qu'a la marge</li>
+	<li>divisions simultanée avec les voisines</li>
+</ul>
+
+ 
+ 
+
+<p>
+	<strong>evl cell growth</strong>
+</p>
+
+<p>
+	Fundulus -> nice picture in Fink, R. & Cooper, M., 1996. Apical membrane turnover is accelerated near cell–cell contacts in an embryonic epithelium. Developmental Biology, 174(2), pp.180–189. <a name='Fink:1996un' class='ref'></a>
+</p>
+
+<figure id='growth_fink_1996.png'>
+	<img src="../../images/Cases_Studies/Case_3_EVL/growth/fink_1996.png" width="400">
+	<figcaption>Regional membrane turnover within the apical membranes of Fundulus enveloping layer cells. Pairs of photographs showing the temporal progression of membrane turnover (seen as loss of fluorescence) of EVL cells labeled with fluorescent lectin (A–D) and lipid (E–H). Embryos stained with fluorescent lectin initially show a uniform pattern of fluorescence <a name='Fink:1996un' class='ref'></a></figcaption>
+</figure>
+
+
+
+ 
+	<p>
+		<strong>A. Hypotheses</strong>
+	</p>
+
+
+
+	<p>
+		see Fukazawa, C. et al., 2010. poky/chuk/ikk1 is required for differentiation of the zebrafish embryonic epidermis. Developmental Biology, 346(2), pp.272–283. <a name='Fukazawa:2010bh' class='ref'></a>
+	</p>
+
+
+	<p>
+		see Dodd, M.E. et al., 2009. The ENTH domain protein Clint1 is required for epidermal homeostasis in zebrafish. Development, 136(15), pp.2591–2600. <a name='Dodd:2009hf' class='ref'></a> 
+	</p>
+
+
+	<p>
+		see Goonesinghe, A. et al., 2012. Desmosomal cadherins in zebrafish epiboly and gastrulation. BMC developmental biology, 12, p.1. <a name='Goonesinghe:2012di' class='ref'></a>
+	</p>
+	
+
+
+	<ul>
+		<li>From which time step do we suppose that the 2 populations remain separated ?</li>
+		
+	</ul>
+
+
+	<p>
+		<strong>Model:</strong>
+	</p>
+
+
+	<p>
+		Formation at cycle N:
+	</p>
+
+	<p>
+		When the division cycle reaches its N_evl_formation th occurence (N_evl_formation  = ), the external cells perform a radial division (normal to the embryo surface) and the external (internal) daughter cell become part of the EVL (IC) population. The externality property is determined by an topological method called &quot;alpha-shaping&quot;. The initial EVL lateral radius R_lat is equal to the initial zygote radius divided by the 2^(numgeneration / 3) so the same radius has its sister IC. The apico-basal radius Rap is computed to conserve the yolk volume .5*(4/3)*PI*Ric0^3 * (1/2)^(numgeneration) divided by the surface of the cell (PI * Rlat^2)
+	</p>
+
+
+	<p>
+		Mechanical equilibrium: transfer IC->EVL, EVL->IC
+	</p>
+
+	<p>
+		For a given period of time after the EVL formation, the cell may be transfer between the two population in both direction (IC->EVL, EVL->IC). The criteria for the transfer is based on geometrical consideration (alpha shaping).
+
+		The dimension of the EVL->IC conversion gives a regular radius of its generation, the inverse conversion gives a regular Rlat for its generation and the Rab accordingly (see initrialization)
+	</p>
+
+
+
+	<p>
+		size control: 
+	</p>
+
+
+	<p>
+		&quot;cylindrical&quot; cell -> two dimensional parameters: R_lateral and R_apicobasal (PartRadius and PartRadius(i+NUMEVLCELLmax))
+	</p>
+
+
+	<p>
+		volume is supposed constant -> V = Rl^2 * Rap
+	</p>
+
+
+	<p>
+		Initially... params_const.EVLPartRadiusLat0...
+	</p>
+
+	
+	<p>
+		cell pressure:
+	</p>
+
+
+	<p>
+		The cell pressure/tension is approximated by the average of the force intensity applied on it.
+	</p>
+
+	<p>
+		Attention, discussion: pas de division par la surface... et la moyenne annule complétement les assymetries dans l'orientatino des forces. example pression > 0 selon un axe, tension > 0 selon l'axe orthogonale -> moyenne nulle...
+	</p>
+
+
+	<p>
+		cell growth :
+	</p>
+
+
+	<p>
+		if the pressure is above a given threshold (mecha_params.EVLgrowthTheshold), the lateral radius R_lateral is inrcreased by a given amount (Rlat * params_const.EVL_growth_ratio_lateral = 1.01 * Rlat) and, to conserve the volume, the apico-basal radius R_ap is decreased (Rap = Rap / (params_const.EVL_growth_ratio_lateral*params_const.EVL_growth_ratio_lateral))
+	</p>
+
+
+
+	<p>
+		cell cycle:
+	</p>
+
+	<p>
+		if the cell lateral radius is above a given threshold (mecha.params.EVLSiveLimit * params_const.EVLPartRadiusLat0) (and if the EVL cell is not in the mphase), a division is triggered. 
+	</p>
+
+
+
+	<p>
+		Cell division:
+	</p>
+
+	<p>
+		The daughter cells have identical size, they maintain their apicobasal radius and the lateral radius is reduced by factor (1/2)^(1/2) to have Vdaugthr = (1 / 2) Vmother
+	</p>
+
+	<p>
+		The axis of division is selected random in the tangential plane.
+	</p>
+
+
+	<p>
+		Cell mechanics
+	</p>
+
+	<p>
+		-> in between EVL cells
+	</p>
+
+
+	<p>
+		-> with the deep cells
+	</p>
+
+
+	<p>
+		-> with the yolk
+	</p>
+
+
+	<p>
+		-> margin 
+	</p>
+
+
+
+
+
+
+	<p>
+		<strong>B. Observed data</strong>
+	</p>
+
+
+	<p>
+		Work in progress. Thierry needed...
+	</p>
+
+
+
+	<p>
+		<strong>C. Reconstruction</strong>
+	</p>
+
+
+	<p>
+		We have implemented standard epithelium measure (see Escudero, L.M. et al., 2011. Epithelial organisation revealed by a network of cellular contacts. Nature communications, 2, p.526. link <a name='Escudero:2011cv' class='ref'></a>) ie:
+	</p>
+
+	<ul>
+		<li>cell area</li>
+		<li>Degree of a node</li>
+		<li>clustering coefficient</li>
+		<li>average degree of neighbors</li>
+		<li>histogram</li>
+	</ul>
+
+	<p>
+		Each measure can be spatially discriminated through a mosaic of zones along the Animal-Vegetal axis and the Antero-Posterior axis (see video below).
+	</p>
+
+
+
+	<figure id='Case_3_EVL_video_example_zone1x3_EVLexample_1x3'>
+		<video src="../../videos/MECAGEN/Case_3_EVL/video_example_zone1x3/EVLexample_1x3.ogg" width="800" controls></video>
+		<figcaption>The measure can be regionalized in spatial zone. Here, we define 3 zones along the AV axis</figcaption>
+	</figure>
+
+	<figure id='Case_3_EVL_video_example_zone3x3_EVLexample_3x3'>
+		<video src="../../videos/MECAGEN/Case_3_EVL/video_example_zone3x3/EVLexample_3x3.ogg" width="800" controls></video>
+		<figcaption>The measure can be regionalized in spatial zone. Here, we define 3 zones along the AV axis and 3 zone along the AP axis ie 9 zone</figcaption>
+	</figure>
+
+
+	<p>
+		<strong>D. Fitness function</strong>
+	</p>
+
+	<p>
+		E. Discussion
+	</p>
+	
+ 
+ 
+ 
+
+
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_2_5_'>
+<h2>8.2.5. Intercalation pattern  </h2>
+ 
+
+
+	
+ 
+	<p>
+		<strong>A. Hypotheses</strong>
+	</p>
+
+
+
+
+	<p>
+		????
+	</p>
+
+
+
+
+
+
+
+	<p>
+		<strong>B. Observed data</strong>
+	</p>
+
+
+
+	<p>
+		we observe the evolution of the cell position at the onset of epiboly.
+	</p>
+
+
+	<figure id='Case_4_intercalation_071222bF_horizontal'>
+		<img src="../../images/Cases_Studies/Case_4_intercalation/071222bF_horizontal.png" width="900">
+		<figcaption>071222bF</figcaption>
+	</figure>
+
+	<figure id='simulation_general'>
+		<img src="../../images/Cases_Studies/Case_4_intercalation/simulation/general/simulation_general.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+	<p>
+		<strong>C. Reconstruction</strong>
+	</p>
+
+
+	<p>
+		Let \(T_s\) be the starting time step of the measure. At \(T_s\), each cell receives a label (total \(N_{label}\)). As time advances and cells divide, daughter cells will inherit the label of their mother. 
+	</p>
+
+
+	<p>
+		We measure at each time step which label has a neighboring contact with another label. This measure is represented by a square matrix \(C(t)\) of size \(N_{label} \times N_{label} \). An element \(c_{i,j}(t)\) of the matrix has a value of 1 if at least a cell having a label i is in contact with at least a cell having a label j at the current time step. Otherwise, \(c_{i,j}(t)\) is 0.
+	</p>
+
+
+	<p>
+		A time integration of the matrix indicates which cell lineage is 
+		.
+	</p>
+
+
+
+
+
+	<figure id='simulation_clonal'>
+		<img src="../../images/Cases_Studies/Case_4_intercalation/simulation/clonal/simulation_clonal.png" width="900">
+		<figcaption>Cell lineage with label.</figcaption>
+	</figure>
+
+
+
+	<figure id='simulation_mitosis_clonal'>
+		<img src="../../images/Cases_Studies/Case_4_intercalation/simulation/mitosis_clonal/simulation_mitosis_clonal.png" width="700">
+		<figcaption>Zoom on mitoses to highlight/show label inheritance.</figcaption>
+	</figure>
+
+
+	<figure id='Case_4_Intercalation_intercalation_measure'>
+		<video src="../../videos/MECAGEN/Case_4_Intercalation/intercalation_measure.ogg" width="400" controls></video>
+		<figcaption>Red zone characterize region on the embryo where the intercalation is more intense.</figcaption>
+	</figure>
+
+
+	<figure id='Case_4_Intercalation_intercalation_cylinder_test'>
+		<video src="../../videos/MECAGEN/Case_4_Intercalation/intercalation_cylinder_test.ogg" width="800" controls></video>
+		<figcaption>Cylinder dispersion test</figcaption>
+	</figure>
+
+
+
+	<p>
+		<strong>D. Fitness function</strong>
+	</p>
+
+
+
+
+
+
+
+
+
+
+	<p>
+		E. Discussion
+	</p>
+	
+ 
+
+
+
+
+
+
+
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_2_6_'>
+<h2>8.2.6. Epiboly  </h2>
+ 
+ 
+
+
+
+	epiboly pre 50%:
+
+	orientation radiale est plutot donné par yolk et non par l'evl
+
+	argument 1: espace entre blasto et evl assez tot, voir film 071222bF 3sec environ
+
+
+
+
+
+
+
+
+
+	<p>
+		Epiboly post internalization
+	</p>
+
+
+	<p>
+		hypothese: hypoblast migrates on the epiblast, and it favors the epiboly movement. See example of MZOEP mutant which is slower (figure below).
+	</p>
+
+	
+	
+	
+
+
+<figure id='Case_Epi_Convergence_extension_waxman_2005'>
+	<img src="../../images/Cases_Studies/Case_7_Convergence_extension/waxman_2005.png" width="800">
+	<figcaption>from Waxman, J.S., 2005. Regulation of the early expression patterns of the zebrafish Dishevelled-interacting proteins Dapper1 and Dapper2. Developmental dynamics : an official publication of the American Association of Anatomists, 233(1), pp.194–200. <a name='Waxman:2005fe' class='ref'></a>. Epiboly is slower - &quot;Note that, because later epiboly (epib.) movements are delayed in MZoep embryos, dpr1 expression in MZoep embryos at \(70\%\) and \(90\%\) epiboly is compared with wild-type embryos at \(90\%\) epiboly and tail bud stages, respectively.&quot;</figcaption>
+</figure>
+
+
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_2_7_'>
+<h2>8.2.7. Internalization  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_2_8_'>
+<h2>8.2.8. Margin contraction  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='8_2_9_'>
+<h2>8.2.9. Convergence-Extension  </h2>
+
+
+
+
+
+
+
+
+
+<p>
+	<strong>Hypotheses</strong>
+</p>
+
+
+
+<p>
+	Initial state of the case study:
+</p>
+
+<ul>
+	<li>cell position: internalized embryo 60% epiboly</li>
+	<li>polarization field: (verifier sur ancien fichier)</li>
+</ul>
+
+
+
+<p>
+	<strong>Questions</strong>
+</p>
+
+
+<p>
+	Background (bio):
+</p>
+
+
+<p>
+	The formation of the antero-posterior axis of the embryo is associated with an elongation of the tissue.
+</p>
+
+
+<p>
+	Various cellular mechanisms may be responsible for an elongation (growth along a preferential axis):
+</p>
+
+<ul>
+	<li>cell deformation along the APaxis: C. elegans, Phallusia (ascidians ?)</li>
+	<li>active cell rearrangement: chord Pallusia, Drosophila</li>
+	<li>oriented cell division, amplified with cell growth: XXXX ??</li>
+</ul>
+
+<p>
+	During the zebrafish gastrulation, this episode is called Convergence-Extension (CE) (see Review chapitre 6 XXX).
+</p>
+
+
+
+
+
+<h3>Q1. Influence of the division orientation axis on the convergence</h3>
+
+
+
+
+
+
+
+<p>
+	-> Is it possible to have a convergence-extension behavior if the division orientation axes are random ? we can test it
+</p>
+
+
+<p>
+	-> Does it help to have oriented division axes along the XXXXX ? we can test it
+</p>
+
+
+
+<p>
+	We postulate that cell are re-oriented after division because of the external protrusive activity around them. On peut le montrer en mettant des divisions d'axes random et en plotant la reorientation dû aux actions mechaniques locales (protrusions des voisines.)
+</p>
+
+
+
+
+<p>
+	Biblio:
+</p>
+
+
+<p>
+	<i>In vivo</i> confocal imaging shows that mitotic divisions in the dorsal region of the zebrafish gastrulation are preferentially oriented along the animal vegetal axis and this orientation is a driving force of axis elongation <a name='Gong:2004bw' class='ref'></a> 
+</p>
+
+
+	<p>
+		&quot;Xdd1 disrupts convergence and extension of the dorsal tissue (Fig. 4b)11,13. It is thus possible that the disruption of oriented division observed in Xdd1-overexpressing embryos was due to compromised morphogenesis of the tissue. To address this, we generated mosaic clones of Xdd1-expressing cells in a wild-type background by injecting a single cleavage-stage blastomere. Such embryos undergo normal morphogenesis, and are indistinguishable from unmanipulated controls morphologically (data not shown). Subsequent analysis shows that these mosaic Xdd1-expressing cells have randomized division orientation, with angular distribution similar to that of embryos overexpressing Xdd1 ubiquitously (Fig. 3e, f; see Supplementary Information for details). Thus, Dsh has a cell-autonomous function and exerts its effect on division orientation directly.&quot; ... &quot;Our experiments on the zebrafish dorsal epiblast show both a matching of division orientation and axis elongation normally, and a disruption of oriented cell division and axis elongation after inhibition of PCP signalling. We assessed the contribution of oriented cell division to axis elongation.&quot; (Gong, Y., Mo, C. &amp; Fraser, S.E., 2004. Planar cell polarity signalling controls cell division orientation during zebrafish gastrulation. Nature, 430(7000), pp.689–693. <a name='Gong:2004bw' class='ref'></a>) -> still a double, another mechanism, like protrusion, could also be involved. leaving this cell division orientation bias as a side effect. It would be really interesting to check in my simulation if, even with random axis, cell are re-oriented by protrusive mechanism (deactivate protrusion for the dividing cell and check if there is many differences).
+	</p>
+
+
+	<p>
+		see Segalen, M. &amp; Bellaã che, Y., 2009. Cell division orientation and planar cell polarity pathways. Seminars in Cell and Developmental Biology, pp.1–6. <a name='Segalen:2009fg' class='ref'></a>
+	</p>
+	
+
+<p>
+	Measures, see papier Manu
+</p>
+
+<ul>
+	<li>local velocity vector</li>
+	<li>mitotic dipole as a function of time, evolution of the distance -> daughter cells which </li>
+
+</ul>
+
+
+
+zoep: pas de plaque prechordale, pas d'endoderme -> mesoderme se debrouille 
+
+
+<h3>Q2. Effect of the hypoblast CE on the epiblast CE.</h3>
+
+
+
+<figure id='Case_7_Convergence_extension/jia_2009'>
+	<img src="../../images/Cases_Studies/Case_7_Convergence_extension/jia_2009.png" width="500">
+	<figcaption>WT and MZoep from Jia, S. et al., 2009. Smad2/3 activities are required for induction and patterning of the neuroectoderm in zebrafish. Developmental Biology, 333(2), pp.273–284. <a name='Jia:2009ez' class='ref'></a>. The extension is less decreased and the mass of converged cell is concentrated in the posterior region.</figcaption>
+</figure>
+
+
+<figure id='Case_7_Convergence_extension/waxman_2005'>
+	<img src="../../images/Cases_Studies/Case_7_Convergence_extension/waxman_2005.png" width="800">
+	<figcaption>from Waxman, J.S., 2005. Regulation of the early expression patterns of the zebrafish Dishevelled-interacting proteins Dapper1 and Dapper2. Developmental dynamics : an official publication of the American Association of Anatomists, 233(1), pp.194–200. <a name='Waxman:2005fe' class='ref'></a>. Epiboly is slower - &quot;Note that, because later epiboly (epib.) movements are delayed in MZoep embryos, dpr1 expression in MZoep embryos at \(70\%\) and \(90\%\) epiboly is compared with wild-type embryos at \(90\%\) epiboly and tail bud stages, respectively.&quot;</figcaption>
+</figure>
+
+
+<p>
+	MZoep mutant does not internalize properly and lacks mesendoderm and structures (notochord, prechordal plate, paraxial/lateral mesendoderm).  
+</p>
+
+<p>
+	MZoep is a mutant of the Nodal-signaling pathways and the Nodal-dependent gene (XXXX goosecoid,...) are not expressed. see Jia, S. et al., 2009. Smad2/3 activities are required for induction and patterning of the neuroectoderm in zebrafish. Developmental Biology, 333(2), pp.273–284. <a name='Jia:2009ez' class='ref'></a> 
+</p>
+
+<p>
+	However, its epiblast still performs a CE. 
+
+	Dorsalizing genes are still expressed (XXXXX)
+
+	Its phenotype shows that the cell mass is present at the dorsal side but in a more ventral latitude (show image).
+</p>
+
+<p>
+	We postulate that the epiblast CE is unaffected by the lack of hypoblast mechanically. Its different phenotype is due to a change in the polarization field in the tissue whose difference correlates with lack of polarization source in the region of the prechorlale plate.
+</p>
+
+<p>
+	-> exemple de modelisation qui suggere une expérience: reorienter le champ en injectant qqchose au niveau de la plaque prechordale
+</p>
+
+<p>
+	Measures:
+</p>
+
+<ul>
+	<li>point singulier voir Thierry et David Pastor. demander à Thierry...</li>
+	<li>evolution of the convergence half ring from Carmany-Rampey, A. & Schier, A.F., 2001. Single-cell internalization during zebrafish gastrulation. Current biology : CB, 11(16), pp.1261–1265. </li>
+	<li>clonal cells alignment. see clonal modes from Petit, A.-C., Legué, E. & Nicolas, J.F., 2005. Methods in clonal analysis and applications. Reproduction Nutrition Development, 45(3), pp.321–339. <a name='Petit:2005dp' class='ref'></a>
+</li>
+</ul>
+
+
+
+
+
+<figure id='Case_7_Convergence_extension_carmany_rampey_2001'>
+	<img src="../../images/Cases_Studies/Case_7_Convergence_extension/carmany_rampey_2001.png" width="600">
+	<figcaption>from Carmany-Rampey, A. & Schier, A.F., 2001. Single-cell internalization during zebrafish gastrulation. Current biology : CB, 11(16), pp.1261–1265. <a name='CarmanyRampey:2001uy' class='ref'></a></figcaption>
+</figure>
+
+
+<h3>Q3. Contribution of the CE to the epiboly.</h3>
+
+
+<h3>Background</h3>
+
+
+<figure id='Sdf1_Cxcr4_signaling_controls_the_dorsal_migration_of_endodermal_cells_during_zebrafish_gastrulation_movie1'>
+	<video src="../../videos/Sdf1_Cxcr4_signaling_controls_the_dorsal_migration_of_endodermal_cells_during_zebrafish_gastrulation/movie1.ogg" width="800" controls></video>	
+
+	<figcaption>Endoderm migration from Mizoguchi, T. et al., 2008. Sdf1/Cxcr4 signaling controls the dorsal migration of endodermal cells during zebrafish gastrulation. Development, 135(15), pp.2521–2529. <a name='Mizoguchi:2008di' class='ref'></a></figcaption>
+</figure>
+
+<figure id='Sdf1_Cxcr4_signaling_controls_the_dorsal_migration_of_endodermal_cells_during_zebrafish_gastrulation_movie2'>
+	<video src="../../videos/Sdf1_Cxcr4_signaling_controls_the_dorsal_migration_of_endodermal_cells_during_zebrafish_gastrulation/movie2.ogg" width="800" controls></video>
+
+	<figcaption>Endoderm migration from Mizoguchi, T. et al., 2008. Sdf1/Cxcr4 signaling controls the dorsal migration of endodermal cells during zebrafish gastrulation. Development, 135(15), pp.2521–2529. <a name='Mizoguchi:2008di' class='ref'></a></figcaption>
+</figure>
+
+
+<figure id='raw_movies_CE_slices_070414ext'>
+	<video src="../../videos/raw_movies/CE_slices/070414ext.ogg" width="800" controls></video>		
+	<figcaption>070414. External view</figcaption>
+</figure>
+
+
+<figure id='raw_movies_CE_slices_070414slice'>
+	<video src="../../videos/raw_movies/CE_slices/070414slice.ogg" width="800" controls></video>	
+	<figcaption>070414. Slice</figcaption>
+</figure>
+
+
+<figure id='raw_movies_CE_slices_100311bFext'>
+	<video src="../../videos/raw_movies/CE_slices/100311bFext.ogg" width="800" controls></video>	
+	<figcaption>100311bF. External View</figcaption>
+</figure>
+
+
+<figure id='raw_movies_CE_slices_100311bFslice'>
+	<video src="../../videos/raw_movies/CE_slices/100311bFslice.ogg" width="800" controls></video>	
+	<figcaption>100311bF. Slice</figcaption>
+</figure>
+
+
+
+
+
+
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

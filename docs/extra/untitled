@@ -1,0 +1,151 @@
+
+
+theo biology models of dev by theme
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+vertebrate somitogenesis
+
+cite 
+
+
+
+somitogenesis
+
+cleavages patterns
+
+plants has its own modeling communauty. The specificities of the plant cell biomechanics, including a rigid wall preventing it to migrate, increase the use of continuous mechanical models (??) like...
+
+cell sorting
+
+limb regeneration
+
+Potts
+
+ScEM elements
+
+Chemotaxis
+
+Cell centered
+
+Segregation of tissues
+
+
+
+from Agarwal, P., 1993. Cell-based Computer Models in Developmental Biology,
+
+3.1 Generalized models of development : : : : : : : : : : : : : : : : : : : : : : : 9
+3.1.1 Turing's morphogen model : : : : : : : : : : : : : : : : : : : : : : : 10
+3.1.2 Mechanical model : : : : : : : : : : : : : : : : : : : : : : : : : : : : 11
+3.1.3 Gordon's model : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : 12
+3.1.4 Cellular automata and Lindenmayer systems : : : : : : : : : : : : : 12
+3.1.5 Connectionist model : : : : : : : : : : : : : : : : : : : : : : : : : : : 15
+3.1.6 A model for growing articial neural networks : : : : : : : : : : : : : 15
+3.2 Dierential adhesion hypothesis : : : : : : : : : : : : : : : : : : : : : : : : : 16
+3.2.1 Mechanisms responsible for type specic adhesions : : : : : : : : : : 19
+3.2.2 Critique : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : 20
+3.2.3 Models and simulations : : : : : : : : : : : : : : : : : : : : : : : : : 21
+3.3 Representation of cells : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : 24
+vi
+3.3.1 Simple array models : : : : : : : : : : : : : : : : : : : : : : : : : : : 24
+3.3.2 The game of life : : : : : : : : : : : : : : : : : : : : : : : : : : : : : 25
+3.3.3 Gordan's spirals : : : : : : : : : : : : : : : : : : : : : : : : : : : : : 26
+3.3.4 Topological model : : : : : : : : : : : : : : : : : : : : : : : : : : : : 26
+3.3.5 Voronoi diagrams : : : : : : : : : : : : : : : : : : : : : : : : : : : : : 27
+3.3.6 Polygonal cell division models : : : : : : : : : : : : : : : : : : : : : : 28
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+principles (intro)
+
+	EXPERIMENTAL SCIENCE MODELING
+
+	experimental science: individial, reality, perception, model, experiment
+	
+	+ exchange with other individiual from communauty 	
+	
+
+	....recursive workflow: the tools used of the workflow can be the focus of the study. They can be the real system.
+
+
+	conceptual nature of model: classical or formalized. Same role. find causal explanation. formalized plus maniable au prix de simplification
+
+	pro theo 1: testing the consequences
+
+	pro theo 2: inverse the hypotheses (introduit la methode exploratoire du chapitre 7)
+
+	The use of computer. (intro improved all module of our experimental science desription). For modeling : unsolvable analytical formalism (turing). New strategy to test and reverse-engineer with data (see Amonlirdviman, K. et al. Mathematical modeling of planar cell polarity to understand domineering nonautonomy. Science 307 for optimization of model parameters with automated (check that) data matching)
+
+	....Computers can enhance each part of this simplistic experimental research workflow. bioemergences
+
+	
+	TOWARD AN INTEGRATED THEORY OF DEVELOPMENT
+
+		level of organization
+
+
+		"upscaling" laws
+
+			schema montrant les empilement de structures
+
+			by stats
+			by simulation
+
+			some compare (cite gold...)
+
+		specialization of the macro laws
+
+			mecha/gene
+
+		The fundamental coupling
+
+			at the cell level
+
+			all kind of combinaison : macro/micro meca with macro/micro regulation (souvent )
+
+		Integration
+
+			interacting part, in toto 
+
+	PRINCIPLES GUIDED SUMMARY
+

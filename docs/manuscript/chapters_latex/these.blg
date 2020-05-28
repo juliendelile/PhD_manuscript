@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: these.aux
+The style file: unsrt.bst
+Reallocated field_info (elt_size=4) to 11877 items from 5000.
+Database file #1: biblio.bib
+Warning--entry type for "Gilbert:1991ww" isn't style-file defined
+--line 62 of file biblio.bib
+Warning--I didn't find a database entry for "Waddington:1940tj"
+Warning--I didn't find a database entry for "Bowerman:1992tc"
+Warning--I didn't find a database entry for "Maitre:2012cm"
+Warning--I didn't find a database entry for "Coen:1999wy"
+Warning--I didn't find a database entry for "Knabe:2008uk"
+Warning--I didn't find a database entry for "Kauffman:1969ua"
+Warning--I didn't find a database entry for "McHale:2006cf"
+Warning--I didn't find a database entry for "Othmer:1980vg"
+Warning--I didn't find a database entry for "Carroll:2006ui"
+Warning--I didn't find a database entry for "Kirschner:2005us"
+Warning--I didn't find a database entry for "Kauffman:1993uj"
+Warning--I didn't find a database entry for "Goodwin:1994tl"
+Warning--I didn't find a database entry for "Peter:2009dl"
+Warning--I didn't find a database entry for "Davidson:2009gx"
+You've used 285 entries,
+            1791 wiz_defined-function locations,
+            2172 strings with 54241 characters,
+and the built_in function-call counts, 68554 in all, are:
+= -- 6245
+> -- 3053
+< -- 19
++ -- 1142
+- -- 857
+* -- 5691
+:= -- 10910
+add.period$ -- 846
+call.type$ -- 285
+change.case$ -- 266
+chr.to.int$ -- 0
+cite$ -- 285
+duplicate$ -- 2650
+empty$ -- 6493
+format.name$ -- 857
+if$ -- 14680
+int.to.chr$ -- 0
+int.to.str$ -- 285
+missing$ -- 288
+newline$ -- 1414
+num.names$ -- 285
+pop$ -- 490
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1069
+stack$ -- 0
+substring$ -- 5899
+swap$ -- 408
+text.length$ -- 19
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 758
+width$ -- 288
+write$ -- 3071
+(There were 15 warnings)

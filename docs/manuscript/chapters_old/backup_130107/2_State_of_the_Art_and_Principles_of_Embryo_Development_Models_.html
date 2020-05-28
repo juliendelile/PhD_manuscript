@@ -1,0 +1,489 @@
+
+ 
+ 
+ 
+ 
+<div id='2_'>
+<h1>2. State of the Art and Principles of Embryo Development Models  </h1>
+ 
+<p>
+	In Chapter 1, we offered a summarized historical timeline of experiments and observations in developmental biology. Although the cited works made theoretical assumptions and proposed hypotheses about the mechanisms of development (Waddington, Needham and others had founded the &quot;Theoretical Biology Club&quot; in 1930), they did not contain formalized models <i>per se</i> with mathematical analysis or computational simulation. No symbolic or numerical calculation was performed. In the meantime and especially recently, an increasing number of theoretical and quantitative models of development have been proposed. We review here a few important families of approaches to embryogenesis such as reaction-diffusion, morphogen gradients, cell shaping or segmentation. Far from being exhaustive, our review only intends to be a sampler of particularly relevant papers that illustrate typical modeling paradigms. Then, we extract common principles from these various methodologies and attempt to unify them toward an encompassing modeling framework of multicellular development&mdash;which is the goal of the MECAGEN project.
+</p>
+
+</div><div id='2_1_'>
+<h2>2.1. A Review of Theoretical Models of Development </h2>
+
+
+</div><div id='2_1_1_'>
+<h3>2.1.1. Early Attempts</h3>
+
+<p>
+	Nicolas Rashevsky is one of the founders of theoretical biology. His whole research effort was spent on formalizing biology using mathematics. For this new discipline, he coined the name &quot;Mathematical Biophysics&quot; in 1938 <a name='Rashevsky:1938tf' class='ref'></a>. He was the first to attempt a quantitative description of biological phenomena, and insisted on bringing theoreticians and experimentalists together to maintain close collaboration ties between them. This early interdisciplinary attitude already had its critics, as some said that he could produce &quot;neither good mathematics nor good biology nor good physics&quot; (from <a name='Cull:2007ib' class='ref'></a>). Concerning multicellular development, he proposed a framework to describe organisms as graphs in which vertices represented biological functions and oriented edges the interactions between them <a name='Rashevsky:1954ws' class='ref'></a>. In particular, he showed as early as 1940 that cell polarity was possible even for cell with a spherical shape <a name='Rashevsky:1940uc' class='ref'></a>. One of the earliest computer simulations of vertebrate development can be attributed to Jacobson and Gordon in 1976 <a name='Jacobson:1976cc' class='ref'></a>. They designed and calculated a mathematical model of neural plate formation.
+</p>
+
+<figure id='biomechanics_sota_jacobson1976'>
+	<img src="../../images/biomechanics_sota/jacobson1976.png" width="500">
+	<figcaption><strong>One of the earliest computer simulations of spatial transformation during vertebrate development (Jacobson and Gordon, 1976).</strong> &quot;A. Appearance of the neural plate immediatly after isolation without notochord at stage 13. B. Shape attained in the same explant when controls had reached mid-neurula stage 15. C. Results of a computer simulation using shrinkage alone, which would be compared to B&quot;. Images and legend from <a name='Jacobson:1976cc' class='ref'></a>.</figcaption>
+</figure>
+
+
+</div><div id='2_1_2_'>
+<h3>2.1.2. Reaction-Diffusion Systems</h3>
+
+<p>
+	Another historical landmark in the advent of developmental models was established by Alan Turing in 1952 with his breakthrough paper on &quot;The chemical basis of morphogenesis&quot; <a name='Turing:1952vn' class='ref'></a>. He proved that spontaneous order, such as stripes and spots of alternating color, could arise from the amplification of unstable fluctuations in an initially homogeneous substrate. The diffusion of two chemical signals or <i>&quot;morphogens&quot;</i> across a biological substrate, coupled with local chemical reactions is sufficient to generate complex spatial patterns. Turing predicted six stable states in his model depending on the reaction coefficients and the rates of diffusion of the morphogens. This idea was further developed and popularized by Gierer and Meinhardt in the 1970's <a name='Gierer:1972et' class='ref'></a>. They showed that by combining &quot;a short-range positive feedback with a long-range negative feedback&quot;, they could generate all Turing patterns. Typically, a pigmented medium such as an animal coat undergoes spontaneous symmetry-breaking by diffusion of an activator substance and an inhibitor substance with two different characteristic distances <a name='Meinhardt:1974vd' class='ref'></a>. This was also demonstrated by Young in 1984 <a name='Young:1984hd' class='ref'></a> in an abstract model of vertebrate skin patterning implemented in cellular automata, in which the random initial distribution of pigmented an non-pigmented cells determined the final equilibrium pattern. An example of more biologically realistic reaction-diffusion model can be found in Amonlirdviman et al. <a name='Amonlirdviman:2005dz' class='ref'></a>, who propose that the <i>Drosophila</i> epithelium is polarized with the &quot;planar cell polarity&quot; (PCP) pathway in a non-autonomous manner. Reviews of reaction-diffusion systems can be found in Kondo et al. <a name='Kondo:2010bx' class='ref'></a> and Murray <a name='Murray:2001uq' class='ref'></a> <a name='Murray:2003ty' class='ref'></a></li>.
+</p>
+
+
+<figure id='biomechanics_sota_young_1984'>
+	<img src="../../images/biomechanics_sota/young_1984.png" width="600">
+	<figcaption><strong>Patterns produced with the activator-inhibitor model.</strong> As inhibition is decreased (left to right), the spot pattern connects up into a pattern of stripes. Images and legend from <a name='Young:1984hd' class='ref'></a>.</figcaption>
+</figure>
+
+</div><div id='2_1_3_'>
+<h3>2.1.3. Morphogen Gradients and Positional Information</h3>
+
+<ul>
+	<li>Wolpert, L., 1969. Positional information and the spatial pattern of cellular differentiation. Journal of Theoretical Biology, 25(1), p.1. <a name='Wolpert:1969wu' class='ref'></a></li> introduces the theory of &quot;positional information&quot;. 
+
+	need of a coordinate system. 
+
+	<li>Wolpert, L., 1989. Positional information revisited. Development, 107 Suppl, pp.3–12. <a name='Wolpert:1989ut' class='ref'></a>: </li>
+
+	<li>Wolpert, L., 1996. One hundred years of positional information. Trends in genetics : TIG, 12(9), pp.359–364. <a name='Wolpert:1996tw' class='ref'></a>: </li>
+
+	<li><a name='Wolpert:2011hw' class='ref'></a></li>
+
+
+
+	<li>chercher Enrico Coen "The Art of Genes" (notion: local geography of the embryo) bibiotheque rené</li>
+	<li>...Sean B. Caroll: evo-devo bibiotheque rene</li>
+	<li>...Kirschner amp;erhart: evo-devo bibiotheque rene</li>
+	
+	<li>chercher 2 ou 3 articles french flag...</li>
+
+
+
+
+
+
+
+
+	<li>Shape, dynamics, precision of the morphogen gradient</li>
+
+	<li>
+		pour intro: Lawrence, P.A., 2001. Morphogens: how big is the big picture? Nature Cell Biology, 3(7), pp.E151–4. <a name='Lawrence:2001bc' class='ref'></a>
+	</li>
+
+	<li>pas theorique mais clair pour intro: Tabata, T. amp;akei, Y., 2004. Morphogens, their identification and regulation. Development, 131(4), pp.703–712. <a name='Tabata:2004bp' class='ref'></a></li>
+
+
+	<li>Kicheva, A. et al., 2012. Investigating the principles of morphogen gradient formation: from tissues to cells. Current opinion in genetics amp;evelopment, pp.1–6. <a name='Kicheva:2012fw' class='ref'></a></li>
+
+	<li>
+		Ben-Zvi, D., Shilo, B.-Z. amp;arkai, N., 2011. Scaling of morphogen gradients. Current opinion in genetics amp;evelopment, 21(6), pp.704–710. <a name='BenZvi:2011ky' class='ref'></a>
+	</li>
+
+	<li>Barkai, N. amp;hilo, B.-Z., 2009. Robust Generation and Decoding of Morphogen Gradients. Cold Spring Harbor Perspectives in Biology, 1(5), pp.a001990–a001990. <a name='Barkai:2009cs' class='ref'></a></li>
+
+	<li>local interpretation of the gradient, before or after steady state in Saunders, T. amp;oward, M., 2009. When it pays to rush: interpreting morphogen gradients prior to steady-state. Physical Biology, 6(4), p.046020. <a name='Saunders:2009gp' class='ref'></a></li>
+
+	<li>the big question of how the gradient is established: simply by diffusing from a source, or by more elaborate mechanism: Lander, A.D., Nie, Q. amp;an, F.Y.M., 2002. Do morphogen gradients arise by diffusion? Developmental cell, 2(6), pp.785–796. <a name='Lander:2002uo' class='ref'></a> </li>
+
+	<li>Gregor, T. et al., 2005. Diffusion and scaling during early embryonic pattern formation. Proceedings of the National Academy of Sciences of the United States of America, 102(51), pp.18403–18407. <a name='Gregor:2005jn' class='ref'></a></li>
+
+	<li>Rolland-Lagan, A. et al., 2012. Morphogen-based simulation model of ray growth and joint patterning during fin development and regeneration. Development, 139, pp.1–10. <a name='RollandLagan:2012vr' class='ref'></a></li>
+
+	<li>Gradient and polarity: many examples... look for it</li>
+
+	<li>Eaton, S. amp;ülicher, F., 2011. Cell flow and tissue polarity patterns. Current opinion in genetics amp;evelopment, 21(6), pp.747–752. <a name='Eaton:2011bj' class='ref'></a></li>
+
+	<li>...</li>
+
+
+</ul>
+
+	
+
+</div><div id='2_1_4_'>
+<h3>2.1.4. Epithelial Cell Shaping and Division Patterns</h3>
+
+<p>
+	A relatively recent interest in epithelial tissue modeling has generated a certain number of models focused on cell shaping, distribution of neighborhood sizes and division axis fields. In <a name='Gibson:2006gia' class='ref'></a>, the authors use a Markov chain model to explain the evolution of the distribution of cell shape in the <i>Drosophila</i> epithelium (Fig. <a name='biomechanics_sota_epithelium' class='fig'></a>A,B). They propose that cell proliferation, and not cell packing, is responsible for the shaping of cells in monolayered epithelia. The model is generalized and compared to other organisms. Other investigators <a name='Farhadifar:2007vj' class='ref'></a> contend that physical forces, in addition to cell division, are also required to explain epithelial cell shape in the wing disc of <i>Drosophila</i>. They use a vertex-based model in which vertices represent junctions between wing cells (Fig. <a name='biomechanics_sota_epithelium' class='fig'></a>C). Forces are derived from an energy function that takes into account cell elasticity, cortical tension and intercellular adhesion. The model is tested experimental data obtained by laser ablation. Patel et al. <a name='Patel:2009in' class='ref'></a> investigate two factors potentially responsible for cell proliferation: inheriting the cleavage plane orientation from mother to daughter cells, and symmetry of the division. They conclude that strong symmetry is the dominant factor explaining the distribution of shapes observed experimentally. Other vertex-based models of cell junctions can describe plant growth. For example, the particularity of the shoot apical meristem of <i>Arabidopsis</i> is that it is stretched by an isotropic mechanical tension controlling the growth rate and division of the cell. A study of division patterns in this tissue <a name='Sahlin:2010eu' class='ref'></a> shows a result similar to the previous work: symmetric division is the favored factor explaining the observed cell shape distribution. 
+</p>
+
+<p>
+	Sandersius et al. <a name='Sandersius:2011ug' class='ref'></a> investigate epithelium patterning before and during the primitive streak formation in the chick embryo. For them, against Gibson et al. <a name='Gibson:2006gia' class='ref'></a>, non-spatial Markov models are not sufficient to explain the histogram of number of neighbors in proliferating only epithelium. They argue that any attempt to improve biological plausibility of this type of model (e.g. with 3-sided cells or asynchronous division) induces a deviation from, instead of a refinement of, the &quot;standard&quot; histogram observed in various species. On the other hand, they show that their own geometrical epithelium model (based on a &quot;Subcellular Element Model&quot;; see Section 3.1) predicts the histogram with growth rate being the unique meaningful parameter. Escudero et al. <a name='Escudero:2011cv' class='ref'></a> introduce complex network topological measures in addition to the cells' neighborhoods and geometry. These new measures allow them to discriminate among epithelia belonging to different species, different stages of development, or genetic variants of the same species. The observed data is classified with statistical methods, allowing them to reveal the &quot;signature&quot; of an epithelium. The question of the interplay between cell shape and cleavage-plane orientation is reconsidered in <a name='Gibson:2011em' class='ref'></a>.
+</ul>
+
+<figure id='biomechanics_sota_epithelium'>
+	<img src="../../images/biomechanics_sota/epithelium.png" width="900">
+	<figcaption><strong>Selected illustrations from the literature of epithelial cell shaping and division patterns.</strong> A: Comparison of the distributions of polygonal epithelial cells obtained from simulation (yellow), the <i>Drosophila</i> wing disc (pink), the <i>Xenopus</i> tail epidermis (green) and the <i>Hydra</i> epidermis (blue) <a name='Gibson:2006gia' class='ref'></a>. B: Schematized Markov chain model expressing the proliferation dynamics of polygonal cells and used in the simulation of A <a name='Gibson:2006gia' class='ref'></a>. C: Typical cell division event in a vertex-based model <a name='Farhadifar:2007vj' class='ref'></a>.</figcaption>
+</figure>
+
+</div><div id='2_1_5_'>
+<h3>2.1.5. Differential Adhesion and Cell Sorting</h3>
+
+
+<p>
+	DAH, steinberg papers:
+</p>
+
+<ul>
+	<li>Steinberg, M.S., 1962c. On the mechanism of tissue reconstruction by dissociated cells. I. Population kinetics, differential adhesiveness. and the absence of directed migration. Proceedings of the National Academy of Sciences of the United States of America, 48, pp.1577–1582. <a name='Steinberg:1962ww' class='ref'></a></li>
+	<li>Steinberg, M.S., 1962a. Mechanism of tissue reconstruction by dissociated cells. II. Time-course of events. Science, 137(3532), pp.762–763. <a name='Steinberg:1962tn' class='ref'></a></li>
+	<li>Steinberg, M.S., 1962b. ON THE MECHANISM OF TISSUE RECONSTRUCTION BY DISSOCIATED CELLS, III. FREE ENERGY RELATIONS AND THE REORGANIZATION OF FUSED, HETERONOMIC TISSUE FRAGMENTS. Proceedings of the National Academy of Sciences of the United States of America, 48(10), pp.1769–1776. <a name='Steinberg:1962us' class='ref'></a></li>
+	<li>Steinberg, M.S., 1963. Reconstruction of tissues by dissociated cells. Some morphogenetic tissue movements and the sorting out of embryonic cells may have a common explanation. Science, 141(3579), pp.401–408. <a name='Steinberg:1963tu' class='ref'></a></li>: the observation of the behavior of once dissociated and then mixed together embryonic cells resemble the one of mixed immiscible fluids. Different phase tends to cluster together to finally form two clusters, one often engulfing the other. Similarly to these fluids, Steinberg hypothesized that the cells should also minimize their surface area and this process is modulated by differences in cell-cell adhesion. 
+	<li>Steinberg, M.S., 1970. Does differential adhesion govern self-assembly processes in histogenesis? Equilibrium configurations and the emergence of a hierarchy among populations of embryonic cells. Journal of Experimental Zoology, 173(4), pp.395–433. </li>
+	<li>Foty, R. &amp; Steinberg, M., 2005. The differential adhesion hypothesis: a direct evaluation. Developmental Biology, 278(1), pp.255–263. <a name='Foty:2005wp' class='ref'></a>: the surface tension of an aggregate is proportional to the cadherin expression level.</li>
+
+</ul>
+
+
+<p>
+	other papers:
+</p>
+
+
+<ul>
+	<li>Graner, F. amp;lazier, J., 1992. Simulation of biological cell sorting using a two-dimensional extended Potts model. Physical Review Letters, 69(13), pp.2013–2016. <a name='Graner:1992ve' class='ref'></a></li>
+	<li>Glazier JA, Graner F (1993) Simulation of the differential adhesion driven rearrangement of biological cells. Phys Rev E 47: 2128–2154. <a name='Glazier:1993ck' class='ref'></a></li>
+	<li>Beysens DA, Forgacs G, Glazier JA (2000) Cell sorting is analogous to phase ordering in fluids. Proc Nat Ac Sc USA 97: 9467–9471. <a name='Beysens:2000wj' class='ref'></a></li>
+	<li>Brodland, G.W. &amp; Chen, H.H., 2000. The mechanics of heterotypic cell aggregates: insights from computer simulations. Journal of biomechanical engineering, 122(4), pp.402–407. <a name='Brodland:2000uu' class='ref'></a>: confront the surface tension mechanism with their finite element cell model.</li>
+	<li>Landsberg, K.P. et al., 2009. Increased Cell Bond Tension Governs Cell Sorting at the Drosophila Anteroposterior Compartment Boundary. Current biology : CB, 19(22), pp.1950–1955. <a name='Landsberg:2009bp' class='ref'></a> or more recently Aliee, M. et al., 2012. Physical Mechanisms Shaping the Drosophila Dorsoventral Compartment Boundary. Current biology : CB, pp.1–10. <a name='Aliee:2012ek' class='ref'></a></li>
+	<li>Beatrici, C.P. &amp; Brunnet, L.G., 2011. Cell sorting based on motility differences. PHYSICAL REVIEW E, pp.1–5. <a name='Beatrici:2011vr' class='ref'></a></li>
+	<li>Zhang, Y. et al., 2011. Computer Simulations of Cell Sorting Due to Differential Adhesion. PLoS ONE, 6(10), p.e24999. <a name='Zhang:2011ca' class='ref'></a></li>
+	<li>Beatrici, C.P. &amp; Brunnet, L.G., 2011. Cell sorting based on motility differences. PHYSICAL REVIEW E, 84(3 Pt 1), p.031927. <a name='Beatrici:2011vr' class='ref'></a></li>
+	<li>Maître, J.-L. et al., 2012. Adhesion Functions in Cell Sorting by Mechanically Coupling the Cortices of Adhering Cells. Science. <a name='Maitre:2012cma' class='ref'></a></li>
+
+
+reformuler le texte suivant from Mechanical control at cell–cell contacts
+
+Cell adhesion and cortex tension are known to regulate cell–cell contact formation. Heisenberg, Paluch and colleagues now analyse the contributions of cell adhesion and cortex tension in contact formation and sorting of zebrafish progenitor cells (Science http://doi.org/jcp; 2012).
+
+Building on previously published models of cell–cell adhesion and sorting, the authors developed a theoretical description of the shape of two progenitor cells adhering to each other. They then used dual micropipette aspiration assays to separate adhering progenitor cells from zebrafish embryos ex vivo and determined that cortex tension controls interfacial tension at the cell–cell contact, and thereby regulates cell–cell contact expansion. In contrast, cell adhesion was not involved in determining cell–cell contact size. Instead, the authors demonstrated that following mechanical separation of adhering cells, the linkage of cadherin to the actin cytoskeleton was crucial in limiting the mechanical resistance of adhesive bonds to pulling forces. The cytoskeletal anchoring of cadherins was further shown to be important for correct progenitor cell sorting within cell aggregates in vitro, and also during the segregation of progenitor cells in gastrulating zebrafish embryos in vivo. Thus, by combining theoretical, biophysical and live imaging experiments, the authors showed that cell adhesion is necessary to mechanically couple the cortices of adhering cells to support cell sorting.
+
+
+
+
+
+
+	<li>cite recent papers with interfacial tension, cortical tension to modulate ...</li>
+</ul>
+
+</div><div id='2_1_6_'>
+<h3>2.1.6. Segmentation and Somite Formation</h3>
+
+<ul>
+
+	<li>Intro: from Oates, A.C., Morelli, L.G. &amp; Ares, S., 2012. Patterning embryos with oscillations: structure, function and dynamics of the vertebrate segmentation clock. Development, 139(4), pp.625–639. <a name='Oates:2012kv' class='ref'></a>: The discovery of the segmentation clock, an oscillating genetic network in the pre-somitic mesoderm (PSM), leading the formation of somites in the elongating body axis of vertebrate embryo is the source of an active field of theoretical modeling. The phenomenon is conserved in various species and it illustrates the interplay of inner cell regulation and cell-cell communication. Cooke and Zeeman introduced a general mechanism called the &quot;clock and wavefront&quot; mechanism which has intensively been studied since its introduction in 1976 <a name='Cooke:1976uf' class='ref'></a>. Lacking molecular grounding, it predicts the number and size of the somites from the period of the clock and the velocity of a wave travelling from the anterior to the posterior part of the axis, locking the cellular oscillators and forming a fixed periodic pattern. From then on, multiple oscillating genes, ie genes whose encoding protein and RNA follow cyclic creation and degradation, have been discovered in various species: Delta/Notch, Wnt, FGF, Hes/Her, and multiple models have been proposed to explain their interactions.</li>
+
+
+
+	<li>
+		Cooke J, Zeeman EC (1976) A clock and wavefront model for control of the number of repeated structures during animal morphogenesis. J Theor Biol 58: 455–476. <a name='Cooke:1976uf' class='ref'></a>: positional information through a gradient along the AP axis is coupled with smooth cellular oscillator.
+	</li>
+	
+	<li>
+		Meinhardt, H., 1986. Models of segmentation. p.320. <a name='Bellairs:1986vo' class='ref'></a> 
+	</li>
+	
+	<li>
+		Baker RE, Schnell S, Maini PK (2006) A clock and wavefront mechanism for somite formation. Dev Biol 293: 116–126. <a name='Baker:2006dq' class='ref'></a>
+	</li>
+	
+	<li>
+		Riedel-Kruse, I.H., Müller, C. &amp; Oates, A.C., 2007. Synchrony dynamics during initiation, failure, and rescue of the segmentation clock. Science, 317(5846), pp.1911–1915. <a name='RiedelKruse:2007hh' class='ref'></a>
+	</li>
+	
+	<li>
+		Tiedemann HB, Schneltzer E, Zeiser S, Rubio-Aliaga I, Wurst W, et al. (2007) Cell-based simulation of dynamic expression patterns in the presomitic mesoderm. J Theor Biol 248: 120–129. <a name='Tiedemann:2007gv' class='ref'></a>
+	</li>
+	
+	<li>
+		Glazier, J.A. et al., 2008. Coordinated action of N-CAM, N-cadherin, EphA4, and ephrinB2 translates genetic prepatterns into structure during somitogenesis in chick. Current topics in developmental biology, 81, pp.205–247. <a name='Glazier:2008kc' class='ref'></a>
+	</li>
+
+	<li>
+		Baker RE, Schnell S, Maini PK (2008) Mathematical models for somite formation. Multiscale Modeling of Developmental Systems 81: 183–203. <a name='Baker:2008hx' class='ref'></a>
+	</li>
+	
+	<li>
+		Goldbeter A, Pourquie O (2008) Modeling the segmentation clock as a network of coupled oscillations in the Notch, Wnt and FGF signaling pathways. J Theor Biol 252: 574–585. <a name='Goldbeter:2008do' class='ref'></a>
+	</li>
+	
+	<li>
+		Uriu K, Morishita Y, Iwasa Y (2010) Synchronized oscillation of the segmentation clock gene in vertebrate development. J Math Biol 61: 207–229. <a name='Uriu:2010kg' class='ref'></a>
+	</li>
+	
+	<li>
+		Jensen PB, Pedersen L, Krishna S, Jensen MH (2010) A Wnt Oscillator Model for Somitogenesis. Biophys J 98: 943–950. <a name='Jensen:2010fy' class='ref'></a>
+	</li>
+	
+	<li>
+		Murray, P.J., Maini, P.K. &amp; Baker, R.E., 2011. The clock and wavefront model revisited. Journal of Theoretical Biology, 283(1), pp.227–238. <a name='Murray:2011cy' class='ref'></a>. In addition to the posteriorly moving molecular gradient which slows the rate of the segmantation clock oscillations, the authors propose that ocillator coupling may also induce a slowing of the oscillations. Using a continuum model of oscillators, an emergent wavefront is produced with three parameters: the clock period in the PSM, the somite length, the length of the PSM. Their model predicts the distance between moving shapes of gene expression, the number of moving stripes and the oscillating period profile along the antero-posterior axis. It also states that the ratio of coupling strength explains interspecies variability and that the period profile is conserved along the antero-posterior axis.
+	</li>
+	
+	<li>
+		Hester, S.D. et al., 2011. A Multi-cell, Multi-scale Model of Vertebrate Segmentation and Somite Formation. PLoS Computational Biology, 7(10), p.e1002155. <a name='Hester:2011dc' class='ref'></a>. Builds an integrative model of the clock and wavefront mechanism. Using a wide variety of accepted &quot;submodels&quot; as intracellular segmentation clock, coupling through the Notch-Delta signalling pathway, FGF8 determination front, delayed differentiation or a biomechanical model of cell sorting (potts with differential cell-cell adhesion), they reveal some inconsistencies between these sub-models. 
+	</li>
+
+
+
+
+</ul>
+
+
+</div><div id='2_1_7_'>
+<h3>2.1.7. Striping in Drosophila</h3>
+
+<ul>	
+	<li>wieschaus constriction apical</li>
+	<li>segmentation: salazar-ciudad, kauffman, </li>
+	
+
+	<li>droso : *segmentation*, genes pair-rule, gap, maternal etc. cf. Wikipedia : voir le bouquin  (mes etageres) Carroll, S. B., Grenier, J. K. and Weatherbee, S. D. 2001 From DNA to Diversity: Molecular Genetics and the Evolution of Animal Design, Blackwell Scientific, Malden, Mass</li>
+
+	<li>von Dassow, G., Meir, E., Munro, E.M., Odell, G.M.: The segment polarity network is a robust developmental module. Nature 406, 188–192 (2000) <a name='vonDassow:2000kx' class='ref'></a></li>
+
+	<li>Salazar-Ciudad, I., Garcia-Fern´andez, J., Sol´e, R.: Gene networks capable of pattern formation: From induction to reactiondiffusion. Journal of Theoretical Biology 205(4), 587–603 (2000) <a name='SalazarCiudad:2000up' class='ref'></a></li>
+
+	<li>wing growth: - modeles *imaginal discs* et *wings* tres importants aussi : trouves en 2</li>
+
+
+	<li>Cell sorting patterning in the wing : <li>Landsberg, K.P. et al., 2009. Increased Cell Bond Tension Governs Cell Sorting at the Drosophila Anteroposterior Compartment Boundary. Current biology : CB, 19(22), pp.1950–1955. <a name='Landsberg:2009bp' class='ref'></a> or more recently Aliee, M. et al., 2012. Physical Mechanisms Shaping the Drosophila Dorsoventral Compartment Boundary. Current biology : CB, pp.1–10. <a name='Aliee:2012ek' class='ref'></a></li> (already in cell sorting section)</li>
+
+	<li>
+		Canela-Xandri, O. et al., 2011. Dynamics and Mechanical Stability of the Developing Dorsoventral Organizer of the Wing Imaginal Disc. PLoS Computational Biology, 7(9), p.e1002153. <a name='CanelaXandri:2011kl' class='ref'></a>
+	</li>
+	
+</ul>
+
+
+<p>
+	<strong>General Review to cite in the end of the section (XXXXXX)</strong>
+</p>
+
+<ul>
+	<li>Oates, A.C. et al., 2009. Quantitative approaches in developmental biology. Nature Reviews Genetics, <a name='Oates:2009kg' class='ref'></a></li>
+	<li>Lewis, J., 2008. From signals to patterns: space, time, and mathematics in developmental biology. Science, 322(5900), pp.399–403. <a name='Lewis:2008kx' class='ref'></a></li>
+	<li>Tomlin, C.J. &amp; Axelrod, J.D., 2007. Biology by numbers: mathematical modelling in developmental biology. Nature Reviews Genetics, 8(5), pp.331–340. <a name='Tomlin:2007gq' class='ref'></a></li>
+	<li>Reeves, G.T. et al., 2006. Quantitative Models of Developmental Pattern Formation. Developmental cell, 11(3), pp.289–300. <a name='Reeves:2006bm' class='ref'></a></li>
+	<li>Morelli, L.G. et al., 2012. Computational approaches to developmental patterning. Science, 336(6078), pp.187–191. <a name='Morelli:2012ht' class='ref'></a></li>
+</ul>
+
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<p>
+	<strong>Biomechanical properties of living organisms</strong>
+</p>
+
+<ul>
+
+	<li>Mechanosensing in single cells</li>
+
+	<li>Mechanosensing in tissues and organisms</li>
+
+	<li>Mechanical control of tissue morphogenesis</li>
+
+	<li>Mechanical control of epithelial morphogenesis</li> 
+
+		
+</ul>
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='2_2_'>
+<h2>2.2. Common Modeling Principles: Toward an Integrated Theory of Development </h2>
+ 
+ 
+
+<p>
+	Most of the models reviewed in the previous section are focused on specific aspects of development, whether certain episodes of embryogenesis localized in space and time, or particular mechanical or genetic components of the dynamics. The ambition of the MECAGEN project, and generally the modeling community, is to integrate all these dimensions into one comprehensive, or <i>&quot;in toto&quot;</i>, model. The benefits of stitching together various approaches and components are to push them toward a mutual adaptation and cross-validation in the perspective of building a global homogeneous and consistent framework. Typically, studies of local phenomena follow a &quot;figure/background&quot; template in which the object of interest is the figure and is modeled in detail, while the environment is a background and is only a rough approximation. In an integrated model, both are &quot;figures&quot; and are represented by rules and laws. 
+</p>
+
+<p>
+	The ultimate goal is to unify what Darwin called the &quot;endless forms most beautiful&quot; of nature, and construe them as variants around a common theme. The variants are the unique genetic and epigenetic information of each species; the common theme is the developmental dynamics that this information guides and &quot;parametrizes&quot;. The Modern Synthesis of evolution and genetics postulates this reduction in principle but has never truly modeled and explained it physically. This challenge, however, requires solving difficult problems: dealing with multiple levels of organization (metabolites, macromolecules, cells, tissues, organs), relating one level to the next by confronting the issue of &quot;emergence&quot;, and eventually identifying custom laws at each level&mdash;as the reductionist dream of a huge atom-based simulation is not conceivable or at best completely unpractical. It involves a mix of continuous and discrete approaches, combining analytical, statistical, and agent-based computational models. Several works have ventured to propose such integrated models at various degrees of completion and with different emphasis, whether a multiscale integration of mechanical forces <a name='Blanchard:2011hk' class='ref'></a> <a name='vanLeeuwen:2009ev' class='ref'></a>, multiscale modeling of pattern formation <a name='Grima:2008ct' class='ref'></a> <a name='Little:2011cs' class='ref'></a>, or a multi-model framework for the simulation of morphogenesis such as the CompuCell platform <a name='Izaguirre:2004vr' class='ref'></a> <a name='Cickovski:2007tj' class='ref'></a> <a name='Swat:2008di' class='ref'></a>.
+</p>
+
+</div>
+ 
+ 
+<div id='2_2_1_'>
+<h3>2.2.1. Dealing with Multiple Levels of Organization </h3>
+ 
+
+
+<p>
+	Although &quot;materialism&quot; and &quot;physicalism&quot; have different historical roots, their meaning today is basically equivalent. They state that everything in the natural world is physical and conforms to the action of physical matter. Moreover, the study of biological development is well within the framework of classical physics and is not concerned with more speculative domains at extreme scales such as quantum physics (dealing with objects smaller than atoms), general relativity (dealing with objects near the speed of light), or consciousness (dealing with the phenomenology of the subject). Modern science's understanding of the material world is traditionally categorized into a hierarchy of levels (Fig. <a name='leveloforganization_circle' class='fig'></a>). At the smallest scales reside subatomic particles and possibly superstrings, which create the <i>atoms</i>. The atoms arrange themselves into <i>molecules</i>, which represent the lowest relevant level for the study of biological development. Small molecules in turn interact to form macromolecules (DNA, RNA, proteins) and organelles. These objects constitute the basic structural units of life, the <i>cells</i>, which self-assemble into tissues, composing the organs and the <i>organisms</i>. Ultimately, through their social interactions, organisms form populations, ecosystems, and finally the biosphere, which represents the whole pyramid of life on Earth. 
+</p>
+
+<figure id='leveloforganization_circle'>
+	<img src="../../images/levels_of_organization/leveloforganization_circle2.png" width="900">
+	<figcaption>Biology is studied at many levels of organization.</figcaption>
+</figure>
+
+<p>
+	At each level of organization, entities are <i>complex systems</i> composed of a great number of small, repeated elements that interact locally and produce a collective behavior in a decentralized and self-organized fashion. They share similar structural and functional properties and are themselves internally structured as ensembles of smaller entities at a finer scale (Fig. <a name='leveloforganization_micro_macro' class='fig'></a>). For example, one cell can be modeled as a self-regulatory network of genetic switches, one social agent (insect) as a network of decision rules. Conversely, agents also interact collectively at the level of clusters or subnetworks (organs, assemblies, cliques) to combine in a modular fashion and form larger sets. Thus, from both perspectives, complex systems can often be described as “networks of networks” on several hierarchical levels. The higher levels connecting elements or clusters of elements are generally spatially extended (cell tissues, ant colonies), whereas the lower levels inside elements are generally nonspatial (gene nets, rule sets). Elements follow the dynamics dictated by their inner networks and also influence neighboring elements through the emission and reception of signals (chemical). Practically, however, complex systems models rarely involve more than two levels of organization.
+</p>
+
+<figure id='leveloforganization_micro_macro'>
+	<img src="../../images/levels_of_organization/micro_macro/micro_macro_julien.png" width="800">
+	<figcaption><strong>The hierarchy of level of organization of physical matter.</strong> At each level of organization, entities are <i>complex systems</i> composed of a great number of small, repeated elements. A: Level view. B: Integrated view.</figcaption>
+</figure>
+
+<p>
+	Physicist Richard Feynman once declared that &quot;If we were to name the most powerful assumption of all, which leads one on and on in an attempt to understand life, it is that all things are made of atoms, and that everything that living things do can be understood in terms of the jigglings and wigglings of atoms&quot; <a name='Feynman:1964tu' class='ref'></a>. Feynman epitomizes the <i>reductionist</i> school of thought according to which the behavior of any living thing can be explained exclusively in terms of its parts, subparts, and their interactions. This standpoint advocates a pure <i>bottom-up</i> view of causality. On the other end of the spectrum, following the famous words of Aristotle &quot;the whole is <i>more</i> than the sum of its parts&quot;, <i>non-reductionists</i> or <i>holists</i> claim that understanding the world, in particular life, must rely on conceptual structures at intermediate levels adapted to the studied phenomenon. This attitude is exemplified by P.W. Anderson in this article &quot;More is different&quot; <a name='Anderson:1972wi' class='ref'></a>. The central concept here is that of &quot;emergence&quot;, which as long as it has not been or cannot be reduced, justifies the very existence of all the scientific disciplines, from biology to social sciences, that are not just temporary placeholders for a yet-to-be &quot;physics of everything&quot;, but relevant in themselves.
+</p>
+
+<p>
+	Although our personal inclination is to agree with the reductionist view, i.e. living matter could be ideally understood in terms of its atomic components, the immensity of the number of atoms exceeds the capacity of the human brain to comprehend how this type of system works. We may rely on the ever-increasing computational power of computers, yet it might only be able to &quot;reproduce&quot; but not &quot;explain&quot;. Rephrasing Feynman, one could say that &quot;everything that living things do could be 'recreated' in terms of the jigglings and wigglings of 'simulated' atoms&quot;. A whole new field of research, generally known as &quot;computational chemistry&quot; or &quot;particle-based molecular dynamics&quot;, is attempting just that. Although still far from comprehensive realistic simulations, it has considerably progressed over the past few decades, boosted by the explosion of computational power. For example, Jensen et al. <a name='Jensen:2012ee' class='ref'></a> simulate the mechanisms of voltage gating in potassium channels by a molecular dynamical model whose typical simulation can process 200,000 atoms in 10 million time steps, corresponding to a total simulated time of 200 microseconds (i.e. 2 simulated femtoseconds per time step). Latest hardware technologies based on general-purpose graphics processing units (GPGPUs) can support a molecular dynamics library such as the Large-scale Atomic/Molecular Massively Parallel Simulator (LAMMPS) <a name='Plimpton:1995wl' class='ref'></a>, providing an estimated computational efficiency of 20 nanoseconds of GPU time per atom per time step (as of 2012). In this context, the above simulation of voltage gating would run about 100 hours on a single GPU, thus by extrapolation a single cell corresponding to simulated time of 10 hours would take \(10^{25}\) seconds, i.e. a billion times the age of the Earth. Optimistic reductionists still rely on a continual acceleration of computing speed (possibly via novel technologies such as quantum computing) to considerably reduce this enormous duration and make it a practical tool.
+</p>
+
+</div><div id='2_2_2_'>
+<h3>2.2.2. Relating One Level to the Next: The Problem of Emergence</h3>
+ 
+ 
+ approche statistique: macro as an &quot;averaged&quot; approximation of the microscopic behaviors  
+approche multi-agent: direct interaction of the microscopic &quot;agent&quot; -> macroscopic reconstruction ?
+
+<p>
+	The dynamics of some complex systems can be described and formalized by macroscopic equations. Typically, the goal here is to solve these equations to obtain an explicit expression of the behavior of the system over time: for example, ordinary differential equations (ODEs) of macro-variables in well-mixed systems (e.g. the law of mass action in chemical kinetics), or partial differential equations (PDEs) of local variables in spatial extended systems (e.g. the heat equation or wave equation). In certain cases, it is even possible to find the formulation of an exact solution by calculus, i.e. the symbolic manipulation of expressions (e.g. the solution of a geometric growth is an exponential function; the solution of the heat equation in homogeneous space is a Gaussian). Unfortunately, although vast, this family of analytically expressible <i>and</i> solvable systems is in fact very small compared to the immense range of dynamical behaviors that natural complex systems can exhibit. Where there is no symbolic resolution of an equation, numerical analysis involving algorithms (step-by-step recipes) can be used. It involves the discretization of space into cells, and time into steps (e.g. the heat equation under irregular boundary conditions). 
+</p>
+
+<p>
+	Yet, most real-world systems do not even obey clear-cut macroscopic laws. For the majority of complex dynamical systems, global ODEs and spatial PDEs are no more possible because (a) there is no law of macroscopic quantities or global metrics that can represent the behavior of the system (no &quot;ideal gas law&quot; \(PV = nRT\) for the embryo), (b) its myriad components are irregularly placed and mobile, requiring a non-Cartesian decomposition of space (the embryo does not conform to an \(x,y,z\) lattice), (c) there is a extreme degree of heterogeneity, requiring a segmentation into different classes of agents (the embryo is composed of many different cell types and behaviors), and (d) last but not least, most systems are highly adaptive, the topology and strength of the interactions depending on the short-term activity of the agents (e.g. cell migration) and the long-term fitness of the system in its environment (evolution). In short, there are no &quot;Navier-Stokes&quot; or &quot;Maxwell&quot; equations of embryogenesis.
+</p>
+
+<p>
+	A &quot;multilevel&quot; approach offers an alternative to the classical formalization. Instead of using a single equation ruling the behavior of a system at the macroscopic level, one can simulate the interactions of the elements at the microscopic level and observe the collective effect resulting from their aggregation.	Traditionally in physics the process of deriving macroscopic laws from microscopic elementary interactions, which can be referred to as &quot;coarse-graining&quot; is possible with the averaging tools of <i>statistical mechanics</i> (e.g. a continuum description of the clock and wavefront model of somitogenesis derived from a chain of coupled oscillators <a name='Murray:2011cy' class='ref'></a>). These approximation or &quot;mean-field&quot; methods use probability theory to realize the transition from the discrete paradigm of local elementary behaviors to the continuous paradigm of macroscopic descriptions. However, they are constrained by strong assumptions such as the homogeneity of the elements. For example, the collective motion of cells in a developing embryo cannot be easily assimilated to fluid mechanics. 
+</p>
+
+<p>
+	Once again, a widely popular solution comes from computer science under the terminology <i>agent-based modeling</i> (ABM). Historically, ABM originated from the need to model socio-economical systems too complex for analytical descriptions. Helped by the rise of computing technologies, it soon became a practical tool in many other scientific disciplines, such as ecology, biology and physics. Most of ABM is based on a combination of three types of topologies: fixed grids such as square pixels, irregular networks with long-range connections, and 2D or 3D Euclidean space supporting mobile agents and metric-based interactions. Note that the continuous/agent-based dichotomy is more conceptual than practical, as many works mix both approaches at various degrees of compromise. As A.R.A.Anderson et al. put it <a name='Anderson:2007wp' class='ref'></a>: 
+</p>
+
+<blockquote>
+	Many mathematical models of biological process that consider space explicitly, fall into one of two categories: (i) continuum population models or (ii) discrete individual based models. Discrete, stochastic interactions between individual organisms cannot be captured by the continuum approach and likewise global population interactions cannot be captured by the discrete approach. In recent years a third category of models has emerged: hybrid models which allow modellers to exploit the advantages of both continuum and discrete models. 
+</blockquote>
+
+</div><div id='2_2_3_'>
+<h3>2.2.3. Identifying Custom Laws at Each Level</h3>
+
+<p>
+	In developmental biological systems, three levels of organization are considered: the sub-cellular level, in which the individual elements are molecules, the cellular level and the organism level. A &quot;hard-liner&quot; reductionist approach would skip the intermediate cellular level and describe the organism's behavior in terms of molecular interactions. As mentioned above, this adventure would run into two major obstacles: not only the knowledge and theoretical models of molecular dynamics that we have today are not easily amenable to a numerical implementation, but also the available computational power, despite great advances, is still far from sufficient for a task of this magnitude. This is why the &quot;emergent&quot; approaches discussed above (statistical mechanics and/or agent-based modeling) have to be used, and <i>custom laws</i> have to be designed at each level. Even though cell-cell mechanical and chemical interactions are ultimately grounded in the physics of molecular interactions (covalent, ionic, hydrogen and electrostatic bonds), they seem to obey their own laws and &quot;cell behavior ontology&quot; on their phenomenological level. Naturally, the micro-to-macro transition is not unique as many different types of &quot;higher-level&quot; laws can &quot;emerge&quot; from the lower levels. The coarse-graining process is not only an approximation but also a selection process. Macroscopic behaviors described by higher-level laws are often focused on a specific set of features at that level of organization. Typically, the microscopic molecular level gives rise to macroscopic laws that can describe thermodynamic, metabolic, genetic, diffusive, or mechanical properties of the cell. Each law has its own domain of application.
+</p>
+
+<p>
+	Thus finding the laws that are particularly relevant to a model of biological development is not just a question of selecting an appropriate level of organization (cell, tissue, or sub-cellular components), but also what types of laws will be used and how they will eventually be coupled. The two major families of macroscopic properties that are considered in most developmental models are (a) biomechanical properties and (b) molecular/genetic regulation and signaling properties. The MECAGEN project introduced in Section 1.2, to which our work contributes, constitutes a new type of morphogenesis modeling that integrates both (a) a representation of cellular and tissue biomechanics, and (b) networks of genetic and molecular interactions. While many models have been proposed to simulate the dynamics of genetic networks, none is directly involved in the regulation of physical properties of the cell. Yet, we believe that the key to understanding the morphogenesis and systemic properties of the organism lies in the <i>coupling</i> of cell biomechanics and networks of genetic and epigenetic regulation. It is about how (b) influences (a) through the production and modulation of the cytoskeleton, molecular motors, and cell adhesion, but also how (a) influences (b) through the transduction of mechanical stress. The modeling work should identify the appropriate level of schematization, i.e. capture essential causal relationships without going into fine molecular details. Each family is represented at the molecular level by different molecules:
+</p>
+
+<ul>
+	<li>
+		Molecules supporting the mechanics: The most important members of this family are the molecules that compose the cytoskeleton (actin, myosin, microtubules, microfilaments) and the molecules involved in adhesion, which attach the neighbor cells together (cadherins, integrins). In addition, although most other molecules are not directly responsible for the biomechanical properties of the cell, the whole molecular environment filling the cellular and extracellular volume creates important viscoelastic effects.
+	</li>
+	<li>
+		Molecules supporting the molecular and genetic regulation and signaling: They are the well-known bases of the DNA and RNA, the amino acids composing the enzymes, and the whole transcription-translation-metabolic machinery in charge of creating, trafficking, and degrading metabolites and proteins.
+	</li>
+</ul>
+
+<p>
+	These two categories of laws, mechanic and genetic, have been used and variously combined in the developmental models reviewed in Section 2.1, at one or several of the three main levels of the embryo. (a) Mechanical models have been proposed at the subcellular level, such as vertex-based junction models <a name='Weliky:1990wn' class='ref'></a> <a name='Weliky:1991vf' class='ref'></a> <a name='Sahlin:2010eu' class='ref'></a> <a name='Farhadifar:2007vj' class='ref'></a> and the Subcellular Element Model (ScEM) <a name='Newman:2005ux' class='ref'></a> <a name='Sandersius:2011ew' class='ref'></a> <a name='Sandersius:2011ug' class='ref'></a>; at the cell level, such as the Cellular Potts model <a name='Glazier:1993ck' class='ref'></a> and off-lattice vertex models <a name='Schaller:2004vs' class='ref'></a>; and at the organismal level, such as structural fluid mechanics inspired approaches <a name='Fleury:2005ul' class='ref'></a> <a name='Fleury:2011wm' class='ref'></a>. (b) On the genetic and signaling side, source-sink diffusion models <a name='Wolpert:1969wu' class='ref'></a> and reaction-diffusion systems <a name='Turing:1952vn' class='ref'></a><a name='Gierer:1972et' class='ref'></a> <a name='Meinhardt:1982tv' class='ref'></a> at the tissue level; and gene regulation networks at the cell level, <a name='Longabaugh:2005bq' class='ref'></a>.
+</p>
+
+</div>
+
+<div id='2_2_4_'>
+<h3>2.2.4. Summary Table </h3>
+
+<p>
+	To conclude this review of models and principles of biological development, we propose below a summary table of some of the most exemplary works in chronological order. For each of them, we specify schematically whether they follow a macroscopic approach (geometric, analytical, statistical) or agent-based methodology, and whether they include biomechanics, molecular/genetic dynamics, or both <a name='theoretical_model_review1' class='fig'></a>. We also indicate the type of cell behavior included, whether cells divide, the animal studied, whether the model is matched against real data and the simulation is in 3D <a name='theoretical_model_review2' class='fig'></a>.
+</p>
+
+<figure id='theoretical_model_review1'>
+	<img src="../../images/Development_Review/theoretical_model/review_part1.png" width="950">
+	<figcaption><strong>Summary table of the developmental models and principles reviewed in Section 2.</strong> (Part I)</figcaption>
+</figure>
+
+
+<figure id='theoretical_model_review2'>
+	<img src="../../images/Development_Review/theoretical_model/review_part2.png" width="950">
+	<figcaption><strong>Summary table of the developmental models and principles reviewed in Section 2.</strong> (Part II)</figcaption>
+</figure>
+
+
+</div>
+ 
+<div id='2_3_'>
+<h2>2.3. Overview of the MECAGEN Modeling Principles </h2>
+
+<p>
+	In the next three chapters, we explain the model that we have designed to contribute to the objective of the MECAGEN project. 
+</p>
+
+<ul>
+	<li>Chapter 3 describes how we express and calculate the mechanical interactions and behavioral properties of the cells. It presents a discrete-element model using one particle per cell driven by an overdamped equation of motion that can be summarily written \(\lambda \vec{v_i} = \vec{F_i^P}+\vec{F_i^A}\), where \(\vec{v_i}\) is the velocity of one cell \(i\), \(\vec{F_i^P}\) represents &quot;passive&quot; interaction forces controlling cell stiffness and adhesion, and \(\vec{F_i^A}\) represents &quot;active&quot; interaction forces, based on polarization axes, which create protrusive activity or apical constriction. These forces are calculated by summing over a neighborhood \(\mathcal{N}_i\) containing nearby cells that are in contact with cell \(i\). This neighborhood is itself defined by a metric and topological criteria. \(\vec{F_i^P}\) is a <i>relaxation</i> force derived from an attractive/repulsive, elastic-like interaction potential. \(\vec{F_i^A}\) is a <i>behavioral</i> force moving the swarm configuration away from equilibrium.</li>
+	
+	<li>Chapter 4 deals with chemical signaling and gene regulatory networks. The goal is to briefly explain the principles of gene regulatory networks (GRNs), describe the components of GRN models, and give examples. In the present work, our particular objective was to design a simple and easily computable model of the molecular and genetic interactions that occur during development. Our model is articulated around three types of rules: rules driving the dynamics of intracellular gene/protein reactions, rules driving the dynamics of cellular secretion and transduction and rules driving the dynamics of extracellular reactions, transport and diffusion. They are expressed in a chemical kinetic framework by ODEs of the type \(dp/dt=f(p,g,q,r)\), where \(p\) represents protein concentrations, \(g\) gene expression level, \(q\) external ligands, and \(r\) membrane receptors. Extracellular reactions, transport and diffusion of ligands are also taken into account via PDEs involving \(\partial q/\partial t\) and fluxes \(\vec{J}=-D\vec{\nabla}q\).</li>
+	
+	<li>Finally, the first steps toward building a complete morphogenetic platform integrating mechanics and genetics will be laid out in Chapter 5. A simplified &quot;cell behavior ontology&quot; (CBO) is proposed. It relates on the one hand <i>cell states</i>, determined by the concentrations of certain proteins, and on the other hand <i>cell behaviors</i>, determined by biomechanical parameters.</li>
+</ul>
+ 
+<figure id='schematic_mecagen'>
+	<img src="../../images/schematic/mecagen.png" width="950">
+	<figcaption><strong>General diagram of the MECAGEN project.</strong> a: Biomechanical processes, including a &quot;passive&quot; and &quot;active&quot; forces (see summary of Chapter 3 above). b: Molecular/genetic regulation and signaling processes, including gene regulation networks, intracellular protein concentrations, extracellular ligands secretion, diffusion and binding.</figcaption>
+</figure>
+
+
+
+</div>
+ 

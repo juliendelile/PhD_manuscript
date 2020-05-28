@@ -1,0 +1,248 @@
+#!/bin/sh
+
+
+
+
+
+
+
+
+cd /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters_latex/
+
+
+#parse every file in chapters to extract the figure html code and put it in figure_list.html
+#create file to store fig ids for html
+outputfile="../pragma/figure_list.html"
+ids_file="../pragma/figure_ids.js"
+ids_vid_file="../pragma/figure_video_ids"
+ids_vid_file_num="../pragma/figure_video_ids_num"
+echo "" > $outputfile
+echo "var id = new Array();" > $ids_file
+echo "var type = new Array();" >> $ids_file
+echo "" > $ids_vid_file
+echo "" > $ids_vid_file_num
+
+for i in ../chapters/*;do
+		
+	chapter_num=${i%%_*}
+	chapter_num=${chapter_num#*chapters/}
+	
+	awk '/<figure/,/\/figure/{ print }' $i >> $outputfile
+	fig_num=1
+	vid_num=1
+	
+	while read line
+	do
+		if [[ "$line" == "<figure id"*">" ]]
+		then
+			idfigure=${line#*id=\'}
+	    	idfigure=${idfigure%%\'>}
+
+	    	read line2
+
+	    	#if figure is an image or a video...
+	    	if [[ "$line2" == "<img src"*">" ]]
+	    	then
+	    		
+	    		echo "id[\"$idfigure\"]=\"$chapter_num.$fig_num\";" >> $ids_file
+	    		echo "type[\"$idfigure\"]=\"image\";" >> $ids_file
+	    		let "fig_num += 1"
+
+	    	elif [[ "$line2" == "<video src"*">" ]]
+	    	then
+
+	    		echo "id[\"$idfigure\"]=\"M.$chapter_num.$vid_num\";" >> $ids_file
+	    		echo "type[\"$idfigure\"]=\"video\";" >> $ids_file
+	    		echo "$idfigure" >> $ids_vid_file
+	    		echo "$M.$chapter_num.$vid_num" >> $ids_vid_file_num
+	    		let "vid_num += 1"
+	    	
+	    	else 
+
+	    		echo "Bad figure format"
+
+	    	fi
+
+		fi
+	done < "$i"
+done
+
+
+
+
+
+
+
+
+
+
+
+#convert chapters 2 tex file
+#htmltolatex is in /usr/local/htmltolatex-1.0.1/
+#compile with 'ant jars'
+
+#/Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/pragma/figure_video_ids is needed 
+#to deal with movie figure link in tex
+
+
+cd /usr/local/htmltolatex-1.0.1/
+./htmltolatex -input /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters/1_Introduction_.html -output /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters_latex/1_Introduction_.tex -config /usr/local/htmltolatex-1.0.1/config.xml
+./htmltolatex -input /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters/2_State_of_the_Art_and_Principles_of_Embryo_Development_Models_.html -output /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters_latex/2_State_of_the_Art_and_Principles_of_Embryo_Development_Models_.tex -config /usr/local/htmltolatex-1.0.1/config.xml
+./htmltolatex -input /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters/3_MECAGEN_Model_of_Cell_Biomechanics_.html -output /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters_latex/3_MECAGEN_Model_of_Cell_Biomechanics_.tex -config /usr/local/htmltolatex-1.0.1/config.xml
+./htmltolatex -input /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters/4_MECAGEN_Model_of_Molecular_and_Genetic_Regulation_and_Signaling_.html -output /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters_latex/4_MECAGEN_Model_of_Molecular_and_Genetic_Regulation_and_Signaling_.tex -config /usr/local/htmltolatex-1.0.1/config.xml
+./htmltolatex -input /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters/5_MECAGEN_Model_of_Mechanic-Genetic_Coupling_.html -output /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters_latex/5_MECAGEN_Model_of_Mechanic-Genetic_Coupling_.tex -config /usr/local/htmltolatex-1.0.1/config.xml
+./htmltolatex -input /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters/6_Review_of_the_Zebrafish_Early_Developmental_Mechanics_.html -output /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters_latex/6_Review_of_the_Zebrafish_Early_Developmental_Mechanics_.tex -config /usr/local/htmltolatex-1.0.1/config.xml
+./htmltolatex -input /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters/7_Experimental_Reconstruction_of_the_Zebrafish_Early_Development_.html -output /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters_latex/7_Experimental_Reconstruction_of_the_Zebrafish_Early_Development_.tex -config /usr/local/htmltolatex-1.0.1/config.xml
+./htmltolatex -input /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters/8_Simulated_Reconstruction_and_Model_Validation_Through_Case_Studies_.html -output /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters_latex/8_Simulated_Reconstruction_and_Model_Validation_Through_Case_Studies_.tex -config /usr/local/htmltolatex-1.0.1/config.xml
+./htmltolatex -input /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters/9_Conclusion_.html -output /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters_latex/9_Conclusion_.tex -config /usr/local/htmltolatex-1.0.1/config.xml
+
+
+
+cd /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters_latex/
+
+
+#remove video figure from tex files
+GLOBIGNORE="these.tex" 
+for i in *.tex;do
+	#echo $i
+	python ../remove_video_latex.py $i > tmp.tmp
+	mv tmp.tmp $i
+done
+
+
+
+#if needed, add /usr/texbin to $path
+
+
+pdflatex -interaction nonstopmode these
+bibtex these
+pdflatex -interaction nonstopmode these
+pdflatex -interaction nonstopmode these
+
+#aux2bib is in chapters_latex/ folder
+#create references.bib
+#I have modified subset-nocomment.bst to let pass url-local in URL bib
+
+perl aux2bib these.aux
+
+#convert path to relativepath for papers in references.bib
+
+new="../../papers/"
+old="file://localhost/Users/Julien/Documents/Papers2/"
+perl -pi -e "s#$old#$new#g" references.bib
+
+
+
+# import pdf in needed
+
+pdfline=`grep -o '/papers/.*pdf' references.bib`
+nummatch=`grep -c '/papers/.*pdf' references.bib`
+
+for ((k=0; k<$nummatch; k++ )){
+		
+	newline=${pdfline#*papers}
+	newline=${newline%%.pdf*}
+	newline="$newline.pdf"
+	
+	#replace %20 by space char
+	newline=${newline//%20/ }
+	
+	if [ ! -f "../../papers$newline" ];
+	then
+		echo "$newline has to be added"
+		
+		short=${newline#/}
+		kind=${short%%/*}
+
+		echo "kind $kind"
+
+		short=${short#*/}
+		foldername=${short%%/*}
+
+		echo "foldername $foldername"
+		
+		short=${short#*/}
+		year=${short%%/*}
+		echo "year $year"
+		
+		
+		#if [ ! -d "../../papers/$kind/$foldername/$year" ];then
+			mkdir "../../papers/$kind/"
+			mkdir "../../papers/$kind/$foldername/"
+			mkdir "../../papers/$kind/$foldername/$year"
+		#fi
+		#copy pdf
+		cp /Users/Julien/Documents/Papers2"$newline" ../../papers"$newline"
+	fi
+	
+	pdfline=${pdfline#*pdf}
+	
+}
+
+
+
+
+
+
+#convert bib filtered references to html files
+export TMPDIR=.
+../../extra/bibtex2html-1.96-osx-x86_64/bibtex2html references.bib
+
+#move two html filtered references files to website folder
+
+mv references.html ../pragma/references.html
+mv references_bib.html ../pragma/references_bib.html
+
+
+
+# outputfile="../pragma/figure_list.html"
+# ids_file="../pragma/figure_ids.js"
+# echo "" > $outputfile
+# echo "var id = new Array();" > $ids_file
+
+
+# for i in ../chapters/*;do
+		
+# 	chapter_num=${i%%_*}
+# 	chapter_num=${chapter_num#*chapters/}
+	
+# 	awk '/<figure/,/\/figure/{ print }' $i >> $outputfile
+# 	fig_num=1
+	
+# 	while read line
+# 	do
+# 		if [[ "$line" == "<figure id"*">" ]]
+# 		then
+# 			idfigure=${line#*id=\'}
+# 	    	idfigure=${idfigure%%\'>}
+# 	    	echo "id[\"$idfigure\"]=\"$chapter_num.$fig_num\";" >> $ids_file
+	    	
+# 	    	let "fig_num += 1"
+# 		fi
+# 	done < "$i"
+# done
+
+
+
+
+#parse every ref in references.html and store their ids in ref_ids.js
+
+ref_ids_file="../pragma/ref_ids.js"
+echo "var id_ref = new Array();" > $ref_ids_file
+ref_file="../pragma/references.html"
+
+refline=`grep -o '\[<a name=.*a>\]' $ref_file`
+nummatch=`grep -c '\[<a name=.*a>\]' $ref_file`
+
+for ((k=0; k<$nummatch; k++ )){
+		
+	hash=${refline#*name=\"}
+	hash=${hash%%\">*}
+	
+	idref=${refline#*\">}
+	idref=${idref%%</a>*}
+	
+	echo "id_ref[\"$hash\"]=\"$idref\";" >> $ref_ids_file
+
+	refline=${refline#*</a>]}	
+}

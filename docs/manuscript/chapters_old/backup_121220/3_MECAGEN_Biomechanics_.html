@@ -1,0 +1,2240 @@
+
+ 
+ 
+ 
+
+<div id='3_'>
+<h1>3. MECAGEN Biomechanics  </h1>
+
+
+
+
+
+objectif: agir comme un patissier, inventer une pate que nous pourrons manipuler, modifier, en comprendre le potentiel. 
+
+De plus, cette pate est active (action reaction sur elle même et non pas simplement action du patissier sur la pate)
+
+
+
+
+
+
+
+pour le probleme du pas temps et de l'embryon trop mou...
+
+imaginons un table trop molle, elle s'affaisse.
+
+pas de gravité
+
+force relative des tissues/cellules entre eux/elles
+
+ 
+ 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+<div id='3_1_'>
+<h2>3.1. State of the Art  </h2>
+ 
+
+
+
+
+</div>
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>Continuous models</strong> from Lim et al. Mechanical models for living cells--a review. Journal of biomechanics (2006)</p>
+
+
+<figure id='CMnewtonian'>
+	<img src="../../images/Development_Review/theoretical_model/ContinuousModels/CMnewtonian.png" width="400">
+	<figcaption> Newtonian liquid drop model</figcaption>
+</figure>
+<figure id='CMcompound'>
+	<img src="../../images/Development_Review/theoretical_model/ContinuousModels/CMcompound.png" width="400">
+	<figcaption>Compound liquid drop model</figcaption>
+</figure>
+<figure id='CMshear'>
+	<img src="../../images/Development_Review/theoretical_model/ContinuousModels/CMshear.png" width="400">
+	<figcaption> Shear thinning liquid drop model </figcaption>
+</figure>
+<figure id='CMmaxwell'>
+	<img src="../../images/Development_Review/theoretical_model/ContinuousModels/CMmaxwell.png" width="400">
+	<figcaption>Maxwell liquid drop model</figcaption>
+</figure>
+<figure id='CMhomogeneous'>
+	<img src="../../images/Development_Review/theoretical_model/ContinuousModels/CMhomogeneous.png" width="400">
+	<figcaption>Homogeneous standard linear solid</figcaption>
+</figure>
+
+
+
+
+
+
+
+
+
+ 
+
+<div id='3_1_1_'>
+<h2>3.1.1. Soft material no physics available  </h2>
+
+
+
+
+<p>
+	The &quot;Entwicklungsmechanik&quot; introduced the importance of mechanics in the study of developmental systems. From that point on, various theoretical models have been proposed. 
+</p>
+
+
+<p>
+	The purpose of these models is to propose mechanical explanation sufficient to generate the kinematic behavior of the cellular tissue. 
+</p>
+
+<p>
+	The diversity of theoretical models is justified by the very evasive nature of multicellular systems compared to the classical object of study in physics. Classical physics has developed framework adapted to objects which present spatio-temporal regularities, however the living matter is characterized by its behavioral heterogeneity. Indeed, the cell behaviors may rapidly change over time as its molecular structure is perpetually reorganizing itself.
+</p>
+
+This heterogeneity of behavior induces that some type of physical models are more relevant to describe some aspects of cell dynamics than others (see discussion interfacial tension vs protrusion).
+
+
+<p>
+	Cells behave neither as a solid or a fluid, or as both at once. Cellular tissue are often described as &quot;soft matter&quot;.
+</p>
+
+<p>
+	A fundamental notion to describe cell behavior is its ability to convert stored energy into mechanical work. 
+
+	This creates nonequilibrium states which deviate from classical equilibriua.
+
+	This notion, which fund the field of &quot;active matter&quot;, is applied at various level of organization, whether it is complex macromolecules, cells from a developing embryo, or even flocking birds <a name='Ramaswamy:2010bf' class='ref'></a>. 
+	In the vocabulary associated with these object, the qualification &quot;self&quot;-(...ing) or &quot;spontaneous&quot; ... conveys the notion of autonomous action independent from an external influence. 
+
+	In egg embryos, the energy necessary to the motion of the cells originate from the yolk and in mammmals, the energy is provided by the mother but as food energy and not as an external mechanical action.
+</p>
+
+<p>
+	Moreover, this notion is the direct consequence of macroscopic scaling and their approximated rules. At the microscopic scale, inter-atomic potential are still respecting equilibrium and there is no notion of active and passive action anymore.
+</p>
+
+
+mettre graphe ici (avant texte pour inciter le lecteur à refléchir par lui-même avant de se voir proposer un point de vue -> même si le graphe est aussi un point de vue il est moins complet donc laisse plus de liberté d'interprétation)
+
+
+
+
+
+<figure id='biomechanics_sota_general_type_of_models'>
+	<img src="../../images/biomechanics_sota/general_type_of_models.png" width="500">
+	<figcaption>Schematic categorization of models</figcaption>
+</figure>
+
+
+
+
+<p>
+	In this section, we will introduce some of these attempts to describe the mechanical cell dynamics. We will categorize the different approach through the discrete or continuous dichotomy.
+</p>
+
+
+<ul>
+	
+
+	<li>a <i>continuum</i> description of the tissue would directly set behavioral law at the level of the tissue without considering the underlying element. These macroscopic equations have the advantage of conciseness, stating a more general description of the phenomenon. But they may also be more imprecise and lost some expressiveness.
+
+	The tissue is considered as a continuous mass. equivalent to a infinity of infinitely small particles but never making reference to them because they are well below the phenomenon of interest.
+
+	macroscopic viewpoint.
+	</li>
+
+	<li>a <i>discrete</i> description of the tissue considers the elements that constitute it (e.g. the cells) as autonomously acting element and the resulting action of all the constitutive elements determine the mechanical behavior of the tissue. 
+
+	The discretized elements are often denoted by the term &quot;particles&quot;, whose properties comprised at least the spatial coordinates and dimensional properties but may also comprise mass or mechanical properties.
+
+	microscopic viewpoint.
+	</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+Energy discussion see later what to do with it
+
+
+dismiss model based on energy conservation because there is no mechanical energy conservation. we should take into account energy provided by chemical reaction but we do not (somebody does it in cells?)
+
+for a discussion on energy and potts, and vertex models see Glazier, J. amp;raner, F., 1993. Simulation of the differential adhesion driven rearrangement of biological cells. PHYSICAL REVIEW E, 47(3), pp.2128–2154. <a name='Glazier:1993ck' class='ref'></a>
+
+
+
+
+
+
+<h3>Continuous models</h3>
+
+
+
+
+
+<h4>Mathematical Biology</h4>
+
+
+<p>
+	demander à Paul comment il considère cette approche, est ce de la physique continue ou autre ? les mêmes equations ? les mêmes objectifs ?
+</p>
+
+
+<p>
+	For example, Navier-Stokes equation is a special case of the continuity equation. Mathematical biology could be the study of continuity equation upon other hypotheses -> intersting mathematically. But it is still continuum mechanics ?
+</p>
+
+
+<p>
+	may produce kinematic behavior but not mechanical behavior comparable to mechanical measure. ?
+</p>
+
+
+
+intéressant 
+
+A continuity equation in physics is an equation that describes the transport of a conserved quantity. Since mass, energy, momentum, electric charge and other natural quantities are conserved under their respective appropriate conditions, a variety of physical phenomena may be described using continuity equations.
+
+Continuity equations are a stronger, local form of conservation laws. For example, it is true that "the total energy in the universe is conserved". But this statement does not immediately rule out the possibility that a lot of energy could disappear from Earth while simultaneously appearing in another galaxy. A stronger statement is that energy is locally conserved: Energy can neither be created nor destroyed, nor can it "teleport" from one place to another—it can only move by a continuous flow. A continuity equation is the mathematical way to express this kind of statement.
+
+
+<p>
+	mathematical biology as advocated by Murray (<a name='Murray:2001uq' class='ref'></a>, <a name='Murray:2003ty' class='ref'></a>): see Murray-Oster mechanical approach to biological pattern formation. A specific model is proposed for the behavior of a tissue comprising mesenchymal cells. <a name='Murray:1984tp' class='ref'></a> -> the temporal rate of cell density is related to the flux of cells and the mitotic rate. The flux function take into account different transport effects: convection and random dispersal.
+</p>
+
+
+
+
+
+<p>
+	The following sections treat the case of &quot;continuum mechanics&quot; which studies bulk matter as continuous material. This field of physics is separated between &quot;solid mechanics&quot; and &quot;fluid mechanics&quot;. A clear distinction between solids and fluids is their ability to resist to the action of a shearing force tangential to the surface. Both fields have discriminated different kind of bulk material behavior and most of them have been applicated to multicellular tissue.	For fluids, stresses are related to velocity fields through continuity equation and conservation laws and for solids, stresses are related to deformation tensor (strain) <a name='Fleury:2005ul' class='ref'></a>.
+</p>
+
+
+
+<h4>Solid mechanics</h4>
+
+
+
+
+<figure id='solids_1000px-Stress_in_a_continuum'>
+	<img src="../../images/biomechanics_sota/solids/1000px-Stress_in_a_continuum.png" width="450">
+	<img src="../../images/biomechanics_sota/solids/1000px-Plane_strain.png" width="450">
+	<figcaption>Left. Stress from a loaded deformable material body assumed as a continuum from http://en.wikipedia.org/wiki/Stress_(mechanics)#Cauchy_stress_tensor. Right. Plane strain state in a continuum from http://en.wikipedia.org/wiki/Plane_strain#Plane_strain
+ </figcaption>
+</figure>
+
+
+
+see http://homepages.engineering.auckland.ac.nz/~pkel015/SolidMechanicsBooks/Part_I/index.html
+or  http://esag.harvard.edu/rice/e0_Solid_Mechanics_94_10.pdf
+
+<p>
+	&quot;Solid mechanics&quot; focuses on the study of the response of solid matter to the action of forces and/or thermal loading.
+</p>
+
+<p>
+	The most important theoretical tool used in solid mechanics is the tensor. The tensor is a 3-dimensional matrix which represents an ellipsoid whose axes convey the principal directions and amplitude of the gradient of a quantity in a local neighborhood. 
+</p>
+
+
+
+
+<p>
+	The relevant quantities are the strain and the stress. The strain expresses the deformation of the solid, it is deduced from the displacement of the solid. The stress is a measure of the internal forces acting inside the solid as a reaction to an external action, and its dimension is a force per unit area (see figure XXX). The relation between the stress tensor and the strain tensor establishes the mechanical properties of the matter.
+</p>
+
+
+
+<p>
+	linear elasticity / viscoelasticity / elasto-plasticity / plasticity
+</p>
+
+
+
+
+<p>
+	<strong>Elasticity</strong> : "Elasticity theory is used, in which a material is assumed to undergo small deformations when loaded and, when unloaded, returns to its original shape."</p>
+
+
+-> Hertz ?
+
+<p>
+	The elasticity can be linear when the material deformation is proportional to the applied load (ex: Hooke's law).
+</p>
+
+
+
+<p>
+	Hamant, O. et al., 2008. Developmental patterning by mechanical signals in Arabidopsis. Science, 322(5908), pp.1650–1655. <a name='Hamant:2008eb' class='ref'></a> represents two layers of polyhedral cells of the meristem of <i>Arabidopsis</i> through their wall interaction. The walls are considered as isotropic elastic material with outer wall being stronger than the inner wall through an increase of the elastic modulus.
+</p>
+
+
+<p>
+	Non-linear elasticity is more adequate to most observed material behavior. 
+</p>
+
+
+<p>
+	<strong>Hyperelasticity</strong>
+</p>
+
+
+<p>
+	Neo-Hookean hyperelastic material in Conte, V., Muñoz, J.J. amp;iodownik, M., 2008. A 3D finite element model of ventral furrow invagination in the Drosophila melanogaster embryo. Journal of the mechanical behavior of biomedical materials, 1(2), pp.188–198. <a name='Conte:2008cp' class='ref'></a>
+</p>
+
+
+<p>
+	<strong>Plasticity</strong> : "plasticity theory, which is used to model the behavior of materials which undergo permanent deformations, for example metals and soils"
+</p>
+
+<p>
+	<strong>Elasto-plasticity</strong>: see Fleury <a name='Fleury:2005ul' class='ref'></a>: embryonic sheets in chicks are viewed as a very soft solid which deform and yield. As a first approximation, the elastic deformation of the blastodic sheets is calculated and assumptions lead to the conclusion that the deformation is proportional to the gradient of pressure.
+</p>
+
+
+<p>
+	<strong>Viscoelasticity</strong> : "viscoelasticity theory, which models well materials which exhibit many “fluid-like” properties, for example plastics"
+</p>
+
+<p>
+	Murray, J.D. amp;ster, G.F., 1984. Generation of biological pattern and form. IMA journal of mathematics applied in medicine and biology, 1(1), pp.51–75. <a name='Murray:1984tp' class='ref'></a> proposes a model of epithelium pattern through a viscoelastic field equation system where the contraction is triggered by a calcium pulse.
+</p>
+
+<p>
+	Forgacs, G. et al., 1998. Viscoelastic properties of living embryonic tissues: a quantitative study. Biophysical Journal, 74(5), pp.2227–2234. <a name='Forgacs:1998ux' class='ref'></a> present an experimental technique that allows the compression and relaxation of cellular aggregate. A generalized Kelvin-body model of viscoelasticity is used.
+</p>
+
+
+
+<p>
+	<strong>Viscoplasticity</strong> : combines viscoelasticity and plasticity
+</p>
+
+
+<p>
+	Solid mechanics is dealing with other matter behavior less related to biological matter like fracture or ...
+</p>
+
+
+
+
+<p>
+	Numerical solution: finite element analysis
+</p>
+
+
+
+
+
+
+
+
+<h4>Fluid mechanics</h4>
+
+<p>
+	Fluid mechanics focus on the study of fluids (liquids, gases and plasmas) and the responses to forces applied on them.
+</p>
+
+<p>
+	As a part of the <i>continuum</i> mechanics, the fluids properties of density, pressure, temperature or velocity is assumed to be continuous.
+</p>
+
+<p>
+	Fundamental hypotheses :
+</p>
+
+<ul>
+	<li>conservation of mass : the rate of change of mass contained in a control volume (a cube, a sphere...) is equal to the rate of mass entering the control surface minus the rate of mass going out of it.</li>
+	<li>conservation of energy</li>
+	<li>conservation of momentum</li>
+	<li>continuity: the continuity equation assures that the aforementioned quantities (mass, energy, momentum) are not only conserved but also <i>locally</i> conserved as they can only displace as a continuous flow. This gives to modeled fluids their apparent smoothness.</li>
+</ul>
+
+<p>
+	The principal equation ruling fluid behavior is the Navier-Stokes equation. It describes the motion of the fluid as a function of the balance of forces acting in it. Its general form for the conservation of the momentum is written:
+</p>
+
+
+<p>
+	$$ {\partial{\bf v}\over{\partial t}} + ({\bf v} \cdot \nabla) {\bf v} = {1\over\rho} \nabla \mathbb{P} + {1\over\rho} {\bf F} $$
+</p>
+
+<p>
+	where 
+</p>
+
+
+<ul>
+	<li>\({\bf v}\) is the velocity vector,</li>
+	<li>\(\rho\) is the density of the fluid,</li>
+	<li>\(\mathbb{P}\) is a tensor which describes the normal and tangential stresses applied on a fluid particle,</li>
+	<li>\({\bf F}\) is a body force vector (force per unit volume).</li>
+</ul>
+
+<p>
+	Additional conditions on the fluid proprieties allow to determine a solvable set of equations. If the fluid is incompressible, the divergence of the stress term \(\nabla \mathbb{P}\) is replaced by the sum of a pressure gradient \(- \nabla p\) for the normal component of the stress and, for a Newtonian fluid, a dynamic viscosity constant \(\mu\) times the Laplacian of the velocity \(\nabla^2{\bf v}\) expresses the tangential component of the stress. 
+</p>
+
+<p>
+	Unfortunately, in biological material, the Newtonian assumption is hardly satisfying as the viscosity model is not linear. The use of more complicated non-linear stress tensor is required and under particular external conditions, hole may appear in the continuum. However, a simplifying assumption adapted to biological material can be made as the inertial forces (LHS of the Navier-Stokes equation) are negligible compared to the forces of viscosity (RHS of NV). The Stokes equation express this assumption:
+</p>
+
+<p>
+	$$ \nabla \mathbb{P} + {\bf F} = 0 $$
+</p>
+
+<p>
+	Only the simplest forms of Navier-Stokes equation are analytically solvable (Poiseuille flow, Couette flow, Taylor-Green vortex... (ajouter figure avec ces solutions ?? XXXX)), more complex conditions require the use of computer simulations (Computational Fluid Dynamics - CFD).
+</p>
+
+
+
+<p>
+	Lubkin, S.R. amp;i, Z., 2002. Force and deformation on branching rudiments: cleaving between hypotheses. Biomechanics and Modeling in Mechanobiology, 1(1), pp.5–16. <a name='Lubkin:2002gv' class='ref'></a>: in the context of branching morphogenesis, they propose a model which consider both an epithelial tissue and a mesenchymal tissue to behave as Stokes fluids with different viscosities and separated by an interface.
+</p>
+
+<p>
+	Pouille, P.-A. amp;arge, E., 2008. Hydrodynamic simulation of multicellular embryo invagination. Physical Biology, 5(1), p.15005. <a name='Pouille:2008jz' class='ref'></a> succeeded to design a model coupling the behavior of a viscous incompressible fluid ruled by Stokes equation and the movement of membrane of cells during epithelial invagination.
+</p>
+
+<p>
+	Fleury, V., 2011. A change in boundary conditions induces a discontinuity of tissue flow in chicken embryos and the formation of the cephalic fold. The European physical journal E, Soft matter, 34(7), p.73. <a name='Fleury:2011gx' class='ref'></a> also uses Stokes fluid to model folding processes.
+</p>
+
+
+
+
+
+
+
+
+<p>
+	<strong>strange Pseudo Finite element ?</strong>
+</p>
+
+difficult to deal with discontinuity. fixed neighborhood
+
+<p>
+	Clausi, D. amp;rodland, G.W., 2001. Finite Element Modelling of Embryo Tissue Formation. In Computer Techniques and Computational Methods in Biomechanics, Biomechanical Systems Techniques and Applications. CRC Press, pp. 1–20. <a name='Clausi:2001te' class='ref'></a>
+</p>
+
+
+<p>
+	Brodland, G.W. amp;hen, H.H., 2000. The mechanics of heterotypic cell aggregates: insights from computer simulations. Journal of biomechanical engineering, 122(4), pp.402–407. <a name='Brodland:2000uu' class='ref'></a>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Discrete models</h3>
+
+
+<p>
+	The distinction revealed by the following headings is about the method of spatial discretization. The spatial coordinates of the objects may belong to :
+</p>
+
+<ul>
+	<li>a grid, i.e. regularly spaced position along the dimension. This approach is denoted by the &quot;on-lattice&quot; qualification,</li>
+	<li>the entire Euclidean space (\(\mathbb{R}^3\)), and this approach is referred as &quot;off-lattice&quot;.</li>
+</ul>
+
+<p>
+	Another orthogonal distinction can be made upon the number of particle used to represent a cell, whereas it is one or more.
+</p>
+
+
+
+
+<h4>On-lattice models and one particle per cell</h4>
+
+
+
+<p>
+	<strong>Cellular automata</strong>
+</p>
+
+<p>
+	A cellular automata represents cell as grid point. Their neighborhood may be define by the orthogonal neighbors (4 in 2D, 6 in 3D), include the diagonal neighbors (8 in 2D, 26 in 3D) or take into account farther neighbors. Generally, from the identity of these neighbors, a rule decides what the central cell will do, move, stay still, die... 
+</p>
+
+
+<p>
+	Anderson, A., 2007. A hybrid multiscale model of solid tumour growth and invasion: Evolution and the microenvironment. Single-Cell-Based Models in Biology and Medicine, pp.3–28. <a name='Anderson:2007ib' class='ref'></a>: 2D or 3D discrete cellular automata-like model (move south, north, west, east, no move)  with probabilities based on a continuum model encompassing biased random-walk model, cell migration and interaction. 
+</p>
+
+<p>
+	The modeler has to define a spatial conflict policy: whether two cells can occupy the same grid point at the same time, what to do if it occurs... In <a name='Anderson:2007ib' class='ref'></a>, they allow cells to proliferate or to move only if the an empty neighbor grid point exists. This may introduce bias as when this kind of situation occurs, a cell has to get the priority and fill the empty grid point.
+</p>
+
+
+<p>
+	Peak, D. et al., 2004. Evidence for complex, collective dynamics and emergent, distributed computation in plants. Proceedings of the National Academy of Sciences of the United States of America, 101(4), pp.918–922. <a name='Peak:2004jt' class='ref'></a>
+</p>
+
+
+
+<h4>On-lattice models and multiple particles per cell</h4>
+
+
+
+<p>
+	<strong>Cellular Potts model</strong> 
+</p>
+
+<p>
+	The cellular Potts model is one of the most successful framework to study multicellular assembly. It was introduced by F. Graner and J. Glazier as an adaptation of the Potts model to reproduce the cell sorting behavior proposed by Steinberg <a name='Graner:1992ve' class='ref'></a> <a name='Glazier:1993ck' class='ref'></a>.
+</p>
+
+<p>
+	Historically, the Potts model derives from the Ising model which was invented by Wilhelm Lenz in 1920. Ising model describes the phase transition of the magnetic dipole moments of atomic spins arranged on a lattice (taken a value of +1 or -1). For example, it allows the characterization of the transition between the ferromagnetic and the paramagnetic phases. Spins only interacts with their immediate neighbors on the lattice (local principle). The coupling between the spins is quantified by an energy function called the <i>Hamiltonian</i>. The Hamiltionian is equal to the sum over every atoms of the coupling factors between an atom's spin and its neighbors' spin. The aligned neighbors spins have a lower energy of coupling than anti-aligned neighbors spins. However, the Ising model presents a static analysis of the transition and not a dynamical evolution of the spins value <a name='Glazier:2007hm' class='ref'></a>. In 1943, Ashkin and Teller added dynamics by using a Monte-Carlo algorithm which updates the values of all spins based on the Boltzmann probability. 
+</p>
+
+<p>
+	In 1952, Renfrey Potts extended the Ising model by allowing the spin to take multiples values. More spin coupling had to be define but the Hamiltonian function remained the same. The Metropolis algorithm, which iteratively selects randomly a spin, and updates its value according to the evolution of the Hamiltonian if the spin value is changed, allows smoother transition based on a principle of locality. With the Metropolis algorithm, the Potts became a kinetic simulation and allows the study of various systems from metal grains to foam <a name='Glazier:2007hm' class='ref'></a>. The cellular Potts model applies the model to cells by stating that a cell is represented by an ensemble of neighbor grid point and the &quot;spin&quot; of each grid point is the id of the cell. Its first version used an Hamiltonian with a neighbor coupling term representing the different adhesion coefficient according to cell types and a volume constraining term to penalize the variation of cell size.
+</p>
+
+<p>
+	The cellular Potts model was later extended with P. Hogeweg to allow the integration of various cell behaviors: cell growth, cell division, cell migration and a modulation term was introduced in the Hamiltonian to take into account the rigidity of the cell through a surface conserving law. Its name became the Glazier-Graner-Hogeweg model (GGH model).
+</p>
+
+
+<figure id='CPM_onlattice_potts'>
+	<img src="../../images/CPM/onlattice_potts.png" width="600">
+	<figcaption>Cellular Potts Model on-lattice space.</figcaption>
+</figure>
+
+<p>
+	We reproduce a summary of the algorithm of the cellular Potts model as presented in ...:
+</p>
+
+
+
+
+
+
+
+
+
+<p>
+	<strong>Potts history</strong>
+</p>
+
+<ul>
+	<li>Athanasius F.M. Marée, Veronica A. Grieneisen, Paulien Hogeweg. The Cellular Potts Model and Biophysical Properties of Cells, Tissues and Morphogenesis. <a name='Maree:2007hc' class='ref'></a></li>
+	<li>Nicholas J. Savill, Roeland M. H. Merks. The Cellular Potts Model in Biomedicine. <a name='Savill:2007fm' class='ref'></a></li>
+	<li>Ariel Balter, Roeland M. H. Merks, Nikodem J. Poplawski, Maciej Swat, James A. Glazier</em>. The Glazier-Graner-Hogeweg Model: Extensions, Future Directions, and Opportunities for Further Study. <a name='Balter:2007fc' class='ref'></a></li>
+
+</ul>
+
+
+<p>
+	<strong>Potts papers</strong>
+</p>
+
+
+<ul>
+	<li>Graner F, Glazier JA (1992) Simulation of biological cell sorting using a twodimensional extended Potts model. Phys Rev Lett 69: 2013–2016. (on PRL, no pdf yet)</li>
+	<li>Glazier JA, Graner F (1993) Simulation of the differential adhesion driven rearrangement of biological cells. Phys Rev E 47: 2128–2154. <a name='Glazier:1993ck' class='ref'></a></li>
+	<li>Izaguirre, J. et al., 2004. CompuCell, a multi-model framework for simulation of morphogenesis. Bioinformatics, 20(7), pp.1129–1137. <a name='Izaguirre:2004vr' class='ref'></a></li>
+	<li>Cickovski, T., Huang, C., Chaturvedi, R., Glimm, T., Hentschel, H. G. E., Alber, M., Glazier, J. A., Newman, S. A., and Izaguirre, J. A. (2005). A framework for three-dimensional simulation of morphogenesis. IEEE/ACM Trans. Comput. Biol. Bioinform. 2, 273–288. (pas de pdf)</li>
+	<li>Cickovski, T. et al., 2007. From genes to organisms via the cell: a problem-solving environment for multicellular development. Computing in Science &amp; Engineering, 9(4), pp.50–60. <a name='Cickovski:2007tj' class='ref'></a></li>
+	<li>Swat, M.H.M. et al., 2008. Multicell simulations of development and disease using the CompuCell3D simulation environment. Methods in molecular biology (Clifton, NJ), 500, pp.361–428. <a name='Swat:2008di' class='ref'></a></li>
+	<li>Glazier, J.A. et al., 2008. Coordinated action of N-CAM, N-cadherin, EphA4, and ephrinB2 translates genetic prepatterns into structure during somitogenesis in chick. Current topics in developmental biology, 81, pp.205–247. <a name='Glazier:2008kc' class='ref'></a></li>
+	<li>Harrison, N.C., Diez Del Corral, R. &amp; Vasiev, B., 2011. Coordination of Cell Differentiation and Migration in Mathematical Models of Caudal Embryonic Axis Extension. PLoS ONE, 6(7), p.e22700. <a name='Harrison:2011hg' class='ref'></a></li>
+	<li>Zhang, Y. et al., 2011. Computer Simulations of Cell Sorting Due to Differential Adhesion. PLoS ONE, 6(10), p.e24999. <a name='Zhang:2011ca' class='ref'></a></li>
+	<li>Hester, S.D. et al., 2011. A Multi-cell, Multi-scale Model of Vertebrate Segmentation and Somite Formation. PLoS Computational Biology, 7(10), p.e1002155. <a name='Hester:2011dc' class='ref'></a></li>
+</ul>
+
+
+
+
+
+
+<h4>Off-lattice models and 1 particle per cell</h4>
+
+
+
+intro off lattice / continuous -> ultra coarse-grained soft matter
+<p>
+	In physics, the field of soft matter focus on the study of macromolecules, which already yields non-trivial properties hardly predictable by their atomic interactions (biopolymers, colloids, membranes...). 
+
+	. But, in the level of organization ladder, it stopped at the level of 
+</p>
+
+<p>
+	These studies focus on sub-cellular phenomenon and a higher level of approximation is needed for studying the mechanical properties of the cell, and of assembly of cells.
+</p>
+
+
+
+
+
+<p>
+	Schaller, G. amp;eyer-Hermann, M., 2004. Kinetic and dynamic Delaunay tetrahedralizations in three dimensions. Computer Physics Communications, 162(1), pp.9–23. <a name='Schaller:2004vs' class='ref'></a>
+</p>
+
+
+
+<p>
+	Palsson, E., 2001. A three-dimensional model of cell movement in multicellular systems. Future Generation Computer Systems, 17(7), pp.835–852. <a name='Palsson:2001um' class='ref'></a>: particle based, surface approximation, non-spheroidal particles (ellipsoid), central forces.
+</p>
+
+
+
+
+
+
+<h4>Off-lattice models and multiple particles per cell</h4>
+
+
+
+
+<p>
+	<strong>Junction network vertex models</strong>
+</p>
+
+<p>
+	Odell, G.M. et al., 1981. The mechanical basis of morphogenesis. I. Epithelial folding and invagination. Developmental Biology, 85(2), pp.446–462. <a name='Odell:1981vy' class='ref'></a>: precursor of computer simulated model in development to test hypothesized mechanical properties. Cellular cytoskeleton's microfilaments form a cuboidal structure whose apical facet is contractile. Neighbor cells are laterally connected so that the contraction of the apical facet produce an invagination of the tissue. The contraction is triggered by a mechanical signal (stretching) which propagates along the aligned cells (mechanotransduction).
+</p>
+	
+
+
+<p>
+	Weliky, M. amp;ster, G., 1990. The mechanical basis of cell rearrangement. I. Epithelial morphogenesis during Fundulus epiboly. Development, 109(2), pp.373–386. <a name='Weliky:1990wn' class='ref'></a> 
+</p>
+
+
+<p>
+	Weliky, M. et al., 1991. Notochord morphogenesis in Xenopus laevis: simulation of cell behavior underlying tissue convergence and extension. Development, 113(4), pp.1231–1244. <a name='Weliky:1991vf' class='ref'></a> 
+</p>
+
+
+<p>
+	Sahlin, P. amp;önsson, H., 2010. A modeling study on how cell division affects properties of epithelial tissues under isotropic growth. PLoS ONE, 5(7), p.e11750. <a name='Sahlin:2010eu' class='ref'></a> 
+</p>
+
+
+<p>
+	Farhadifar, R. et al., 2007. The influence of cell mechanics, cell-cell interactions, and proliferation on epithelial packing. Current Biology, 17(24), pp.2095–2104. <a name='Farhadifar:2007vj' class='ref'></a>
+</p>
+
+
+
+
+
+
+<p>
+	Hamant, O. et al., 2008. Developmental patterning by mechanical signals in Arabidopsis. Science, 322(5908), pp.1650–1655. <a name='Hamant:2008eb' class='ref'></a>: represents a two-dimensional approximation of the L1 layer of cells of <i>Arabidopsis</i> meristem. A global energy term comprising internal pressure and wall stiffness through elastic spring is used. Plastic behavior is obtained by increasing the walls' restlengths if their tension is above a given threshold.
+</p>
+
+
+
+
+<p>
+	<strong>Detailed cell model</strong>
+</p>
+
+
+<p>
+	show how nice are tensegrity model and say that they are not used in multicellular assemblies...
+</p>
+
+
+
+
+<p>
+	<strong>Subcellular particles</strong>
+</p>
+
+
+<figure id='sandersius_newman_4_images'>
+	<img src="../../images/biomechanics_sota/sandersius_newman/4_images.png" width="750">
+	<figcaption></figcaption>
+</figure>
+
+
+
+<p>
+	Subcellular element model (ScEM):  <a name='Newman:2005ux' class='ref'></a> <a name='Sandersius:2011ew' class='ref'></a> <a name='Sandersius:2011ug' class='ref'></a>
+</p>
+
+
+<p>
+	Sandersius, S.A., Weijer, C.J. amp;ewman, T.J., 2011. Emergent cell and tissue dynamics from subcellular modeling of active biomechanical processes. Physical Biology, 8(4), p.045007. <a name='{Sandersius:2011ih}' class='ref'></a>
+</p>
+
+<p>
+	Sandersius, S.A. amp;ewman, T.J., 2008. Modeling cell rheology with the Subcellular Element Model. Physical Biology, 5(1), p.15002. <a name='Sandersius:2008ia' class='ref'></a>
+</p>
+
+
+
+<p>
+	Ajouter les miennes
+</p>
+
+
+
+
+.A utiliser ou non
+
+In this section, and in the physicist vocabulary, the microscopic scale is the one made of atoms, the mesoscopic scale deals with molecules and the macroscopic 
+
+
+
+.Pour discussion
+
+specialization of models: models emanating from the &quot;bubble&quot; field insist on the influence of interfacial tension between the cells and are less convenient for the study of cell behavior involving protrusive activity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+	<strong>review</strong>
+</p>
+
+
+<p>
+	Gonzalez-Rodriguez, D. et al., 2012. Soft Matter Models of Developing Tissues and Tumors. Science, 338(6109), pp.910–917. <a name='GonzalezRodriguez:2012fp' class='ref'></a>
+</p>
+
+
+
+<p>
+	Wyczalkowski, M.A. et al., 2012. Computational models for mechanics of morphogenesis. Birth Defects Research Part C: Embryo Today: Reviews, 96(2), pp.132–152. <a name='Wyczalkowski:2012gp' class='ref'></a>: partie &quot;Theories and Models for Morphogenesis&quot; exploitée, pas la suivante sur les phénomènes morphogénetiques... pas indispensable pour l'instant
+</p>
+
+<p>
+	&quot;Relation to other morphogenetic models &quot; in Odell, G.M. et al., 1981. The mechanical basis of morphogenesis. I. Epithelial folding and invagination. Developmental Biology, 85(2), pp.446–462. <a name='Odell:1981vy' class='ref'></a>: done
+</p>
+
+<p>
+	&quot;Simulations of Morphogenetic Processes&quot; in Clausi, D. amp;rodland, G.W., 2001. Finite Element Modelling of Embryo Tissue Formation. In Computer Techniques and Computational Methods in Biomechanics, Biomechanical Systems Techniques and Applications <a name='Clausi:2001te' class='ref'></a>
+</p>
+
+<p>
+	Robu, A. et al., 2012. Computer simulations of in vitro morphogenesis. Biosystems, 109(3), pp.430–443. <a name='Robu:2012bv' class='ref'></a>
+</p>
+
+<p>
+	Semple, J.L., Woolridge, N. amp;umsden, C.J., 2005. In vitro, in vivo, in silico: computational systems in tissue engineering and regenerative medicine. Tissue engineering, 11(3-4), pp.341–356. <a name='Semple:2005hw' class='ref'></a>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+	<strong>Hybrid continuum-discrete mechanics</strong>
+</p>
+
+
+<p>
+	Rejniak, K.A. amp;nderson, A.R.A., 2008. A computational study of the development of epithelial acini: I. Sufficient conditions for the formation of a hollow structure. Bulletin of Mathematical Biology, 70(3), pp.677–712. <a name='Rejniak:2008ij' class='ref'>, and Rejniak, K.A. amp;nderson, A.R.A., 2008. A computational study of the development of epithelial acini: II. Necessary conditions for structure and lumen stability. Bulletin of Mathematical Biology, 70(5), pp.1450–1479. <a name='Rejniak:2008ho' class='ref'></a>: 2D cell are deformable body with elastic spring defining the cell shape and a viscous incompressible fluid. The membrane is a chain of particle linked by adjacent and next to adjactent springs. The fluid follows a source-sink transport model (Navier-Stokes equations). The coupling between the two components is retroactive: membrane particle move at the local fluid velocity and generate source-sink mechanism inducing fluid transport. </a>
+</p>
+
+
+
+
+<p>
+	<strong>others</strong>
+</p>
+
+		
+<p>
+	some abstract model with displacement rules <a name='Robertson:2007da' class='ref'></a></li> (hardly mechanical)
+</p>
+
+
+<p>
+	Cox, B., 2010. A multi-scale, discrete-cell simulation of organogenesis: Application to the effects of strain stimulus on collective cell behavior during ameloblast migration. Journal of Theoretical Biology, 262(1), pp.58–72. <a name='Cox:2010ep' class='ref'></a>
+</p>
+
+
+
+
+
+
+
+
+computational fluid dynamics (CFD)
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+<div id='3_1_2_'>
+<h2>3.1.2. Particle-based physics  </h2>
+ 
+
+
+
+<p>
+	In particle-based physics models, each element of matter is represented by a particle.
+</p>
+
+<p>
+	Mechanical properties of the system are the parameters of the interaction potentials between neighbor particles.
+</p>
+
+
+
+<p>
+	Describing a particle-based model can be organized in two parts, resumed by the following questions: 
+</p>
+
+<ul>
+	<li>how to divide up the physical space into particles ? (Space)</li>
+	<li>how to relate the motion of the particles with their mechanical properties ? (Forces)</li>
+</ul>
+
+<h3>Spatial neighborhood</h3>
+
+
+
+<p>				
+	Equations ruling particle system dynamics always used a term \( \sum\limits_{\text{neighbors j of i}}^{} \). The aim of this part is to describe how these sets of neighbors are determined.
+</p>			
+
+<p>
+	In <strong>off-lattice</strong> simulation, particle are free to take any coordinate in the Euclidian space \(\mathbb{R}^{3}\). Neighborhood is not implicit any more and algorithm are needed to connect neighbor particles. For the following, let \(P \) be the set of \(n\) particles \(p_i \) with position vector \(x_i\). 
+</p>  
+
+
+
+
+
+
+
+
+<p><strong>All to all</strong></p>
+
+<figure id='nbody_nbody2'>
+	<img src="../../images/nbody/nbody2.png" width="600">
+	<figcaption>Nbody simulation with gravitational force. (CUDA example)</figcaption>
+</figure>
+
+<p>
+	Every particle are interconnected. \(\frac{n (n-1)}{2}\) bidirectional connections in between the swarm of particles \(P\).
+</p>
+
+
+<p>
+	$$N_{\text{all to all}} =
+	\begin{pmatrix}
+	1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+	1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+	1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+	1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+	1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+	1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+	1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+	1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+	\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  \\
+	1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \cdots & 1 \\
+	\end{pmatrix}$$
+</p>
+
+
+
+
+
+<p><strong>Selection by metric criteria (distance based)</strong></p>
+
+<p>
+	Particles interaction often decreases in intensity when their relative distance increases. 
+
+	At some point, this interaction may even be neglected compared to interaction with closer particle.
+
+	A first definition may be given: a pair of particles is considered neighbor if they interact with a non null intensity.
+
+	Each particle generates a local field of potential interaction and particle out of this local field are not considered as neighbor any more.
+
+	The \({N}_{\text{all to all}}\) connection matrix became a sparser one.
+</p>
+
+<p>
+	$$N_{\text{sparser}} =
+	\begin{pmatrix}
+	1 & 1 & 1 & 0 & 1 & 0 & 0 & 1 & \cdots & 1 \\
+	1 & 0 & 1 & 0 & 1 & 1 & 1 & 0 & \cdots & 1 \\
+	1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & \cdots & 1 \\
+	0 & 0 & 1 & 0 & 1 & 1 & 0 & 0 & \cdots & 0 \\
+	1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & \cdots & 0 \\
+	0 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & \cdots & 0 \\
+	0 & 1 & 0 & 0 & 1 & 0 & 1 & 1 & \cdots & 1 \\
+	1 & 0 & 1 & 0 & 1 & 0 & 1 & 1 & \cdots & 1 \\
+	\vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \vdots  & \ddots & \vdots  \\
+	1 & 1 & 1 & 0 & 0 & 0 & 1 & 1 & \cdots & 1 \\
+	\end{pmatrix}$$
+</p>
+
+
+<p>
+
+	In its simplest form, this locality principle may be captured by a intrinsic size parameter \(s\), applied to all particle of \(P\). It implies that the local domain is defined by a sphere of radius \(f(s)\). In the Euclidean space, it means each particle \(p_i\) and \(p_j\) are considered neighbors if their distance is less than \(f(s)\).
+	$$ \left \|  x_i - x_j \right \| \leq f(s)  $$
+
+	If particle have spheroidal shapes, a intrinsic parameter \(r_i\) may be associated to each particle \(p_i\). The metric criteria may be written:
+
+	$$ \left \|  x_i - x_j \right \| \leq f(r_i,r_j) $$
+
+	More complex metric scenarii may be considered if more than one intrinsic parameter is associated with the particle (for example an ellipsoidal domain). Theses cases will not be developed here.
+
+
+</p>
+
+
+
+
+
+
+
+<p><strong>Selection by topological criteria</strong></p>
+
+<p>
+	Some models direct the use of more refined neighborhood criteria. Distance only criteria are not sufficient. 
+</p>
+
+<p>
+	This is the case when spheroidal approximation is not sufficient.
+</p>
+
+<p>
+	This is the case when particle represent a physical piece of the space which is not a neglected compared to the volume of the local interaction field of the particle.
+</p>
+
+
+<p>
+	We introduce \( \phi \) the ratio of physical volume of the object represented by a particle and the volume of the domain of its local interaction field.
+</p>
+
+<p>
+	On one side, planets and their gravitation field or atoms and their "atomic" potential have a ratio which tends to zero.
+</p>
+
+<p>
+	On the other side, when object interacts with other object through surface contact as it is the case in living cell system, the ratio close to 1.
+</p>
+
+
+see Knudsen number http://en.wikipedia.org/wiki/Knudsen_number
+
+
+
+<figure id='spatial_neighb_field_volume_ratio'>
+	<img src="../../images/MECAGEN/spatial_neighb/field_volume_ratio.png" width="600">
+	<figcaption></figcaption>
+</figure>
+
+
+<p>
+	For high \(\phi\) system, some criteria may define more specifically what part of the space is occupied by the object associated with the particle.
+</p>
+
+<p>
+	For systems where objects are closely packed along each others, Voronoï diagram \(V(P)\)is a convenient solution to determine a decomposition of the space into convex polyhedra associated to particles \(p_i \in P\). Such a convex polyhedron is called a Voronoï cell. It is defined as follows:
+</p>
+
+<p>
+	$$ V(p_i) = \{ x \in \mathbb{R}^{3} : \forall j \in \left [ 0,n-1\right]\setminus i, \left \| x-x_i \right \| \leq \left \| x-x_j\right \| \} $$ 
+</p>
+
+
+
+
+<figure id='spatial_neighb_voronoi'>
+	<img src="../../images/MECAGEN/spatial_neighb/voronoi.png" width="500">
+	<figcaption>2D Voronoï diagram generated with <a href="http://www.liefke.com/hartmut/cis677/" class='www'>Voronoï sweeping algoritm applet</a> by H. Liefke</figcaption>
+</figure>
+
+
+
+<p>
+	Insert 3D voronoi image here.....
+</p>
+
+<p>
+	In \( \mathbb{R}^3\), a Voronoï cell is delimited by Voronoï facets which contain all points equidistant from two neighbor cell. A Voronoï edge is shared by three Voronoï cells and a Voronoï vertex is shared by four Voronoï cells. 
+</p>
+
+<p>
+	Degenerating particle swarm configuration disturbs Voronoï diagram building: three colinear particles, four particles on a circle or five particles on a common sphere. We assume that the following swarm configurations are not degenerated.
+</p> 
+
+<p>
+	Some Voronoï cells at the periphery of the swarm have open volume in \( \mathbb{R}^3\). They share open facets and edges between each other and form a convex outer shape of the swarm called "convex hull".
+</p>
+
+<p>
+	verifier si cela correspond bien au convex hull.....
+</p>
+
+
+
+
+
+
+<p><strong>Dual of the Voronoï diagram: the Delaunay triangulation</strong></p>				
+
+<p>
+	From the Voronoï diagram is deduced a fundamental neighborhood rule in computational geometry: the Delaunay triangulation.
+</p>
+
+<p>
+	When the elements of the tessellation are polyhedra, the edges that link each center of mass of adjacent polyhedra constitute the dual of the tessellation. One can be deduced from the other.
+</p>
+
+
+
+
+<p>
+	simplex 
+
+	/ parenthese sur la notion de triangulation
+
+	/ introduire simplices
+
+	/ conventions
+	/ introduce topological structure: simplices 
+	/ edge, tetrahedra (triangle)
+</p>
+
+
+<p>
+	introduire notion de dualité entre decoupage en volume et stockage des liens de voisinage (1 lien equivalent à 1 face). see <a href="http://euler.slu.edu/escher/index.php/Spherical_Geometry#Duality" class='www'>wikipedia</a>: vrai pour triangulation parfaite (2D) et tetrahedralisation parfaite(3D). Forme concave sans trou -> delaunay est approprié
+</p>
+
+<p>
+	rapide présentation de Delaunay 
+</p>
+
+<p>
+	weighted Delaunay 
+</p>
+
+
+
+
+
+<p><strong>Delaunay triangulation</strong></p>
+
+<figure id='spatial_neighb_Delaunay_circumcircles_centers'>
+	<img src="../../images/MECAGEN/spatial_neighb/Delaunay_circumcircles_centers.png" width="300">
+	<figcaption>from <a href="http://en.wikipedia.org/wiki/Delaunay_triangulation" class='www'>http://en.wikipedia.org/wiki/Delaunay_triangulation</a></figcaption>
+</figure>
+
+<p>
+	Each polyhedra face is 
+</p>
+
+
+<p>
+	two faces can not separate the same pair of adjacent polyhedra eq. 
+</p>
+
+
+<p>
+	implies convex polyhedra
+</p>
+
+
+<p>
+	montrer schema avec non convex poly
+</p>
+
+
+<p>
+	The process of carving space using geometric shapes with no overlaps or no holes is called tessellation. Most of the time, cells remain in contact, each polydron's face is shared by two neighbor cells. But sometimes, holes may appear or disappear as cell move during embryogenesis. These holes can be seen as empty polyhedra so we will use the term tessellation anyway.
+</p>
+
+
+<p>
+	(Euler characteristic \(\chi = V - E + F = 2 - 2g \) with \(V\) the number of vertices, \(E\) the number of edges, \(F\) the number of faces, \(g\) the genus).
+</p>
+
+
+
+<p>
+	Critique de delaunay, pas de trou perms, lien a longue distance
+</p>
+
+<p>
+	No hole is allowed in between particle, the dual shape is convex.
+</p>
+
+
+
+
+
+
+<p>
+	mean field theory: each particle interacts with all the other particles through an average field.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Attraction/Repulsion potential</h3>
+
+
+<p>
+	Every particle-based model interaction potential share common features: repulsion at short distance, until an equilibrium distance \(r_{eq}\) and attraction afterwards, until the border of the interaction field, whether it is finite or not (see Spatial Neighborhood.)
+</p>
+
+
+
+<p><strong>Equilibrium distance</strong></p>
+
+<p>
+	Two distinctive characterization of distance equilibrium co-exists: 
+</p>
+
+<ul>
+	<li>the equilibrium distance is implicitly obtain by the relaxed state of the dynamical system. It will be function of the material properties (elasticity, adhesion ...).</li>
+	<li>the equilibrium distance is explicitly specified by geometric calculus.</li>
+</ul>
+
+<p><strong>Implicit equilibrium distance</strong></p>
+
+<p>
+	As soon as two cells touch each other, adhesive forces at their surface tends to augment the contact area until inner resistance compensate them totally. This implicitly defines an equilibrium surface. The most influential field of research for describing this phenomenon is contact mechanics. Initiated by the publication of Heinrich R. Hertz papers "On the contact of elastic solids" (1881) and "On the Contact of Rigid Elastic Solids and on Hardness" (1882), contact mechanics successfully relates the deformation of two elastic bodies which touch each other to the load applied and the mechanical properties of the bodies. Originally, Hertz only described the non adhesive surface case but two concurrent models (Johnson-Kendall-Roberts and Derjaguin-Muller-Toporov) added adhesion related terms in the equation, each performing better on different material. 
+</p>
+	
+<p>
+	For example, if two elastic sphere with Elastic modulii \(E_i\) and \(E_j\), Poisson's ratios \(\nu_i\) and \(\nu_j\) and radii \(R_i\) and \(R_j\), their contact is a circle of radius \(a\). The JKR model establishes a relation between load \(F_{JKR}\) and contact radius by:	
+</p>
+
+<p>
+	$$ F_{JKR} (a) = \frac{4 E^{*} a^3}{3 R^{*}} - 2 \sqrt{ 2 \pi E^{*} w_{adh} a^3} $$
+</p>
+
+<p>
+	with \( E^{*} = \left (     \frac{1-{\nu_i}^2}{E_i} + \frac{1-{\nu_j}^2}{E_j}   \right )^{-1}  \), \(  R^{*} = \left (     \frac{1}{R_i} + \frac{1}{R_j}   \right )^{-1}  \) and \(w_{adh}\) the adhesive energy per unit area.
+</p>
+
+<p>
+	The equilibrium surface radius \(a_{eq}\) is obtained for \(F_{JKR} = 0\):
+</p>
+
+<p>
+	$$ a_{eq} = \left ( \frac{9 \pi w_{adh} {R^{*}}^2}{2 E^{*}} \right )^{1/3} $$
+</p>
+
+<p>
+	As the shape of the deformation of the surface is assumed to be parabolic, the equilibrium distance between the two spheroid particle centers can also be inferred. 
+</p>
+
+<figure id='Contact_mechanics_two_cells_contact'>
+	<img src="../../images/Contact_mechanics/two_cells_contact.png" width="500">
+	<figcaption></figcaption>
+</figure>
+
+
+<p>
+	These equations have been used in multicellular modeling. But in addition with some assumption made which could be discussed (friction-less surface, the deformation has to be small compared with the sphere radii), the main drawback is that all these theories are designed for two interacting spheroid particle. When a particle is surrounded by multiple particles, the free surface surrounding the contact area is occupied by other contact area, limiting its augmentation or amplifying its diminution. 
+</p>
+
+
+<figure id='Contact_mechanics_multi_cells_contact'>
+	<img src="../../images/Contact_mechanics/multi_cells_contact.png" width="500">
+	<figcaption></figcaption>
+</figure>
+
+<p>
+	The particular problem tends to decrease the cellular volume when the interfacial tension increases (see figure above). This annihilates the advanced characterization of the surface equilibrium by contact mechanics models. Some have added a volume consevation term to correct this tendency, but the outcome is also a perturbation of contact mechanics hypothesis.
+</p>
+
+<p>
+	The general problem is that the variable used is the particle center position, and there is no explicit usage of the surface with for example the Voronoï vertices. Pair of neighbor particles expressed in the \( \sum\limits_{\text{neighbors j of i}}^{} \) term does not allow to design more adapted models. This is why we simplify the distance equilibrium and use an explicit definition.
+</p>
+
+
+<p>
+	ici l'exception (deux cellules seulement) est bien traitée, le cas general (voisinage complet) non.
+	nous voulons faire l'inverse, ok pour multi, moins bon pour deux cellulies
+</p>
+
+
+
+
+
+
+
+<h3>Integration scheme</h3>
+
+
+
+
+
+
+
+
+
+
+</div>
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id='3_2_'>
+<h2>3.2. Hypotheses  </h2>
+
+
+
+</div>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+<div id='3_2_1_'>
+<h2>3.2.1. Equation of Motion  </h2>
+ 
+
+<p>The equation of motion is the core of every mechanical model. It relates the spatial variables of the model and the time through hypothesized laws reflecting our understanding of the biomechanical properties of the studied phenomenon. In classical mechanics, the famous Newton's laws are the fundamental principle on which the equation of motion is build. In the following section, we will explain how an adaptation of Newton's laws is needed. </p>
+
+
+<p>Newton's second law states that the acceleration \(\vec{a}\) of a body is proportional to the sum of the forces applied to it \(\vec{F}\). The proportionality factor is the inverse of the mass of the body, a quantity assumed to remain constant over time.</p>
+  
+<p>$$ m \vec{a} = \vec{F} $$</p>
+
+<p>In particle-based physics, each particle \(p_i\) (mass \(m_i\), position \(X_i\), velocity \(v_i\), acceleration \(a_i\), size \(R_i\)) are related by the Newton's law straightforwardly:</p>
+
+<p>$$m_i \vec{a_i} = \vec{F}(X_i, v_i, R_i, ...)$$</p>
+
+<p>However, the physical world in which cells evolve is a very counterintuitive one. Cells are so small and their interaction are so sticky that the physics of their motion is radically different from the one we are accustomed to. The main difference is the disappearance of inertial forces.</p>
+
+<p>In &quot;Life at low Reynolds number&quot; <a name='Purcell:1977tk' class='ref'></a>, E.M. Purcell explains how a water-immersed cell stops moving as soon as he stops pushing it. The cell, an E. Coli bacteria, is so small that the viscous forces exerted by the surrounding water are overwhelming the inertial forces due to the motion. </p>
+
+<p>When an object of characteristic length \(R\) moves at a velocity \(v\) in a fluid of density \(\rho\) and dynamic viscosity \(\mu\), the quantity that measures the ratio of the inertial forces to the viscous forces is called the Reynolds number \(Re\). This dimension-less number is expressed as the following:</p>
+
+<p>$$Re = \frac{\rho v R}{\mu}$$</p>
+
+<p>The ratio \(\frac{\mu}{\rho}\) is the kinematic viscosity \(\nu\) and it has a value of \( 10^{-6} {m}^2 {s}^{-1} \)  for water.</p>
+
+<p>For a man of characteristic length \(1m\) swimming at \(1 m s^{-1}\), \(Re\) is about \(10^6\). For a bacterium of characteristic length \(10^{-6} m\) swimming at \(10^{-5} m s^{-1}\), \(Re\) is \(10^{-5}\). The physics of inertia and viscosity is totally different for these two examples. The balance shifts from inertial forces for a man to the viscosity forces for a cell.</p>
+
+<p>A more striking example is the coasting distance of the same bacterium when it stops self-propulsing in water. When only inertial and viscous and inertial are at work, Newton's second law is written:</p>
+
+<p>$$m \frac{dv}{dt} = - \gamma_{drag} v$$</p>
+
+<p>The solution is \(v(t) = v_0 e^{ -\frac{\gamma_{drag}}{m} t}\) (see Introductory Biophysics - Perspectives on the living state p.96 by J. Claycomb and J. Tran)</p>
+
+<p>Integrating it from \(t=0\) to \(t=\inf\), gives the coasting distance of the bacterium \(d\):</p>
+
+<p>$$d = \frac{v_0 m}{\gamma_{drag}}$$</p>
+
+<p>For a bacterium swimming at \(10^{-5} m s^{-1}\), this distance is \(0.1\) angstrom.</p>
+
+<p>This simple calculus confirms that if the bacterium is not moving by itself or pushed by an external actor, it stops “immediatly” its motion.</p>
+
+<p>Purcell interprets theses results as the following: “If you are at very low Reynolds number, what you are doing at the moment is entirely determined by the forces that are exerted on you <u>at the moment</u>, and by nothing in the past.”</p>
+
+<p>This implies that in these low Reynolds environments, applied forces produce a velocity, not an acceleration. The displacement is proportional the instantaneous force and inversely proportional to the a damping coefficient \(\lambda\)</p>
+
+<p>Theses results thereby allow a bypass of Newton's Second Law and we write the new equation of motion that will be used in our model :</p>
+
+<p>$$\lambda \vec{v} = \vec{F}$$</p>
+
+
+<p>The previous argument has been evaluated for a solid object moving in a fluid flow. In a multicellular environment as encountered in developing systems, we assume that the aforementioned principle remains the same because:</p>
+
+<ul>
+	<li>the dimension of the cells are similar to the aforementioned bacterium (from 300 microns for the zygote to 0.3 microns at stage 1024 cells, 0.02 microns when the embryo is composed of about 15000 cells), </li>
+	<li>the density is equivalent.</li>
+	<li>the kinematic viscosity of the surrounding cells taken as a flow can be considered greater than the one of water. For example, at 18°C, the kinematic viscosity of ketchup is 50000 times higher than the one of water. (see Odell et al. The mechanical basis of morphogenesis. I. Epithelial folding and invagination. Developmental Biology (1981) Appendix 2 for a similar justification)</li>
+</ul>
+
+<p>For each particle \(p_i\), its motion is governed by its interactions with neighbor cells:</p>
+
+<p>$$\lambda_i \vec{v}_{i} = \sum_{neighbors\;j} \vec{F}_{i,j}$$</p>
+
+<p>The main difference with the example of a solid object is that the surrounding cells are responsible for the damping of the motion but also for the motion itself. Here there is no hand pushing the cell like Purcell explained, the pushing is executed by every cell intrinsic behavior. </p>
+
+<p>This is why these interactions are decoupled in the following way:</p>
+
+<ul>
+	<li>the damping coefficient \(\lambda\) assure the global damping of the particle. (It plays an equivalent role as the mass in Newton's Second Law). This weighting coefficient is proportional to the surface of the cell: \( \lambda_i = \lambda_0 {R_i}^2 \) (show study of \(R^0\), \(R^1\), \(R^2\)). </li>
+	<li>A passive force \(\vec{F_P}\) of interaction between neighbor cell maintains the integrity of the cellular volume and controls both the stiffness and the adhesion of their interaction. This force is always exerting its action whatever the state of the cell. However, it is modulated through its stiffness and adhesion. </li>
+	<li>An active force \(\vec{F_A}\) of interaction between neighbor cell executes specific behavior like protrusive activity or apical constriction. The force depends of the state of the cell and it disappears when the cell is in a &quot;resting&quot; state.</li>
+</ul>
+
+<p>The weight, exerted by earth gravitational field, derived from Newton's law of universal gravitation \(W_i = m_i \frac{G  M_{earth}}  {{R_{earth}}^2} \) is neglected. </p>
+
+
+<p>In conclusion, here is the final equation we will use throughout all the study:</p>
+
+<p>$$\vec{v}_{i} =  \frac{1}{\lambda_i} \sum_{neighbors\;j} \left ( \vec{F_P}_{i,j} + \vec{F_A}_{i,j} \right )$$</p>
+
+The following section 3.2.2. will detail how are defined the neighbors \(p_j\) of the each particle \(p_i\) and the section 3.2.3. will focus on the forces between theses particles. 
+
+
+</div>
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<div id='3_2_2_'>
+<h2>3.2.2. Spatial Neighborhood  </h2>
+ 
+
+
+<p>Cell sustains forces from the cells which are in contact with them. The notion of contact is straightforward in some modeling paradigm (potts for example) but in highly abstracted model like particle-based model, specific algorithm are to be devised. </p>
+
+<p>At each time step, the only information about the spatial structure is that each cell, represented by a spheroidal particle \(p_i\) belonging to a swarm \(S\), has a position \(X_i (x_i,y_i,z_i)\), and a volume \(V_i\) (see figure <a name='spatial_neighb_spherecontact_edge_surf_link_figure' class='fig'></a> on the left). The objective of this section is to infer these intrinsic parameters the neighboring links and contact surface area (figure <a name='spatial_neighb_spherecontact_edge_surf_link_figure' class='fig'></a> on the right). We will present a two steps strategy: a first selection of potential neighbors with a metric criteria and a refinement of this list according to topological consideration.</p>
+
+<figure id='spatial_neighb_spherecontact_edge_surf_link_figure'>
+	<img src="../../images/MECAGEN/spatial_neighb/spherecontact_edge_surf_link_figure.png" alt="" width="900" >
+	<figcaption>testcaption</figcaption>
+</figure>
+
+
+<p>The regular Delaunay triangulation is in many way the most adapted method, it establishes a list of neighbors according to topological criteria dependent of each particle size (see state of the art). However, its drawback is its computational heaviness. We have adopted a parallel algorithmic structure exploiting the computational power of GPGPU (see relevant part), and, to our knowledge, there is no parallel implementation for regular triangulation yet.</p>
+
+<p>We designed a new parallel neighboring building strategy (see algorithm part for implementation) which insure that a topologically plausible structure is realized.</p>
+
+<p>A comparison between the regular triangulation and our neighboring strategy is proposed at the end of this part.</p>
+
+<p>Our method consecutively builds two lists of neighbor particles. The first selection \(\mathcal{N}_m (p_i)\), based on metric criteria, is filtered by a topological criteria to define the final selection of neighbors \(\mathcal{N}_t (p_i)\).</p>
+
+
+
+<p><strong>Metric selection of neighbor particles</strong></p>
+
+<p>Two cells of radius \(R_i\), \(R_j\) and of position \(X_i\) and \(X_j\) are considered neighbor according to the metric criteria iff their relative distance is less than a constant factor \(c_{max}\) times the sum of their radii \(R_i+R_j\).</p>
+
+<p>We denote by \(r_{max}\) this cutoff value: \(r_{max} = c_{max} (R_i+R_j)\).</p>
+
+<p>The set of neighbor particle of a particle \(p_i\) according to the metric criteria is defined by the following:</p>
+		
+<p>$$\mathcal{N}_m (p_i) := \left \{  p_j \in S : \left \|  X_i - X_j \right \| \leq c_{max} \cdot (R_i+R_j) \right \} $$</p>
+
+<p>Even if the particles are considered &quot;spheroidal&quot;, we incorporate the ability to deform to access farer neighbor cells. \(r_{max}\) sets the maximum distance of this deformation. The sphere of radius \(r_{max}\) represents the domain of space where the particle can potentially interact.</p>
+
+<figure id='spatial_neighb_surface_distance_why_all_figure'>
+	<img src="../../images/MECAGEN/spatial_neighb/surface_distance_why_all_figure.png" alt="" width="900" >
+	<figcaption></figcaption>
+</figure>
+
+<p>More generally, we need to define a law that relates the distance between two neighbor particles to the area of the contact surface. \(r_{max}\) is the limit from which this area is equal to zero.</p>
+
+
+
+<p><strong>Empirical quantification of the surface of contact</strong></p>
+
+<p>In the absence of real experimental data, we generate an artificial construction based on the weighted delaunay triangulation. This will allow us to infer an empirical law which approximate the surface-distance relationship in this articifial case and, by extension, to the modeled multicellular system.</p>
+
+<p>An ellipsoidal domain of space is filled with particles belonging to three consecutive cell generation \(g1\), \(g2\), \(g3\) in equal proportion. Their volume are \(V_{g1}\), \(V_{g2}=  \frac{1}{2} V_{g1}\), \(V_{g3} = \left ( \frac{1}{2} \right )^{2} V_{g1}\). Similarly, the particle being considered spheroidal, their radii are \(R_{g1}\), \(R_{g2} = \left ( \frac{1}{2} \right )^{\frac{1}{3}} R_{g1}\), \(R_{g3} = \left ( \frac{1}{2} \right )^{\frac{2}{3}} R_{g1}\). These radii are the weighing coefficient of the triangulation.</p>
+
+
+<p>The number \(N\) of each particle generation is determined to fit the total volume occupied by the \(3N\) particles with the volume of the ellipsoid.</p>
+
+<p>The ellipsoid self deforms to impose a rearrangement of the particles, generating various spatial reorganisation. The first semi-principal axis of the ellipsoid is cycling sinusoidallly, the second remains constant and the third is specified to maintain the volume of the ellipsoid constant.</p>
+
+<figure id='spatial_neighb_Fusion_light'>
+	<img src="../../images/MECAGEN/spatial_neighb/surf_dist_movie_1677cells_gS11_filtered_SNAPSHOT/Fusion_light.png" alt="" width="600" >
+	<figcaption></figcaption>
+</figure>
+
+<p>On the figure above, only the close Voronoï volume that does not belong to the convex hull are shown. The color code highlights the normalized difference of volume between the theoretical volume of the cell and the volume specified by the weighted Voronoï \( c = \frac{V_{obs} - V_{theo}}{V_{theo}} \). </p>
+
+<p>When two neighbor cells both have a measure \(c\) which is less than 5% (green cell in figure XX), we consider that these cells have a valid spatial configuration and we store the pair composed of their relative distance and the area of the surface of contact ie the area of the Voronoï face shared by both cell.</p>
+
+<p>We will denote by an experiment \(i\) the aforementioned simulation with a set of \(N\) particle of generation \(g1=i\), \(g2=i+1\) and \(g3=i+2\). Each experiment thereby creates 6 sets of data called plots: a plot for every possible pair of generation ( \( g1/g1, g1/g2, g1/g3, g2/g2, g2/g3, g3/g3 \) ).</p>
+
+<p>We performed 6 experiments with \(i\) belonging to the set \(\left [ 9, 14 \right ]\). Theses generations correspond to the zebrafish generations which can be mixed. It explains why the indices start at 9 but this fact is not relevant for the following study. </p>
+
+<figure id='spatial_neighb_g10_g11_exp9_simple'>
+	<img src="../../images/MECAGEN/spatial_neighb/g10_g11_exp9_simple.png" alt="" width="600" >
+	<figcaption></figcaption>
+</figure>
+
+
+<p>For each plot, \(numPoints(exp,g1,g2)\) points \(\left ( dist_{exp,g1,g2}(i), surf_{exp,g1,g2}(i)  \right ), i \in \left [ 1,numPoints(exp,g1,g2) \right ]\) are collected, typically about 10000. We observe that, as expected, if most points are located below the distance \(R_i+R_j\), some of them exceed it.</p>
+
+<p>The selected empirical law is written:</p>
+
+<p>$$ A(r,R_i,R_j) = \begin{cases}  a (r - c_{max} (R_i+R_j))^2 & \text{if }r< r_{max} (R_i+R_j) \\ 0 & \text{if }r\geq r_{max}(R_i+R_j)  \end{cases}$$</p>
+
+
+<p>We decide to use a monomial of degree 2 in order to scale as a surface. If the distance \(r\) between two double-sized neighbor particles \(p_i\) and \(p_j\) is doubled, the area of the surface of contact will quadruple.</p>
+	
+<p>$$A(2r,2R_i,2R_j) = 4 A(r,R_i,R_j)$$</p>
+  
+
+<p>To obtain the best pair of parameters \((a, c_{max})\), the discrepancy between the generated data and the empirical law is measured with the &quot;sum of squared errors of prediction&quot; (SSE) function. The smaller the SSE is, the better the law matches the data.</p>
+
+<p>In general terms, the SSE is expressed: </p>
+
+<p>$$SSE = \sum_{i = 1}^{n} \left ( y_i - f(x_i) \right )^2$$</p>
+
+<p>In our case, the sample of variable is split in 6 experiments and 6 couple of particle types (\(g1/g2\)) per experiment, the ith observed variable \(y_i\) is the measured area of surface of contact \(surf_{exp,g1,g2}(i)\), and the value of the predicted variable \(f(x_i)\) is the value of the empirical law at the observated variable distance \(A(dist_{exp,g1,g2}(i),R_{g1},R_{g2})\). The SSE is written:</p>
+
+<p>$$SSE (a,r_{max}) = \sum_{exp = 9}^{14} \sum_{g1 = exp}^{exp+2} \sum_{g2 = g1}^{exp+2} \left ( \frac{1}{< surf_{exp,g1,g2}>} \sum_{i = 1}^{numPoints(exp,g1,g2)}  \left ( surf_{exp,g1,g2}(i) - a(dist_{exp,g1,g2}(i) - c_{max} (R_{g1} + R_{g2})) \right )^2 \right )$$</p>
+
+<p>We explored exhaustively all the couple \((a,c_{max})\) until the 4th decimal. A heatmap of this exploration is vizualised below.</p>
+
+<figure id='spatial_neighb_zoomALL'>
+	<img src="../../images/MECAGEN/spatial_neighb/zoomALL.png" alt="" width="800" >
+	<figcaption></figcaption>
+</figure>
+
+<p>The best couple with four decimal is \((a=1.3697 , c_{max}=1.2414)\). These values are used throughout the rest of the manuscript.</p>
+
+<p>To compare the empirical law with the generated data, the following figure proposes an overlay of both data on 6 plots.</p>
+
+<figure id='spatial_neighb_multi_scatter_gp1_gp2_exp9_14'>
+	<img src="../../images/MECAGEN/spatial_neighb/multi_scatter_gp1_gp2_exp9_14.png" alt="" width="800" >
+	<figcaption></figcaption>
+</figure>
+
+
+
+<p><strong>Topological selection of neighbor particles</strong></p>
+
+
+<p>As exposed in the state of the art, a metric neighboring selection is not sufficient as it leads to collapsing simulation for high adhesive particle interactions. We propose to use a filtering of the metric list of neighbor with a topological criteria to avoid this drawback.</p>
+
+<p>The delaunay triangulation solve this issue but is slow to compute because of its heavy data structure composed of tetraedra. Our solution is inspired by a similar neighboring method: the Gabriel graph.</p>
+
+<p>In 2D, where the Delaunay triangulation imposes that no particle is inside the circumcircle of any triangle of the Delaunay triangulation, the Gabriel graph method imposes that no particle lie inside the circle whom diameter is a valid neighboring link.</p>
+
+<figure id='spatial_neighb_gabriel'>
+	<img src="../../images/MECAGEN/spatial_neighb/gabriel.png" alt="" width="400" >
+	<figcaption>Gabriel graph as introduced in Gabriel and Sokal. A new statistical approach to geographic variation analysis. Systematic Biology (1969)</figcaption>
+</figure>
+
+<p>We propose to extend the method in the 3D case: each particle pair \((p_i, p_j)\) is considered valid according to the Gabriel criteria if no other particle of the swarm lie inside the ball whose diameter is \(\left [ X_i X_j \right ] \)<a class='footnote' title='To our knowledge, the term Gabriel graph has not been formally defined in 3D. However, when it is mentionned (see Attali and Montanvert. Computing and simplifying 2D and 3D continuous skeletons. Computer Vision and Image Understanding (1997)), a 3D version of the Gabriel graph does not use an edge to define the empty ball criteria but a triangle. This makes sense, in n-dimension, Delaunay triangulation uses n-simplices as basic units for defining the empty ball criteria ie a triangle in 2D and tetrahedron in 3D. In 2D, the Gabriel graph uses a (n-1)-simplex as a basic unit (an edge), the straightforward equivalent in 3D would also use a (n-1)-simplex ie a triangle. Yet for the sake of clarity, we will still denote the edge defining the empty ball criteria by Gabriel. '></a>.</p>
+
+<p>Two cells of radius \(R_i\), \(R_j\) and of position \(X_i\) and \(X_j\) are considered neighbor according to the topological criteria iff no neighbor cell according to the metric criteria have their position inside the sphere of diameter \([X_i X_j]\).</p>
+		
+<p>$$\mathcal{N}_t (p_i) := \left \{  p_j \in  \mathcal{N}_m (p_i) : \forall p_k \in  \mathcal{N}_m (p_i), \left \| \frac{1}{2} ( X_i + X_j ) - X_k  \right \| \geq \frac{1}{2} \left \| X_i - X_j \right \|\right \} $$</p>
+
+<p>In fact, in the 2D case, the Gabriel graph is a subgraph of the Delaunay triangulation. Every pair of neighbor in a Gabriel graph are also neighbor according to the Delaunay criteria (see figure XX). </p>
+
+<figure id='spatial_neighb_gabdelau'>
+	<img src="../../images/MECAGEN/spatial_neighb/gabdelau.png" alt="" width="400" >
+	<figcaption>The solid edges materialize neighborhood according to the Delaunay triangulation, all edges but edge ab are Gabriel edges. A visual way to determine if a Delaunay edge is also a Gabriel edge is to check if the edge crosses the surface of contact (here edge of contact). If the Delaunay edge pass through it, it is also a Gabriel edge. The edge we loose with our approximation are the one which matter the less. Picture from Cazals and Giesen. Delaunay Triangulation Based Surface Reconstruction : Ideas and Algorithms. (2004)</figcaption>
+</figure>
+
+<p>TODO: plot the ratio of gabriel edges which are also delaunay edges in Mecagen. To confirm the validity of our hypethesis.</p>
+
+ 
+</div>
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id='3_2_3_'>
+<h2>3.2.3. Interaction Potential  </h2>
+ 
+
+<p>Two neighbor spheroidal particles with radii \(R_i\) and \(R_j\), separated with by a distance \(r\), will interact by means of forces \( \vec{F}_{i,j} \). In MECAGEN, these forces are decomposed in two parts: </p>
+
+				<ul>
+					<li>Relaxing forces \(\vec{F_P}_{i,j}\), derived from an attraction/repulsion potential. They relax the swarm of particles toward an equilibrium state. The underlying principle is the surface maximization of every neighbor pair in the swarm.</li>
+					<li>Behavioral forces \(\vec{F_A}_{i,j}\), which move the swarm configuration away from the previous equilibrium. These behaviors are inspired by the protrusive activity of the cell.</li>
+				</ul>
+
+
+<p>Every pair of neighbor particles interaction potential share common features: repulsion at short distance, until an equilibrium distance \(c_{eq}(i)  (R_i+R_j)\) and attraction afterwards, until the limit of the interaction field \(r_{max} \). </p>
+
+<p>We established in the previous section how the maximum distance of interaction is determined, through an empirical study of the surface of contact between neighbor particles. Given this rule, we performed a two step strategy of selection of the neighbor particles. </p>
+
+<p>As detailed in the section 3.1.X, the definition of the distance of equilibrium can be stated either explicitly or implicitly. In the implicit category, for example in the most advanced models in contact mechanics, the equilibrium distance results from a trade-off between the different biomechanical properties. We showed that theses models run up against major difficulty when multi-cellular interaction are considered. </p>
+
+<p>We decide to explicitly express the distance of equilibrium of neighbor cells as the distance between their position in the densest arrangement of sphere pack. We assume that there is no significant volume is occupied by intercellular material. Otherwise, additional particle representing the extra-cellular material should be added (not presented here).</p>
+
+<p>On a 2D plane, the densest arrangement of all possible circle packing is the hexagonal lattice (see figure XX). The ratio of the surface occupied by the disks to the surface containing the disks is equal to the ratio of the surface of a disk to the surface of an hexagon i.e. \(\frac{\pi}{ 2 \sqrt{3}} \simeq 0.9068997...\).</p>
+
+<figure id='spatial_neighb_hexagonal_compact'>
+	<img src="../../images/MECAGEN/spatial_neighb/hexagonal_compact.png" alt="" width="500" >
+	<figcaption></figcaption>
+</figure>
+
+<p>In 3D, Kepler conjecture states that the hexagonal close packing and face-centered cubic close packing arrangements of equally sized sphere have the greater density of all arrangement (proven by Thomas Hales in 1998). An hexagonal close packing arrangement is obtained by superposing alternatively two 2D hexagonal lattice of sphere with pattern ABAB... (see figure XX).</p>
+
+<figure id='spatial_neighb_hexagonal_compact3D'>
+	<img src="../../images/MECAGEN/spatial_neighb/hexagonal_compact3D.png" alt="" width="500" >
+	<figcaption>hexa 3D</figcaption>
+</figure>
+
+
+<p>In this arrangement, each sphere touches 12 other spheres ie each particle has 12 neighbors (six particles on a 2D plane and three other particles on each of the surrounding planes). The space-filling tessellation which is dual to this arrangement has a tile called trapezo-rhombic dodecahedron (TRD) (see figure XX).</p>
+
+<figure id='potential_trapezo_all_figure'>
+	<img src="../../images/MECAGEN/potential/trapezo_all_figure.png" alt="" width="900" >
+	<figcaption>trapezo</figcaption>
+</figure>
+
+<p>The atomic packing factor is the ratio of the volume of a sphere to the volume of the TDR and it is equal to \(\frac{\pi}{3\sqrt{2}} \simeq 0.74048... \). So, for a pair of cells of radii \(R_i = R_j=R\), their equilibrium distance is:</p>
+
+<p>\( r_{eq} = {\frac{\pi}{3\sqrt{2}}} ^ {1/3} \left ( R_i + R_j \right ) \), with \(c_{eq} = {\frac{\pi}{3\sqrt{2}}} ^ {1/3} \simeq 0.904699895...\) </p>
+
+
+
+<p>We extend the notion of distance of equilibrium in a pair of neighbor particle to the notion of a radius of equilibrium intrinsic to the particle. It means that each particle brings its own contribution to equilibrium distance between two neighbor cells.   </p>
+
+<p>We denote by \(r_{eq}(p_i)\) the radius of equilibrium of the particle \(p_i\). \(r_{eq}(p_i) = c_{eq}R_i\) (see figure XX)</p>
+
+<p>In a pair of neighbor particle \(p_i\), \(p_j\), we get:</p>
+	
+<p>$$ r_{eq} = r_{eq}(p_i) + r_{eq}(p_j) $$</p>
+
+<figure id='potential_apf_sphere_figure'>
+	<img src="../../images/MECAGEN/potential/apf_sphere_figure.png" alt="" width="800" > 
+	<figcaption>The green sphere has the same volume as the trapezo-rhombic dodecahedron. The pink sphere has a radius \(r_{eq} = c_{eq} (R_i+R_j)\), it is tangent to each face of the TDR.</figcaption>
+</figure>
+
+<p>The intrisicness of the notion of equilibrium frees the requirement of the neighbor particles to have the same radius. We apply the equation XX ( \(r_{eq} = c_{eq} \left ( R_i + R_j \right )\) ) for every pair of neighbor particles, with no discrimination of size.</p>
+
+
+ 
+</div>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+<div id='3_2_3_1_'>
+<h2>Attraction-Repulsion  </h2>
+ 
+
+<p>As illustrated in figure XX, the attraction/repulsion potential must be repulsive for a distance below \(R_{eq}\), attractive between \(R_{eq}\) and \(R_{max}\) and null afterward.</p>
+
+<figure id='potential_surface_distance_why_potential'>
+	<img src="../../images/MECAGEN/potential/surface_distance_why_potential.png" alt="" width="600" >
+	<figcaption></figcaption>
+</figure>
+
+<figure id='potential_surface_distance_why_potential_rep_eq_adh'>
+	<img src="../../images/MECAGEN/potential/surface_distance_why_potential_rep_eq_adh.png" alt="" width="950" >
+	<figcaption></figcaption>
+</figure>
+
+<p>We considered the simplest form of potential which catches the short range repulsion / long range attraction property. An spring force derived from the elastic potential.</p>
+
+<p>The mechanical interaction between neighbor cell has been intensively studied by the biophysical scientific communauty. Roughly, the consensual hypothesis is that the driving mechanism is the intercellular surface tension. The two main components of the tension are the adhesion which tends to lower it and the cortical tension which acts antogonistically. The balance between these two components determine the behavior of the interaction: attraction or repulsion. </p>
+
+<p>Another mechanism is also fundamental: cell preserve their volume. As we made the assumption that cell are spheroidal and that each cellular interaction is decorrelated from the other in its expression, we have to assume that the volume conservation principle participate to the repulsive part of the potential only. This allow us to introduce a discontinuity of the slope of force at the distance of equilibrium. Also, we will denote by adhesion the cumulated effect of effective surface adhesion and cortical tension.</p>
+
+<p>To modulate the intensity of adhesion, we split the stiffness coefficient below and after equilibrium (see \(F_{linear}\) figure XX). A low (resp. high) adhesion coefficient \(w\) will induce a weak (resp. strong) attraction.</p>
+
+<figure id='potential_potential_linear_force'>
+	<img src="../../images/MECAGEN/potential/potential_linear_force.png" alt="" width="600" >
+	<figcaption></figcaption>
+</figure>
+
+<p>$$F_{\text{linear}} = \begin{cases} - rep (r-r_{eq})  & \text{if }r< r_{eq} \\ - w (r-r_{eq}) & \text{if }r\geq r_{eq}  \end{cases}$$</p>
+
+<p>Cells start to adhere when their relative distance is less than \(R_{max}\). Moreover, the intensity of the attraction can not be maximum at this point, a bell shape between \(R_{eq}\) and \(R_{max}\) suits more a realistic cellular interaction.</p>
+
+<p>We obtain this shape by multiplying the linear force \(F_{linear}\) by the area of the surface of contact elaborated in X.X.X.X. The depth of the well is still controled by the adhesion coefficient \(w\) (see figure XX).</p>
+
+<figure id='potential_potential_surface'>
+	<img src="../../images/MECAGEN/potential/potential_surface.png" alt="" width="600" >
+	<figcaption></figcaption>
+</figure>
+
+<p>$$A(r,R_i,R_j) = \begin{cases}  a (r - l (R_i+R_j))^2 & \text{if } r < l (R_i+R_j) \\ 0 & \text{if } r \geq l(R_i+R_j)  \end{cases}$$</p>
+
+<figure id='potential_potential_linear_force_scale'>
+	<img src="../../images/MECAGEN/potential/potential_linear_force_scale.png" alt="" width="600" >
+	<figcaption></figcaption>
+</figure>
+
+<p>$$F = \begin{cases} - rep (r-r_{eq}) \cdot A(r,R_i,R_j)  & \text{if }r < r_{eq} \\ - w (r-r_{eq})  \cdot A(r,R_i,R_j) & \text{if }r\geq r_{eq} \wedge r \leq r_{max} \\ 0 & \text{if } r \geq r_{max}  \end{cases}$$</p>
+
+<p>To compare our custom attraction/repulsion force with classical potential, we plot them all in figure <a name='potential_potential_superpose' class='fig'></a>.</p>
+
+<figure id='potential_potential_superpose'>
+	<img src="../../images/MECAGEN/potential/potential_superpose.png" alt="" width="600" >
+	<figcaption></figcaption>
+</figure>
+
+
+
+ 
+</div>
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<div id='3_2_3_2_'>
+<h2>Cell specific behavioral forces  </h2>
+ 
+
+<p>In addition to the equilibrium oriented attraction/repulsion forces, we introduce new forces which aim at expressing cell specialized biomechanical behaviors. </p>
+
+<p>Cells manifest a wide variety of behavior across every species development. Multiple classification of these behaviors have been undertaken (find references). We will refer to our own cell behavior ontology (see CBO part).</p>
+
+<p>Among these behaviors, we will introduce the one we believe to be the main driving force in our zebrafish early gastrulation study : cellular protrusion. </p>
+
+<p><strong>Protrusion</strong></p>
+
+intro bio: keller axis schema
+
+<p>Our mechanical model abstracts cells as the microscopic level of our study. However, in order to explain our interpretation of the protrusive activity of a cell, we need to present this mechanism at the sub-cellular level. The following description reflects our understanding of protrusion based on multiple reading of the subject which is still subject of on-going intense research. </p>
+
+<p>A cell protrusion is a cyclic activity. It is similar to the activity of the track of tracked vehicle except that, as gravity plays no part in cellular interactions, adhesion is specifically regulated to avoid a potential sliding of neighbor cells surfaces. The protrusive activity induces an intercalation of the cell between its neighbors.</p>
+
+<p>One requirement for exerting protrusive activity is polarization. Cells need to have an asymmetrical distribution of internal substances to specify the direction in which they will protrude. We will not present here how this axis is determined (see coupling part XXX). The axis determines two regions of the cell belonging to its extremities: the poles of the cell. Each pole can host a protrusive activity for the cell. If only one pole is active, we call the cell monopolar and if both are active, bipolar.</p>
+
+<p>At the subcellular level, the structure which serves as a base for protrusion is the cytoskeleton. The &quot;cell's skeleton&quot; denomination should evoke both the exoskeleton of insects and the skeleton of mammals. The external part is located at the cortex, the main molecules composing it are actin and myosin (here and in the following, proteins are denoted by their &quot;family&quot; name, a wide variety of cousins are hidden behind these global denomination). Internally, microfilaments, intermediate filaments and microtubules constitute the main units. To explain protrusion, we will focus on the acto-myosin cortex of the cell. Actin proteins are rangy molecules we may consider as our bones and myosins play the role of our muscles and ligaments relating bones. When associated together, they forms a both solid and flexible network which can resist internal and external pressure. Moreover, actin is a polymer which can disassemble itself at one side of its rangy structure and reassemble at the other side. This allows an active deformation of the acto-myosin network which, as shown is figure <a name='protrusion_multicell_white_rec_figure' class='fig'></a>, is the driving mechanism of protrusion. The cells, attached all together by molecular bridges often belonging to the cadherin family, deforms their acto-myosin network in the direction of the polarization axis. A bulge is appearing at a pole, warding off the neighbor cells. However, no intercalation would be observed without an accurate regulation of the adhesion between the neighbor cells.</p>
+
+<figure id='protrusion_multicell_white_rec_figure'>
+	<img src="../../images/MECAGEN/protrusion/multicell_white_rec_figure.png" alt="" width="950" >
+	<figcaption>Cellular protrusion illustrated at the subcellular level.</figcaption>
+</figure>
+
+<p>In addition to the regular adhesion between neighbor cell, special adhesion bonds called focal adhesion points appear at the surface of the protruding region of the cell. These bonds bear the extra load generated by the protrusive activity of the acto-myosin cortex. They become visible around the tip of the bulge and, as the cell is advancing, they maintain the spatial cohesion between the neighbor cytoskeleton. Without them, the cell would slip on the surface, or at least the efficiency of the protrusion would be massively reduced. The focal adhesion points disappear when the cell has advanced enough relatively to the bonded neighbor and the focal adhesion has left the protruding region of the cell surface.</p>
+<p>The coupled action of acto-myosin cortex and the focal adhesion points form a treadmill originating at the tip of the protrusion. It induces a torque transmission between the protruding cell and each neighbor cell linked by focal adhesion points. The transfer of cell material in the bulge results from the &quot;action&quot; force generated by the acto-myosin cortex and the &quot;reaction&quot; force is exerted on the neighbor cell through the focal adhesion points. In some cases, an additional mechanism of cellular contraction at the back of the cell amplifies the &quot;action&quot; force (not presented here). As we suppose the distribution of focal adhesion points homogeneous on the surface of the cell, the quantity of torque transmitted between two neighbor cells scales with the area of their surface of contact \(A(r,R_i,R_j)\).</p>
+
+<figure id='protrusion_protrusion_schematic_figure'>
+	<img src="../../images/MECAGEN/protrusion/protrusion_schematic_figure.png" alt="" width="950" >
+	<figcaption>Left Right.</figcaption>
+</figure>
+
+<p>In our particle-based framework, the mathematical interpretation of this mechanism is the following: a cell \(p_i\) has a normalized polarization axis \({Up}_i\) that we consider given in this part. Among the neighbor cells belonging \(\mathcal{N}_t (p_i)\), we denote by \(P_{+}(\mathcal{N}_t (p_i))\) the sublist of neighbors which share a surface of contact on the positive pole of the cell. </p>
+
+<p>$$ P_{+}(\mathcal{N}_t (p_i)) := \left \{  p_j \in  \mathcal{N}_t (p_i) : \frac{( (X_j - X_i) \cdot {Up}_i)}{\left \| ( X_j - X_i ) \right \|} \geq \alpha_p  \right \} $$ </p>
+
+<p>\(\alpha_{p}\) defines the relative size of the protrusion. Similarly, we denote by \(P_{-}(\mathcal{N}_t (p_i))\) the sublist of neighbors which share a surface of contact on the other pole of the cell.</p>
+
+<p>For each neighbor \(p_j\) belonging \(P_{+}(\mathcal{N}_t (p_i))\), and by the Weak Law of Action and Reaction (Newton's third law), we introduce a pair of equal and opposite force applied on \(p_i\) and \(p_j\). The axis of the force is designed to roughly represent the profile of the surface of contact(see figXX). It is a linear combination of the protrusion axis \({Up}_i\) and of \(Up_{\perp i}(j)\) the axis orthogonal to \(Up_i\) which passes through \(p_j\). The constant terms of the linear combination set the profile of the surface of contact. It could be precisely described by a function of the angular position of the neighbor but we will let them constant these coefficient do not impact the outcome of the model (see example TODO???).</p>
+
+<p>Eventually, the &quot;action&quot; forces resulting from each neighbors interaction are summed up to produce the resulting &quot;action&quot; force applied to protruding cell. </p>
+
+
+<p><strong>Other examples: Bonus if...</strong></p>
+
+<ul>
+	<li>intercalation in epithelium. The polarization axis is constained on the tangential plane of the epithelium. (Drosophila)</li>
+	<li>apico-basal constriction. (Drosophila)</li>
+</ul>
+
+
+</div>
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cell volume 
+
+Assume that cells do not grow.
+
+No assymetric division.
+
+
+The volume is reduced in halves at each division.
+
+V(t) = 4/3 * PI * Ro^3 * pow(.5, numMtosis(t))
+
+Radius is equal to R0 * pow(1/2,  numMitosis/3 )
+
+
+
+Exception : EVL
+
+2 radii : apico-basal radius Rap + lateral radius Rl
+
+S surface = APF_2D * Rl * Rl
+
+V = S * Rap * 2
+
+a each division : volume is divided by two but the apico-basal radius remain constant
+
+V(t) = 4/3 * PI * Ro^3 * pow(.5, numMtosis(t))
+
+and V(t) = S(t) * 2 * Rap(t) = PI * Rl(t)^2 * 2 * Rap(t)
+
+Rl(t) = sqrt(2 * Ro^3 * pow(.5, numMitosis(t)) / (3 * Rab(t)))
+
+eq to Rab(t) = (2 / 3) Ro^3 (1/2)^(numMitosisc(t)) / Rl^2
+
+after the division
+
+EVL cell Rl increases when external pressure is above a given threshold
+
+when Rl is increased, Rap decreases to conserve EVL cell volume
+
+ie if Rl *= k, Rap *= (1/k^2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id='3_3_'>
+<h2>3.3. Discussion  </h2>
+ 
+ 
+
+</div>
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id='3_3_1_'>
+<h2>3.3.1. Alternative-Future work including previous experiments  </h2>
+ 
+
+
+
+
+ 
+</div>
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id='3_3_2_'>
+<h2>3.3.2. Extracellular matrix  </h2>
+ 
+
+
+
+ 
+</div>
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<div id='3_3_3_'>
+<h2>3.3.3. Friction  </h2>
+ 
+ 
+</div>

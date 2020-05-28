@@ -1,0 +1,41 @@
+body {
+  font: 10px sans-serif;
+}
+
+.rule line {
+  stroke: #D8D8D8; //steelblue;//stroke: #eee;
+  shape-rendering: crispEdges;
+}
+
+.rule line.axis {
+  stroke: #000;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.lineOrigArea {
+  fill: none;
+  stroke: steelblue;
+  stroke-dasharray: 9, 5;
+  stroke-width: 1.5px;
+}
+
+.lineRadius {
+  fill: none;
+  stroke: green;
+  stroke-width: 1.5px;
+}
+
+.lineForce {
+  fill: none;
+  stroke: red;
+  stroke-width: 1.5px;
+}
+
+circle.line {
+  fill: #fff;
+}

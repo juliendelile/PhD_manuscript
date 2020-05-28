@@ -1,0 +1,19 @@
+
+#!/bin/sh
+
+
+
+
+
+
+
+
+cd /Applications/MAMP/htdocs/morphogenesisNoWP/manuscript/chapters_latex/
+
+#remove video figure from tex files
+GLOBIGNORE="these.tex" 
+for i in *.tex;do
+	echo $i
+	#python ../remove_video_latex.py $i > tmp.tmp
+	#mv tmp.tmp $i
+done

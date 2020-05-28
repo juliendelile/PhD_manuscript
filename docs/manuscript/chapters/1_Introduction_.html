@@ -1,0 +1,502 @@
+<!-- ********************************************************************** -->
+<div id='1_'><h1>1. Introduction</h1>
+<!-- ********************************************************************** -->
+
+<p>The spontaneous making of an entire multicellular organism from a single cell ranks among the most exquisitely complex phenomena in nature. Through a precise spatiotemporal interplay of genetic switches, chemical signals and mechanical constraints, an elaborate form is created without any of its myriad cells containing the explicit map of the resulting architecture. An eternal source of fascination for generations of philosophers, artists and scientists, biological morphogenesis is the epitome of what can be called today a <i>self-organizing complex system</i>. To follow the metaphor used by Enrico Coen in his beautiful popular science book <i>The Art of Genes</i> <a name='Coen:1999wy' class='ref'></a>, it could be said that the embryo is similar to a <q>canvas that paints itself</q> (where colors represent cell differentiation) at the same time that it is growing and <q>sculpting itself</q>, too&mdash;both patterning and shaping affecting each other in a tight loop. Schematically, the mechanical properties of cells, such as their adhesion strength or intrinsic motility, are tightly correlated with their spatiotemporal location and molecular and genetic dynamics, which define distinct morphogenetic fields that further expand, reshape and segment themselves into subregions due precisely (in a feedback loop) to the self-assembly of differentiating cells.</p>
+
+<p>In this introduction chapter, we first propose a brief chronological review of the field of developmental biology, born from the classical <q>embryology</q> (Section 1.1), then state the overall objectives of the project, which is called MECAGEN to highlight the double and coupled mechanical-genetic dynamics of development, to which this dissertation is contributing (Section 1.1.2). This will be followed by general preliminary remarks on the methodological principles and workflow that will be at the foundation of our work (Section 1.1.3), then an overview and summary of the remaining eight chapters of this dissertation (Section 1.1.4).</p>
+
+<!-- ====================================================================== -->
+</div><div id='1_1_'><h2>1.1. A Historical Timeline of Developmental Biology </h2>
+<!-- ====================================================================== -->
+
+<!-- ---------------------------------------------------------------------- -->
+</div><div id='1_1_1_'><h3>1.1.1. The Science of How Organisms Form</h3>
+<!-- ---------------------------------------------------------------------- -->
+
+<p>A general definition would state that <i>development</i> is a dynamical process leading a given organism to a certain morphological state, and that the study of development is the study of the mechanisms ruling the coordination of cellular differentiation through space and time in a multicellular organism. This process is not steady, however, and organisms may alternate periods of intense transformation with <q>quieter</q> periods dedicated to growth only. However, the most dramatic events occur in the beginning, when the egg divides into a myriad cells. These soon start to perform a collective ballet of complex movements, which are precisely coordinated through a system of physicochemical interactions. It is interesting to note that this process never ends, the morphological state of an organism undergoing constant change, albeit smaller, until senescence and death.</p>
+
+<p>The definition of development has its own <q>embryogenesis</q>: it has also changed and reformed itself through the numerous discoveries and practical methods that have punctuated the history of the field. The following major periods can be distinguished, adapted from Hopwood <a name='Hopwood:2008wy' class='ref'></a>:</p>
+
+<ul>
+  <li>pre-1880: classical descriptive embryology (mostly addressed in Section 1.1.2)</li>
+  <li>1880-1930: classical experimental embryology (mostly addressed in 1.1.3)</li>
+  <li>1930-1960: reconciling genetics and embryology (mostly addressed in 1.1.4)</li>
+  <li>1960: modern developmental biology (mostly addressed in 1.1.5-6)</li>
+</ul>
+
+<!-- ---------------------------------------------------------------------- -->
+</div><div id='1_1_2_'><h3>1.1.2. First Theories: Epigenesis, Preformation and Spontaneous Generation</h3>
+<!-- ---------------------------------------------------------------------- -->
+
+<h4>Aristotle envisioned them all</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>If Hippocrates is often labeled as the first embryologist, based on his <i>Hippocratic Collection</i> where he describes the successive stages of incubation of hens' eggs <a name='Needham:1931tz' class='ref'></a>, it is Aristotle in <i>De Generatione Animalium</i> who initiated the main theory of the formation of living organisms that still hold today. This theory, called <q>epigenesis</q>, states that organisms develop through changes in shape. New parts appear by themselves and deform through a series of stages. In Book II of his work, Aristotle foresees the alternative theory of <q>preformation</q>, which persisted well through the 18th century before it was gradually dismissed. It states that organisms develop from miniature versions of themselves, thus no new structures are truly generated during development, but parts simply unfold and grow:</p>
+
+<blockquote>
+  <q>Either all the parts, as heart, lung, liver, eye, and all the rest, come into being together or in succession, as is said in the verse ascribed to Orpheus, for there he says that an animal comes into being in the same way as the knitting of a net</q> <a name='Aristotle:WxoMhbAm' class='ref'></a>.
+</blockquote>
+
+<p>A third hypothesis was developed by Aristotle in <i>Historia Animalium</i> <a name='Aristotle:WxoMhbAm' class='ref'></a>. Synthesizing contemporary thought, he introduces the theory of <q>spontaneous generation</q>. This theory proposes that some complex organisms such as flies can be generated from non-living matter such as putrefying earth, vegetable matter, or dead flesh.</p>
+
+<h4>Early mechanical interpretations</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	
+<p>In 1651, William Harvey was among the first philosophers to consider embryonic development as a dynamic process requiring a causal explanation of a sequence of events <a name='Horder:2010uj' class='ref'></a>. In 1664, Ren&eacute; Descartes's <i>De la formation du foetus</i> <a name='Descartes:1677un' class='ref'></a> was posthumously published and contained the first attempt to explain the formation of an animal embryo by means of mechanistic interactions. In this theory, the male and female seeds were thought to <q>heat up</q> and <q>ferment</q> until some of their particles started moving and forming the organs, from the heart that pushed the blood directly towards the place that it was freest to go, and participate in the formation of the brain <a name='Roger:1998td' class='ref'></a>.</p>
+
+<h4>The end of spontaneous generation</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>In 1668, Gregorio Redi realized an experiment which discredited the spontaneous generation hypotheses by showing that no fly can form in a closed jar containing food or dead flies. As maggots would appear, however, when the same experiment was run in an open jar, he concluded that the food or dead flies could not produce maggots by themselves <a name='Theriseofembryolo:2000uf' class='ref'></a>. The final blow to this theory was struck by Louis Pasteur two centuries later (in 1859) when, as a young chemist, he showed that a boiled meat broth would not produce new organisms. The key idea of his experimental setup was to bend the neck of the container into a 'S' shape. It allowed air to pass through it but not the aerial microorganisms because of gravity. However, when the inflexion point was put in contact with the broth, a culture would rapidly start to grow.</p>
+
+<h4>The end of preformationism</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<figure id='homonculi_Hartsoecker_1695'>
+	<img src="../../images/Development_Review/homonculi_Hartsoecker_1695.png" width="500">
+	<figcaption>Drawing of the homonculi observed in sperm by Nicolaas Hartsoecker (1695)</figcaption>
+</figure>
+
+<p>The contention between preformists and the upholders of epigenesis lasted longer. Antonie van Leeuwenhoek was a Dutch scientist who created various microscopes. In 1676, he made the first observation of single-celled organisms, <q>animalcules</q>, soon after Robert Hooke had first described and termed the <q>cells</q> <a name='Hooke:2005vy' class='ref'></a>. Leeuwenhoek discovered that the sperm cells of animals, among which humans, were entering the egg cell <a name='Gest:2004fj' class='ref'></a>. In addition to his contribution to the refutation of spontaneous generation, this discovery favored the spermist side of the preformation camp. Some of them started to describe miniatured humanoid shapes as did Nicolaas Hartsoeker in 1695 <a name='homonculi_Hartsoecker_1695' class='fig'></a>.</p>
+
+<h4>Germ layers</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>In the 1820's, Christian Pander conducted a reinvestigation of developing chicks in egg and explained that development does not start from the formation of organs but originates from the transformation of primitive sheets of tissue, called the <q>germ layers</q> <a name='Hopwood:2008wy' class='ref'></a>.</p>
+
+<h4>Cell theory</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>Between the 1820's and the 1850's, <i>cells</i> were added as the second pillar of embryological analysis mostly under the influence of Johannes Müller <a name='Hopwood:2008wy' class='ref'></a>. In the late 1830's, the <q>cell theory</q> attempted to unify the development of the various observed eggs in vertebrates, and particularly in mammals. Cells progressively became the fundamental building blocks of every living species in the minds of the scientists. Robert Remak stated that every cell was produced by a preexisting cell, from the egg all the way to the tissues, via the germ layers <a name='Lagunoff:2002gw' class='ref'></a>. This insight is now called the <q>segmentation</q> or <q>cleavage</q> stage and is indeed the first morphological event of today's developmental studies. Remak also introduced the concept of germ-layer specificity in vertebrates, stating that each layer (endoderm, mesoderm, and ectoderm) is specifying the cell type or <q>fate</q> of all cells that originate from it (such as muscle, skin, nervous system, or intestine) <a name='Remak:1855tc' class='ref'></a>. This concept was also central to embryology and preludes the fundamental questions that will continue occupying developmental biologists of the modern era.</p>
+
+<figure id='Development_Review_dog_segmentation_kolliker_1861'>
+	<img src="../../images/Development_Review/dog_segmentation_kolliker_1861.png" width="700">
+	<figcaption>Egg segmentation from a dog's oviduct, surrounded by the zona pellucida and spermatozoa as represented by Albert Kölliker in 1861 <a name='Kolliker:1861uj' class='ref'></a>.</figcaption>
+</figure>
+
+<!-- ---------------------------------------------------------------------- -->
+</div><div id='1_1_3_'><h3>1.1.3. The Rise of Experimental Embryology</h3>
+<!-- ---------------------------------------------------------------------- -->
+
+<p>Starting in the 1880's, some embryologists reinvented their methods through experimentation to decipher the causal links between the successive stages of development. Calling this discipline <i>Entwicklungsmechanik</i> (<q>developmental mechanics</q>), Wilhem Roux and others applied to embryos various kinds of perturbations, whether mechanical, thermal, chemical or electrical <a name='Hopwood:2011gt' class='ref'></a>.</p>
+
+<h4><i>Entwicklungsmechanik</i>: self-differentiation vs. dependent differentiation</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>The key question raised by Roux was whether the differentiation process of the parts of an embryo was autonomous from external influence (<q>autonomous differentiation</q> or <q>self-differentiation</q>) or not (<q>dependent differentiation</q>). In 1888, he obtained half-embryos after destroying one of the cells of a two-cell frog embryo with a hot needle. The half-embryos were displaying either the anterior or the lateral halves. Roux concluded that each blastoderm was capable of <i>self-differentiation</i>, independently from the missing half <a name='Hamburger:1997cm' class='ref'></a>. A year earlier, in 1887, Laurent Chabry had been the first to characterize the autonomous differentiation of cells' fate. By killing two identified blastomeres at the 8-cell stage of the ascidian tunicate, the animal became a tadpole that was missing its tail muscles. When he extracted and cultured the same two blastomeres at the same stage, they resulted in an isolated tail muscle <a name='Lawrence:2006ke' class='ref'></a>.</p>
+
+<p>In 1891, following Roux's influence, Hans Driesch repeated the experiment on a two-cell stage sea urchin embryo. He separated both blastomeres and observed that each one had differentiated into a half-sized, yet complete, sea urchin larva. In 1893, by pressing on a sea urchin embryo at the third cell cycle, Driesch completely modified the relative positions of the cells and still obtained normal larvae. A mosaic determination process would have produced a highly perturbed embryo, therefore it proved that the determination occurred later than expected via <i>dependent differentiation</i>. Driesch concluded: <q>The relative position of a blastomere within the whole will probably in a general way determine what shall come from it.</q></p>
+
+<p>These historical experiments epitomized the concurrent interpretations of autonomous vs. dependent differentiation, where the former requires <q>determinants</q> to be present at the earliest stage and separated by cell division to spatially specify cell fates, whereas the latter depends on the interaction between the cells (see a classification in <a name='Davidson:1991uu' class='ref'></a>). Later, it was recognized that truth resided in the middle. Neither totally mosaic nor totally regulative, developmental principles are a fine balance between both principles <a name='Lawrence:2006ke' class='ref'></a>. Some cells at certain stages seem highly dependent from their surroundings, and other times they seem to <q>seal their hatches</q> and follow their own differentiation path. From there on, most embryological studies will be dedicated to deciphering the modus operandi of these mixed principles, from their macroscopic characterization at the tissue level down to the molecular mechanisms at the sub-cellular level.</p>
+
+<h4>Morphogenetic fields</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>The early 20th embryologists refined these questions with new experiments such as grafts and aimed at deciphering what determined cell fates. In 1918, Ross Harrison published a paper that introduced the concepts of <i>morphogenetic fields</i> <a name='Harrison:1918ta' class='ref'></a>. He carried out various limb grafts on the newt embryo. He transplanted some cells from a specific region of the mesoderm to the non-neural ectoderm and observed that an additional forelimb was formed. The original grafted cell population had the ability, even after transplantation, to <q>remember</q> its fate. Even if the cells were separated into two subpopulations and grafted independently, both grafts would grow an intact limb <a name='DeRobertis:1991ua' class='ref'></a>. The key property of a morphogenetic field is thus to conserve its potential even after significant manipulation. Later observations showed that the fate of the morphogenetic field was dependent on the position along the antero-posterior axis. It led to the notion of <i>gradient field</i> which determined the identity of the morphogenetic fields <a name='huxley1934elements' class='ref'></a>.</p>
+
+<h4>Induction</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>In 1924, Hans Spemann and his student Hilde Mangold reported the discovery of a tissue in the newt gastrula that, when grafted on the ectodermal region of another newt embryo, triggered a neurulating process and initiated the formation of a secondary embryonic axis <a name='Spemann:1924ky' class='ref'></a>. This tissue was called an <i>organizer</i>, as it was apparently able to instruct and organize the adjacent ectoderm. Spemann proposed two different speculative mechanisms: either the existence of a chemical substance that would be transmitted to the induced tissue, or the inducing tissue would possess a specific vitalistic <q>structure</q> associated to the living embryo <a name='Holtfreter:1991wi' class='ref'></a>. These hypotheses became the focus of intensive study and debate.</p>
+
+<p>Tissue boiling, desiccating and killing experiments practiced on the famous <q>Spemann organizer</q> rapidly dismissed the second hypothesis. A variant upon the theme of induction was introduced by Waddington in his work <i>Organisers and Genes</i> <a name='Waddington:1940tj' class='ref'></a>, in which an </q>evocator-competence system</q> defined an inducing substance, the <q>evocator</q>, that was only slightly perturbing the dynamics of the competent tissue, which would actively respond by a change of state controlled by the genes <a name='Gilbert:1991ww' class='ref'></a>. The organizer was no longer believed to actively organize the formation of the induced organs but only release a water-diffusible chemical agent initiating the self-organization of the induced tissue. A global quest for the identity of the inducing substances started <a name='Armon:2010bo' class='ref'></a>. In 1932, Johannes Holtfreter used dead or desintegrated organizer tissue that still induced neurulation <a name='Gerhart:1998wy' class='ref'></a>, and multiple chemical substances were diffused into the competent tissue <a name='Steinbeisser:1996vs' class='ref'></a>: lipids <a name='Needham:1934ux' class='ref'></a>, oleic and nucleic acids <a name='Wehmeier:1934wh' class='ref'></a>, proteins <a name='Barth:1938fx' class='ref'></a>. As it became evident that induction was occurring in multiple tissues <a name='Kessler:1994un' class='ref'></a>, ubiquitous candidate substances were targeted. In 1961, Lauri Saxon showed that the inducing substance could act through a <q>millipore</q> filter with an average pore size of 0.8 micron and a thickness of 20 microns, confirming that the substance was indeed diffusive <a name='Saxen:1961uk' class='ref'></a>.</p>
+
+<p>Decades later, the great variety of candidate substances that positively induced neurulation progressively discouraged the embryologists to pursue their quest for tissue-inducing agents, while the more promising field of modern molecular biology was attracting the younger generations away from this problem <a name='Holtfreter:1991wi' class='ref'></a>. However, it was only a temporary abandonment as the concept of induction witnessed a rebirth and was eventually reinstated on new physico-chemical grounds. The discovery of secreted proteins acting in evolutionary well-conserved signaling pathways, such as the mesoderm-inducing protein activin <a name='Tiedemann:1992te' class='ref'></a>, launched again the quest for <q>the inducer</q> of the Spemann organizer.</p>
+
+<!-- ---------------------------------------------------------------------- -->
+</div><div id='1_1_4_'><h3>1.1.4. Developmental Genetics</h3>
+<!-- ---------------------------------------------------------------------- -->
+
+<p>In the early 20th century, embryology and genetics were both part of the larger field of <i>heredity</i> and were tightly entangled. A distinction was initiated in 1926 by the work of Thomas Morgan who proposed that, to avoid confusion, embryology would study the expression of the hereditary traits, whereas genetics would deal only with the transmission of those traits (<a name='Morgan:1926wt' class='ref'></a>, Chapter II). From this time on, other biologists tried to reunite both fields, which led to the emerging field of <i>developmental genetics.</i></p>
+
+<p>The first publications at the foundation of this field were the work of Gluecksohn-Schoenheimer in the late 1930's, who interpreted the defect in the induction of the mouse notochord as the consequence of a mutation of the Brachyury gene <a name='GluecksohnSchoenheimer:1938vk' class='ref'></a>, <a name='GluecksohnSchoenheimer:1940wg' class='ref'></a>. The result would not only pioneer developmental genetics but also propose a new methodology for the study of embryology. Instead of perturbing experimentally the development of the embryo and observe the consequences on its phenotype, mutant phenotypes were to be observed first and genetic causes had to be inferred from them.</p>
+
+<p>This methodological dichotomy was later merged with the experimental generation of mutants selected by the observation of their phenotypes. This was especially the case of chemically induced random mutations in <i>Drosophila</i> by Nüsslein-Volhard and Wieschaus in the 1980's <a name='NussleinVolhard:1980wg' class='ref'></a>, which eventually earned them the Nobel prize, or more recently in zebrafish <a name='NussleinVolhard:2012kb' class='ref'></a>.</p>
+
+<p>Waddington was also an important defender of the importance of genes in development. According to him, genes act as <q>controllers</q> of cellular fate. By comparing the development of mutated <i>Drosophila</i>, he observed that a presumptive tissue (the <q>imaginal disc</q>) would transform into a leg or an antenna according to the mutation <a name='Gilbert:1991ww' class='ref'></a>. He illustrated his view by the concepts of <i>epigenetic landscape</i> and <i>canalization</i>, which he compared to grooves and bumps guiding a rolling <q>ball</q> of cell fate on a hilly terrain. Behind the scene, i.e. <q>under the hill</q>, genetic interactions reshape the folds, hence orchestrate embryonic development (Fig. <a name='Development_Review_waddington_epigenetic_nature_mod_small_intro' class='fig'></a>). 
+</p>
+
+<figure id='Development_Review_waddington_epigenetic_nature_mod_small_intro'>
+	<img src="../../images/Development_Review/waddington_epigenetic_nature_mod_small.png" width="800">
+	<figcaption><strong>Waddington's epigenetic landscape.</strong> A: The ball represents a cell evolving in the epigenetic landscape. Its fate is determined by the canals in which the ball is rolling. B: A view of the landscape's behind the scene. The landscape relief is dynamically controlled by hidden wires that symbolize genes' expression and interactions. Image and caption adapted from Slack <a name='Slack:2002kg' class='ref'></a>.</figcaption>
+</figure>
+
+<!-- ---------------------------------------------------------------------- -->
+</div><div id='1_1_5_'><h3>1.1.5. Molecular Genetics</h3>
+<!-- ---------------------------------------------------------------------- -->
+
+<h4>Operon-lactose</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>The discovery of the operon-lactose mechanism by Jacob and Monod in 1961 set the start of the genetic trend in embryology. It applied the idea of induction at the subcellular level by introducing genetic determinants, the <i>regulator and operator genes</i>, which explain how the rate of protein synthesis was controlled by the action of <i>repressors</i> <a name='JACOB:1961uh' class='ref'></a>. This seminal paper already envisioned the influence of this discovery on embryology:</p>
+
+<blockquote>
+	<q>The occurrence of inductive and repressive effects in tissues of higher organisms has been observed in many instances. . . It has repeatedly been pointed out that enzymatic adaptation, as studied in micro-organisms, offers a valuable model for the interpretation of biochemical co-ordination within tissues and between organs in higher organisms. The demonstration that adaptive effects in micro-organisms are primarily negative (repressive), that they are controlled by functionally specialized genes and operate at the genetic level, would seem greatly to widen the possibilities of interpretation. The fundamental problem of chemical physiology and embryology is to understand why tissue cells do not all express, all the time, all the potentialities inherent in their genome.</q>
+</blockquote>
+
+<p>Immediately understood by some embryologists as Waddington, who had defended the notion of a cytoplasm-activated genetic control of cell fate in development (Chapter <q>The Activation of Genes by the Cytoplasm</q> in <i>Principles of Embryology</i>, 1956 <a name='Waddington:1956wf' class='ref'></a>), this discovery opened the door to the reconciliation between the embryological orchestration of spatiotemporal cell specification and the biophysical molecular paradigm.</p>
+
+<h4>Gene regulatory networks (GRNs), <i>cis</i>-regulatory systems</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>The modern view of the orchestration of cell behavior in space and time is conceptualized by the work of Eric Davidson on the cis-regulatory system. It is an extension of the work of Jacob and Monod that systematizes the role of the genetic regulators as arrays of transcription factors' target sites on the DNA <a name='Arnone:1997th' class='ref'></a>. These arrays, called the <i>cis-regulatory elements</i> as they are usually on the same DNA molecule as the genes that they regulate <a name='Davidson:2006ud' class='ref'></a>, define a network of interactions between the genes involved in development, called the <i>gene regulatory network</i> (GRN). The dynamics of this network is regulated by its topology and the quantities of the various <i>transcription factors</i> (TFs) that bind the cis-regulatory elements. As E. Davidson mentioned, the first GRNs were anecdotal but since 2002 rapid progress in their systematic analysis led to the publication of large-scale GRN maps, such as the network specifying the endomesoderm of the sea urchin embryo (containing over 40 genes), or the network responsible for the dorsoanterior-ventroposterior patterning and the endoderm formation of the zebrafish embryo <a name='Chan:2009er' class='ref'></a>.</p>
+
+<h4>Maternal factors</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>The dynamics of the GRN regulation is initialized by the various <i>maternal factors</i> <a name='Pelegri:2003wm' class='ref'></a>. The transcription factors are already present in the egg and serve as inputs to the GRN. The first direct evidence of a maternal RNA present in the oocyte and controlling the early activation of the GRN in the mouse was published in 1994 <a name='Renard:1994wo' class='ref'></a>. Maternal factor anisotropy is also an important cause of the patterning of the body plan. As the maternal factors are not homogeneously spatialized in the egg, a differential initialization of the GRN occurs in the different blastomeres. The <i>bicoid</i> gradient establishes the antero-posterior axis in the <i>Drosophila</i> embryo and is responsible for several asymmetries <a name='Gavis:1992ug' class='ref'></a> <a name='StJohnston:1992uu' class='ref'></a>. In the <i>C. elegans</i> nematode development, the <i>Skn1</i> maternal factor is concentrated on the posterior axis and specifies the antero-posterior axis <a name='Bowerman:1992tc' class='ref'></a>. In the zebrafish, a maternal transcript, <i>Squint</i>, has been proposed as a predictor of the dorsal axis <a name='Gore:2005fj' class='ref'></a>.</p>
+
+<h4>Signaling pathways, transduction</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>While the GRN dynamics view is centered on the cell, it also takes into account its communication capabilities through exchange of molecular information. Cell-cell interactions are realized by binding of secreted extracellular ligands, which trigger a transduction process and subsequent modification of the cytoplasmic dynamics. As mentioned by Pires da Silva and Sommer, a wide variety of cells use only a few classes of <i>signaling pathways</i> <a name='PiresdaSilva:2003bj' class='ref'></a></li>. For example, among these pathways, the <i>Wnt</i> gene has been discovered multiple times in different animals. Its name itself is the contraction of two occurrences: the <i>Int1</i> gene characterized in 1982 by Nusse and Varmus that induced mammary gland tumors in mice <a name='Nusse:1982wu' class='ref'></a>), and its homologue the <i>Wingless</i> gene (<i>Wg</i>) associated with <i>Drosophila</i> mutants that lacked wings <a name='Sharma:1973wy' class='ref'></a>. The <i>Wg</i> mutation was later associated with defaults in the <i>Drosophila</i> segmentation process <a name='NussleinVolhard:1980wg' class='ref'></a>). Other major signaling pathways are <i>Notch</i> <a name='ArtavanisTsakonas:1999ts' class='ref'></a> <a name='Bray:2006fe' class='ref'></a> <a name='Fuss:2002vw' class='ref'></a>, <i>Hedgehog</i> <a name='Wicking:1999ju' class='ref'></a> <a name='Jiang:2008ia' class='ref'></a>, <i>TGF\(\beta\)-BMP</i> <a name='Wu:2009ih' class='ref'></a>, and FGF <a name='Bae:2012iq' class='ref'></a>.</p>
+
+<h4>Mechanotransduction</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>Another important factor of cell dynamics is the integration of mechanical forces by the cell, or <i>mechanotransduction</i> <a name='Orr:2006cr' class='ref'></a> <a name='Jaalouk:2009jn' class='ref'></a> <a name='Wozniak:2009cu' class='ref'></a> <a name='Eyckmans:2011fy' class='ref'></a>. Mechanical forces had been thought to play a major role in tissue and organ shaping since the end of the 19\(^\textrm{th}\) century, from Wolff who studied the impact of the mechanical environment on the structure of bone tissue after fracture healing <a name='wolff1892gesetz' class='ref'></a> to Roux <a name='Roux:1895vb' class='ref'></a> and D'Arcy Thompson <a name='thompson1992growth' class='ref'></a>. More recently, forces have been demonstrated to influence vascular endothelial function <a name='Franke:1984gc' class='ref'></a>. The applied tension has been correlated with the proliferation rate in endothelial cells <a name='Nelson:2005dd' class='ref'></a> and with the morphology of branching processes <a name='Gjorevski:2010gb' class='ref'></a>.</p>
+
+<p>Evidence of mechanotransduction in modulated morphogenetic processes includes the role of forces on the cytoskeletal dynamics in the <i>Drosophila</i> mesoderm invagination <a name='Martin:2010je' class='ref'></a> <a name='FernandezGonzalez:2009hp' class='ref'></a> and the orientation of polarization axes in collective migration behavior <a name='Weber:2011hi' class='ref'></a>. An increasing number of studies stress the importance of mechanotransduction as an input of the GRN. The possible regulation of gene expression by microtubule-induced nuclear enveloppe fluctuations was shown in Drosophila <a name='Hampoelz:2011wv' class='ref'></a>. A definitive demonstration of mechanotransduction's direct input into the GRN was given by Desprat et al. <a name='Desprat:2008ei' class='ref'></a>, who showed that compression forces exerted by a tissue could induce the expression of a transcription factor in another tissue. The corresponding TF, <i>Twist</i>, is involved in the differentiation of the anterior midgut in <i>Drosophila</i>. After removing the pushing cells by laser ablation, they were able to rescue Twist expression by experimentally applying forces with magnetic microtweezers.</p>
+
+<h4>Gene regulatory networks and epigenetics</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>In addition to mechanotransduction, a growing number of epigenetic features provide new types of inputs to the GRNs, introducing novel possibilities to control genetic expression during development. After the now classical DNA and histone methylation shown in different model organisms including the zebrafish <a name='Lindeman:2010ia' class='ref'></a> <a name='Lindeman:2011fn' class='ref'></a>, gene silencing by RNA interference is also described as a major concept part of the gene regulation machinery, also leading to a new kind of bioengineering tools <a name='Chitwood:2010da' class='ref'></a>.
+
+<!-- ---------------------------------------------------------------------- -->
+</div><div id='1_1_6_'><h3>1.1.6. Cell Biomechanics</h3>
+<!-- ---------------------------------------------------------------------- -->
+
+<p>The post-genomic era is bringing back the cell as the integrator of the molecular and genetic machinery. In this context, understanding precisely what the cell is doing is a major issue. Cell motility, cell adhesion, cell membrane deformation are all part of the biomechanics underlying morphogenetic processes and their emergent features at a macroscopic level. As reviewed by Ray Keller <a name='Keller:2012ge' class='ref'></a>, this field remained quiet for a long period during the 20th century but was recently revived. Keller distinguishes between two tendencies that structure the physical shaping of embryos and were both envisioned by Johannes Holtfreter: the notion of <q>selective affinity</q> modulated by adhesion, and the notion of physical integration of multiple local cellular behaviors.</p>
+
+<h4>Differential adhesion hypothesis and improvements</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>Holtfreter employed his experimental skills to separate cells from their different germ layers and mix them. He observed that they were still able to recognize their lineage origins and adopt different preferential association or <q>affinities</q> accordingly <a name='Holtfreter:1939wb' class='ref'></a>. He postulated that this mechanism could lead to the progressive organization of the embryo. In the 1960's, Malcom Steinberg refined this idea and developed the <i>Differential Adhesion Hypothesis</i> (DAH) <a name='Steinberg:1962ww' class='ref'></a> <a name='Steinberg:1963tu' class='ref'></a> <a name='Steinberg:1970bq' class='ref'></a>. Comparing the behavior of cells during development to the properties of liquids, the DAH states that in a heterogeneous population cells are both cohesive and mutually motile, the interfacial surface tension leading the ensemble toward the most stable configuration. The main factors defining the interfacial surface tension were originally the mutual adhesiveness between cells, where higher affinity meant stronger bonds. This theory became very popular because of the simple causal link that it offered between gene expression and physical shaping through adhesion molecules. Later refinements added <i>cell rigidity</i> as a key factor to the interfacial surface tension definition. Through cortical tension, the driving principle became that stronger adhesion was increasing the contact size whereas stronger cortical tension decreased it <a name='Lecuit:2007cw' class='ref'></a> <a name='Kafer:2007do' class='ref'></a> <a name='Manning:2010ce' class='ref'></a> <a name='Maitre:2012cma' class='ref'></a>.</p>
+
+<h4>Diversified cell behaviors</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>The second notion envisioned by Holtfreter was that cell mechanical behavior was truly diversified and that a global integration of the local behaviors had to be brought to light. He observed the specialization of the external layer of frog gastrulae, in particular its organization as a planar sheet in which specific cell shape changes must reflect specific cell mechanical behaviors. The so-called <i>epithelial</i> cells are characterized by a strong polarization between the interior side, or <i>basal</i> side, and the exterior side, or <i>apical</i> side. They exhibit strong cohesion at their lateral interface and form surface layers <a name='Apodaca:2012hn' class='ref'></a>. During embryonic development, epithelial behaviors may be temporary as epithelial cell may leave the surface layer and migrate toward different regions. These cells are called <i>mesenchymal</i> and the transformation is the <i>epithelial-mesenchymal-transition</i>. Holtfreter also observed the protrusive activities of these cells in culture, and the way they exerted forces on the substrate and oriented their migration. Trinkaus determined the migrating behavior of cells in the avian neural crest, echinoderm mesenchyme and teleost fish epiboly <a name='Trinkaus:1984uh' class='ref'></a>. The collective behavior of mesenchymal cells was reviewed in <a name='Weijer:2009hy' class='ref'></a> <a name='Ilina:2009dx' class='ref'></a> <a name='Rorth:2009gl' class='ref'></a> <a name='Vedula:2012ja' class='ref'></a>. These concepts are the basis for more recent quantitative approaches of cell biomechanics in culture and in vivo <a name='vonDassow:2011dc' class='ref'></a>.</p>
+
+<!-- ====================================================================== -->
+</div><div id='1_2_'><h2>1.2. Integrating Developmental Mechanics and Genetics: The MECAGEN Project</h2>
+<!-- ====================================================================== -->
+
+<p>The ambition of the MECAGEN project, to which this dissertation contributes, is to construct an encompassing <i>model of the multiscale dynamics of the early stages of animal morphogenesis</i>. This theoretical endeavor must be controlled experimentally by a cohort of original quantitative <i>reconstructions</i> of the developmental processes, essentially taking the form of an <i>image processing workflow</i> on the one hand (see Chapter 7 of this thesis), and <i>agent-based model and simulation</i> on the other hand (Chapter 3-5). In this approach, <i>embryonic development is construed as a self-organized phenomenon arising from a multitude of individual cell behaviors, including their genetically and chemically regulated, and regulating, biomechanics</i>. It is a fundamental research project that relies on an important software programming effort required to (a) extract relevant measurements from real data (obtained by microscope imaging, Chapter 7), (b) recreate virtual data (by simulation, Chapters 3-5), and (c) validate the simulation against the measurements (Chapter 8).</p>
+
+<h4>The embryo as a complex system</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>Typical systemic properties of living organisms, such as <q>homeostasis</q> and <q>autopoiesis</q>, can only be understood through a <i>complex systems</i> approach of their underlying biological processes. Complex systems refer to objects composed of a great number and diversity of small elements (e.g. organisms made of cells, cells made of molecules), which interact locally in a decentralized and self-organized way to give rise to a rich repertoire of non-trivial collective behaviors. This phenomenon is also called <q>emergence<q>, referring to the fact that the higher-scale properties qualitatively differ from the lower-scale elementary features, and cannot be deduced from them (if only because of a combinatorial explosion). The complex systems viewpoint requires new methodological and experimental strategies, in the case of development the use of animal models chosen for their properties of accessibility, transparency and phylogenetic position.</p>
+
+<p>MECAGEN wants to confront directly the level of the complexity of living processes, something that biology has so far partly evaded in its traditional attempts to address the <q>function</q> of genes one by one, or dissect subcellular processes in isolated cultured cells. This historical avoidance of complexity was undoubtedly necessary at first, and the reductionist approach has provided critical descriptions of the components, their local interactions, and their context. But now that the pieces of the puzzle have been (more or less) well identified, it is ample time to try and <i>integrate</i> them all together at the level of thousands of genes and millions of cells in order to see the big picture of the growing organisms. Moreover, the decomposition approach has limits that can be overcome only by viewing the elements in the broader context of their interactions.</p>
+
+<h4>Supporting platforms and methodologies</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>Our approach to developmental complexity consists of a reconstruction of multiscale dynamics from measures based on in vivo observations at appropriate spatial and temporal scales. The MECAGEN project branched out of the integrative biology platforms (formerly European projects) <i>Embryomics</i> and <i>BioEmergences</i>, which have pioneered the design of methods and algorithms for measuring and reconstructing the dynamics of multicellular development observed by microscopy. The concept is that biologists produce and annotate time-lapse series of organism development, while mathematicians and computer scientists process these images to reconstruct (BioEmergences) and model (MECAGEN) collective cell dynamics. This effort resulted in sophisticated software platforms capable of handling large amounts of 4D imaging data through a workflow of segmentation and tracking algorithms. The concept of <q>multiscale dynamics reconstruction</q> does not come from biology, but from disciplinary fields that use formalization. Moving in this direction can be done only within an interdisciplinary context, where there is agreement about a representation of the system, the acquisition of relevant data and the processing of such data to extract quantitative measures. Then comes the question of theoretical models and what is expected from them. The relevance of such models depends on their predictive power, and this power is measurable only by going back to the experiments (see Section 1.3).</p>
+
+<h4>Summary of objectives and particular position of this dissertation</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>In this context, the objectives of MECAGEN are to implement:<p>
+
+<ul>
+  <li>(A) the quantitative multiscale reconstruction of the morphodynamics of the zebrafish <i>Danio rerio</i>'s early embryogenesis, from the egg to the beginning of somitogenesis (15 hours of post-fertilization development at 28 degrees Celsius), supplementing the qualitative descriptions of biological processes with observations in 4D (3D+time) and measured data that allow the statistical analysis of individual and collective cellular behavior.</li>
+  
+  <li>(B) the modeling of the gene regulation processes, cellular dynamics and biomechanical constraints that govern morphogenesis via coupling between a discrete and a continuous formalization. Model and experiments are joined in a feedback loop, in which the model is optimised and falsified by experimental trials of <q>gain</q> and <q>loss</q> of function.</li>
+</ul>
+
+<p>By its interdisciplinary nature at the interface between theoretical and experimental biology, including the modeling of molecular and cellular dynamics and their multiscale integration, MECAGEN relies on various methodological tools, mainly in computer science and algorithmic tools (image processing, multi-agent systems), mathematics (image processing, dynamic systems, statistics) and the modeling of large amounts of data (parametric estimation, optimisation).</p>
+
+<p>The present dissertation will be focusing for the most part on the <i>biomechanical</i> side (<q>MECA</q>, Chapter 3) of the project as not only was it a huge endeavor in itself, but it was also a prerequisite to the understanding of gene regulation and chemical signaling (<q>GEN</q>, Chapter 4, only covering the basics) and the coupling of both sides (Chapter 5, only sketched out). Genes play a role only inasmuch as there is a physico-chemical phenomenon to steer and control. As James D. Murray puts it <a name='Murray:2003ty' class='ref'></a>:
+
+<blockquote>
+  <q>However one chooses to ignore mechanics, nevertheless, presiding over every embryonic twitch and jerk are Newton’s laws. And whatever role chemistry and genetics play in embryogenesis, they must finally submit their programs for Newtonian execution. Therefore, we have adopted the philosophy that, since morphogenesis is—at least proximally—a mechanical event, it is reasonable to start analyses of morphogenetic processes by examining the forces that produced them, and then, working backwards, add chemistry and genetics as needed</q> (p314).
+</blockquote>
+
+<!-- ====================================================================== -->
+</div><div id='1_3_'><h2>1.3. Methodological Considerations</h2>
+<!-- ====================================================================== -->
+
+<p>In this section, and before we set out on describing the model and experiments in the next chapters, we first wish to lay out our tools on the bench, i.e. the methodological principles and workflow that are at the foundation of our project. In short, we defend the notion that the complex nature of the processes involved in a phenomenon such as vertebrate development requires the use of <i><q>augmented</q></i> tools and strategies, built upon the classical experimental scientific framework. While this is not a dissertation on the philosophy of science, we felt it was nonetheless crucial to clarify the framework of our modeling and simulation endeavors, which constitute an attempt at tightly integrating experimental observations with theoretical models in order to unravel the physical mechanisms of embryogenesis <a name='Varner:2012in' class='ref'></a>. To this aim, we will make short but, we hope, important preliminary remarks about the generation of hypotheses and models by scientists and the tools that they design to help them in this process, then discuss the notion of validation and quality of a model.</p>
+
+<p>Accordingly, this section is organized as follows: we first comment on the position of a scientist-modeler with respect to the external reality, i.e. her/his object of interest, but also the rest of the scientific community; then we examine the tools that can be used to <q>augment</q> the three fundamental scientific steps of perceiving, conceiving, and manipulating, which together form a loop; finally, we ask what it means for hypotheses to be ultimately <q>validated</q> by a fitness function, which is essentially a measure of the discrepancies between the simulated and the raw data.</p>
+
+<!-- ---------------------------------------------------------------------- -->
+</div><div id='1_3_1_'><h3>1.3.1. The Scientist in the Observation-Hypothesis-Experiment Loop </h3>
+<!-- ---------------------------------------------------------------------- -->
+
+<!-- id='1_3_1_1_' --><h4>The Individual</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>Experimental science stages an <i>individual</i> and her/his <i>environment</i>, or <q>reality</q>. Like any other explanation-seeking activity, experimental science is characterized by three fundamental processes in a cycle: perception of the environment, generation of new hypotheses, and experimentation on the environment to test these hypotheses (Fig. <a name='experimental_science_schematic' class='fig'></a>).</p>
+
+<figure id='experimental_science_schematic'>
+	<img src="../../images/experimental_science/experimental_science_raw_v2.png" width="950">
+	<figcaption><strong>The observation-hypothesis-experiment loop of experimental science. </strong> It involves two main actors: the individual and reality (environment); and three main processes: perception, hypothesis generation (modeling), and experimentation.</figcaption>
+</figure>
+
+<ol>
+	<li>The loop can be entered by the individual perceiving and observing her/his environment.</li>
+	
+	<li>The observations made by this individual are then matched with the knowledge that s/he holds. Most of the time, observations conform to this knowledge and no particular reaction is elicited. Otherwise, a significant difference between the observations and what was initially expected by the observer triggers a <q>curiosity</q> signal that challenges her/his existing set of hypotheses and leads her/him to reconsider some of them. The cognitive processes by which s/he creates new hypotheses (e.g. analogy, inference, induction, abduction, or deduction) are not discussed here. Ultimately, <q>satisfying</q> hypotheses are the ones that can establish causal relationships among the observations. They can identify certain observations (the effects) as the consequences of others (the causes). Hypotheses also have a predictive value as they allow to extrapolate the behavior of the system when the causal factors are modified.</li>
+	
+	<li>The <q>experimental</q> qualifier attributed to many domains of biology or physics comes from combining the pure thought exercise of generating new hypotheses and real interactions with external objects in order to test the validity of these new hypotheses. The most efficient way for an observer-modeler to assess that the causal relationships that s/he inferred are compatible with her/his observations is to identify some elements of the studied object as potential <q>factors</q>, then perturb these elements to modify the behavior of the studied object, and finally compare the new observed behavior with the predicted behavior. Note that the environment of the individual is made of multiple potential objects of study, so that the specification of one object of interest implies its separation from the environment, which may or may not include her/him. In developmental biology, the studied object is the embryo and the observer is excluded from the embryo's natural environment.</li>
+</ol>
+
+<h4>Exchange/Validation by the Scientific Community</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>Even if the individual is at the center of experimental science, it is above all a <i>collective</i> knowledge-building enterprise. The interaction between an observer-modeler and the rest of the scientific community operates bidirectionally (Fig. <a name='experimental_science_schematic_communauty' class='fig'></a>):</p>
+
+<figure id='experimental_science_schematic_communauty'>
+	<img src="../../images/experimental_science/experimental_science_communauty2.png" width="950">
+	<figcaption><strong>The collective effort of experimental science.</strong> Each member of the scientific community may send or receive scientific work, which are verbal or written descriptions of parts or the whole observation-hypothesis-experiment loop.</figcaption>
+</figure>
+
+<ul>
+  <li>All the hypotheses made by an individual are elaborated upon a historical accumulation of prior scientific works. Today, s/he is potentially able to access all of the knowledge produced by the scientific community thanks to Internet, in particular the various article databases (Pubmed, arXiv.org, IEEE, ACM, Google Scholar, etc.).</li>
+
+  <li>One particularity of science is that the validation of a scientific work is ultimately decided by approval of the community. Through the peer-reviewed publication system, each new proposal is screened before being made available by a panel of individuals representing the community. This social dynamics is not without its problems, naturally (issues of motivation, expertise, time, politics, etc.), but consensus is basically the only mechanism that we have. We can distinguish between two types of peer validation: the <i>validation of the scientific work</i> containing all or some parts of the elements illustrated in Fig. <a name='experimental_science_schematic' class='fig'></a>, and the <i>validation of the hypotheses</i> contained in the scientific work itself. We will develop the latter aspect in Section 1.3.3.</li>
+</ul>
+
+<!-- ---------------------------------------------------------------------- -->
+</div><div id='1_3_2_'><h3>1.3.2. Designing Tools to Perceive, Conceive and Manipulate</h3>
+<!-- ---------------------------------------------------------------------- -->
+
+<p>Experimental science insists on confronting hypotheses, the prediction they generate and observations. This confrontation is improved or <q>augmented</q> by the means of <i>tools</i>. Tools can be considered the third actor in experimental science, in addition to the individual and the object of study. In fact, they are objects of study in themselves. In developmental biology, the technologies used to observe (microscopy) or perturb (genetics, chemistry, mechanics) a growing organism are the focus of intensive research in other fields of science. The advances of our understanding are closely coupled to the advances of these specialized and cutting-edge instruments. Microscopy imaging is constantly improving and expanding the spatiotemporal resolution and scope of observations. Every new microscope triggers a boom of new methodologies, observations and conceptualizations. For example, Fig. <a name='experimental_science_perception_augmented' class='fig'></a> illustrates the perception pathway augmented with such tools. We examine below three types of tools designed to augment the three fundamental processes of experimental science: tools to perceive, tools to conceive, and tools to manipulate.</p>
+
+<h4>Tools to Perceive</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>Tools can greatly improve the perception of the studied object, whether upstream at the level of the interface between the real system and the observed (raw) data, or downstream at the level of the <q>reconstruction</q> and analysis of this data to extract salient features compatible with its interpretation. Perception-augmenting tools allow to reach information inaccessible to the natural senses of the individual: they widen the scope of perception and increase its resolution at the same time.</p>
+
+<p>Perception-augmenting tools, however, can also perturb the natural behavior of the studied object by introducing external elements. For example, in the present study, microscope images are obtained by using artificially mutated specimens of fish or injecting fluorescent molecules, which are also heated by the laser light that is designed to illuminate them. Therefore, special care must be taken to evaluate, control, and maintain the possibly deleterious perturbation to a minimum.</p>
+
+<p>The goal of perception-augmenting tools is to produce <i>measures</i> of the studied object. Measures are a quantification of the physical attributes of the object by ordinary real numbers, the <i>data</i>, which are scaled in <q>units</q>. Therefore the data is the embodiment of the abstract notion of measure. Measures and data are never interpretation-free, as they are collected by choices that depend on prior knowledge. Thus their quantitative nature does not preclude subjectivity. They are indispensable resources that must be handled carefully and their scaling units validated by consensual agreement.</p>
+
+<figure id='experimental_science_perception_augmented'>
+	<img src="../../images/experimental_science/experimental_science_perception_augmented2.png" width="950">
+	<figcaption><strong>Augmented perception with interfacing tool (optical microscope) and a reconstruction workflow.</strong></figcaption>
+</figure>
+
+<h5>Optical Microscopy: An Interface with the Studied Object</h5>
+<!-- ........................................................ -->
+
+<p>In developmental biology, the principal perception-augmenting tools are obviously optical microscopes. The sets of measures used in the present project are originating from these devices. Other tools used in developmental biology, but more disruptive ones, are force microscopes and molecular biology techniques such as DNA/RNA microarrays, and macromolecule blotting and probing.</p>
+
+<p>Optical microscopes extend our natural perception to the cellular scale and below. The general principle is to send photons to excite small regions of the embryos, which in turn emit other photons that are collected by camera sensors through objective lenses. The path of the exciting light beam can be controlled to cross the region of interest in the embryo. A software automates the task and automatically associates the spatial coordinates of the excited region to the quantity of photons captured by the sensors. An extensive scan produces a certain volume of <q>voxels</q> (3D pixels) that store the spatially localized quantity of photons emitted by the embryo. This process is repeated multiple times and a time-series of 3D volumes is generated, eventually producing 4D (or <q>3D+t</q>) <i>raw data</i>.</p>
+
+<p>The value stored in a single voxel is called its intensity and belongs to a first category of raw data that we call here <i>local microscopic measures</i>, which are characterized by the smallest resolution both spatially and temporally. Then, the aggregation of all these local measures produces <i>extensive local measures</i>, a second category of raw data that can otherwise be called a <q>field</q> and contains the complete set of information captured by our perception-oriented device. Raw data presents two challenges:</p>
+
+<ul>
+	<li>Its size is generally enormous. A few hours of embryonic development under the microscope typically produces billions of integer values. For example, 200 3D volumes of voxels of intensity sampled every 3 minutes, each volume having a resolution of \(512 \times 512 \times 200\), yields over \(10^{10}\) values. This size may can also be multiplied by the number of channels used for light excitation. In the present study, two different channels are used for nucleus and cell membrane labeling. Multiple channels can be used to capture the light emitted by fluorophores that label gene expression <a name='Ducros:2011km' class='ref'></a>.</li>
+	
+	<li>Consequently, profuse raw data is abstruse: it cannot be interpreted easily and no biological insight can be gained from direct observation.</li>
+</ul>
+
+<h5>Phenomenological Reconstruction </h5>
+<!-- ................................ -->
+
+<p>Computers offer visualization software tools that allow the observer-modeler to create 3D+t movies of the captured developmental sequences. While a raw movie can certainly lead to qualitative insights, it also critically lacks quantitative measurements.	Thus data <i>processing</i> is a necessary step toward a comparison with the predictions derived from the hypotheses, and a final interpretation. Here, we call this step the <i>phenomenological reconstruction</i>, or simply <q>reconstruction</q>, of the data. The idea is that, since raw data contains more or less incomplete information on the structure of the imaged embryos, depending on the spatiotemporal resolution and signal-to-noise ratio of the microscope, missing pieces have to be quite literally <q>reconstructed</q>. Moreover, as the reconstruction is realized from prior knowledge about the studied object, which is subjective with respect to the individual, this reconstruction is also <q>phenomenological</q>.</p>
+
+<p>The reconstruction process is composed of a series of subprocesses organized in a <i>workflow</i>. Each subprocess carries out a specific task that extracts some information from the input data sets, completes it, and generates new data sets (Fig. <a name='schema_raw_reconstructed_embryo_macroscopic' class='fig'></a>). The question is then to define what type of measure the phenomenological reconstruction is aimed at. As described in Section 1.1, the individual cell's dynamics is the fundamental unit of comprehension of biological development. The objective is thus to reconstruct the collective spatiotemporal dynamics of all cells taken together. The format we propose to use here is organized around the <i>lineage tree</i>, which follows along a global time line the complete cell genealogy starting from the zygote (Fig. <a name='schema_raw_reconstructed_embryo_macroscopic' class='fig'></a>). Each item of this graph represents a cell at a given time step. As we progress along the time axis, each item is connected downstream (a) either to a single item representing the same cell at the next time step, (b) or to two items if the cell has divided, where each item represents the daughter cells. The lineage tree is then enhanced or <q>decorated</q> by labeling each item with local observations about the cell it represents, describing its dynamics: its spatial 3D coordinates, membrane shape, list of neighbor cells, and various scalar quantities representing the fluorescent labeling molecules (RNA, proteins, etc.). In future work, we plan to add more precise information about asymmetrical quantities of labeled molecules, which represent cell polarity.</p>
+
+<figure id='schema_raw_reconstructed_embryo_macroscopic'>
+	<img src="../../images/experimental_science/schema_raw_reconstructed_embryo_macroscopic.png" width="1000">
+	<figcaption><strong>The three major steps of the reconstruction in the BioEmergences platform: raw data, reconstructed embryo and macroscopic measures. </strong> Left: raw data of the zebrafish developing head (nuclei labeled in green and cell membrane in red). Center: visualization of the reconstructed embryo with the MoveIt software. Small dots are the cell centers and arrows gives the future cell displacement. Colors indicates the velocities of the cell. The central image illustrates the extremely high dimensionality of the reconstructed embryo. Right: Macroscopic measures of the displacement field in the developing embryo (from B. Lombardot PhD manuscript <a name='Lombardot:2010vd' class='ref'></a>). Images realized by the BioEmergences team.</figcaption>
+</figure>
+
+<p>Equipped with this enhanced lineage tree, which we call the <i>reconstructed embryo</i>, the cell dynamics can be followed through space and time. The structured format of this exhaustive set of measurements allows comparison with predictions from the hypotheses, and among different reconstructed specimens. The reconstructed embryo is an <q>extensive local measure</q>, following the term we defined earlier. While it greatly facilitates and accelerates the handling of observations, the problem is that its dimensionality is also huge&mdash;as it scales with the number of time steps multiplied by the number of cells per time step multiplied by the number of local measures per cell. Thus it represents only the foundation of a higher-level reconstruction of the embryo dynamics, which ultimately provides the individual with interpretable biological facts. This higher level reconstruction represents a third category of data, which we call <i>macroscopic measures</i>. The macroscopic measures are obtained by projecting the enhanced lineage tree space onto specific low dimensional space characterizing biological properties. Performing multiple macroscopic measures allows a relevant characterization of the behavior of the global dynamics of the developing embryo.</p>
+
+<p>Some of the reconstruction modules can be realized with off-the-shelf commercial software. However, the high number of cells involved and the difficulty to interpret and manipulate the 3D volume of data initiated in our group the design and implementation of better suited custom software and greater automation of the workflow of these subprocesses. Nadine Peyri&eacute;ras at the NED (formerly DEPSN) in Gif-sur-Yvette and Paul Bourgine at the CREA lab and ISC-PIF institute in Paris, spearheaded two major European projects gathering several teams in six different countries: <i>Embryomics</i> (ended in 2009) and <i>Bioemergences</i> (renewed), which pioneered the design of such reconstruction methods and algorithms. While the biologists of the group produced and annotated time-lapse series of organism development, the mathematicians and computer scientists processed these images through specialized algorithms and transformations such as filtering, segmentation, detection, and tracking. This effort resulted in sophisticated software <i><q>platforms</q></i> capable of handling large amounts of 4D voxel movies of vertebrate embryos, and producing in output partial or complete cell lineage trees (see Chapter 7). For our part, we added new modules that we designed and implemented specifically for the present study. A detailed presentation of these workflows and our own contribution will be found in Chapter 7.</p>
+
+<h4>Tools to Conceive</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>Cognitive scientist Marvin Minsky provided a general definition of a model in his 1965 article <i>Matter, mind and models</i> <a name='Minsky:1965wb' class='ref'></a>: <i><q>To an observer B, an object A* is a model of an object A to the extent that B can use A* to answer questions that interest him about A</q>.</i> This definition is centered around the notion of <q>question</q> asked by the observer. The model is an object whose raison d'être is to satisfy its designer and, eventually, others around her/him. In this section, we discuss the nature of theoretical models, and particularly causal models. We believe that tools are also able to augment the capacity of the individual to make and test hypotheses, by providing interactions with a model that push her/him beyond her/his usual reasoning abilities.</p>
+
+<h5>Means of Expression</h5>
+<!-- ................... -->
+
+<p>Models are constrained by their means of expression. The descriptive power of the structures and their interactions can vary greatly depending on whether they are expressed verbally, graphically or mathematically. Models are often described through a combination of the above. In the context of developmental biology, a distinction is often made between <q>classical</q> studies and <q>theoretical</q> studies: generally, the former use verbal and graphical formalism, while the latter use mathematical formalism.</p>
+
+<h5>Mathematical Formalism</h5>
+<!-- ...................... -->
+
+<p>In the mathematical formalism, objects are represented by variables, and their interactions are put into functions or equations. Generally, this formalism is expressed in <q>analytical form</q> using basic arithmetic operations such as \(+\),\(-\),\(\times\),\(\div\)), power, exponential, logarithm, or infinite times series. In experimental science, the quantities involved tend to vary temporally and/or spatially, and their rates or derivatives play an important role. Typically, <q>ordinary differential equations</q> (ODEs) for time-varying quantities only or <q>partial differential equations</q> (PDEs) for time and space-varying quantities are used.</p>
+
+<h5>Dynamical Systems</h5>
+<!-- ................. -->
+
+<p>In classical mechanics derived from the Newtonian laws, the time variable \(t\) holds a particular status. It is considered an <q>absolute</q>, meaning that two events are temporally separated by the same interval for all observers. This assertion is not correct in relativistic physics, where the notions of space and time are intermingled. However, the classical mechanics assumptions have founded a theoretical framework that produced accurate results for systems where objects are moving at a speed much smaller than the speed of light, or have sizes much larger than the atomic or sub-atomic scale (the realm of quantum mechanics)&mdash;which is obviously the case of all models of developmental biology discussed in the present work. Therefore, in the case of growing embryos that undergo spatiotemporal transformations, all theoretical representations fit well in the classical paradigm of <i>dynamical systems</i>. A dynamical system is built from three elements:</p>
+
+<ul>
+	<li>the <i>state space</i>: the state of a modeled system being a collection of variable at a given time, the state space encompasses all the possible states that the system can adopt; it is defined a priori</li>
+	<li>a set of equations that determine the laws of evolution of the system</li>
+	<li>the initial state, i.e. the state of the system at the initial time from which the dynamical system evolves.</li>
+</ul>
+
+<p>The interest of the dynamical system paradigm is that it does not restrict a model to a particular set of equations, but makes the space of possible values that variables can take and their initial conditions an important part of the hypotheses that define a model. Dynamical systems can be deterministic or stochastic if a random term (such as noise) is used in the differential equations. In a deterministic model, a state at any given time entirely determines a unique trajectory of future states of the system (Fig. <a name='experimental_science_multi_initialstate' class='fig'></a>).</p>
+
+<h5>Parameters</h5>
+<!-- .......... -->
+
+<p>Certain variables have a special status as they are, by hypothesis, intended to remain constant along the state trajectories. In that case, they are called <i>parameters</i>. The design of a model must deal with parameters as much as with the mathematical laws of evolution. Selecting the parameters among the variables depends on the use of a model. Depending on the context, some parameters may be always fixed at a specific values because they have been confirmed by direct experimental measures. Parameters generally have their own space, the <i>parameter space</i>. Each point in the parameter space can be associated with a state trajectory (Fig. <a name='experimental_science_multi_initialstate' class='fig'></a>).</p>
+
+<figure id='experimental_science_multi_initialstate'>
+	<img src="../../images/experimental_science/multi_initialstate_fusion.png" width="1000">
+	<figcaption>Simple illustration of a dynamical system: if a ball is hit by an object, it will move in space following a parabolic curve until it lands on the ground. A classical mechanics model would consider the curve (i.e. the temporal evolution of the position) as the <q>phenotype</q>, which is determined only from an initial known position and the velocity of the ball. Left: parameter space, Right: phenotypic space.</figcaption>
+</figure>
+
+<p>During the study of a model, a parameter may reveal itself as non-constant (we never <q>know</q> if a parameter is truly constant, see validation section below). The reaction is to hypothesize a new rule for the evolution of the parameter and add it to the mathematical set of rule. This operation is a common part of the building of model.</p>
+
+<h5>Theoretical Models, Analytical vs. Computer-Simulated Models</h5>
+<!-- ............................................................ -->
+
+<p>As mentioned above, theoretical models formalize the interactions among the system with equations that link together some of the selected variables of the studied phenomenon. Solving this <i>analytical</i> formalism is not always feasible because of constraints that are specific to mathematical symbolic transformations. Computers can help in this situation by converting equations into algorithms and calculating <i>numerical</i> solutions, which are approximations of the ideal solutions. Used nowadays in every field of research and engineering, numerical analysis allows scientists to tackle more complex phenomena. In 1952, Alan Turing already envisioned the use of computer to help him solve more realistic reaction-diffusion patterns in <q>The chemical basis of morphogenesis</q>:</p>
+
+<blockquote>
+	<q>Most of an organism, most of the time, is developing from one pattern into another, rather than from homogeneity into a pattern. One would like to be able to follow this more general process mathematically also. The difficulties are, however, such that one cannot hope to have any very embracing theory of such processes, beyond the statement of the equations. It might be possible, however, to treat a few particular cases in detail with the aid of a digital computer. This method has the advantage that it is not so necessary to make simplifying assumptions as it is when doing a more theoretical type of analysis</q> <a name='Turing:1952vn' class='ref'></a>.
+</blockquote>
+
+<p>Turing emphasizes the fact that the use of computer simulation is not only a practical solution to treat analytically unsolvable mathematical equations, but also that it allows the individual to integrate new mechanisms that s/he would refrain from using because of their mathematical unsolvability. In this sense, the computer (as a Turing machine) is a tool that augments the ability of the individual to develop mathematical models of the object of study.</p>
+
+<figure id='experimental_science_hypotheses_augmented'>
+	<img src="../../images/experimental_science/experimental_science_hypotheses_augmented2.png" width="950">
+	<figcaption><strong>Augmentation of hypothesis generation through theoretical model and computer simulation.</strong></figcaption>
+</figure>
+
+<p>An important category of analytically unsolvable models are called <i>many-body problems</i>, which concern most complex systems. They occur when a large number of elements are interacting together. As we will present in Chapter 3, the physical approach that we have chosen for our embryogenesis model is based on this assumption, each cell being an elementary particle interacting with its neighbors. Solving this system of equations is highly computationally intensive and requires the use of many computing units in parallel, such as computer clusters or graphical processing untis (GPUs). In fact, computers were originally invented to deal with theses situations (for example, the MonteCarlo simulation performed on the MANIAC computers in the early 1950's <a name='Metropolis:1987ws' class='ref'></a>). Figure <a name='experimental_science_hypotheses_augmented' class='fig'></a> illustrates the process of transformation of the model, from the original hypotheses made by the individual, to its theoretical form, and finally to its final form as a computer program.</p>
+
+<h5><q>Black Box</q> Models</h5>
+<!-- .................. -->
+
+<p>The type of models that have been considered so far are what some would call <q>white box</q> models: they are elaborated from specific hypotheses, and try to provide a mechanistic explanation. In contrast, <q>black box</q> models are empirical models built without a priori knowledge. These data-driven models are essentially <i>statistical</i> and used for data mining purposes. In our study, we have ruled out this category as it does not follow the framework of individual-induced hypotheses described above. Black-box models certainly possess predictive capabilities but they have little or no explanatory value, since the internal rules that they form are not directly interpretable. To tis category belongs machine learning, such as neural networks or support vector machines, and evolutionary computation. An intermediary category, <q>gray box</q> models may be defined if partial knowledge of the system is included in the black box.</p>
+
+<p>In conclusion of this section, as stated by Turing when introducing his reaction-diffusion model, a model is a <q>simplification and an idealization, and consequently a falsification</q> <a name='Turing:1952vn' class='ref'></a>. This description applies to all models, whether theoretical or <q>classical</q>, but mathematical formalism obviously still plays a fundamental role in at least three ways:</p>
+
+<ul>
+	<li>Predictability: theoretical models allow to test hypotheses and postulate the behavior of complex systems in a way that <q>pure thought</q> could not. They are not a replacement for the experimental part, but they can perform theoretical pre-experiments to specify the conditions of <q>real</q> experiments.</li>
+
+	<li>Abstraction: the idealization process allows to simplify the hypotheses and determine which mechanism is essential and which one is not.</li>
+
+	<li>Precision: however sensitive qualitative transitions between different regimes or behaviors of a system may be, mathematical formalism can be adapted to any scale.</li>
+</ul>
+
+<h4>Tools to Manipulate</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>A third category of tools were designed to interfere with and modify the <q>natural</q> behavior of the objects of study, or their environment, in a controlled manner. Such experiments are artificial constructions that are designed to discriminate and select among various hypotheses about the rules of behavior of a system. In developmental biology, the embryo can be perturbed in two major ways: genetically or mechanically. Genetic experiments consist in making the embryo express an abnormal phenotype, either by random mutagenesis or by <q>morpholino</q> injection (antisense oligonucleotide morpholino modified to achieve specific gene knock-out by preventing RNA translation). Mechanical experiments can be done either through a lesion applied to a specific tissue to study its fate (e.g. laser ablation between individual cell-cell boundaries <a name='FernandezGonzalez:2009hp' class='ref'></a> <a name='Landsberg:2009bp' class='ref'></a>, and tissue dissection by laser <a name='Behrndt:2012gy' class='ref'></a>), or by some mechanical constraint to measure the response of the tissue. <q>Mechanotransduction</q> mechanisms also allow to conceive experiments at the interface between genetics and mechanics, such as provoking new genetic regulation by exerting a force with magnetic tweezers or magnetic nanoparticles <a name='Desprat:2008ei' class='ref'></a>).</p>
+
+<p>As it will be discussed in Section 2.2, studying an object often begins with studying its parts. In developmental biology, <i>in vitro</i> experiments allow to isolate cells or tissues, and test their behavior under controlled conditions (e.g. cell sorting experiments). One pitfall of this approach can be underestimating the impact of the artificial conditions on the behavior of the part, compared to its usual <i>in vivo</i> conditions. This can lead to the design of more complete in vitro environments that try to mimic and recreate the natural cellular <q>habitat</q>, as is the case for stem cells <a name='Nishikawa:2007jl' class='ref'></a>.</p>
+
+<!-- ---------------------------------------------------------------------- -->
+</div><div id='1_3_3_'><h3>1.3.3. Reality Check: Validating the Hypotheses</h3>
+<!-- ---------------------------------------------------------------------- -->
+
+<p>The concept of <i>validation</i> of a hypothesis, which is employed in this work, can not be understood in the same sense as stating that an hypothesis is definitively true or false. Oreskes <a name='Oreskes:1994gn' class='ref'></a> has demonstrated that establishing the truth of a proposition is possible only in a closed system, and that models using incompletely known input parameters as is the case in developmental biology are never closed systems. Popper <a name='Popper:1959uo' class='ref'></a> also advocates that one cannot <q>prove</q> theories and laws, and that they can only be <q>falsified</q>. Thus in our case, <q>validation</q> can only mean a certain degree of <i>consistency</i> between the output of the model and the observations made about the object of study. Observations can support the likelihood of a model <a name='Oreskes:1994gn' class='ref'></a>, or its empirical adequacy <a name='vanFraassen:1980uy' class='ref'></a>.</p>
+
+<p>The goal of an explanatory model is not merely to reproduce observations (as in the black-box methods) but rather unravel the principles that are at the foundation of these observations. The more observed data are positively confronted to the model, the more <q>adequate</q> the model and its underlying principles are deemed. The diversity of the observed data is another factor in favor of the adequacy of the model. A framework must also be designed to practice and confront the model against the observations of the studied phenomenon. The strategy that we adopt here is to <i>integrate the simulation platform and the reconstruction workflow</i>. In the same way that a microscope produces <q>real raw data</q>, our program generates <q>simulated raw data</q>. Then, the same reconstruction step is applied to both branches in parallel, giving rise to <q>reconstructed real data</q> and <q>reconstructed simulated data</q> (where reconstruction may refer to local microscopic, extensive microscopic or global measures; see above), which are later compared to each other. The reconstruction workflow gets a new leg from the theoretical process of our general experimental science scheme (Fig. <a name='experimental_science_larger_augmented' class='fig'></a>). The different natures of the simulated and experimental data require that reconstruction algorithmic modules be applied so that they can be compared based upon the same format and automatically processed.</p>
+
+<figure id='experimental_science_larger_augmented'>
+	<img src="../../images/experimental_science/experimental_science_larger_augmented.png" width="900">
+	<figcaption><strong>Integrative schematic of the tool-augmented observation-hypothesis-experiment loop.</strong></figcaption>
+</figure>
+
+<h4>Fitness function</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>The comparison between simulated and observed values is based on a <q>distance</q> between dynamical trajectories, which can be embodied by a <i>fitness function</i> and applied to any one of the three categories of measures presented above (local, extensive or global). We distinguish between two types of fitness functions, in addition to the original <q>cognitive</q> comparison represented by the symbol \(\Delta\) in Fig. <a name='experimental_science_larger_augmented' class='fig'></a>:</p>
+
+<ul>
+	<li>An <i>automated fitness function</i>, denoted by \(\Delta_a\): this function requires a reconstruction strategy based on the data generated by the simulation platform, similar to the reconstruction workflow described in the augmented perception part. It produces a quantitative score evaluating the discrepancy between two trajectories.</li>
+	
+	<li>A <i>visual fitness function</i>, denoted by \(\Delta_v\): the goal of this function is to support the individual's intuitions and hypotheses based on visualization only. Visual fitness is not as formalized as automated fitness, but it constitutes an important stepping stone toward automation (a continuation of the perception-augmenting tools) and was extensively used in this project.</li>
+</ul>
+
+<h4>Validation Schemes</h4>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<p>There are at least two different scenarios of exploitation of this integrated platform, as the design of the model and its comparison with the observations are tightly coupled:</p>
+
+<ul>
+	<li>asserting the likelihood of the model by showing that the foundational hypotheses of the model are sufficient to mimic the observations in a satisfying manner</li>
+	
+	<li>conversely, assuming the validity of the model and optimizing its parameters, then using its predictive abilities to design new experiments.</li>
+</ul>
+
+<figure id='experimental_science_phase_diagram2'>
+	<img src="../../images/experimental_science/phase_diagram2.png" width="700">
+	<figcaption><strong> Generic evaluation of the performance of a model through quantitative evaluation of its parameter space.</strong> To each element of the parameter space (left column), a deterministic dynamical system model associates a trajectory that may be represented by a single point in the extensive microscopic measurement space (this is the state space but we want to emphasize the complexity and the high dimensionality of this space when the model is agent-based, center column). The macroscopic measurement point are obtained by reconstructing and measuring the observations of interest in the complex trajectory space. Row 1 illustrates the passage from the parameter space to the extensive microscopic measurement space (red arrows). As shown by the arrow pointing to the white dot, there is no guaranty that every point in the parameter space produces a <q>viable</q> trajectory. Quantitative assessment of the performance of the trajectory are determined according to adapted criteria (comparison with a target measure Fig. <a name='experimental_science_phase_diagram_distance' class='fig'></a>, clustering). A <q>color</q> is attributed to the macroscopic measure points to symbolize this evaluation (Row 2). The color is easily propagated back to the parameter space and allows a quantitative assessment of the performance of every trajectory (Row 3, 4, 5). White regions represent parts of the parameter space that are not viable (Row 5).</figcaption>
+</figure>
+
+<p>This scheme can be easily generalized to compare (Fig. <a name='experimental_science_phase_diagram_distance' class='fig'></a>):</p>
+
+<ul>
+	<li>two or more models</li>
+	<li>two or more individuals within a cohort (population of experimental individuals with the same a priori initial state, including genetic and environmental conditions)</li>
+	<li>individuals from different cohorts</li>
+	<li>models and theoretical data plotted in the macroscopic measure space.</li>
+</ul>
+
+<figure id='experimental_science_phase_diagram_distance'>
+	<img src="../../images/experimental_science/phase_diagram_distance.png" width="800">
+	<figcaption><strong>Fitness landscape according to a target macroscopic measure.</strong> This schema is a particular example illustrating the case of a model evaluated by the comparison a macroscopic measure (black cross). The score of each trajectory is attributed as a function of the distance between the simulated macroscopic measures and the target macroscopic measure.</figcaption>
+</figure>
+
+<p>An orthogonal distinction among fitness functions focuses on the type of observed data and simulated data that are compared (Fig. <a name='experimental_science_experimental_science_cleaner' class='fig'></a>):</p>
+	 
+<ul>
+	<li>Reconstruction of experimental raw data: we call this fitness function <i>experimental reconstruction fitness</i> (ERF).</li>
+	<li>Theoretical data representing an idealized phenotypic behavior: we call this fitness function <i>theoretical fitness</i> (TF).</li>
+</ul>
+
+
+<figure id='experimental_science_experimental_science_cleaner'>
+	<img src="../../images/experimental_science/experimental_science_cleaner.png" width="950">
+	<figcaption><strong>Summary of the methodological workflow adopted for this project.</strong> The top left \(\Delta\) symbolizes the theoretical fitness (TF) and the top right \(\Delta\) the experimental reconstruction fitness (ERF).</figcaption>
+</figure>
+
+
+<!-- ====================================================================== -->
+</div><div id='1_4_'><h2>1.4. Overview of this Dissertation</h2>
+<!-- ====================================================================== -->
+
+<p>The remainder of this study is organized as follows:</p>
+
+<ul>
+  <li><strong>Chapter 2</strong>: After the introduction chapter, which offered a summarized historical timeline of experiments and observations in developmental biology, <strong>we review next a few important families of formalized <i>models</i> of embryogenesis</strong> involving mathematical analysis and/or computational simulation. They include reaction-diffusion, morphogen gradients, epithelial cell shaping and cell sorting. Far from being exhaustive, this review only intends to be a sampler of particularly relevant papers that illustrate typical modeling paradigms. Then, we extract common principles from these various methodologies and attempt to unify them toward an encompassing modeling framework of multicellular development&mdash;which is the goal of the MECAGEN project.</li>
+</ul>
+
+<p>In the next three chapters, we explain the particular choices that we have made in the design of our model contributing to the objectives of the MECAGEN project:</p>
+
+<ul>
+  <li><strong>Chapter 3 expresses and calculates the mechanical interactions and behavioral properties of the cells.</strong> It presents a discrete-element model using one particle per cell driven by an overdamped equation of motion. Forces are calculated on each cell by summing over a mixed metric/topological neighborhood containing the nearby cells in contact with it. Two types of forces are involved: <i>relaxation</i> forces derived from an attractive/repulsive, elastic-like interaction potential, and a <i>behavioral</i> force moving the system of cells away from equilibrium.</li>
+  
+  <li><strong>Chapter 4 deals with chemical signaling and gene regulatory networks.</strong> The goal is to briefly explain the principles of gene regulatory networks (GRNs), describe the components of GRN models, and give examples. In the present work, our particular objective was to design a simple and easily computable model of the molecular and genetic interactions that occur during development. Our model is articulated around three types of rules: rules driving the dynamics of intracellular gene/protein reactions, rules driving the dynamics of cellular secretion and transduction and rules driving the dynamics of extracellular reactions, transport and diffusion.</li>
+  
+  <li><strong>Chapter 5 lays out the first steps toward building a complete morphogenetic platform integrating mechanics and genetics</strong>, as envisioned by the MECAGEN project. A simplified <q>cell behavior ontology</q> (CBO) is proposed. It relates <i>cell states</i>, determined by the concentrations of certain proteins, to <i>cell behaviors</i>, determined by biomechanical parameters.</li>
+</ul>
+
+<p>While Chapters 2-5 above treated models of development from a generic point of view, Chapters 6-8 focus on the zebrafish early embryogenesis, including a short monograph of this species, a description of the raw imaging data reconstruction platform BioEmergences, and the results of our modeling and simulation work (<q>reconstruction of simulated data</q>) across several case studies:</p>
+
+<ul>
+  <li><strong>Chapter 6 identifies the different phases of the developing early zebrafish embryo that our model should account for</strong>, and the different components with their characteristic scales that are expected to be at play and underlie the biomechanics of this process. The zebrafish gastrulation, its processes and underlying causalities have long been and remain today a very active field of research. The global view that we have formed about this phenomenon, and which we present in this chapter, is based on raw microscope observations, the 3D+time imaging and reconstructions performed by the BioEmergences platform (explained in Chapter 7), and the state-of-the-art literature.</li>
+  
+  <li><strong>Chapter 7 explains the software platform <i>BioEmergences</i> (created by our team, and extended by this study) that processes large amounts of 4D imaging data</strong> through a workflow of segmentation and tracking algorithms. This integrative biology endeavor has pioneered the design of methods and algorithms for measuring and reconstructing the dynamics of multicellular development observed by microscopy. Biologists produce and annotate time-lapse series of organism development, while mathematicians and computer scientists process these images to reconstruct (BioEmergences) and model (MECAGEN) collective cell dynamics.</li>
+  
+  <li><strong>Chapter 8 showcases our modeling and simulation approach across six special studies of the zebra fish early development:</strong> (1) the yolk biomechanical properties, (2) the cell proliferation rate along the cell lineages, (3) the shaping of the blastula, (4) cell behaviors in the enveloping cell layer compartment, (5) intercalation patterns, and (6) gastrulation. In each case study, measures extracted from our <q>in silico</q> embryo are confronted to the image processing reconstruction provided by the BioEmergences platform. The goal is to tune parameters in order to validate our simulations and draw biologically meaningful conclusions.</li>
+</ul>
+
+<p>Finally,</p>
+
+<ul>
+  <li><strong>Chapter 9 offers a discussion and conclusion</strong></li>
+</ul>
+
+</div>
+

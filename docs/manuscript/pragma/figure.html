@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<meta charset=UTF-8>
+		
+		<link rel="shortcut icon" href="../../favicon.ico">
+		
+		<script type='text/javascript' src='../../js/jquery-latest.js'></script>
+	
+		<script type="text/x-mathjax-config">
+			
+			MathJax.Hub.Config({
+				
+
+				jax: ["input/TeX","output/SVG"],
+				extensions: ["tex2jax.js","MathMenu.js","MathZoom.js"],
+				TeX: {
+					extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+				}
+				
+				
+			});
+
+			MathJax.Hub.config.messageStyle= "simple";
+			
+			
+		</script>
+		<script type="text/javascript" src="../../js/MathJax2/unpacked/MathJax.js"></script>
+
+		
+		<script type="text/javascript" src="ids.js"></script>
+		<script type="text/javascript" src="figure_ids.js"></script>
+		<script type="text/javascript" src="ref_ids.js"></script>
+		
+		
+		
+		
+		
+		<link rel='stylesheet' href='style.css' />
+		
+	</head>
+
+	<body>
+		
+		<div id="content" >
+
+			
+			
+			<article>
+			
+				
+				<figure id='item_content' style='top=200px;'>
+				
+				
+								</figure>
+ 
+ 				
+ 				  				 
+				<script>
+					
+					
+					jQuery.noConflict();
+					
+					
+					var url=String(window.location);
+					var figname = url.substr(url.indexOf("name=")+5,url.length);
+					
+					jQuery("#item_content").load('figure_list.html #'+figname+" > *",
+						 function ()  
+						{
+									
+							jQuery(document).ready(function(){
+				       				
+				       				
+				       				jQuery('.ref').each(function(){
+				       					var refname = jQuery(this).attr("name");
+				       					jQuery(this).html("["+id_ref[refname]+"]");
+				       					
+				       				});
+				       				
+				       				jQuery('.fig').each(function(){
+				       					var figname = jQuery(this).attr("name");
+				       					jQuery(this).html(id[figname]);
+				       					
+				       				});
+				       				
+				       				
+				       				jQuery("figure").each(function(){
+				       					var caption ="";
+				       					caption = jQuery(this).find("figcaption").text();
+
+				       					if(type[figname]=="image"){
+											jQuery(this).find("figcaption").text("Figure "+id[figname]+" : "+caption);
+										}
+										else if(type[figname] == "video"){
+											jQuery(this).find("figcaption").text("Movie "+id[figname]+" : "+caption);
+										}
+										else{
+											console("error figure type in "+figname);
+										}
+
+
+				       					//jQuery(this).find("figcaption").text("Figure "+id[figname]+" : "+caption);
+				       				});
+				       				
+				       				
+				       				
+				       				
+				       		});
+				       		
+				       		MathJax.Hub.Queue(["Typeset",MathJax.Hub,item_content]);
+					
+						});
+									
+				</script>
+				
+			</article>
+
+		</div>
+		
+	</body>	
+</html>

@@ -1,0 +1,1615 @@
+
+ 
+ 
+ 
+ 
+<div id='7_'>
+<h1>7. Reconstruction of the Zebrafish early development  </h1>
+ 
+
+
+
+<figure id='bioemergences_c_elegans_lineage_kipreos_2005'>
+	<img src="../../images/Reconstruction/bioemergences/c_elegans_lineage_kipreos_2005.png" width="900">
+	<figcaption>Cell lineage from the <i>Caenorhabditis elegans</i> embryonics and larval stages from Kipreos, E.T., 2005. C. elegans cell cycles: invariance and stem cell divisions. Nature reviews Molecular cell biology, 6(10), pp.766–776. <a name='Kipreos:2005im' class='ref'></a></figcaption>
+</figure>
+
+
+
+<p>
+	<strong>Objective</strong>: Reconstruction of the complete cell lineage tree of the Zebrafish early development. The lineage tree is augmented by the spatial coordinates and the shape of the cells (3D+time digital embryo) and by the quantification of various gene expression of the cells (Atlas of genetic expression).
+</p>
+
+
+<p>
+	The reconstruction task is a very tedious one and semi or complete automation is the only solution to tackle such an enormous lineage tree.
+</p>
+
+<p>
+	In this section, we will introduce the past and current strategies originated by the European project Embryomics and Bioemergences and pursued the Bioemergences team. This section is divided as the following:
+</p>
+
+<ul>
+	<li>1. Embryo Preparation and Acquisition</li>
+	<li>2. Cell lineage reconstruction workflow</li>
+	<ul>
+		<li>1. Workflow</li>
+		<li>2. Visualization / Correction</li>
+		<li>3. Validation</li>
+	</ul>
+	<li>3. Post-processing / Higher level reconsruction / Exploitation</li>
+	<li>4. 4D atlas of gene expression</li>
+	<li>5. <i>In toto</i> cell lineage</li>
+</ul>
+
+
+
+Discussion
+->Prototype
+
+
+<p>
+	<strong>Various challenges</strong>: in addition to the challenges to design the aforementioned reconstruction strategy, various challenges arises from the limitation of the current imaging setups. 
+</p>
+
+
+
+<p>
+	Workflow inputs: raw data
+</p>
+
+
+<ul>
+	<li>The workflow is efficient if the spatio-temporal resolution of the raw data produced by the microscope device satisfies some required signal properties.</li>
+	<ul>
+		<li>spatially, the signal-to-noise ratio must be limited and the local resolution of the 
+		<li>temporally, the difference between two images of the same region must be small enough as the image must not move too much.</li>
+	</ul>
+</ul>
+
+<p>
+	Unfortunately, these two requirements are antagonists and a trade-off must be found
+</p>
+
+
+
+
+<p>
+	Solution: 
+</p>
+
+
+<p>
+	Most of the improvement must be applied in the imaging technique area but, given their limitations, algorithmic bandages must be designed to overcome them. 
+</p>
+
+<p>
+	We distinguish between the fundamental reconstruction workflow which, in its idealized form, will remain relevant for a long time (pas terrible XXXX) and the modules which are subjugated to the limits of microscope performance (signal and scale of the raw data) and will become obsolete as soon as the microscope improves.
+</p>
+
+
+
+<i>in toto</i>
+
+error-less: automated vs manual (introduire application thierry),
+
+channel limitation
+
+
+
+The prototype
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure id='bioemergences_FigureWorkflow_Workflow2'>
+	<img src="../../images/Reconstruction/bioemergences/FigureWorkflow/Workflow2.png" width="600">
+	<figcaption>Workflow of reconstruction of the cell lineage</figcaption>
+</figure>
+
+
+
+
+
+
+
+<p>
+	review of embryogenesis reconstruction :
+</p>
+
+
+<p>
+	Keller, P.J. et al., 2008. Reconstruction of zebrafish early embryonic development by scanned light sheet microscopy. Science, 322(5904), pp.1065–1069. <a name='Keller:2008km' class='ref'></a>
+</p>
+
+
+<p>
+	Giurumescu, C.A. et al., 2012. Quantitative semi-automated analysis of morphogenesis with single-cell resolution in complex embryos. Development, 139(22), pp.4271–4279. <a name='Giurumescu:2012ej' class='ref'></a>
+</p>
+
+
+
+
+<p>
+	example reconstruction:
+</p>
+
+
+<p>
+	Xiong, Y. amp;glesias, P.A., 2010. Tools for analyzing cell shape changes during chemotaxis. Integrative Biology, 2(11-12), pp.561–567. <a name='Xiong:2010ck' class='ref'></a>
+</p>
+
+
+
+
+
+<p>
+	review -> Khairy, K. amp;eller, P.J., 2011. Reconstructing embryonic development P. M. Kulesa, M. E. Dickinson, amp;.-K. Hadjantonakis, eds. genesis, 49(7), pp.488–513. <a name='Khairy:2011ht' class='ref'></a>
+</p>
+
+
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='7_1_'>
+<h2>7.1. Embryo Preparation and Acquisition  </h2>
+ 
+ 
+
+
+
+
+<p>
+	Embryo Preparation from paper methodo, à modifier:
+</p>
+
+
+<p>
+	Wild-type zebrafish embryos were injected at the one cell stage with 200pg mCherry/H2B RNA and 200pg eGFP-ras prepared from PCS2+ constructs [Moriyoshi, 1996 #35;Shaner, 2005 #29]. Although mCherry, unlike eGFP, bleached significantly through imaging, this colour combination was the best compromise allowing proper staining of the cell membranes for further segmentation. Injected embryos were raised at 28.5°C for the next 3 hours. Embryos were mounted in a 3cm Petri dish with a glass coverslip bottom, sealing a hole of 0.5mm at the Petri dish centre where a Teflon tore (ALPHAnov) with a hole of 780µm received the dechorionated embryo. The embryo was maintained and properly oriented by infiltrating around it 0.5% low melting point agarose (Sigma) in embryo medium [Westerfield, 2000 #36]. Temperature control in the room resulted in a temperature of about 26°C under the objective slightly slowing down development with respect to the standard 28.5°C developmental table [Kimmel, 1995 #11] (Table S1). After the imaging procedure, embryo morphology was checked under the dissecting binocular and the animal was raised for at least 24h to assess morphological defects. Embryo survival depends on total imaging duration, average laser power, and image acquisition frequency (or time step ∆t). 070418a and 070420a correspond to a standardised procedure with 50s < ∆t < 70s allowing 75-110 sections per time point for 10 hours with an average laser power of 80 mW delivered to the sample. Lowering the laser power to less than 60 mW and lengthening ∆t up to 3.5min allowed imaging embryos for more than 20 hours, then raising them until adulthood. These conditions were used for making up to 320 sections at 400Hz line scan rate (bidirectional scanning), or 200Hz to improve signal-to-noise ratio, as for the image data set 080322a shown in movie 1-3. 
+</p>
+
+
+
+
+
+
+<p>
+	Image acquisition from paper methodo, à modifier:
+</p>
+
+<p>
+	Imaging was achieved with a Leica upright microscopes SP5 MLSM equipped with a 20/0.95NA W dipping lens objective (Olympus) or Leica 20/1NA W dipping lens objective. Axial resolution at the sample surface (1.5µm) was estimated by recording 3D images of 0.1 or 1µm fluorescent polystyrene beads (Invitrogen) at the surface of an agarose gel. Field size was 700x700 or 775x775 microns in x, y, 140µm in z for 070418a and 100µm in z for 070420a; voxel size was 1.37x1.37x1.37µm or 1.51x1.51x1.51µm. Simultaneous dual wavelength excitation with pulses at two different wavelengths (980 and 1030nm). At 1030 nm, pulsed laser beam (50Mhz, 200fs) was provided by a solid-state Ytterbium femtosecond oscillator (T-pulse 20, Amplitude Systèmes). At 980 nm, pulsed laser beam (80Mhz, 100fs) was provided by a Ti-Sapphire femtosecond oscillator (Mai Tai HP, Newport Spectra physics). Details of the optical bench are provided in supplementary material. Raw data visualisation was done using Amira software (Mercury Computer Systems). 
+</p>
+
+
+
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='7_2_'>
+<h2>7.2. Cell lineage reconstruction workflow  </h2>
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='7_2_1_'>
+<h2>7.2.1. Workflow  </h2>
+ 
+
+
+
+<figure id='bioemergences_FigureWorkflow_Workflow2_lineage_only'>
+	<img src="../../images/Reconstruction/bioemergences/FigureWorkflow/Workflow2_lineage_only.png" width="800">
+	<figcaption></figcaption>
+</figure>
+
+
+
+
+
+
+<h3>Filtering</h3>
+
+
+<p>
+	Raw data images are filtered with specific nonlinear geometrical PDEs called &quot;Geodesic Mean Curvature Flow&quot; (GMCF). In GMCF, the contrast-invariant flows achieved nonlinear multiscale analysis on scalar intensity functions in the voxel intensity histogram <a name='Rizzi:2007bz' class='ref'></a> <a name='Kriva:2010cs' class='ref'></a>.. This iterative strategy eliminate most of the noisy signal.
+</p>
+
+ 
+
+<h3>Cell identification</h3>
+
+<p>
+	Once, the nuclei and membrane images have been filtered, the nuclear centers are detected by a nonlinear PDE-based multiscale strategy called &quot;Flux-Based Level Set Center Detection&quot; (FBLSCD). On the nuclei image, the FBSLSCD iteratively decreases the size of the nuclei signal until a given stopping condition is reached. The last remaining local maxima gives the position of the cell centers <a name='Frolkovic:2007ti' class='ref'></a>.
+</p>
+
+
+<h3>Shape Segmentation</h3>
+
+
+<figure id='segmentation_images_segmentation'>
+	<img src="../../images/Reconstruction/bioemergences/segmentation/images_segmentation.png" width="800">
+	<figcaption>Top. Left. A triangle with subjective contour <a name='Sarti:2000jw' class='ref'></a>. Right. Evolution of the subjective surface technique towards the contour <a name='Sarti:2000jw' class='ref'></a>. Bottom. Segmentation of membrane with an uncomplete contour <a name='Zanella:2007vh' class='ref'></a>.</figcaption>
+</figure>
+
+
+
+<p>
+	The proper segmentation of both the surface of the cell membranes and cell nuclei is then performed from the position of the cell centers. The algorithm used is called the &quot;Subjective Surface Technique&quot; (SST) <a name='Sarti:2000jw' class='ref'></a>. For each cell, the segmentation is performed from the point of view of the center. The surface grows around it until it reaches an obstacle, the surface then deforms to adopt the shape of the surrounding signal. The key advantage of this technique is its ability to deal with the incomplete information of the image and still propose a hole-less segmentation. 
+</p>
+
+<p>
+	The segmentation of the nuclei and membrane are used to automatically correct some errors in the center detection step. If two centers are detected but the segmentation provide the same subjective surface, the duplicated center. Similarly, segmentation are used to detect mitosis if two mitosis are inducing the same membrane. The information of a probable cell duplication is used by the following cell tracking algorithm.
+</p>
+
+
+<p>reference recente: Mosaliganti, K.R. et al., 2012. ACME: Automated Cell Morphology Extractor for Comprehensive Reconstruction of Cell Membranes R. F. Murphy, ed. PLoS Computational Biology, 8(12), p.e1002780. <a name='Mosaliganti:2012gj' class='ref'></a></p>
+
+
+<h3>Cell tracking</h3>
+
+
+<p>
+	The cell tracking algorithm is the key module of this workflow. It relates temporally the identity of the cell in between time steps. From the initial cell population, these temporal links form a tree whose branches split when a cell divides. The tracking is build in three steps:
+</p>
+
+<ul>
+	<li>an <i>a priori</i> step which specifies the strong local constraints that restricts the list of putative links. The constraints are mainly the suppression of all putative links which relates cell which would have move above a given maximum distance and the number of daughter links.</li>
+	<li>a central step which consists in minimizing a heuristic function which combines the information extracted from the processed images (center positions, large scale vector fields, segmentation) with a biophysical regularization constraint (see Kirkpatrick 1983 XXXX).</li>
+	<li>an <i>a posteriori</i> step which processes the obtained tree to minimize the number of false-positive and false-negative errors detected in the segmentation module.</li>
+</ul>
+
+
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='7_2_2_'>
+<h2>7.2.2. Visualization / Correction  </h2>
+ 
+ 
+
+<p>
+	Moveit
+</p>
+
+
+
+<p>
+	A major challenge for the reconstruction of developing embryos is the design of tools adapted the handling of the produced data sets.
+</p>
+
+<p>
+	The specificity of these new kind of data (a mapping between a graph = lineage tree and various type of local cell data = morphological, positional, genetic expression...) make them mostly incompatible with existing data-handling software solution.
+</p>
+
+
+new type of phenomological 
+
+a new kind of digital specimen
+
+original
+
+augmented
+reconstructed phenomenology
+
+
+
+
+
+
+
+dedicated tool for visualization and correction/validation of the reconstruction of developing embryos.
+
+
+
+
+
+Necessité d'un outil qui répond à une double demande
+
+
+Data visualization:
+
+	exhaustive visualization: from the raw data to the (cell centers + cell nuclear and membrane segmentation)  + and every intermediate data used in the workflow ?
+	
+	multiscale: from the fields of microscopic data and the focus on local data
+
+	
+	direct biological insight extraction: 
+
+		
+		fate mapping : avant non seulement flou, lien continu entre repere et injection
+
+		cell fate given by the lieneage
+
+		evolution of the cell proliferation rate
+
+		clonal population selection
+
+		origin polyclonal des organes: 
+
+		exemple hors bioemergences -> lineage exploitation for stem cell studies (Simons, B.D. &amp; Clevers, H., 2011. Strategies for Homeostatic Stem Cell Self-Renewal in Adult Tissues. Cell, 145(6), pp.851–862. <a name='Simons:2011ec' class='ref'></a>)
+
+from Lombardot, B., 2010. Description intégrative des cinématiques de la structure embryonnaire : morphogenèse précoce du poisson zébré. Ecole Polytechnique EDX Paris.
+
+"Inter^et de l'etude des destinees : L'etude des destinees est tres informative au premier
+abord sur la morphogenese embryonnaire. Les cartes de destinees et les lignages
+cellulaires indiquent ou vont les cellules et comment (dans le cas du lignage). Cependant
+ca n'est pas le seul inter^et de l'etude des destinees. Comme nous venons de le voir les
+destinees dans l'embryon peuvent dependre du lignage mais aussi d'une regulation de l'environnement.
+Les cartes de destinees ou les lignages ne donnent pas d'information directe
+sur la regulation, par contre, l'etude du lignage, les analyses clonales et leur association a
+des informations complementaires sur le comportement des cellules, leur activite biochimique
+et leur mode de division peuvent ^etre indicatifs d'une restriction du potentiel d'une
+cellule ou d'une population de cellules. L'analyse clonale (ie. l'analyse des descendants
+d'une cellule) permet de s'interroger sur le lignage qui permet la transformation observ
+ee : nombre de divisions, nombre de cycles cellulaires, distribution des types cellulaires,
+organisation spatiale des descendants [38]. L'etude de ces grandeurs permet de s'interroger
+sur l'activite specique associee a la mise en place d'une structure. Si on etudie les
+caracteristiques d'un territoire presomptif au cours du temps, il pourrait ^etre possible de
+caracteriser la periode d'apparition des comportements speciques a la descendance de la
+region. Indirectement il serait donc possible de distinguer les periodes auxquelles se font
+les restrictions du potentiel developpemental des cellules."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Data modification:
+
+	The automated reconstruction workflow does not produce error-less reconstruction. 
+
+
+expliquer comment sont corrigées les centres, liens grace à l'interface
+
+correction -> existence and position of cell centers, cell link between two consecutive time steps
+
+
+
+Key points:
+
+
+Mapping between the flat representation of the lineage tree and the 3D 
+
+Time controlling: backward and forward
+
+Propagation of measures on a clonal, backward and forward
+
+
+from papier methodo
+
+
+Processing supervision, data annotation, validation, correction and analysis were performed with the Mov-IT interactive visualization software
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='7_2_3_'>
+<h2>7.2.3. Validation  </h2>
+ 
+
+
+
+Validation:
+
+
+Manual validation versus automated validation
+
+
+
+Manual validation: statistical analysis from the hand-corrected tracking links
+
+
+
+
+"The tracking error rate was measured (make it only for shorter time) with the sampling procedure described in Figure 4d and Methods section. Altogether, over 15,000 links between the t and t+1 positions of cells have been manually checked at different time points. For the first 300 time steps (5h34 imaging, end of gastrulation) the total error rate is lower than 2%, i.e., more than 98% of the cells were correctly tracked (Figure 4d)."
+
+False positives in nuclear detection were kept below 0.5% and were not the major source of tracking errors. About half of the tracking errors were identified as false trajectories (the tracking jumped from one cell trajectory at time t to another at time t+1) and the other half was false deaths (the tracking did not find the position of the cell at time t+1, and cell trajectory ended). 
+
+
+
+Automated validation : the salt and pepper strategy
+
+""
+Validation with the above sampling procedure remained a time consuming task. We however showed that similar data sets i.e. corresponding to the same developmental period, labelling and imaging conditions, provided similar results. Nevertheless, we looked for an automated validation strategy and came up with the following. Transplanting about one hundred cells between high stage and sphere stage [Kimmel, 1995 #11] from a donor embryo with double stained nuclei (H2B/mcherry through RNA injection into H2A/eGFP transgenic embryos) into a transgenic host with green nuclei [Pauls, 2001 #236] provided means to both assess our tracking performances in the context of the whole embryo cells tracking (the salt channel) and in the context of a small subpopulation of labelled nuclei (the pepper channel). We were able to show that tracking accuracy in the pepper channel is as good as the hand-made gold standard (gs) and that the automated comparison with either the gold standard or the automatically tracked pepper channel (lineage tree p) provided the same measurement for the “salt channel” tracking accuracy (Figure 5). Mappings mgs,p; mgs,s and ms,p (explain more)   identifying the same cell in both dataset were created. These mappings minimized the distance between matching cells. Cell i is catgoarized as false positive if i is in the set gs / Range(m[gs,p]) (Figure 4 b?), false negative if i is in p / Domain(m[gs,p]) (Figure 4 c?). An error in cell detection is defined as range(m[gs,p]) Δ domain(m[gs,p]).  We conclude about a tracking error if f(it+1)=jt and f(m(it+1)) != m(jt) where f is the predecessor function (Figure 4 d?).
+
+There was no significant difference in errors’ categorization plots when the mappings Mgs,s and Ms,p were compared. The errors characterization done with two different evaluation methods, salt & paper and manually (figure 4), applied to the reconstruction of two individuals, showed similar numbers. The salt & pepper strategy allowed the fully automated evaluation of the reconstruction accuracy and errors’ categorization without manual intervention.
+
+Provided that imaging labelling procedures and imaging set up allowed a third colour and channel, the salt and pepper strategy might be performed still preserving the membrane channel and the possibility to get measurements for cell shape. 
+""
+
+
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='7_3_'>
+<h2>7.3. Post processing / Exploitation  </h2>
+ 
+
+
+
+<p>
+	<strong>Spatio-temporal cartography of the cell kinematics</strong>
+</p>
+
+
+
+
+ <p>
+ 	Thèse Benoit -> Lombardot, B., 2010. Description intégrative des cinématiques de la structure embryonnaire : morphogenèse précoce du poisson zébré. Ecole Polytechnique EDX Paris. <a name='Lombardot:2010vd' class='ref'></a>
+ </p>
+
+
+
+<p>
+	On présente rapidement les mesures utilisées par Benoît M U ... en ensuite les cartes. 
+</p>
+
+
+
+<p>
+
+	Ajouter mesures
+</p>
+
+
+
+ <figure id='these_lombardot_p93_texture_tensor'>
+ 	<img src="../../images/Reconstruction/these_lombardot/p93_texture_tensor.png" width="700">
+ 	<figcaption>Le tenseur de texture de la cellule i (jaune) peut ^etre vu comme une
+caracterisation geometrique de la forme du voisinage de i (A). Le tenseur de texture
+(vert) est proche de la covariance du voisinage de i (rouge) (B). Le tenseur de texture
+peut aussi ^etre interprete comme la covariance du voisinage symetrise de i. adapted from XXXXXX</figcaption>
+ </figure>
+
+
+
+ <figure id='these_lombardot_p94_texture_tensor_average'>
+ 	<img src="../../images/Reconstruction/these_lombardot/p94_texture_tensor_average.png" width="700">
+ 	<figcaption>En general, le tenseur de texture n'est pas deni pour une cellule mais pour
+une collection de cellules C (cellule dans le cercle jaune). Comme pour une representation
+"coarse grained" du milieu le tenseur de texture a la position X est deni par la moyenne
+des tenseurs de texture de chaque cellule de la region de mesure (cercle jaune) (a droite).
+En representant tous les liens impliques dans la mesure du tenseur de texture au point X
+(M(X)), on comprend bien que M(X) est une caracterisation moyenne de la forme des
+voisinages cellulaires dans la region de mesure autour de X.</figcaption>
+ </figure>
+
+
+
+ <figure id='these_lombardot_p98_texture_tensor_derivative'>
+ 	<img src="../../images/Reconstruction/these_lombardot/p98_texture_tensor_derivative.png" width="700">
+ 	<figcaption>La derivee de M traduit la description intuitive de l'evolution du voisinage
+d'une cellule. Le tenseur de texture de la cellule i (jaune) a t + dt est egale au tenseur
+de texture de i a t (M(t)) auquel trois contributions sont ajoutees : la premiere traduit
+la deformation continue des positions de cellules restant dans le voisinage de i (cellules
+bleues), la seconde traduit l'entree de cellules dans le voisinage (cellules rouges), enn la
+derniere contribution correspond aux cellules sortant du voisinage (cellules vertes). Ces
+trois contributions correspondent respectivement aux tenseurs B(t), n_ +M+ et 􀀀n_ 􀀀M􀀀.
+Cette interpretation intuitive n'est valide que si le nombre de liens apparus est egal au
+nombre de liens disparus.</figcaption>
+ </figure>
+
+
+
+ <figure id='these_lombardot_p166_velocity_map'>
+ 	<img src="../../images/Reconstruction/these_lombardot/p166_velocity_map.png" width="700">
+ 	<figcaption>La gure montre l'evolution du champ de vitesse et de sa norme dans le jeu
+de donnees 080322a. C'est une vue laterale. Le triedre rappelle l'orientation de la carte sur
+chaque image : l'axe vert pointe le c^ote dorsal et l'axe rouge le p^ole animal. Sur la vignette
+A les donnees sont representees sur le modele geometrique de l'embryon (sphere + repere).
+L'echelle en bas a gauche de chaque vignette represente une longueur de 100m. Sur les
+gures D, E et F on a superpose la topologie du champ de vitesse : point singulier (rouge),
+separatrices (bleu), lignes de courant (vert). La vignette B ne presente pas de moyenne
+spatiale du champ de deplacement. Les donnees sont presentees de l'interieur du vitellus.
+On peut observer les cellules de l'hypoblaste lateral pres de la marge.</figcaption>
+ </figure>
+
+
+
+ <figure id='these_lombardot_p172_velocity_map_drawings'>
+ 	<img src="../../images/Reconstruction/these_lombardot/p172_velocity_map_drawings.png" width="700">
+ 	<figcaption>Les champs de vitesse peuvent ^etre caracterises par une topologie simple.
+Les vignettes presentent la topologie du systeme au cours du temps. Chaque schema
+represente l'embryon en vue laterale par un cercle. Le c^ote dorsale est a droite, ventrale
+a gauche, les p^oles animal et vegetatif respectivement en haut et en bas. Etant donnee
+la symetrie bilaterale du systeme cette vue est susante pour caracteriser l'ensemble du
+champ de vitesse. Les separatrices sont representees par des lignes rouges, les singularites
+par des points rouges. On a trace quelques lignes de courant en vert pour illustrer la
+coordination des mouvements de matiere associes a la topologie tracee.</figcaption>
+ </figure>
+
+
+
+ <figure id='these_lombardot_p180_deformation_rate'>
+ 	<img src="../../images/Reconstruction/these_lombardot/p180_deformation_rate.png" width="700">
+ 	<figcaption>La gure presente a 7,5 hpf les champs de directions propres associes
+aux taux de deformation dans les tissus. Les valeurs propres vont croissantes de gauche
+a droite. La carte de couleur indique le signe des valeurs propres et l'orientation des
+directions propres par rapport au tissu (voir la gure 4.5). L'orientation des donnees est
+rappelee par le repere (bleu, vert, rouge) : laterale (080322a), animale (071226a), dorsale
+(070128c). Sur la vue laterale de la premiere valeur propre, la ligne pointillee marque la
+separation entre les regions A et B denis dans la description. Les regions A, B, C, D, E
+sont 
+echees sur les dierentes vues associees a la premiere valeur propre lorsqu'elles sont
+visibles.</figcaption>
+ </figure>
+
+
+
+
+ <figure id='these_lombardot_p200_neighbor_shape_U'>
+ 	<img src="../../images/Reconstruction/these_lombardot/p200_neighbor_shape_U.png" width="700">
+ 	<figcaption>La gure montre l'evolution des cartes moyennes de la forme des voisinages
+cellulaires en vue laterale. Ces cartes sont construites a partir du jeu de donnees 080322a.</figcaption>
+ </figure>
+
+
+
+
+ <figure id='these_lombardot_p205_lost_contact'>
+ 	<img src="../../images/Reconstruction/these_lombardot/p205_lost_contact.png" width="700">
+ 	<figcaption>La gure montre en vue animale (071226a) des cartes de direction de
+disparition des contacts (1ere valeur propre de P􀀀). Le repere indique l'orientation de
+l'embryon : c^ote dorsal pointe par la 
+eche verte, p^ole animal pointe par la 
+eche rouge.
+En premiere ligne on a une coupe presentant la carte dans le plan de symetrie bilaterale
+de l'embryon. Sur la seconde ligne on a une vue du p^ole animal sur la carte.</figcaption>
+ </figure>
+
+
+
+
+ <figure id='these_lombardot_p209_new_contact'>
+ 	<img src="../../images/Reconstruction/these_lombardot/p209_new_contact.png" width="700">
+ 	<figcaption>Les cartes presentent la direction principale d'apparition des contacts (1ere
+valeur propre du tenseur P+). Une partie de la regionalisation observee correle avec les
+directions de contraction du champ de deformation mesoscopique (1ere valeur propre).</figcaption>
+ </figure>
+
+
+
+
+ <figure id='these_lombardot_p211_mix_tensor'>
+ 	<img src="../../images/Reconstruction/these_lombardot/p211_mix_tensor.png" width="700">
+ 	<figcaption>La gure montre l'evolution de la principale direction propre du tenseur de
+melange dans une vue animale (071226a). C'est la direction dans laquelle les translations
+de cellules vis-a-vis de leur voisinage sont les plus importantes en moyenne. La partie
+superieure de chaque vignette montre une section de la carte dans le plan de symetrie
+bilaterale de l'embryon. La partie inferieure de chaque vignette est une vue du p^ole animal.</figcaption>
+ </figure>
+
+
+
+
+
+ <figure id='these_lombardot_p237_deformation_rate_comparison_zoep'>
+ 	<img src="../../images/Reconstruction/these_lombardot/p237_deformation_rate_comparison_zoep.png" width="700">
+ 	<figcaption>La gure illustre les dierences macroscopiques observees dans le champ
+de deformation continue des tissus en vue animale pour un embryon sauvage (WT) et
+un mutant zoep. Le jeu de donnees WT est 071226a, celui du mutant zoep est 081018a.
+La structuration du champ de deformation est dierente des 7,5 hpf. Apres 8,5 hpf il se
+forme chez le WT une region avec des lignes de deformation paralleles au plan median
+(region anterieure aux pointilles). Cette region de part et d'autre de laquelle se forment
+les vesicules optiques n'existe pas chez le mutant zoep.</figcaption>
+ </figure>
+
+
+
+
+
+<p>
+	<strong>Orientation of mitosis axis</strong>
+</p>
+
+
+<p>
+	...
+</p>
+
+
+
+
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='7_4_'>
+<h2>7.4. 4D Atlas of gene expression  </h2>
+ 
+
+<p>
+	papier Carlos ?
+</p>
+
+
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='7_5_'>
+<h2>7.5. in toto cell lineage  </h2>
+ 
+
+
+
+
+	<figure id='washington_workflow'>
+		<img src="../../images/Reconstruction/washington/workflow.png" width="900">
+		<figcaption><i>in toto</i> displacement field reconstruction workflow</figcaption>
+	</figure>
+
+<p>
+	The bi-photonic microscopy devices do not allow the capture of the entire zebrafish embryo because of the optical loss of signal in the depth of the tissue.
+</p>
+
+<p>
+	One solution is to take advantage of the spherical shape of the embryo during the early gastrulation and rotate it to capture multiple views and thus cover the all volume without major deformation. This solution has a pitfall, the imaging time lasts longer as consecutive angles of view have to capture superposed region of the embryo. Fortunately, a recent microscopic device, the Digital Scanning Light Microscope (DSLM), increases the speed of light-scanning thanks to its ability to illuminate and record the signal emitted by the embryo plane by plane and not only point by point. Faster recording means the possibility of make temporal comparison of 3D volume to extract the dynamics of the reconstructed cell trajectories evoked in the previous section.
+</p>
+
+<p>
+	However, the quality of the signal is different that the one generated by the bi-photon illuminated device used in the previous section so the reconstruction strategies had to be adapted to extract the reconstructed dynamics. We decide to leave the reconstruction of the <i>in toto</i> lineage tree for further investigation and instead create the more accessible reconstruction of the <i>in toto</i> deformation field of the embryo. The workflow is presented in this section.
+</p>
+
+
+<p>
+	Resumé des étapes XXXX à faire:
+</p>
+
+
+
+	<figure id='washington_5angles_before'>
+	<img src="../../images/Reconstruction/washington/5angles_before.png" width="900">
+	<figcaption></figcaption>
+</figure>
+
+
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='7_5_1_'>
+<h2>7.5.1. Manual registration  </h2>
+ 
+
+
+
+	
+	<figure id='washington_workflow_manual'>
+		<img src="../../images/Reconstruction/washington/workflow_manual.png" width="600">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+	<p>
+		The DSLM allows the rapid imaging of embryos and, coupled with a rotating device, is able to record multiple views of the same embryos. In the following, we will present an example of multi-view with five angles of view. 
+	</p>
+
+
+	<p>
+		Describe the DSLM
+	</p>
+
+
+	<p>
+		In this section 6.2 ???XXXX, we will use the following conventions for the axes of the each views. The axis from the camera to embryo is the z-axis or depth, the horizontal axis of the light plane is the x-axis and the vertical axis of the light plane is the y-axis.
+	</p>
+
+
+	<figure id='washington_SPIM'>
+		<img src="../../images/Reconstruction/washington/SPIM.png" width="900">
+		<figcaption>SPIM set up.</figcaption>
+	</figure>
+
+
+
+
+
+	<p>
+		Reconstructing an <i>in toto</i> view of the embryo require the spatial fusion of the five views in a reference frame. Even if sophisticated method of non-rigid spatial registration based on raw image processing are currently developed (curvelet-based ??? XXXX josé ???), we decide to take advantage of the knowledge of the geometrical motion of the rotating plate of the device to geometrically infer a rigid spatial registration. Moreover, we assume that the spatial registration parameters will remained unchanged for each time step on the imaging process as the embryo does not move in its agarose chamber and the rotating plate exerts precise and controlled displacement. So the parameters are computed at a single time step and will be applied to every time steps.
+	</p>
+
+
+
+
+	<figure id='washington_manual_spim'>
+		<img src="../../images/Reconstruction/washington/manual_spim.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+	<p>
+		The embryo is mounted into a cylindrical agarose tube. The tube is fixed on a table which can rotate around the cylinder central axis and translate it. As the embryo never passes exactly through the central axis of the cylinder, the software which control the motion of the table as to be calibrated before the time-lapse starts. The calibration phase is equivalent to the following process: the operator is asked to center the embryo in the light plane. Once he validates the position, the software performs a 100 degree rotation and the operator is again asked to center the embryo in the light plane. From the translation vector that operator has determined to re-center the embryo, the software computes the relative position of the embryo to the cylinder rotation center. However, the estimation of the center of the embryo is not really precisely done by the operator. First, he only sees a projection along the z-axis, and as the embryo has been rotated, he does not have the same aspect on the screen. The computed relative position is only an approximation of the real relative position.
+	</p>
+
+
+
+	<figure id='washington_manual_registration_selection'>
+		<img src="../../images/Reconstruction/washington/manual_registration_selection.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+	<p>
+		We built an interactive graphical interface to manually correct the estimation error, and determine the optimal relative position. The two parameters controlled by the user of the interface are the coordinates of the correction vector. As the user moves them, he can directly observed the computed motion of the 5 views and thus determine the optimal correction vector. For this task, the margin nuclei which are separated from the mass of the deep cells offer useful landmarks to allow a precise determination of these two parameters (figure XXXX).
+	</p>
+
+
+	<figure id='washington_manual_registration_final'>
+		<img src="../../images/Reconstruction/washington/manual_registration_final.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+	<p>
+		The 5 views are now registrated and the time lapse registration may be performed. However, as it can be seen on figure XXX, the optical deformation induced by the perturbation of the light path by the embryonic tissue creates a very unsatisfying result, the following module will aim at cleaning the deformed part of each views.
+	</p>
+
+
+
+	<figure id='washington_5angles_after'>
+		<img src="../../images/Reconstruction/washington/5angles_after.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='7_5_2_'>
+<h2>7.5.2. Voxel quality evaluation  </h2>
+ 
+
+	<figure id='washington_workflow_vqe'>
+		<img src="../../images/Reconstruction/washington/workflow_vqe.png" width="600">
+		<figcaption></figcaption>
+	</figure>
+ 
+	
+	<p>
+		This module is independent form the previous one and it aims at determining, on each view of each time step, which spatial region of the volume has the better signal quality. The effective goal of this module is to attribute a score to each voxel of the volume, score which expresses the quality of signal of this voxel.
+	</p>
+
+	<p>
+		The assumption supporting the voxel quality evaluation is based on the observation that the more the light path pass through the embryo, the more the signal is degraded. The light path through the embryo is decomposed in two sub-paths: the path of light from the laser to excited molecule, and the path of light emitted by the molecule to the camera. As the relevant part of the light path is inside the embryo, we perform a geometrical computation to determine the length of light path for each voxel of the volume from the physical border of the embryo. The fist part of this module focuses on the computation of this border and the second on the computation of the length. It may be summarized as the following:
+	</p>
+
+	<ul>
+		<li>1. To illuminate the low intensity background noise, the average intensity of the voxel in the volume is computed and used to determine the isosurface of the nuclei shapes (vtkContourFilter) (figure XXXX a).  </li>
+		<li>2. After a random decimation of the triangles to lower the number of their vertices (vtkDecimatePro), large enough metaballs centered on these vertices are created to obtain a non-empty surface of the embryo (vtkGaussianSplatter then vtkContourFilter). A binary stencil of the image is extracted to store the shape of the embryo (vtkImageStencil).</li>
+		<li>3. As some undesired signal may remain out of the embryo shape, we suppose that the closed region which has the larger volume correspond to the embryo so we remove the smaller ones (figure XXXX b).</li>
+		<li>4. The metaballs create a embryo border volume which is larger than desired so we erode the volume by the radius of the metaball to get the physical border of the embryo. The volume is stored as a binary data with value 1 (0) for voxel inside (outside) the border (figure XXXX c).</li>
+		<li>5. As each view is oriented with the z-axis along the camera path and the x-axis along the illumination plane, it is straightforward to compute both distances from the border along the x and z axes as the number of 1 along both axes (figure XXXX d, e). The voxels which are out of the border get an eliminatory score as they can not be used for the registration task (figure XXXX f).</li>
+		<li>6. We also eliminate the voxels which are situated after a cutoff value in both direction as they belong to part of the image that is too degraded to be used (the cutoff value is about 200 microns) (figure XXX g, h, i).</li>
+	</ul>
+	
+
+
+
+
+
+
+
+	<figure id='washington_vqe'>
+		<img src="../../images/Reconstruction/washington/vqe.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='7_5_3_'>
+<h2>7.5.3. Blending function  </h2>
+ 
+ 
+
+
+	<figure id='washington_workflow_blend'>
+		<img src="../../images/Reconstruction/washington/workflow_blend.png" width="600">
+		<figcaption></figcaption>
+	</figure>
+
+	
+
+	<p>
+		The objective of this task is to use both the manual registration and the voxel quality evaluation module to build a blending function which will select which part of which view is used in the <i>in toto</i> registrated volume. The function is represented as a  3D integer volume whom each voxel correspond to the id of the more relevant angle of view according to its quality evaluation.
+	</p>
+
+	<p>
+		With the coordinates of center of rotation of the microscope table, we are now able to set all 5 views into a common reference volume (figure XXXX). We scan each voxel of this reference volume and check in each projected angle of view if it belongs to the inside of the embryo border evaluated in the previous section. If it belongs :
+	</p>
+
+	<ul>
+		<li>to none of them, a 0 value is attributed to the reference voxel,</li>
+		<li>to an evaluated part of a single angle of view, the id of this angle of view is attributed to the reference voxel (from 1 to 5),</li>
+		<li>to evaluated parts of multiple angles of view, we pick the id of the angle of view which provide the higher voxel quality evaluation at this position and attribute it to the reference voxel. </li>
+	</ul>
+
+	<p>
+		This allows the production of the integer mask shown in figure XXX. This mask is used to extract the voxel information for the relevant angle of view. Instead of using the maximum voxel quality evaluation, we could also use these scores to compute an weighted average of each angle.
+	</p>
+
+	<p>
+		An exemple of application is exposed in figure XXX with the direct selection of the pixel intensity, it provide a first <i>in toto</i> registration of the embryo. However, the objective of this workflow is to apply the blending function to the deformation field.
+	</p>
+
+
+
+	<figure id='Reconstruction_5angles_3Dvolume'>
+		<img src="../../images/Reconstruction/5angles_3Dvolume.png" width="450">
+		<img src="../../images/Reconstruction/5angles_2D_scan.png" width="450">
+		<figcaption></figcaption>
+	</figure>
+	
+
+
+	
+	<figure id='washington_blendingfunction'>
+		<img src="../../images/Reconstruction/washington/blendingfunction.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+	<figure id='washington_blendingfunction_raw'>
+		<img src="../../images/Reconstruction/washington/blendingfunction_raw.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='7_5_4_'>
+<h2>7.5.4. Deformation fields  </h2>
+ 
+ 
+
+
+vtkGaussianSplatter
+
+
+	<figure id='washington_workflow_deffield'>
+		<img src="../../images/Reconstruction/washington/workflow_deffield.png" width="600">
+		<figcaption></figcaption>
+	</figure>
+
+
+	<p>
+		The objective of the module is to reconstruct the spatial deformation that relate two 3D volume at consecutive time step. Each volume is one of the five angles of view produced by the DLSM. We call A and B two generic consecutive 3D volumes. A and B must have the same dimension.
+	</p>
+
+	<p>
+		The notion of image deformation is close to the notion of optical flow as it aims at computing the image motion between consecutive images. We use a non-rigid registration method called &quot;Demons Registration&quot;, it acts as if voxel-sized &quot;demons&quot; were were pulling and push the voxel of volume B along the local gradient of the volume A. The method is iterative as the demons may work until during a specific number of step or until a matching criteria is reached. The implementation we use is based on Thirion's algorithm <a name='Thirion:1998hg' class='ref'></a> (itk::DemonsRegistrationFilter).
+	</p>
+
+	<p>
+		This method takes as inputs two volumes A and B and compute a new volume whose voxel are 3D scalar vectors representing the local voxel motion to morph B into A. Figure XXXX shows the superposition of the isosurfaces of two consecutive time step's volume at the marginal region of the Zebrafish embryo. The motion of the image is superposed on figure XXXX. The deformation field is computed for the all image A and B, not only in the relevant part of the images. Thus, we perform a filtering of the deformation field based on their position. The vectors belonging to voxels which are inside the nuclei envelopes (determined by an isosurface thresholding at two times the averaged volume intensity) are kept and the others are set to null vector. We obtain the deformation fields for each angle of view independently.
+	</p>
+
+	<p>
+		The next module deals with the blending of these deformation fields.
+	</p>
+
+
+
+
+
+
+	<figure id='washington_vueGlobal_frame'>
+		<img src="../../images/Reconstruction/washington/deffield/vueGlobal_frame.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+	<figure id='washington_vue1ts'>
+		<img src="../../images/Reconstruction/washington/deffield/vue1ts.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+	<figure id='washington_vue2ts'>
+		<img src="../../images/Reconstruction/washington/deffield/vue2ts.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+	<figure id='washington_vueDeffield2tsNoFiltering'>
+		<img src="../../images/Reconstruction/washington/deffield/vueDeffield2tsNoFiltering.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+	<figure id='washington_vueDeffield2ts'>
+		<img src="../../images/Reconstruction/washington/deffield/vueDeffield2ts.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+
+
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id='7_5_5_'>
+<h2>7.5.5. Blended deformation fields  </h2>
+ 
+ 
+
+
+	<figure id='washington_workflow_blend_deffield'>
+		<img src="../../images/Reconstruction/washington/workflow_blend_deffield.png" width="600">
+		<figcaption></figcaption>
+	</figure>
+
+
+	<p>
+		The blending function is applied on the deformation vector field obtained in the previos section. Each voxel of the reference volume has the deformation vector from the angle of view which has the larger quality evaluation score.
+	</p>
+
+
+
+
+	<figure id='washington_blendingfunction_deffield'>
+		<img src="../../images/Reconstruction/washington/blendingfunction_deffield.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+	<figure id='washington_blendingfunction_deffield_multits'>
+		<img src="../../images/Reconstruction/washington/blendingfunction_deffield_multits.png" width="900">
+		<figcaption></figcaption>
+	</figure>
+
+
+
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
