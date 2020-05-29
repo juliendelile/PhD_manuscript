@@ -14,21 +14,18 @@ Some of the highlights include:
 
 * individual cell migration toward a population emitting a diffusing signal
 
-| | |
-:-------------------------:|:-------------------------:
 ![](images/migrRaz.gif)  |  ![](images/migrModel12short.gif)
+:-------------------------:|:-------------------------:
 
 * classic and new mechanisms leading to cell sorting
 
-| | | |
-:-------------------------:|:-------------------------:|:-------------------------:
 ![](images/sorting_nosource_allmigr_DAH.gif)  |  ![](images/sorting_sourcecenter_extmigr.gif)  |  ![](images/sorting_sourceext_extmigr.gif)
+:-------------------------:|:-------------------------:|:-------------------------:
 
 * cases studies of the different phases of early Zebrafish development (first video taken from [Karlstrom & Kane](https://pubmed.ncbi.nlm.nih.gov/9007263/) for illustration)
 
-| | | |
-:-------------------------:|:-------------------------:|:-------------------------:
 ![](images/Zebrafish_Development_kane.gif)  |  ![](images/movieNadine5Xslowerv2_resized_delayed.gif)  |  ![](images/yolk_relaxation_cut.gif)
+:-------------------------:|:-------------------------:|:-------------------------:
 ![](images/cleavages.gif)  |  ![](images/epiboly_f3500_s0_evl60_marg7_r0.gif)  |  ![](images/intercalation_cylinder_test.gif)
 ![](images/EVLexample_1x3.gif)  |  ![](images/EVLexample_3x3.gif)  |  ![](images/parallel_views.gif)
 
